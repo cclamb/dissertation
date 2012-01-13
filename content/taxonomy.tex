@@ -1,4 +1,28 @@
 \section{Taxonomies of Usage Management Overlay}
+A clear taxonomic organization of potential steps in approaching finer grained policy based usage management helps in describing the difficulties inherent in developing potential solutions as well as aiding in planning system evolution over time. Here, we have five distinct types of integrated policy-centric usage management systems, as shown in Table \ref{table:model:taxonomy}.  Of these five, only the first two levels are represented in current system model.
+
+\begin{table}[tp] %
+\centering %
+\begin{tabular}{clcc}
+\toprule %
+$ Name$ 	& $Description$ \\\toprule %
+$\phi$ 		& The initial level of this taxonomy, $\phi$ classified systems \\
+ 			& have a single guard without policy-based control \\\midrule
+$\alpha$	& $\alpha$ classified systems have a single guard by have begun \\
+			& to integrate policy-based control \\\midrule
+$\beta$		& Systems that have begun to integrate policy-based control with \\
+			& router elements are in the $\beta$ category \\\midrule
+$\gamma$	& Systems that have integrated policy-based control with routing \\
+			& and computational elements \\\midrule
+$\delta$	& Continuous policy-based control with \textit{smart licensed} artifacts \\\bottomrule
+\end{tabular}
+\caption{Proposed Usage Management Taxonomy}
+\label{table:model:taxonomy}
+\end{table}
+
+In this taxonomy, it is not required that systems pass through lower levels to reach higher ones.  This taxonomy represents a continuum of integration of usage management controls.  Systems can very well be designed to fit into higher taxonomic categories without addressing lower categories.  That said however, many of the supporting infrastructural services, like identification management or logging and tracing systems, are common between multiple levels.
+
+The taxonomy itself starts with the current state, integrating policy evaluation systems into the network fabric gradually, moving away from filters, then by adding policy evaluation into the routing fabric, then the computational nodes, and finally by incorporating evaluation directly into content.
 
 \subsection{$\phi$-level Overlay Systems}
 
