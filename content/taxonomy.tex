@@ -24,9 +24,27 @@ In this taxonomy, it is not required that systems pass through lower levels to r
 
 The taxonomy itself starts with the current state, integrating policy evaluation systems into the network fabric gradually, moving away from filters, then by adding policy evaluation into the routing fabric, then the computational nodes, and finally by incorporating evaluation directly into content.
 
-\subsection{Evaluation Methodology}
+\subsection{Evaluation Methodology and Model}
+In order to successfully evaluate the elements of our overlay taxonomy, we must first establish a model against which to measure the presented architectures.  The current standard for evaluating software quality is ISO/IEC 25020 and this, along with other related standards from other service delivery organizations has begun to be integrated into both academia and industry as a tractable way to measure system quality \cite{IT QUALITY PAPER, ISO STANDARD}.
+
+This particular model must address quality attributes specific to the presented architectures rather than the functional domain.  The goal of this model is to allow for architectural evaluation of policy evaluating architectures regardless of the specific functional domain.  Ergo, injecting a specific functional domain into the evaluation or the evaluating model is unacceptable.  Acceptable attributes are those which directly target quality attributes of the architectures in question.
+
+\begin{eqnarray}
+E = \lbrace f_{e}, f_{r}, f_{u}, f_{p}, f_{m}, f_{f}, f_{s}, f_{c} \rbrace \\
+W= \lbrace w_{e}, w_{r}, w_{u}, w_{p}, w_{m}, w_{f}, w_{s}, w_{c} \rbrace \\
+s = \sum_{W, E} w_{i} f_{i}
+\end{eqnarray}
+
+We are specifically interested in evaluating architectures for policy evaluation functional suitability, reliability, usability, possible performance efficiencies, maintainability, portability, security, and compatibility, specifically neglecting any kind of domain functional suitability.  Each area will be associated with an evaluation function.  The suitability of a given architectural option will be evaluated by a tuple of these functions, which can then be converted into a weighted sum leading to a single quantitative metric representing suitability under evaluated conditions.
 
 \subsection{$\phi$-level Overlay Systems}
+The $\phi$ classification consists of systems like the initial NSA and BAH notional models in Figures \ref{fig:model:conceptual-model} and \ref{fig:model:conceptual-model-bah}.
+
+These systems consist of two distinct domains, separated by a filter-centric single guard.  The initial NSA system model is clearly of this type, separating two domains with a guard using filter chains.  The BAH model is also of this type, using a Filter Segment to evaluate data packages transmitted between interface segments attached to specific domains.
+
+Generally one of the domains supports more sensitive information than the other, but that is not always the case.  In the models we have examined this has certainly been true, but classified information for example  is commonly stored in \textit{compartments} which are separated by clear \textit{need-to-know} policies enforced by access lists and classification guides.  These kinds of compartments contain information at similar levels of classification, but contain distinct informational elements that should not be combined.
+
+In these kinds of systems, specific rules regarding information transfer and domain characterization are tightly bound to individual filter implementations.  They are based on \textit{a priori} knowledge of the domains the guard connects, and therefore are tightly coupled to the domains they connect.  Furthermore, the filter elements are standalone within the system, in this classification, not availing themselves of external resources.  Rather, they examining information transiting through the filter based purely on the content of that information.
 
 \subsection{$\alpha$-level Overlay Systems}
 
