@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: cloud-2012.aux
+The style file: IEEEtranBST/IEEEtran.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: bib/proposal.bib
+Database file #2: bib/drm.bib
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty booktitle in proposal:ron-ross
+Warning--empty author in coral
+Warning--missing institution in coral
+Warning--empty author in marlin
+Warning--missing institution in marlin
+
+Done.
+You've used 25 entries,
+            4039 wiz_defined-function locations,
+            958 strings with 11729 characters,
+and the built_in function-call counts, 14797 in all, are:
+= -- 1157
+> -- 239
+< -- 105
++ -- 141
+- -- 33
+* -- 675
+:= -- 2200
+add.period$ -- 51
+call.type$ -- 25
+change.case$ -- 25
+chr.to.int$ -- 252
+cite$ -- 30
+duplicate$ -- 1161
+empty$ -- 1363
+format.name$ -- 45
+if$ -- 3408
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 208
+newline$ -- 100
+num.names$ -- 14
+pop$ -- 523
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 1149
+stack$ -- 0
+substring$ -- 617
+swap$ -- 873
+text.length$ -- 21
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 25
+warning$ -- 5
+while$ -- 56
+width$ -- 27
+write$ -- 236
+(There were 5 warnings)
