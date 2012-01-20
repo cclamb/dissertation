@@ -1,5 +1,13 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: cloud-2012.aux
+White space in argument---line 34 of file cloud-2012.aux
+ : \citation{IT
+ :              QUALITY PAPER}
+I'm skipping whatever remains of this command
+White space in argument---line 35 of file cloud-2012.aux
+ : \citation{ISO
+ :               STANDARD}
+I'm skipping whatever remains of this command
 The style file: IEEEtranBST/IEEEtran.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bib/proposal.bib
@@ -12,47 +20,50 @@ Warning--empty author in coral
 Warning--missing institution in coral
 Warning--empty author in marlin
 Warning--missing institution in marlin
+Warning--empty booktitle in proposal:nsa-arch
+Warning--empty booktitle in proposal:bah-arch
+Warning--empty booktitle in proposal:raytheon-arch
 
 Done.
-You've used 25 entries,
+You've used 29 entries,
             4039 wiz_defined-function locations,
-            958 strings with 11729 characters,
-and the built_in function-call counts, 14797 in all, are:
-= -- 1157
-> -- 239
+            970 strings with 12189 characters,
+and the built_in function-call counts, 16342 in all, are:
+= -- 1252
+> -- 261
 < -- 105
-+ -- 141
-- -- 33
-* -- 675
-:= -- 2200
-add.period$ -- 51
-call.type$ -- 25
-change.case$ -- 25
++ -- 152
+- -- 38
+* -- 729
+:= -- 2443
+add.period$ -- 62
+call.type$ -- 29
+change.case$ -- 29
 chr.to.int$ -- 252
-cite$ -- 30
-duplicate$ -- 1161
-empty$ -- 1363
-format.name$ -- 45
-if$ -- 3408
+cite$ -- 37
+duplicate$ -- 1310
+empty$ -- 1565
+format.name$ -- 51
+if$ -- 3761
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 208
-newline$ -- 100
-num.names$ -- 14
-pop$ -- 523
+int.to.str$ -- 29
+missing$ -- 237
+newline$ -- 112
+num.names$ -- 17
+pop$ -- 620
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1149
+skip$ -- 1272
 stack$ -- 0
-substring$ -- 617
-swap$ -- 873
+substring$ -- 621
+swap$ -- 938
 text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 25
-warning$ -- 5
-while$ -- 56
-width$ -- 27
-write$ -- 236
-(There were 5 warnings)
+type$ -- 29
+warning$ -- 8
+while$ -- 59
+width$ -- 31
+write$ -- 264
+(There were 2 error messages)

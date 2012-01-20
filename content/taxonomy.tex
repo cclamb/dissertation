@@ -1,7 +1,7 @@
 \section{Taxonomies of Usage Management Overlay}
 A clear taxonomic organization of potential steps in approaching finer grained policy based usage management helps in describing the difficulties inherent in developing potential solutions as well as aiding in planning system evolution over time. Here, we have five distinct types of integrated policy-centric usage management systems, as shown in Table \ref{table:model:taxonomy}.  Of these five, only the first two levels are represented in current system model.
 
-\begin{table}[tp] %
+\begin{table*}[tp] %
 \centering %
 \begin{tabular}{clcc}
 \toprule %
@@ -18,7 +18,7 @@ $\delta$	& Continuous policy-based control with \textit{smart licensed} artifact
 \end{tabular}
 \caption{Proposed Usage Management Taxonomy}
 \label{table:model:taxonomy}
-\end{table}
+\end{table*}
 
 In this taxonomy, it is not required that systems pass through lower levels to reach higher ones.  This taxonomy represents a continuum of integration of usage management controls.  Systems can very well be designed to fit into higher taxonomic categories without addressing lower categories.  That said however, many of the supporting infrastructural services, like identification management or logging and tracing systems, are common between multiple levels.
 
@@ -38,9 +38,7 @@ s = \sum_{W, E} w_{i} f_{i}
 We are specifically interested in evaluating architectures for policy evaluation functional suitability, reliability, usability, possible performance efficiencies, maintainability, portability, security, and compatibility, specifically neglecting any kind of domain functional suitability.  Each area will be associated with an evaluation function.  The suitability of a given architectural option will be evaluated by a tuple of these functions, which can then be converted into a weighted sum leading to a single quantitative metric representing suitability under evaluated conditions.
 
 \subsection{$\phi$-level Overlay Systems}
-The $\phi$ classification consists of systems like the initial NSA and BAH notional models in Figures \ref{fig:model:conceptual-model} and \ref{fig:model:conceptual-model-bah}.
-
-These systems consist of two distinct domains, separated by a filter-centric single guard.  The initial NSA system model is clearly of this type, separating two domains with a guard using filter chains.  The BAH model is also of this type, using a Filter Segment to evaluate data packages transmitted between interface segments attached to specific domains.
+The $\phi$ classification consists of systems like the initial NSA and BAH notional models.  These systems consist of two distinct domains, separated by a filter-centric single guard.  The initial NSA system model is clearly of this type, separating two domains with a guard using filter chains.  The BAH model is also of this type, using a Filter Segment to evaluate data packages transmitted between interface segments attached to specific domains.
 
 Generally one of the domains supports more sensitive information than the other, but that is not always the case.  In the models we have examined this has certainly been true, but classified information for example  is commonly stored in \textit{compartments} which are separated by clear \textit{need-to-know} policies enforced by access lists and classification guides.  These kinds of compartments contain information at similar levels of classification, but contain distinct informational elements that should not be combined.
 
