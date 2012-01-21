@@ -37,15 +37,114 @@ s = \sum_{W, E} w_{i} f_{i}
 
 We are specifically interested in evaluating architectures for policy evaluation functional suitability, reliability, usability, possible performance efficiencies, maintainability, portability, security, and compatibility, specifically neglecting any kind of domain functional suitability.  Each area will be associated with an evaluation function.  The suitability of a given architectural option will be evaluated by a tuple of these functions, which can then be converted into a weighted sum leading to a single quantitative metric representing suitability under evaluated conditions.
 
+Also important to note, certain attributes may not be able to be evaluated using specific architectural models.  For example, conceptual or notional architecture models are intended to convey specific ideas prevalent in a given system architecture rather than ways that architecture will be realized.  As such, these kinds of models generally cannot be evaluated for things like portability or performance efficiency, as these qualities usually manifest based on specific standard and technology selections, respectively.  In these cases, the evaluation functions representing those attributes will be weighted at zero.
+
+\subsubsection*{Functional Suitability}
+Functional suitability in this context is reflects the ability of the system to accurately manage artifacts based on policy and context.  As the functional domain is the same for all examined systems, we will neglect this and set $ w_{e} = 0 $.
+
+\subsubsection*{Reliability}
+Here, we will evaluate reliability via a simple Bayesean Networks and Reliability Theory.  The function $ f_{r} $ for a given architecture will be a functional representation of the independent variables required to evaluate the network.
+
+\subsubsection*{Usability}
+These are purely notional models, and as a result cannot be evaluated using generally accepted usability metrics like the Systems Usability Scale (SUS) \cite{SYSTEM_USABILITY_SCALE}.  Ergo, for this analysis we will set the wieght $w_{u} = 0$.
+
+\subsubsection*{Performance Efficiency}
+Performance efficiency is generally a characteristic of logical and physical system architectures.  Specific logical architectures can certainly decrease the performance of a given system through poor design, insufficient caching, badly considered state management, or inferior scalability.  Physical architectures clearly impact performance if processing power, storage, communication bandwidth, or other attributes are insufficient to process apparent loads.  We will therefore set $w_{p} = 0$ in this analysis.
+
+\subsubsection*{Maintainability}
+Maintainability can be measured via examination of a given system with an eye toward areas prone to change.  Loosely coupled components directly contribute to the ability to change a specific system component.  With this in mind, we can measure develop a simple ratio to indicate the maintainability of a given system --- the total number of components with high change impact to the number of components with high change impact that have been decoupled from the system via an interface 
+
+\begin{equation}
+f_{m} = c_{i} / c_{\delta}
+\end{equation}
+
+\subsubsection*{Portability}
+One way to evaluate system portability is via standard compliance \cite{IT QUALITY PAPER}.  Proposed architectures herein will not be evaluated to the level at which proposed standards have an impact.  Therefore, in this analysis, $ w_{f} =0 $.
+
+\subsubsection*{Security}
+We will evaluate security using Reliability Theory and Bayesean Networks as well.  In that network we will evaluate confidentiality, integrity, and availability failure modes.  We will define $ f_{s} $ as we did $ f_{r} $ previously.
+
+\subsubsection*{Compatibility}
+Compatibility with existing systems requires either accepted system standards or other systems with which to be compatible.  In this analysis, we have neither accepted standards or other systems, so we will set $ w_{c} = 0 $.
+
+Any weights not explicity set to zero previously will be set to one, giving us:
+
+\begin{equation}
+W = \lbrace 0, 1, 0, 0, 1, 0, 1, 0 \rbrace
+\end{equation}
+
+or, in essence:
+
+\begin{equation}
+s = f_{r} + f_{m} + f_{s}
+\end{equation}
+
 \subsection{$\phi$-level Overlay Systems}
 The $\phi$ classification consists of systems like the initial NSA and BAH notional models.  These systems consist of two distinct domains, separated by a filter-centric single guard.  The initial NSA system model is clearly of this type, separating two domains with a guard using filter chains.  The BAH model is also of this type, using a Filter Segment to evaluate data packages transmitted between interface segments attached to specific domains.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{model-phi}
+\caption{Taxonomy ($\phi$)}
+\label{fig:model:taxonomy-phi}
+\end{figure}
 
 Generally one of the domains supports more sensitive information than the other, but that is not always the case.  In the models we have examined this has certainly been true, but classified information for example  is commonly stored in \textit{compartments} which are separated by clear \textit{need-to-know} policies enforced by access lists and classification guides.  These kinds of compartments contain information at similar levels of classification, but contain distinct informational elements that should not be combined.
 
 In these kinds of systems, specific rules regarding information transfer and domain characterization are tightly bound to individual filter implementations.  They are based on \textit{a priori} knowledge of the domains the guard connects, and therefore are tightly coupled to the domains they connect.  Furthermore, the filter elements are standalone within the system, in this classification, not availing themselves of external resources.  Rather, they examining information transiting through the filter based purely on the content of that information.
 
 \subsection{$\alpha$-level Overlay Systems}
+The $\alpha$ overlay classification contains systems that have begun to integrate policy-centric usage management.
+
+Both policies and contexts are dynamically delivered to the system.
+
+The dynamic delivery of context and policies allows these kinds of systems more flexibility with policy evaluation.
+
+The $\alpha$ category begins to integrate policy-centric management rather than using strict content filtering.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{model-alpha}
+\caption{Taxonomy ($\alpha$)}
+\label{fig:model:taxonomy-alpha}
+\end{figure}
+
+Here, we again have at least two domains, Domain A and Domain B, though we could potentially have more.  $\phi$ type systems require domain specific information to be tightly coupled to the filter implementations.  Separating the permissions, obligations, and other constraints from the filters and incorporating them into a specific separate policy entity frees the Guard from this coupling and provides additional flexibility to the system.
+
+The guard can continue to use filters to process data.  These filters however are now more generic and decoupled from the specific domains it manages.  The choice of using a specific filtering model rather than some other kind of construct is a design detail level to implementers.  That said however, individual filters will be remarkably different and still need to understand the ontologies over which specific licenses are defined.
+
+The policy repository is key to the implementation and differentiation of this taxonomy category.  This repository can be implemented as a separate repository keyed into via a data artifact's unique URI, for example.  It could also represent a policy sent in tandem with a data artifact in a data package.
+
+The policy repository may be implemented as some kind of external service, and as such, represents the first such external service explicitly used in this taxonomy.  Other external services may well exist and be used to adjudicate information transfer decisions as well.
 
 \subsection{$\beta$-level Overlay Systems}
+The $\beta$ taxonomic category begins to integrate policy-centric processing with router elements in a given network.  While this work is centered on using overlay technology to illustrate and implement these concepts, it is important to note that this kind of distributed policy-centric processing could very well be distributed into the physical routing fabric of a given network as well by extending Software Defined Networking systems like OpenFlow \cite{proposal:openflow}.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{model-beta}
+\caption{Taxonomy ($\beta$)}
+\label{fig:model:taxonomy-beta}
+\end{figure}
+
+In this model we can also host multiple domains as a result of flexible policy-based content examination.  Each domain hosts a network of some kind, though that hosted network could very well be a degenerate network of a single system.  Each network hosted in a domain is hierarchical, with specific computational nodes embodied by workstations, tablet computers or mobile devices, and routing points embodied by routers or switches of some kind.
+
+Policy evaluation in this model has begun to penetrate into the routing elements of the specific domain networks.  Here, note that we have started to penetrate into the routing fabric of the network by doing content evaluation at router points.  Content-based switching networks have been successful in other domains, and such techniques can be used here to provide policy evaluation capabilities.  
+
+Certain types of traffic are easier to evaluate than others however.  For example, HTTP requests and responses are easier to examine that TCP packets.  When examining TCP packets, systems generally require additional context to select an appropriate packet window (e.g. the number of packets cached for examination).  HTTP traffic does not usually require this kind of flexibility.
+
+This migration of policy evaluation into the routing fabric provides for enhanced data security and better network management, especially if part of a network is compromised.  Now that policy decisions can be made at the router level in a given network, we are starting to have network security in depth rather than simple perimeter protection.  This not only provides the ability for additional information protection, but also allows for different compartments holding information at different need-to-know levels to be created ad-hoc under different routing segments.  In cases of network compromise, this kind of dynamic policy enforcement can also allow for quick node excision as well.
 
 \subsection{$\gamma$-level Overlay Systems}
+The $\gamma$ compartment has integrated policy evaluation with compute and routing nodes.  Here, policies can be evaluated against content at all network levels --- nodes emitting requests, nodes fielding requests, and all routing elements in between.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{model-gamma}
+\caption{Taxonomy ($\gamma$)}
+\label{fig:model:taxonomy-gamma}
+\end{figure}
+
+We see that the policy repository is supplying services to all computational elements in both domains.  This gives us increased granularity with respect to data compartmentalization by integrating information security into each network element.  At this point, the network can create compartments of single nodes, while previously in $\beta$ level systems compartments could only be created under specific routing elements.  At this level, we can also provide services revoking data access based on policy evaluation decisions when needed.
+
+Furthermore, individual node exclusion is possible as well. $\beta$ classified systems could excise network elements under specific routers by dynamic policy application.  Now, we can apply the same functionality to individual compute nodes.  For example, if a networked device like a smart phone is compromised, that device can be removed from access quickly or used to feed mis-information to adversaries.
