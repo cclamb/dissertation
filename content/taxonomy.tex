@@ -25,7 +25,7 @@ In this taxonomy, it is not required that systems pass through lower levels to r
 The taxonomy itself starts with the current state, integrating policy evaluation systems into the network fabric gradually, moving away from filters, then by adding policy evaluation into the routing fabric, then the computational nodes, and finally by incorporating evaluation directly into content.
 
 \subsection{Evaluation Methodology and Model}
-In order to successfully evaluate the elements of our overlay taxonomy, we must first establish a model against which to measure the presented architectures.  The current standard for evaluating software quality is ISO/IEC 25020 and this, along with other related standards from other service delivery organizations has begun to be integrated into both academia and industry as a tractable way to measure system quality \cite{IT QUALITY PAPER, ISO STANDARD}.
+In order to successfully evaluate the elements of our overlay taxonomy, we must first establish a model against which to measure the presented architectures.  The current standard for evaluating software quality is ISO/IEC 25020 and this, along with other related standards from other service delivery organizations has begun to be integrated into both academia and industry as a tractable way to measure system quality \cite{5958158, proposal:iso-25020}.
 
 This particular model must address quality attributes specific to the presented architectures rather than the functional domain.  The goal of this model is to allow for architectural evaluation of policy evaluating architectures regardless of the specific functional domain.  Ergo, injecting a specific functional domain into the evaluation or the evaluating model is unacceptable.  Acceptable attributes are those which directly target quality attributes of the architectures in question.
 
@@ -43,10 +43,10 @@ Also important to note, certain attributes may not be able to be evaluated using
 Functional suitability in this context is reflects the ability of the system to accurately manage artifacts based on policy and context.  As the functional domain is the same for all examined systems, we will neglect this and set $ w_{e} = 0 $.
 
 \subsubsection*{Reliability}
-Here, we will evaluate reliability via a simple Bayesean Networks and Reliability Theory.  The function $ f_{r} $ for a given architecture will be a functional representation of the independent variables required to evaluate the network.
+Here, we will evaluate reliability via a simple Bayesian Belief Networks and Reliability Theory.  The function $ f_{r} $ for a given architecture will be a functional representation of the independent variables required to evaluate the network.
 
 \subsubsection*{Usability}
-These are purely notional models, and as a result cannot be evaluated using generally accepted usability metrics like the Systems Usability Scale (SUS) \cite{SYSTEM_USABILITY_SCALE}.  Ergo, for this analysis we will set the wieght $w_{u} = 0$.
+These are purely notional models, and as a result cannot be evaluated using generally accepted usability metrics like the Systems Usability Scale (SUS) \cite{proposal:sus}.  Ergo, for this analysis we will set the weight $w_{u} = 0$.
 
 \subsubsection*{Performance Efficiency}
 Performance efficiency is generally a characteristic of logical and physical system architectures.  Specific logical architectures can certainly decrease the performance of a given system through poor design, insufficient caching, badly considered state management, or inferior scalability.  Physical architectures clearly impact performance if processing power, storage, communication bandwidth, or other attributes are insufficient to process apparent loads.  We will therefore set $w_{p} = 0$ in this analysis.
@@ -59,15 +59,15 @@ f_{m} = c_{i} / c_{\delta}
 \end{equation}
 
 \subsubsection*{Portability}
-One way to evaluate system portability is via standard compliance \cite{IT QUALITY PAPER}.  Proposed architectures herein will not be evaluated to the level at which proposed standards have an impact.  Therefore, in this analysis, $ w_{f} =0 $.
+One way to evaluate system portability is via standard compliance \cite{5958158}.  Proposed architectures herein will not be evaluated to the level at which proposed standards have an impact.  Therefore, in this analysis, $ w_{f} =0 $.
 
 \subsubsection*{Security}
-We will evaluate security using Reliability Theory and Bayesean Networks as well.  In that network we will evaluate confidentiality, integrity, and availability failure modes.  We will define $ f_{s} $ as we did $ f_{r} $ previously.
+We will evaluate security using Reliability Theory and Bayesian Belief Networks as well.  In that network we will evaluate confidentiality, integrity, and availability failure modes.  We will define $ f_{s} $ as we did $ f_{r} $ previously.
 
 \subsubsection*{Compatibility}
 Compatibility with existing systems requires either accepted system standards or other systems with which to be compatible.  In this analysis, we have neither accepted standards or other systems, so we will set $ w_{c} = 0 $.
 
-Any weights not explicity set to zero previously will be set to one, giving us:
+Any weights not explicitly set to zero previously will be set to one, giving us:
 
 \begin{equation}
 W = \lbrace 0, 1, 0, 0, 1, 0, 1, 0 \rbrace
@@ -75,6 +75,7 @@ W = \lbrace 0, 1, 0, 0, 1, 0, 1, 0 \rbrace
 
 or, in essence:
 
+\label{equation:final}
 \begin{equation}
 s = f_{r} + f_{m} + f_{s}
 \end{equation}
@@ -84,7 +85,7 @@ The $\phi$ classification consists of systems like the initial NSA and BAH notio
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3in]{model-phi}
+\includegraphics[width=3in]{model-phi-crop}
 \caption{Taxonomy ($\phi$)}
 \label{fig:model:taxonomy-phi}
 \end{figure}
@@ -104,7 +105,7 @@ The $\alpha$ category begins to integrate policy-centric management rather than 
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3in]{model-alpha}
+\includegraphics[width=3in]{model-alpha-crop}
 \caption{Taxonomy ($\alpha$)}
 \label{fig:model:taxonomy-alpha}
 \end{figure}
@@ -122,7 +123,7 @@ The $\beta$ taxonomic category begins to integrate policy-centric processing wit
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3in]{model-beta}
+\includegraphics[width=3in]{model-beta-crop}
 \caption{Taxonomy ($\beta$)}
 \label{fig:model:taxonomy-beta}
 \end{figure}
@@ -140,7 +141,7 @@ The $\gamma$ compartment has integrated policy evaluation with compute and routi
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3in]{model-gamma}
+\includegraphics[width=3in]{model-gamma-crop}
 \caption{Taxonomy ($\gamma$)}
 \label{fig:model:taxonomy-gamma}
 \end{figure}
@@ -148,3 +149,15 @@ The $\gamma$ compartment has integrated policy evaluation with compute and routi
 We see that the policy repository is supplying services to all computational elements in both domains.  This gives us increased granularity with respect to data compartmentalization by integrating information security into each network element.  At this point, the network can create compartments of single nodes, while previously in $\beta$ level systems compartments could only be created under specific routing elements.  At this level, we can also provide services revoking data access based on policy evaluation decisions when needed.
 
 Furthermore, individual node exclusion is possible as well. $\beta$ classified systems could excise network elements under specific routers by dynamic policy application.  Now, we can apply the same functionality to individual compute nodes.  For example, if a networked device like a smart phone is compromised, that device can be removed from access quickly or used to feed mis-information to adversaries.
+
+\section{Taxonomic Analysis}
+Now that we have developed a quality model and defined the taxonomic elements describing a migration from essentially no usage management to pervasive usage management, we can begin to apply that model to the elements themselves.  We will begin by applying the model to $\phi$ elements, proceeding through the taxonomy to $\gamma$ elements.  In each case, we will describe the notional architecture including any inferred services required for application of our usage management model.  Then we will apply the quality model from \ref{equation:final}.  Finally, we will compare results of the analysis and extract implications with respect to appropriate conditions for specific architecture application.
+
+\subsection{$\phi$}
+$\phi$ classified systems are remarkably simple and self-contained, but not invulnerable to failure, and can be very difficult to maintain.
+
+\subsection{$\alpha$}
+
+\subsection{$\beta$}
+
+\subsection{$\gamma$}
