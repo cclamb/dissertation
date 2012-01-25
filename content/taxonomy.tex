@@ -153,11 +153,25 @@ Furthermore, individual node exclusion is possible as well. $\beta$ classified s
 \section{Taxonomic Analysis}
 Now that we have developed a quality model and defined the taxonomic elements describing a migration from essentially no usage management to pervasive usage management, we can begin to apply that model to the elements themselves.  We will begin by applying the model to $\phi$ elements, proceeding through the taxonomy to $\gamma$ elements.  In each case, we will describe the notional architecture including any inferred services required for application of our usage management model.  Then we will apply the quality model from \ref{equation:final}.  Finally, we will compare results of the analysis and extract implications with respect to appropriate conditions for specific architecture application.
 
-\subsection{$\phi$}
+In each analysis, a failure is either not passing through acceptable content, or passing through unacceptable content. Furthermore, handing content to review of any kind is considered a failure if that content is acceptable for transmittal, and a success otherwise.
+
+\subsection{$\phi$ Classification Analysis}
 $\phi$ classified systems are remarkably simple and self-contained, but not invulnerable to failure, and can be very difficult to maintain.
 
-\subsection{$\alpha$}
+A typical system in this classification receives content, with associated meta-data, passes that content to a chained group of filters, which then pass the content onto a dispatcher if it passes filter evaluation.  If it does not pass filter evaluation, it is then held for future review.
 
-\subsection{$\beta$}
+% Reliability
 
-\subsection{$\gamma$}
+% Maintainability
+From a maintainability perspective, immediate points of possible volatility include filter components, receptor components, and dispatcher components.  Filters are generally expected to be the most vulnerable to required change as stakeholders create additional filter rules that must be deployed.  Filters also require replacement as meta-data formats change.  Content receivers and dispatchers may need to change as well based on content format changes or content dispatch rules.
+
+In these kinds of systems, none of these components are designed with appropriate interfaces supporting easy upgrade at this level of evaluation.  Ergo, in this case, $ f_{m} = 0 $.
+
+% Security
+
+
+\subsection{$\alpha$ Classification Analysis}
+
+\subsection{$\beta$ Classification Analysis}
+
+\subsection{$\gamma$ Classification Analysis}
