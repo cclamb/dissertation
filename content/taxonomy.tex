@@ -39,33 +39,29 @@ We are specifically interested in evaluating architectures for policy evaluation
 
 Also important to note, certain attributes may not be able to be evaluated using specific architectural models.  For example, conceptual or notional architecture models are intended to convey specific ideas prevalent in a given system architecture rather than ways that architecture will be realized.  As such, these kinds of models generally cannot be evaluated for things like portability or performance efficiency, as these qualities usually manifest based on specific standard and technology selections, respectively.  In these cases, the evaluation functions representing those attributes will be weighted at zero.
 
-\subsubsection*{Functional Suitability}
+\subsubsection*{Unevaluated Attributes}
 Functional suitability in this context is reflects the ability of the system to accurately manage artifacts based on policy and context.  As the functional domain is the same for all examined systems, we will neglect this and set $ w_{e} = 0 $.
 
-\subsubsection*{Reliability}
-Here, we will evaluate reliability via a simple Bayesian Belief Networks and Reliability Theory.  The function $ f_{r} $ for a given architecture will be a functional representation of the independent variables required to evaluate the network.
-
-\subsubsection*{Usability}
 These are purely notional models, and as a result cannot be evaluated using generally accepted usability metrics like the Systems Usability Scale (SUS) \cite{proposal:sus}.  Ergo, for this analysis we will set the weight $w_{u} = 0$.
 
-\subsubsection*{Performance Efficiency}
 Performance efficiency is generally a characteristic of logical and physical system architectures.  Specific logical architectures can certainly decrease the performance of a given system through poor design, insufficient caching, badly considered state management, or inferior scalability.  Physical architectures clearly impact performance if processing power, storage, communication bandwidth, or other attributes are insufficient to process apparent loads.  We will therefore set $w_{p} = 0$ in this analysis.
 
-\subsubsection*{Maintainability}
+One way to evaluate system portability is via standard compliance \cite{5958158}.  Proposed architectures herein will not be evaluated to the level at which proposed standards have an impact.  Therefore, in this analysis, $ w_{f} =0 $.
+
+Compatibility with existing systems requires either accepted system standards or other systems with which to be compatible.  In this analysis, we have neither accepted standards or other systems, so we will set $ w_{c} = 0 $.
+
+\subsubsection*{Evaluated Attributes}
+In the scope of this paper, we will evaluate system reliability by evaluating the information entropy of a given system in which failure is modeled using a Weibull distribution over selected systems elements emulating a burn-in model with faults decreasing over time\cite{5754490}.  The function $ f_{r} $ for a given architecture will be a functional representation of the entropy of the component distributions.
+
+Information entropy here is used to succinctly evaluate the stability of a given system component.  In this context, the higher the entropy, the more unstable a given system is as the randomness inherent in that system leads to a higher required communication bandwidth to enumerate a given possible state \cite{cover:book91}.  This approach is also more succinct for this context as it requires less specific knowledge with respect to precise component behavior under load when compared to other approaches like Bayesian Networks and is more quantitative than fault tree analysis \cite{Rausand-Hoyland-2003}.  Other software specific models require either \textit{a priori} knowledge of components or neglect the risk associated with higher complexity imparted by additional system componentry \cite{5305674,5368230}.  
+
 Maintainability can be measured via examination of a given system with an eye toward areas prone to change.  Loosely coupled components directly contribute to the ability to change a specific system component.  With this in mind, we can measure develop a simple ratio to indicate the maintainability of a given system --- the total number of components with high change impact to the number of components with high change impact that have been decoupled from the system via an interface 
 
 \begin{equation}
 f_{m} = c_{i} / c_{\delta}
 \end{equation}
 
-\subsubsection*{Portability}
-One way to evaluate system portability is via standard compliance \cite{5958158}.  Proposed architectures herein will not be evaluated to the level at which proposed standards have an impact.  Therefore, in this analysis, $ w_{f} =0 $.
-
-\subsubsection*{Security}
-We will evaluate security using Reliability Theory and Bayesian Belief Networks as well.  In that network we will evaluate confidentiality, integrity, and availability failure modes.  We will define $ f_{s} $ as we did $ f_{r} $ previously.
-
-\subsubsection*{Compatibility}
-Compatibility with existing systems requires either accepted system standards or other systems with which to be compatible.  In this analysis, we have neither accepted standards or other systems, so we will set $ w_{c} = 0 $.
+We will evaluate security of a given system via attack surface analysis of the system itself as well as the protected domains.
 
 Any weights not explicitly set to zero previously will be set to one, giving us:
 
