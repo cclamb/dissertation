@@ -24,62 +24,6 @@ In this taxonomy, it is not required that systems pass through lower levels to r
 
 The taxonomy itself starts with the current state, integrating policy evaluation systems into the network fabric gradually, moving away from filters, then by adding policy evaluation into the routing fabric, then the computational nodes, and finally by incorporating evaluation directly into content.
 
-\subsection{Evaluation Methodology and Model}
-In order to successfully evaluate the elements of our overlay taxonomy, we must first establish a model against which to measure the presented architectures.  The current standard for evaluating software quality is ISO/IEC 25020 and this, along with other related standards from other service delivery organizations has begun to be integrated into both academia and industry as a tractable way to measure system quality \cite{5958158, proposal:iso-25020}.
-
-This particular model must address quality attributes specific to the presented architectures rather than the functional domain.  The goal of this model is to allow for architectural evaluation of policy evaluating architectures regardless of the specific functional domain.  Ergo, injecting a specific functional domain into the evaluation or the evaluating model is unacceptable.  Acceptable attributes are those which directly target quality attributes of the architectures in question.
-
-\begin{eqnarray}
-E = \lbrace f_{e}, f_{r}, f_{u}, f_{p}, f_{m}, f_{f}, f_{s}, f_{c} \rbrace \\
-W= \lbrace w_{e}, w_{r}, w_{u}, w_{p}, w_{m}, w_{f}, w_{s}, w_{c} \rbrace \\
-s = \sum_{W, E} w_{i} f_{i}
-\end{eqnarray}
-
-We are specifically interested in evaluating architectures for policy evaluation functional suitability, reliability, usability, possible performance efficiencies, maintainability, portability, security, and compatibility, specifically neglecting any kind of domain functional suitability.  Each area will be associated with an evaluation function.  The suitability of a given architectural option will be evaluated by a tuple of these functions, which can then be converted into a weighted sum leading to a single quantitative metric representing suitability under evaluated conditions.
-
-Also important to note, certain attributes may not be able to be evaluated using specific architectural models.  For example, conceptual or notional architecture models are intended to convey specific ideas prevalent in a given system architecture rather than ways that architecture will be realized.  As such, these kinds of models generally cannot be evaluated for things like portability or performance efficiency, as these qualities usually manifest based on specific standard and technology selections, respectively.  In these cases, the evaluation functions representing those attributes will be weighted at zero.
-
-\subsubsection*{Functional Suitability}
-Functional suitability in this context is reflects the ability of the system to accurately manage artifacts based on policy and context.  As the functional domain is the same for all examined systems, we will neglect this and set $ w_{e} = 0 $.
-
-\subsubsection*{Reliability}
-Here, we will evaluate reliability via a simple Bayesian Belief Networks and Reliability Theory.  The function $ f_{r} $ for a given architecture will be a functional representation of the independent variables required to evaluate the network.
-
-\subsubsection*{Usability}
-These are purely notional models, and as a result cannot be evaluated using generally accepted usability metrics like the Systems Usability Scale (SUS) \cite{proposal:sus}.  Ergo, for this analysis we will set the weight $w_{u} = 0$.
-
-\subsubsection*{Performance Efficiency}
-Performance efficiency is generally a characteristic of logical and physical system architectures.  Specific logical architectures can certainly decrease the performance of a given system through poor design, insufficient caching, badly considered state management, or inferior scalability.  Physical architectures clearly impact performance if processing power, storage, communication bandwidth, or other attributes are insufficient to process apparent loads.  We will therefore set $w_{p} = 0$ in this analysis.
-
-\subsubsection*{Maintainability}
-Maintainability can be measured via examination of a given system with an eye toward areas prone to change.  Loosely coupled components directly contribute to the ability to change a specific system component.  With this in mind, we can measure develop a simple ratio to indicate the maintainability of a given system --- the total number of components with high change impact to the number of components with high change impact that have been decoupled from the system via an interface 
-
-\begin{equation}
-f_{m} = c_{i} / c_{\delta}
-\end{equation}
-
-\subsubsection*{Portability}
-One way to evaluate system portability is via standard compliance \cite{5958158}.  Proposed architectures herein will not be evaluated to the level at which proposed standards have an impact.  Therefore, in this analysis, $ w_{f} =0 $.
-
-\subsubsection*{Security}
-We will evaluate security using Reliability Theory and Bayesian Belief Networks as well.  In that network we will evaluate confidentiality, integrity, and availability failure modes.  We will define $ f_{s} $ as we did $ f_{r} $ previously.
-
-\subsubsection*{Compatibility}
-Compatibility with existing systems requires either accepted system standards or other systems with which to be compatible.  In this analysis, we have neither accepted standards or other systems, so we will set $ w_{c} = 0 $.
-
-Any weights not explicitly set to zero previously will be set to one, giving us:
-
-\begin{equation}
-W = \lbrace 0, 1, 0, 0, 1, 0, 1, 0 \rbrace
-\end{equation}
-
-or, in essence:
-
-\label{equation:final}
-\begin{equation}
-s = f_{r} + f_{m} + f_{s}
-\end{equation}
-
 \subsection{$\phi$-level Overlay Systems}
 The $\phi$ classification consists of systems like the initial NSA and BAH notional models.  These systems consist of two distinct domains, separated by a filter-centric single guard.  The initial NSA system model is clearly of this type, separating two domains with a guard using filter chains.  The BAH model is also of this type, using a Filter Segment to evaluate data packages transmitted between interface segments attached to specific domains.
 
@@ -151,27 +95,12 @@ We see that the policy repository is supplying services to all computational ele
 Furthermore, individual node exclusion is possible as well. $\beta$ classified systems could excise network elements under specific routers by dynamic policy application.  Now, we can apply the same functionality to individual compute nodes.  For example, if a networked device like a smart phone is compromised, that device can be removed from access quickly or used to feed mis-information to adversaries.
 
 \section{Taxonomic Analysis}
-Now that we have developed a quality model and defined the taxonomic elements describing a migration from essentially no usage management to pervasive usage management, we can begin to apply that model to the elements themselves.  We will begin by applying the model to $\phi$ elements, proceeding through the taxonomy to $\gamma$ elements.  In each case, we will describe the notional architecture including any inferred services required for application of our usage management model.  Then we will apply the quality model from \ref{equation:final}.  Finally, we will compare results of the analysis and extract implications with respect to appropriate conditions for specific architecture application.
+The various levels of the taxonomy vary primarily with respect to the inclusion of policy-based usage management and overlay structure.  $\phi$ type systems are not structured with overlay use in mind, nor do they use policy-centric management.  Conversely, $\gamma$ type systems are both purely policy oriented and completely overlay structured.
 
-In each analysis, a failure is either not passing through acceptable content, or passing through unacceptable content. Furthermore, handing content to review of any kind is considered a failure if that content is acceptable for transmittal, and a success otherwise.
+As systems move through the various levels of the taxonomy they gradually move from one side of the spectrum to another.  Overlay structures, hierarchical or otherwise, gradually migrate into the network begining with $\beta$ systems.  Policy orientation is injected into the architectures starting with $\alpha$ systems and moving into the network fabric in parallel with overlay inclusion.
 
-\subsection{$\phi$ Classification Analysis}
-$\phi$ classified systems are remarkably simple and self-contained, but not invulnerable to failure, and can be very difficult to maintain.
+\subsection{Policy-centricity}
+In these systems policy based management supplies distinct advantages over filter-centric information control.  This kind of policy-centric usage management is more content specific than filters, more flexible, presents better composition characteristics, allows for better content traceability, and finally provides a clear separation of concerns not shown by filter systems.
 
-A typical system in this classification receives content, with associated meta-data, passes that content to a chained group of filters, which then pass the content onto a dispatcher if it passes filter evaluation.  If it does not pass filter evaluation, it is then held for future review.
-
-% Reliability
-
-% Maintainability
-From a maintainability perspective, immediate points of possible volatility include filter components, receptor components, and dispatcher components.  Filters are generally expected to be the most vulnerable to required change as stakeholders create additional filter rules that must be deployed.  Filters also require replacement as meta-data formats change.  Content receivers and dispatchers may need to change as well based on content format changes or content dispatch rules.
-
-In these kinds of systems, none of these components are designed with appropriate interfaces supporting easy upgrade at this level of evaluation.  Ergo, in this case, $ f_{m} = 0 $.
-
-% Security
-
-
-\subsection{$\alpha$ Classification Analysis}
-
-\subsection{$\beta$ Classification Analysis}
-
-\subsection{$\gamma$ Classification Analysis}
+\subsection{Overlay Structure}
+Overlay structure integration exhibits clear advantages over single point perimeter systems as well.  Specifically, overlay systems are more partitionable than perimeter solutions, enables content throttling, provides capabilities for dynamic content control, and allows content to be more traceable.
