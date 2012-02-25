@@ -16,6 +16,35 @@ Robust usage management will become an even more important issue in these enviro
 
 Cloud systems certainly exhibit economic incentives for use, providing cost savings and flexibility, but they also have distinct disadvantages as well.  Specifically, the are not intrinsically as private as some current systems, generally can be less secure than department-level solutions, and have the kinds of trust issues that the best of therapists cannot adequately address \cite{proposal:privacy-security-trust-cloud}.
 
+<<<<<<< HEAD
+=======
+%As Pearson and Benameur \cite{proposal:privacy-security-trust-cloud} show, cloud technology is not currently as private as some organizations would like:
+%\begin{itemize}
+%\item \textit{User Data Control} --- In virtually any given Software-as-a-Service (SaaS) scenario, user data controls are sadly lacking.  Once data has been committed to a specific provider, that data is completely out of the original data owners control.  Furthermore, as we will see below, that data my not even be solely owned by the original owner anymore either.
+%\item \textit{Secondary Use} --- Most consumer facing social systems extensively mine user provided data for additional business advantages.  This is a common and well known secondary use for supplied data.  SaaS providers again have strong incentives to examine user provided information.
+%\item \textit{Offshore Development} --- Service users have no real control over who actually develops the systems a given service deploys.  Organizations have attempted to contractually limit development and support functions companies pursue to, say, the continental United States but have had very poor results with these kinds of unsupportable arrangements.
+%\item \textit{Data Routing} --- Both system providers and system users in fact have little control over routing issues.  Prohibiting data routing through sensitive countries is a difficult task for a single organization.
+%\item \textit{Secondary Storage} --- Most large-scale systems expect to use Content Delivery Networks (CDNs) to help manage content, and that expectation is heavily reflected in their physical system architectures. They simply cannot divorce use of CDNs from their systems for a single organization.
+%\item \textit{Bankruptcy and Data Ownership} --- Ownership and obligation to maintain expected data arrangements for a given company is not established under bankruptcy \cite{proposal:borders-info-I,proposal:borders-info-II,proposal:borders-info-III}.
+%\end{itemize}
+%
+%Security issues also emerge from utility computing infrastructures:
+%\begin{itemize}
+%\item \textit{Data Access} --- System users have very little control over who, in the system provider's organization, is able to access their data and systems.
+%\item \textit{Data Deletion} --- Most savvy organizations have procedures in place to sanitize old storage elements like disk drives or backup tapes.  System users have very little control over if and how this is done when computing services are treated as a utility.
+%\item \textit{Backup Data Storage} --- Backup media is very difficult to encrypt, and most system providers still use tape systems as preferred media solutions for backup and storage needs.  These tapes, or copies of them, are generally stored offsite to support disaster recovery scenarios.  Security of these types of systems has been spotty to date \cite{proposal:saic-breach-I,proposal:saic-breach-II,proposal:saic-breach-III}.
+%\item \textit{Intercloud Standardization} --- Cloud computing systems do not have any standardized way to transfer computational units or data between systems.  Any protocols used for this kind of thing must be developed by customers themselves.  Due to the desire of providers to lock-in customers, this will likely not change as any standard development is strongly counter-incentiveized. 
+%\item \textit{Multi-tenancy and Side-Channels} --- Multi-tenant architectures in which multiple customers simultaneously use the same systems open those customers to covert side-channel attacks.
+%\item \textit{Logging and Auditing} --- Logging and auditing structures, especially for inter-cloud systems, are non-existent.
+%\end{itemize}
+%
+%Finally, such systems suffer from internal and external trust issues:
+%\begin{itemize}
+%\item \textit{Trust Relationships} --- Trust is difficult to establish between individual cloud providers long-term.
+%\item \textit{Consumer Trust} --- Service users are still not entirely trusting of cloud system providers.
+%\end{itemize}
+
+>>>>>>> 1fd166e16a4092f96ada50f3af84250d9e99c5a7
 How to address these issues is an open research question.  Organizations ranging from cloud service providers to the military are exploring how to engineer solutions to these problems, and to more clearly understand the trade-offs required between selected system architectures \cite{proposal:assured-info-sharing}.  The problems themselves are wide ranging, appearing in a variety of different systems.  Military and other government systems are clearly impacted by these kinds of trust and security issues, and they also have clear information sensitivity problems.  This, coupled with the fact that these organizations have been dealing with these issues in one form or another for decades make them very well suited for prototypical implementation and study.
 
 Current federal standards in place to deal with these issues in this environment are managed by the Unified Cross Domain Management Office (UCDMO).  UCDMO stakeholders range from the DoD to the NSA.  The current standard architectural model in place and governed by the UCDMO to deal with this kinds of issues are \textit{guard-centric cross domain architectures}.

@@ -17,45 +17,45 @@ Warning--empty booktitle in proposal:bah-arch
 Warning--empty booktitle in proposal:raytheon-arch
 
 Done.
-You've used 33 entries,
+You've used 32 entries,
             4039 wiz_defined-function locations,
-            988 strings with 12716 characters,
-and the built_in function-call counts, 18180 in all, are:
-= -- 1390
-> -- 285
-< -- 114
-+ -- 167
-- -- 41
-* -- 800
-:= -- 2709
-add.period$ -- 70
-call.type$ -- 33
-change.case$ -- 33
-chr.to.int$ -- 276
-cite$ -- 41
-duplicate$ -- 1466
-empty$ -- 1757
-format.name$ -- 55
-if$ -- 4190
+            992 strings with 12301 characters,
+and the built_in function-call counts, 19415 in all, are:
+= -- 1483
+> -- 338
+< -- 131
++ -- 189
+- -- 51
+* -- 875
+:= -- 2865
+add.period$ -- 68
+call.type$ -- 32
+change.case$ -- 30
+chr.to.int$ -- 318
+cite$ -- 40
+duplicate$ -- 1518
+empty$ -- 1858
+format.name$ -- 70
+if$ -- 4511
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 266
-newline$ -- 124
-num.names$ -- 18
-pop$ -- 703
+int.to.str$ -- 32
+missing$ -- 272
+newline$ -- 121
+num.names$ -- 23
+pop$ -- 713
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1420
+skip$ -- 1517
 stack$ -- 0
-substring$ -- 682
-swap$ -- 1044
-text.length$ -- 22
+substring$ -- 780
+swap$ -- 1103
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 33
+type$ -- 32
 warning$ -- 8
-while$ -- 63
-width$ -- 35
-write$ -- 294
+while$ -- 77
+width$ -- 34
+write$ -- 293
 (There were 8 warnings)
