@@ -100,7 +100,7 @@ The various levels of the taxonomy vary primarily with respect to the inclusion 
 As systems move through the various levels of the taxonomy they gradually move from one side of the spectrum to another.  Overlay structures, hierarchical or otherwise, gradually migrate into the network begining with $\beta$ systems.  Policy orientation is injected into the architectures starting with $\alpha$ systems and moving into the network fabric in parallel with overlay inclusion.
 
 \subsection{Policy-centricity}
-In these systems policy based management supplies distinct advantages over filter-centric information control.  This kind of policy-centric usage management is more content specific than filters, more flexible, is more expressive, allows for better content traceability, and finally provides a clear separation of concerns not shown by filter systems.
+In these systems policy based management supplies distinct advantages over filter-centric information control.  This kind of policy-centric usage management is more content specific than filters, more flexible, is more expressive, and finally provides a clear separation of concerns not shown by filter systems.
 
 \subsubsection*{Content Specific}
 Filters, in filter-based systems, are not coupled to the content passing through the system.  Rather, they are usually tied to the characteristics of attached networks.  For some filters, that is not problematic.  Malware filters, for example, are very general and do not need to have an understanding of filtered content and are not sensitive to that content at all, though they can be very sensitive to specific context.  This limitation does however prohibit filters from doing anything content specific.  Due to their deployment limitations, in that they are deployed to such a system via a process distinct from processing content, they are unable to use presented content or current dynamic context to influence information processing decisions.
@@ -123,10 +123,8 @@ Assume a distributed system with multiple filter points.  In this kind of system
 
 Policy enabled systems are not limited in this way.  Policies, when coupled with policy evaluation tools, can exercise control not only over distribution and routing, but also over use of distributed content at endpoints.
 
-\subsubsection*{Content Traceability}
-
 \subsubsection*{Separation of Concerns}
-Section
+Separation of concerns is a well known and accepted design goal evident in modern technology ranging from Cascading Stylesheets/Javascript/HTML (separating style from actions from content) to the OSI seven layer network model (separating media from host content).  Separating policy content into a separate policy rather than including meta-data within content makes management of both policy and content easier.
 
 These advantages accrue in usage management systems as policy capabilities are propagated through the network fabric.
 
