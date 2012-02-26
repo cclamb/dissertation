@@ -114,6 +114,8 @@ Policy-centric systems are more flexible than filter-based counterparts.  In a f
 
 A filter is going to have a specific responsibility, like redacting sensitive words from a document, for instance.  In order for that filter to redact those sensitive words, it must have access to some kind of list of what those sensitive words are.  Remember, $\phi$ level systems use static filters, so that filter can only be updated when the filter itself is updated.  Now a policy-centric system on the other hand can have a policy associating sensitivity with various areas of content in a specific document.  In this case, all the system must do is understand the sensitivity described in the policy associated with the content, and can then redact that content if needed.  The ontology describing the areas of sensitivity will change more slowly that the possible content itself, leading to a more flexible maintainable system.
 
+This is of course a simple example solvable by creating a dynamic list; the key point of the above example is that the specificity of the filters requires additional complexity in the filter system itself.  The generality of the policy-centric system allows the complexity to be more clearly expressed and contained within the policy file.
+
 \subsubsection*{Composition Characteristics}
 
 \subsubsection*{Content Traceability}
