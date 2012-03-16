@@ -1,0 +1,310 @@
+% \documentclass[t, 10pt]{beamer}
+\documentclass[t,handout, 10pt]{beamer}
+
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{psfrag}
+\usepackage[english]{babel}
+\usepackage{color}
+%Mathematics packages
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+
+\usepackage{enumerate}
+
+
+\graphicspath{{./images/}} % Figures path - used in graphicx
+
+\selectcolormodel{cmyk}
+
+\mode<presentation>
+
+%THEMES - Please refer to these chapters in the beamer documentation.
+% Presentation themes : Chapter 15
+% Color themes : Chapter 17
+% Font themes : Chapter 18
+
+\usetheme{Pittsburgh}
+\usecolortheme{orchid}
+\usefonttheme{default}
+
+%---------------------------Title frame definition------------------------------------- 
+
+\title{Policy-based Usage Management Overlay Networks}
+\author [Greg, Chris]{Gregory Heileman and Christopher C. Lamb}
+\institute[University of New Mexico]{
+\inst {}Department of Electrical and Computer Engineering\\
+University of New Mexico}
+\date{}
+\titlegraphic{
+\begin{figure} 
+\includegraphics[width = 7cm]{UNM}
+\end{figure}}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+%\AtBeginSubsection[]
+%{
+%  \begin{frame}<beamer>
+%    \frametitle{Outline}
+%     \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+% This command will make the logo appear on all frames excluding the title frame.
+\logo {\includegraphics[width = 2.5cm]{UNM}}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents 
+\end{frame}
+
+\section{Introduction }
+
+\begin{frame}
+\frametitle{Introduction}
+\end{frame}
+
+\begin{frame}
+\frametitle{Today's Scenarios}
+In order to demonstrate the flexibility of our approach, we will work through a series of possible scenarios with regard to sensitive information dissemination and use.
+\newline
+\pause
+\begin{itemize}
+\item \textbf{Go back to class!}
+\pause
+\item \textbf{Changes roll downhill}
+\pause
+\item \textbf{Operational Chaos}
+\pause
+\item \textbf{Need to know now!}
+\end{itemize}
+\end{frame}
+
+\section{Scenarios}
+
+\begin{frame}
+\frametitle{Scenario 1: Go Back to Class!}
+Imagine a new cabinet secretary is appointed.  Shortly thereafter, the new secretary  unclassifies swathes of information - documents, presentations, data sets, you name it.  Well, no secretary is forever, so eventually that secretary moves on and a new one comes in.  That new secretary is appalled at the open flow of information in his agency and immediately clamps down, reclassifying oceans of documents.
+\newline
+\newline
+Results of this change include:
+\newline
+\pause
+\begin{itemize}
+\item \textbf{Lost Time} --- Agency personnel and contractors spend significant portions of their lives remarking documents...
+\pause
+\item \textbf{Inaccuracy} --- ...and despite their best efforts, humanity rears it's ugly head in the form of reams of mismarked information that takes years to sort out.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Scenario 1: Core Problem}
+So why did so many people need to sacrifice so much time to reclassify previously released information?
+\newline
+\pause
+\begin{center}
+\textbf{Hierarchical Mismatch.}
+\end{center}
+\pause
+Here, we have one one side a clear organizational hierarchy, spanning from the secretaries down to those who actually needed to clean up the messes those hypothetical secretaries made.  On the other, we have a mass of essentially undifferentiated documents with embedded security metadata.
+\end{frame}
+
+\begin{frame}
+\frametitle{Scenario 1: Policy/Content Separation}
+One way to address this problem is by separating the \textbf{content} we're protecting from the \textbf{policies} describing how that content can be used.
+\pause
+\newline
+\newline
+This gives us \textbf{indirection} between policy and content, allowing us to be more flexible with how policies are managed.
+\pause
+\newline
+\newline
+We could organize policies in a clear hierarchy, where content classifications can be defined one once, in policies within that hierarchy, rather than innumerable times within classified documents.
+\end{frame}
+
+\begin{frame}
+\frametitle{Hierarchical Policy Solution}
+\end{frame}
+
+\begin{frame}
+\frametitle{Scenario 2: Changes Roll Downhill}
+Scenario 1 shows the use of top-down control of a given group of policies.  If top-down is effective, can we have similar advantages from a bottom-up use of a policy hierarchy?
+\pause
+\newline
+\newline
+\textbf{Yes, we can.}
+\pause
+\newline
+\newline
+Imagine a case where an organization:
+\begin{itemize}
+\item \textbf{... is working with an untrusted partner} --- Say, for example, some coalition partner that is not entirely trusted with all the intelligence a given organization may have about a situation.
+\item \textbf{...must limit information access} --- Not only by content, but perhaps by other factors like time.
+\item \textbf{...must be able to retract access} --- Access to information needs to be retracted after a given time window.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Scenario 2: Core Problem}
+The problem here is somewhat different from that presented in the first Scenario.
+\newline
+\newline
+\pause
+Here we have:
+\begin{itemize}
+\item \textbf{Unequal information sharing} ---  Partners do not have the same access as organizational members.
+\item \textbf{Decisions made on the basis of content and context} --- Decisions are made based on dynamic conditions, including the current reputation of the partner and the type of information accessed.
+\item \textbf{Decisions made close to the sharing scenario} --- These decisions need to be made frequently by those most familiar with immediate use of the information and the context of use.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Scenario 2: Bottom-up Locality}
+\textbf{This gives us a certain degree of \textit{bottom up locality}.}
+\newline
+\newline
+\pause
+In this case, we have:
+\pause
+\begin{itemize}
+\item \textbf{Decisions made close to operational environment} --- Access decisions must be made frequently with knowledge of local context.
+\pause
+\item \textbf{Locality of leadership vital} --- Frequency of decisions and dynamic nature of context preclude decision-from-a-distance.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Scenario 2: Hierarchical Mirroring}
+Separation of \textbf{policy} from \textbf{content} at this level allows local decisions.
+\newline
+\newline
+Decisions can be made at multiple levels based on local contexts, propagating to vital parties quickly.
+\pause
+\end{frame}
+
+\begin{frame}
+\frametitle{Scenario 3: Operational Chaos}
+Under common conditions, technology and communications equipment is not very effective.  These kinds of situations occur regularly under the stress of catastrophic conditions, for example.
+\newline
+\newline
+\pause
+These conditions generally share certain characteristics:
+\begin{itemize}
+\item \textbf{Dynamic operations} --- The communication and computer operational networks have very dynamic topologies where groups are unexpectedly isolated and then reconnected.
+\pause
+\item \textbf{System breakdown} --- Systems tend to breakdown unexpectedly and catastrophically.
+\pause
+\item \textbf{Centralized systems unavailable} -- As a result of communication breakdowns, centralized systems become unavailable or unreliable.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Scenario 3: Core Problem}
+As communications becomes less reliable, information becomes more valuable and highly demended.
+\newline
+\newline
+\pause
+\begin{itemize}
+\item \textbf{Need information in high stress environments} --- Information demand increases under stress as those involved demand more situational awareness.
+\pause
+\item \textbf{Communication capabilities highly variable} --- Communications capabilities decrease as systems are destroyed or otherwise go offline leading to unreliable infrastructure.
+\pause
+\item \textbf{Must operate under attack} --- Even though the conditions are hostile, systems \textbf{must} provide some level of service and degrade gradually if at all in extreme environments.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Scenario 3: Information Management Cells}
+Under these conditions, end-to-end principles in system design can provide the appropriate scalability and reliability to support continued operations under stress.  
+\newline
+\newline
+\pause
+These principles establish functionality in the nodes of a system rather than in the core, leading to higher system reliability and performance.  
+\newline
+\newline
+\pause
+Here, centralized queries inconsistent to impossible, but \textbf{local} queries can still be successful.
+\end{frame}
+
+\section{Analysis}
+
+\begin{frame}
+\frametitle{Underlying Characteristics}
+What are the underlying principles that enable this flexibility?
+\pause
+\begin{itemize}
+\item \textbf{Separation of Concerns} --- Specifically, we separate \textbf{policy} from \textbf{content}.
+\pause
+\item \textbf{End-to-End principle application} --- As we move away from centralized cross-domain guards we push functionality closer and closer to content.  We also begin to create distinct usage management cells, enabling \textit{collaboration over centralization}.
+\pause
+\item \textbf{Dynamic Context} --- Context change radically in the context of artifact use.  Environmental conditions that forbid access to information content can change gradually or quickly, leading to conditions under which that content must be widely accessed.
+\pause
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Separation of Concerns}
+How does separation of concerns help us?
+\newline
+\newline
+\pause
+Why does it help in other domains? Say Javascript/CSS/HTML?
+\begin{itemize}
+\item \textbf{Rates of change} --- Some things change at different rates.  In web development, content (HTML) may stay the same, but the presentation (CSS) of the content will change.  Likewise, the presentation may be static, but the behavior (Javascript)  may need to evolve.
+\item \textbf{Roles} --- Different roles may be suitable for different types of work.  Here, content may be edited near constantly, while the presentation of that content may be static.
+\end{itemize}
+\pause
+In usage management scenarios, we have similar issues.
+\end{frame}
+
+\begin{frame}
+\frametitle{End-to-End Principles}
+How do end-to-end principles help us?
+\newline
+\newline
+\pause
+End-to-End principles were originally outlined to help design forerunner networks to what we now know as the internet.
+\newline
+\newline
+\pause
+Essentially, they encourage simplicity in the core switching fabric of a network with application complexity pushed out to nodes in a network graph.
+\newline
+\newline
+\pause
+Although recent approaches have abandoned these ideas, they have done so at the price of loss of scalability, reliability, and performance.
+\end{frame}
+
+\begin{frame}
+\frametitle{Dynamic Context}
+How does recognition of dynamic contexts help us?
+\newline
+\newline
+\pause
+We know that environments and situations change, and change rapidly.  Not recognizing this leads to brittle systems that are prohibitively expensive to maintain, if they work at all.
+\newline
+\newline
+\pause
+With dynamic context support we can:
+\begin{itemize}
+\item \textbf{Retract access based on conditions} --- Simply recognizing a larger context enables the system to automatically restrict access to sensitive material based on changing conditions.
+\pause
+\item\textbf{Map \textit{activities} to \textit{actions}} --- Reading a document may in fact not be a single activity, but rather a sequence of actions (lookup, retrieve, save, open, display) that are managed separately in certain situations.
+\end{itemize}
+\end{frame}
+
+\section{Conclusions}
+
+\begin{frame}
+\frametitle{Conclusions and Future Work}
+\end{frame}
+
+\end{document}
+
