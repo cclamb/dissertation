@@ -7,55 +7,56 @@ Database file #2: bib/drm.bib
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty booktitle in proposal:nsa-arch
+Warning--empty booktitle in proposal:bah-arch
+Warning--empty booktitle in proposal:raytheon-arch
 Warning--empty booktitle in proposal:ron-ross
 Warning--empty author in coral
 Warning--missing institution in coral
 Warning--empty author in marlin
 Warning--missing institution in marlin
-Warning--empty booktitle in proposal:nsa-arch
-Warning--empty booktitle in proposal:bah-arch
-Warning--empty booktitle in proposal:raytheon-arch
+Warning--empty booktitle in proposal:cd101
 
 Done.
-You've used 32 entries,
+You've used 27 entries,
             4039 wiz_defined-function locations,
-            992 strings with 12301 characters,
-and the built_in function-call counts, 19415 in all, are:
-= -- 1483
-> -- 338
-< -- 131
-+ -- 189
-- -- 51
-* -- 875
-:= -- 2865
-add.period$ -- 68
-call.type$ -- 32
-change.case$ -- 30
-chr.to.int$ -- 318
-cite$ -- 40
-duplicate$ -- 1518
-empty$ -- 1858
-format.name$ -- 70
-if$ -- 4511
+            960 strings with 11277 characters,
+and the built_in function-call counts, 15836 in all, are:
+= -- 1210
+> -- 262
+< -- 105
++ -- 151
+- -- 39
+* -- 715
+:= -- 2362
+add.period$ -- 59
+call.type$ -- 27
+change.case$ -- 27
+chr.to.int$ -- 252
+cite$ -- 36
+duplicate$ -- 1258
+empty$ -- 1511
+format.name$ -- 52
+if$ -- 3650
 int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 272
-newline$ -- 121
-num.names$ -- 23
-pop$ -- 713
+int.to.str$ -- 27
+missing$ -- 226
+newline$ -- 106
+num.names$ -- 18
+pop$ -- 590
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1517
+skip$ -- 1228
 stack$ -- 0
-substring$ -- 780
-swap$ -- 1103
-text.length$ -- 25
+substring$ -- 619
+swap$ -- 902
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 32
-warning$ -- 8
-while$ -- 77
-width$ -- 34
-write$ -- 293
-(There were 8 warnings)
+type$ -- 27
+warning$ -- 9
+while$ -- 60
+width$ -- 29
+write$ -- 250
+(There were 9 warnings)
