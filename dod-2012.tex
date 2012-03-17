@@ -62,14 +62,13 @@ University of New Mexico}
 \logo {\includegraphics[width = 2.5cm]{UNM}}
 
 \begin{frame}
-\frametitle{Outline}
-\tableofcontents 
-\end{frame}
-
-\section{Introduction }
-
-\begin{frame}
 \frametitle{Introduction}
+\textbf{Usage Management}: The continuous control of access and action over protected artifacts.
+\newline
+\newline
+\pause
+Today we will cover our work in usage management, new architectures we are developing to enable usage management, and how they apply to the cross domain information management problem.
+\tableofcontents 
 \end{frame}
 
 \begin{frame}
@@ -83,8 +82,6 @@ In order to demonstrate the flexibility of our approach, we will work through a 
 \item \textbf{Changes roll downhill}
 \pause
 \item \textbf{Operational Chaos}
-\pause
-\item \textbf{Need to know now!}
 \end{itemize}
 \end{frame}
 
@@ -226,7 +223,7 @@ Decisions can be made at multiple levels based on local contexts, propagating to
 %\begin{frame}
 %\frametitle{Test}
 %
-%\begin{columns}[t]
+%\begin{columns}[t] 
 %\begin{column}{5cm}
 %Two\\lines.
 %\end{column}
@@ -255,8 +252,7 @@ These conditions generally share certain characteristics:
 
 \begin{frame}
 \frametitle{Scenario 3: Core Problem}
-As communications becomes less reliable, information becomes more valuable and highly demended.
-\newline
+As communications becomes less reliable, information becomes more valuable and highly demanded.
 \newline
 \pause
 \begin{itemize}
@@ -271,14 +267,14 @@ As communications becomes less reliable, information becomes more valuable and h
 \begin{frame}
 \frametitle{Scenario 3: Information Management Cells}
 Under these conditions, end-to-end principles in system design can provide the appropriate scalability and reliability to support continued operations under stress.  
-\newline
-\newline
-\pause
-These principles establish functionality in the nodes of a system rather than in the core, leading to higher system reliability and performance.  
-\newline
-\newline
-\pause
-Here, centralized queries inconsistent to impossible, but \textbf{local} queries can still be successful.
+\begin{center}
+\includegraphics[width=7cm]{info-cells}
+\end{center}
+End-to-end design provides:
+\begin{itemize}
+\item \textbf{Stalability, Reliability, Perfomance} --- Complex nodes, simple core
+\item \textbf{Exploits Locality} --- Centralized queries offline, local still available
+\end{itemize}
 \end{frame}
 
 \section{Analysis}
@@ -351,6 +347,15 @@ With dynamic context support we can:
 
 \begin{frame}
 \frametitle{Conclusions and Future Work}
+We have developed initial systems embodying these concepts.
+\newline
+\newline
+\pause
+Currently, additional distributed systems are in development that will apply these ideas to XML and HTML/RDFa content using HTTP-centric protocols.
+\newline
+\newline
+\pause
+Additional future areas of study include migration of these ideas into the core of cloud systems (e.g. Eucalyptus), application to addtional domains (e.g. medicine)
 \end{frame}
 
 \end{document}
