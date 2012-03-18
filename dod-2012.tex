@@ -63,16 +63,107 @@ University of New Mexico}
 
 \begin{frame}
 \frametitle{Introduction}
-\textbf{Usage Management}: The continuous control of access and action over protected artifacts.
-\newline
-\newline
-\pause
 Today we will cover our work in usage management, new architectures we are developing to enable usage management, and how they apply to the cross domain information management problem.
 \tableofcontents 
 \end{frame}
 
+\section{Usage Management}
+
+\begin{frame}\frametitle{Usage Management}
+\begin{itemize}
+ \item \textbf{Usage management} refers to the ability to control how resources~(data and services) are used across and within computing domains.
+ \pause
+ \item Controlling how information is used becomes increasingly difficult as computing infrastructure becomes more distributed.  \pause However, the ability to share information between domains provides for powerful capabilities, as well as increased security risks.
+ \pause
+ \item Usage management incorporates aspects of access control and digital rights management (DRM):
+ \pause
+  \begin{itemize}
+   \item Access control -- access rules are defined in terms of relationships between a set of resources and a set of users.
+  \pause
+  \item DRM -- access is implicit, the focus is on specifying and enforcing rules related to how the resource can be used.
+  \end{itemize}
+  \item We seek the development of open frameworks for usage management, based upon fundamental system design principles, that support interoperability within distributed computing environments. 
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}
-\frametitle{Today's Scenarios}
+\frametitle{Usage Management Meta-Model}
+{\small
+Fundamental design principle: \textbf{Policy and computing domain separation} --
+ \centerline{\includegraphics[width=3.5in]{meta-model.png}}
+ \begin{itemize}
+ \item A policy describes usage rules that govern how content may be used within computing domains.
+ \pause
+ \item The primary application of a policy is for reasoning whether or not a given action may be carried out within a given computing domain.
+ \pause
+ \item The current state of the policy (previous actions can affect this state), as well as the current conditions of the computing domain may be used in specifying usage rules.
+ \end{itemize}}
+\end{frame}
+
+\begin{frame}\frametitle{Usage Management Meta-Model}
+ \begin{itemize}
+ \item Adherence to this design principle directly supports interoperability, and more specifically, the ability to operate across multiple computing domains.
+ \pause
+ \item Most of the ``policy" languages that have been proposed in the areas of access control and DRM can be mapped to this meta-model.
+  \pause
+ \item Based upon this meta-model we can identify the three major functionalities that a usage management framework must support: 
+ \begin{enumerate}
+  \item Policy Expression -- the usage rules.
+  \item Policy Interpretation -- can an action be performed in a given domain?
+  \item Policy Enforcement -- mechanisms for enforcing the allowed actions.
+  \end{enumerate}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{A High-level UM Framework}
+\begin{itemize}
+\item We have created a usage management model based upon the meta-model that satisfies the previous separation principle through the interaction of two objects:
+ \begin{itemize}
+  \item[--] \textbf{Context Object} -- An instantiation of the ``context", i.e., the entities that exist within the computing domain, along with their relationships, and current state. 
+  \pause
+  \item[--] \textbf{License Object} -- Usage policies expressed in some program logic, along with the current policy state.
+ \end{itemize}~\\
+ \centerline{\includegraphics[width=3.5in]{model_overview.pdf}} 
+ \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{UM Framework -- Context Object}
+  \centerline{\includegraphics[width=2.5in]{context-obj.png}}
+  \begin{itemize}
+   \item Primary purpose: to capture the current conditions in the computation environment, and to provide them to the policy interpretation mechanism.
+   \pause
+   \item An update interface allows updating, retrieving and querying of the attribute values associated with the entities in the context.
+   \pause
+   \item A context object is updated by the system with appropriate values using the context interface.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{UM Framework -- Setup}
+  \centerline{\includegraphics[width=3.5in]{UM-setup.png}}
+    {\small Note: the policy interpretation and enforcement mechanisms have been rolled up into the usage management mechanism.}
+\end{frame}  
+
+  
+\begin{frame}\frametitle{UM Framework -- Operation}
+  \centerline{\includegraphics[width=3.75in]{UM-operation.png}}
+\end{frame}  
+
+\begin{frame}\frametitle{UM Framework -- Operational Semantics}
+\vspace*{-0.1in}
+  \centerline{\includegraphics[width=3.25in]{UM-working.png}}
+  {\small Note:  the operational semantics of the framework are independent of syntax and semantics of any particular type of policy languages or logics.}
+\end{frame}  
+  
+\begin{frame}\frametitle{UM Framework -- Cross-domain}
+~\\  \centerline{\includegraphics[width=4.25in]{UM-highlevel.pdf}}~\\
+  {\small Note: this is one possible high-level architectural realization of the UM model that is meant to depict the pieces necessary in each domain, along with their dependencies. These are NOT data flows.}
+\end{frame}  
+
+\section{Scenarios}
+
+\begin{frame}
+\frametitle{Applicable Scenarios}
 In order to demonstrate the flexibility of our approach, we will work through a series of possible scenarios with regard to sensitive information dissemination and use.
 \newline
 \pause
@@ -84,8 +175,6 @@ In order to demonstrate the flexibility of our approach, we will work through a 
 \item \textbf{Operational Chaos}
 \end{itemize}
 \end{frame}
-
-\section{Scenarios}
 
 \begin{frame}
 \frametitle{Scenario 1: Go Back to Class!}
@@ -246,7 +335,7 @@ These conditions generally share certain characteristics:
 \pause
 \item \textbf{System breakdown} --- Systems tend to breakdown unexpectedly and catastrophically.
 \pause
-\item \textbf{Centralized systems unavailable} -- As a result of communication breakdowns, centralized systems become unavailable or unreliable.
+\item \textbf{Centralized systems unavailable} --- As a result of communication breakdowns, centralized systems become unavailable or unreliable.
 \end{itemize}
 \end{frame}
 
@@ -342,6 +431,65 @@ With dynamic context support we can:
 \item\textbf{Map \textit{activities} to \textit{actions}} --- Reading a document may in fact not be a single activity, but rather a sequence of actions (lookup, retrieve, save, open, display) that are managed separately in certain situations.
 \end{itemize}
 \end{frame}
+
+\section{Prototype Results}
+
+\begin{frame}\frametitle{Prototype Demonstration}
+\vspace*{-0.1in}
+  \centerline{\includegraphics[width=4.35in]{demo.png}}
+  {\small Note:  the guard functionality in this demonstration was not a separate module, and was provided as part of usage management framework.}
+\end{frame} 
+
+\begin{frame}\frametitle{Prototype Demonstration -- Capabilities}
+{\small
+The Phase I prototype demo was used to exhibit the following capabilities:
+\begin{itemize}
+\item Licenses that contained policies expressing both access and usage control rules were constructed to enable persistent information security over data elements.
+\pause
+\item The concept of a license being interpreted in real-time according to the current
+context was exhibited.
+\pause
+\item The capability of real-time aggregation of licenses, and reasoning over the resulting
+combined policies was demonstrated. This included situations were polices precluded certain data elements from being mixed together, and the reasoning about this occurred in real-time, as the mashup was being constructed.
+\pause
+\item Information sources belonging to different realistic DoD security domains, and the sharing of objects between them, were simulated (there was no communication through any type of trusted pathway though), taking into account the roles of the personnel involved, the devices they were using, etc.
+\end{itemize}}
+\end{frame}
+
+\begin{frame}\frametitle{Prototype Demonstration -- Limitations}
+{\small
+The Phase I prototype demo was limited in the following ways:
+\begin{itemize}
+\item The demo did not provide a formal ontology for the domain. Rather this was ``hard- coded" into the demo.
+\pause
+\item User authentication was simulated.
+\pause
+\item Although access to data sources was dynamically computed according to policy, the
+data sources themselves were static. I.e., map data was not generated by a database query, but rather was stored as fixed images. 
+\pause
+\item It did not provide a mechanism for generating licenses using an underlying ontology; XML licenses were constructed ``by hand."
+\pause
+\item The logic associated with reasoning over license aggregation was very simplistic, essentially a logical ANDing over the license terms.
+\pause
+\item The semantics of the licenses were also rudimentary, e.g., only permissions were considered, not obligations, usage history, etc.
+\end{itemize}}
+\end{frame}
+
+\begin{frame}\frametitle{Prototype Demonstration -- Limitations}
+{\small
+\begin{itemize}
+\item Reasoning over the interoperability of licenses between different domains was not considered. With a formal notion of interoperability, one context (domain) can query another, in order to determine if the other domain is able to interpret a particular policy.
+\pause
+\item The demo did not exhibit the capabilities of dynamic interpretation, where one activity specified in a license could lead to different actions depending upon the environment in which it is being interpreted.
+\pause
+\item The security of the system was not rigorously evaluated against any type of threat model. If we can formally capture a threat model, then we can better understand how usage management plays in the architecture. (AFRL help would be appreciated here.)
+\pause
+\item The trusted pathway was not a stand-alone entity. We implicitly supplied one through our usage management mechanism, thereby providing a distributed cross-domain sharing solution.
+\pause
+\item Query capabilities over usage scenarios (i.e., what led to a particular rule in a combined license) were not provided.
+\end{itemize}}
+\end{frame}
+
 
 \section{Conclusions}
 
