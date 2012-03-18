@@ -31,15 +31,15 @@
 
 %---------------------------Title frame definition------------------------------------- 
 
-\title{Policy-based Usage Management Overlay Networks}
+\title{Usage Management In Multi-level Security Environments}
 \author [Greg, Chris]{Gregory Heileman and Christopher C. Lamb}
 \institute[University of New Mexico]{
 \inst {}Department of Electrical and Computer Engineering\\
 University of New Mexico}
-\date{}
+\date{April 4, 2012}
 \titlegraphic{
 \begin{figure} 
-\includegraphics[width = 7cm]{UNM}
+\includegraphics[width = 10cm]{ECE-UNM-logo}
 \end{figure}}
 
 % Delete this, if you do not want the table of contents to pop up at
@@ -86,7 +86,6 @@ Today we will cover our work in usage management, new architectures we are devel
 \end{itemize}
 \end{frame}
 
-
 \begin{frame}
 \frametitle{Usage Management Meta-Model}
 {\small
@@ -117,6 +116,7 @@ Fundamental design principle: \textbf{Policy and computing domain separation} --
 \end{frame}
 
 \begin{frame}\frametitle{A High-level UM Framework}
+\centerline{\includegraphics[width=3.5in]{model_overview.pdf}} 
 \begin{itemize}
 \item We have created a usage management model based upon the meta-model that satisfies the previous separation principle through the interaction of two objects:
  \begin{itemize}
@@ -124,7 +124,6 @@ Fundamental design principle: \textbf{Policy and computing domain separation} --
   \pause
   \item[--] \textbf{License Object} -- Usage policies expressed in some program logic, along with the current policy state.
  \end{itemize}~\\
- \centerline{\includegraphics[width=3.5in]{model_overview.pdf}} 
  \end{itemize}
 \end{frame}
 
@@ -139,18 +138,30 @@ Fundamental design principle: \textbf{Policy and computing domain separation} --
   \end{itemize}
 \end{frame}
 
+\begin{frame}\frametitle{UM Framework -- License Object}
+  \centerline{\includegraphics[width=2.5in]{policy-obj.png}}
+   \begin{itemize}
+   \item Primary purpose: put a ``wrapper" around usage policies, and provide an interface to access them.
+   \pause
+   \item The interface supports:
+    \begin{itemize}
+    \item[--] License Querying -- the policy interpretation mechanism will use this.
+    \item[--] State Update -- update, retrieve or reset license state
+    \item[--] Transform -- check compatibility with another license, or merge licenses.
+    \end{itemize}
+   \end{itemize}
+\end{frame}
+
 \begin{frame}\frametitle{UM Framework -- Setup}
   \centerline{\includegraphics[width=3.5in]{UM-setup.png}}
     {\small Note: the policy interpretation and enforcement mechanisms have been rolled up into the usage management mechanism.}
 \end{frame}  
-
   
 \begin{frame}\frametitle{UM Framework -- Operation}
   \centerline{\includegraphics[width=3.75in]{UM-operation.png}}
 \end{frame}  
 
 \begin{frame}\frametitle{UM Framework -- Operational Semantics}
-\vspace*{-0.1in}
   \centerline{\includegraphics[width=3.25in]{UM-working.png}}
   {\small Note:  the operational semantics of the framework are independent of syntax and semantics of any particular type of policy languages or logics.}
 \end{frame}  
@@ -224,7 +235,7 @@ We could organize policies in a clear hierarchy, where content classifications c
 \includegraphics[width=4cm]{hierarchy-1}
 \newline
 \newline
-Classification Propogation without Policies:
+Classification Propagation without Policies:
 \newline
 \begin{itemize}
 \item \textbf{Everyone involved}
@@ -435,7 +446,6 @@ With dynamic context support we can:
 \section{Prototype Results}
 
 \begin{frame}\frametitle{Prototype Demonstration}
-\vspace*{-0.1in}
   \centerline{\includegraphics[width=4.35in]{demo.png}}
   {\small Note:  the guard functionality in this demonstration was not a separate module, and was provided as part of usage management framework.}
 \end{frame} 
