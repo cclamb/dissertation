@@ -1,50 +1,146 @@
-\documentclass[12pt,letterpaper]{article}
+% \documentclass[12pt,letterpaper]{article}
+\documentclass[botnum,fleqn,final]{unmeethesis}
+
+% Set Title and Author
+\newcommand{\mytitle}{Overlay Networks for Usage Management}
+\newcommand{\myauthor}{Christopher C. Lamb}
+
+
 \usepackage[latin1]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{setspace}
+%\usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{epsfig}
 \usepackage{booktabs}
+
+% Font settings:
+\usepackage[T1]{fontenc}
+%\usepackage{mathpazo}
+\usepackage{mathptmx}
+\usepackage[scaled]{helvet}
+\usepackage{courier}
+\normalfont
+
+% User microtype package to get some nicer font details
+% http://www.ctan.org/tex-archive/macros/latex/contrib/microtype
+\usepackage{microtype}
+
+% Other packages
+\usepackage{graphicx} % ability to include graphics
+\usepackage[pdftex]{hyperref} % hyperrefs inside of PDF
+\hypersetup{colorlinks,
+            citecolor=black,
+            filecolor=black,
+            linkcolor=black,
+            urlcolor=black,
+            pdftitle={\mytitle},
+            pdfauthor={\myauthor}}
+
+% Use hyperref package to allow hyperlinks inside of the PDF document and PDF metadata
+% http://en.wikibooks.org/wiki/LaTeX/Hyperlinks
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    %bookmarks=true,          % show bookmarks bar?
+    unicode=false,           % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,         % show Acrobat’s toolbar?
+    pdfmenubar=true,         % show Acrobat’s menu?
+    pdffitwindow=false,      % window fit to page when opened
+    pdfstartview={FitH},     % fits the width of the page to the window
+    pdftitle={\mytitle},     % title
+    pdfauthor={\myauthor},   % author
+    %pdfsubject={Subject},   % subject of the document
+    %pdfcreator={Creator},   % creator of the document
+    %pdfproducer={Producer}, % producer of the document
+    %pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    %pdfnewwindow=true,      % links in new window
+    colorlinks=true,         % false: boxed links; true: colored links
+    linkcolor=black,         % color of internal links
+    citecolor=black,         % color of links to bibliography
+    filecolor=black,         % color of file links
+    urlcolor=blue            % color of external links
+}
+
 
 \graphicspath{{./images/}}
 
 \begin{document}
 
-\pagenumbering{roman}
+\frontmatter
 
-\begin{center}
-\textbf{Overlay Networks for Usage Management} \\
-\vspace{5mm}
-\textbf{by} \\
-\vspace{5mm}
-\textbf{Christopher C. Lamb} \\
-\vspace{2mm}
-B.S. Mechanical Engineering, New Mexico State University, 1993 \\
-M.S. Computer Science, University of New Mexico, 2002 \\
-Ph.D. Computer Engineering, University of New Mexico, 2012 \\
-\end{center}
+\title{\mytitle}
+\author{\myauthor}
 
-\doublespacing
+\degreesubject{Ph.D., Computer Engineering}
+
+\degree{Doctor of Philosophy \\ Computer Engineering}
+
+\documenttype{Dissertation}
+
+\previousdegrees{B.S., Mechanical Engineering, New Mexico State University, 1994 \\
+                 M.S., Computer Science, University of New Mexico, 2002}
+
+%\date{September, \thisyear}
+\date{\today}
+
+\maketitle
+
+\makecopyright
+
+\begin{dedication}
+   This thesis is dedicated my wife Elisa and our two daughters Evelyn and Katherine.
+\end{dedication}
+
+\begin{acknowledgments}
+   \vspace{1.1in}
+   I would like to thank my advisor, Professor Gregory Heileman, for his support.
+\end{acknowledgments}
+
+\maketitleabstract
+
+% \pagenumbering{roman}
+
+%\begin{center}
+%\textbf{Overlay Networks for Usage Management} \\
+%\vspace{5mm}
+%\textbf{by} \\
+%\vspace{5mm}
+%\textbf{Christopher C. Lamb} \\
+%\vspace{2mm}
+%B.S. Mechanical Engineering, New Mexico State University, 1993 \\
+%M.S. Computer Science, University of New Mexico, 2002 \\
+%Ph.D. Computer Engineering, University of New Mexico, 2012 \\
+%\end{center}
 
 \begin{abstract}
 Overlay networks have become a widely used technology with examples ranging from consumer focused distribution systems like BitTorrent to commercial content distribution systems like Akamai.  These kinds of systems, with the appropriate policy-centric content management components, can address looming problems in information distribution that both companies and federal agencies are beginning to face with respect to sensitive content.  This work addresses the current state of the art in these kinds of cross-domain systems, reviewing current example system architectures from the Unified Cross Domain Management Office (UCDMO), a federal organization specifically tasked with addressing these issues.  It then covers other related work, introduces a taxonomy of types of policy-centric usage managed overlay network systems and an associated methodology for evaluating the individual taxonomic elements.  It then delves into experimental evaluation of the various defined architectural options and finally presents results of comparing experimental evaluation with anticipated results. 
 \end{abstract}
 
-\pagebreak
 \tableofcontents
-\pagebreak
 \listoffigures
-\pagebreak
 \listoftables
-\pagebreak
 
-\pagenumbering{arabic}
+\begin{glossary}{UHR}
+   \item[RDFa] Resource Description Framework -- in -- attributes
+   \item[XDM] Extensible Metadata Platform
+   \item[XML] eXtensible Markup Language
+\end{glossary}
 
+\mainmatter
+
+%\pagenumbering{arabic}
+
+\chapter{Introduction}
 \input{content/introduction}
+
+\chapter{Cross Domain Examples}
 \input{content/cross-domain-examples}
+
+\chapter{Current Systems}
 \input{content/current-system-analysis}
+
+\chapter{Proposed Taxonomy}
 \input{content/taxonomy}
 
 \pagebreak
