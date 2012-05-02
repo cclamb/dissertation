@@ -1,74 +1,64 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: dissertation.aux
-White space in argument---line 53 of file dissertation.aux
- : \citation{IT
- :              QUALITY PAPER}
-I'm skipping whatever remains of this command
-White space in argument---line 54 of file dissertation.aux
- : \citation{ISO
- :               STANDARD}
-I'm skipping whatever remains of this command
 The style file: plain.bst
 Database file #1: bib/proposal.bib
 Database file #2: bib/drm.bib
 Warning--to sort, need author or key in proposal:info-sharing-strategy
 Warning--to sort, need author or key in proposal:nsa-cloud
-Warning--to sort, need author or key in proposal:borders-info-I
-Warning--to sort, need author or key in proposal:borders-info-II
-Warning--to sort, need author or key in proposal:borders-info-III
-Warning--to sort, need author or key in proposal:saic-breach-I
-Warning--to sort, need author or key in proposal:saic-breach-II
-Warning--to sort, need author or key in proposal:saic-breach-III
 Warning--to sort, need author or key in proposal:assured-info-sharing
 Warning--to sort, need author or key in proposal:gig-arch
 Warning--to sort, need author or key in marlin
+Warning--to sort, need author or key in proposal:ucdmo-goals
+Warning--to sort, need author or key in proposal:openflow
+Warning--to sort, need author or key in proposal:jboss-esb
 Warning--empty author in marlin
 Warning--empty institution in marlin
 Warning--empty booktitle in proposal:bah-arch
 Warning--empty author in coral
 Warning--empty institution in coral
 Warning--empty booktitle in proposal:nsa-arch
+Warning--empty booktitle in proposal:cd101
 Warning--empty booktitle in proposal:raytheon-arch
 Warning--empty booktitle in proposal:ron-ross
-You've used 29 entries,
+You've used 28 entries,
             2118 wiz_defined-function locations,
-            657 strings with 8886 characters,
-and the built_in function-call counts, 8190 in all, are:
-= -- 814
-> -- 249
+            654 strings with 8132 characters,
+and the built_in function-call counts, 8225 in all, are:
+= -- 819
+> -- 260
 < -- 7
-+ -- 110
-- -- 76
-* -- 501
-:= -- 1189
++ -- 114
+- -- 80
+* -- 507
+:= -- 1223
 add.period$ -- 77
-call.type$ -- 29
-change.case$ -- 128
+call.type$ -- 28
+change.case$ -- 127
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 366
-empty$ -- 797
-format.name$ -- 76
-if$ -- 1853
+cite$ -- 45
+duplicate$ -- 369
+empty$ -- 780
+format.name$ -- 80
+if$ -- 1841
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 17
-newline$ -- 138
-num.names$ -- 34
-pop$ -- 206
+int.to.str$ -- 28
+missing$ -- 19
+newline$ -- 136
+num.names$ -- 38
+pop$ -- 192
 preamble$ -- 1
 purify$ -- 97
 quote$ -- 0
-skip$ -- 281
+skip$ -- 274
 stack$ -- 0
-substring$ -- 455
-swap$ -- 90
+substring$ -- 476
+swap$ -- 89
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 116
-warning$ -- 19
-while$ -- 59
-width$ -- 31
-write$ -- 290
-(There were 2 error messages)
+type$ -- 112
+warning$ -- 17
+while$ -- 65
+width$ -- 30
+write$ -- 287
+(There were 17 warnings)
