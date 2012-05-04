@@ -49,6 +49,8 @@ Generally one of the domains supports more sensitive information than the other,
 
 In these kinds of systems, specific rules regarding information transfer and domain characterization are tightly bound to individual filter implementations.  They are based on \textit{a priori} knowledge of the domains the guard connects, and therefore are tightly coupled those domains.  Furthermore, the filter elements are standalone within the system, in this classification, not availing themselves of external resources.  Rather, they examining information transiting through the filter based purely on the content of that information.
 
+The set of filters that could be developed and deployed within the guard are unlimited.  Developers could easily create a filter that inspects and possibly redacts the sections within the document, rather than passing or not passing the entire document through the guard.  Indeed, if we assume even very limited processing capabilities within the guard, that is, turing completeness, then this guard can be made as powerful as any solution we can derive for implementing a CDS. Thus the computational power of the guard is not the issue. The real issues are the benefits that can be gained by distributing the capabilities intelligently within the networked environment.
+
 \subsection{$\alpha$-level Overlay Systems}
 The $\alpha$ overlay classification contains systems that have begun to integrate policy-centric usage management. Both policies and contexts are dynamically delivered to the system. The dynamic delivery of context and policies allows these kinds of systems more flexibility with policy evaluation. The $\alpha$ category begins to integrate policy-centric management rather than using strict content filtering.
 

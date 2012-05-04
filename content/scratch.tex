@@ -1,84 +1,50 @@
-\subsection{Evaluation Methodology and Model}
-In order to successfully evaluate the elements of our overlay taxonomy, we must first establish a model against which to measure the presented architectures.  The current standard for evaluating software quality is ISO/IEC 25020 and this, along with other related standards from other service delivery organizations has begun to be integrated into both academia and industry as a tractable way to measure system quality \cite{5958158, proposal:iso-25020}.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{phi-level}
+\caption{Scenario I}
+\label{fig:model:phi-level}
+\end{figure}
 
-This particular model must address quality attributes specific to the presented architectures rather than the functional domain.  The goal of this model is to allow for architectural evaluation of policy evaluating architectures regardless of the specific functional domain.  Ergo, injecting a specific functional domain into the evaluation or the evaluating model is unacceptable.  Acceptable attributes are those which directly target quality attributes of the architectures in question.
+\section{Implementation Progression}
+The fundamental concepts demonstrated in our prototypes are those related to usage management in multi-level-security cross-domain environments. We provide prototypes that clearly demonstrate the research concepts that are being investigated. Below are some very high-level scenarios we have built. We have purposefully abstracted out specifics such as the type of the domain (i.e. NIPRnet, SIPRnet, etc.), as well as implementation-specific issues, such as whether or not some functionality is implemented as a virtual machine, the type of data repository, and so on. The focus in these scenarios is demonstrating the fundamental design concepts embodied in the scenarios.
 
-\begin{eqnarray}
-E = \lbrace f_{e}, f_{r}, f_{u}, f_{p}, f_{m}, f_{f}, f_{s}, f_{c} \rbrace \\
-W= \lbrace w_{e}, w_{r}, w_{u}, w_{p}, w_{m}, w_{f}, w_{s}, w_{c} \rbrace \\
-s = \sum_{W, E} w_{i} f_{i}
-\end{eqnarray}
+\subsection{Scenario I}
+In this scenario the cross-domain solution (CDSO is a $\phi$ guard. A user in Domain B makes an information request, and this leads to document request. The appropriate document is retrieved, and passes through the guard if it passes all of the filters associated with the guard; otherwise the document is dropped for reliable human review.
 
-We are specifically interested in evaluating architectures for policy evaluation functional suitability, reliability, usability, possible performance efficiencies, maintainability, portability, security, and compatibility, specifically neglecting any kind of domain functional suitability.  Each area will be associated with an evaluation function.  The suitability of a given architectural option will be evaluated by a tuple of these functions, which can then be converted into a weighted sum leading to a single quantitative metric representing suitability under evaluated conditions.
+The set of filters that could be developed and deployed within the guard are unlimited.  Developers could easily create a filter that inspects and possibly redacts the sections within the document, rather than passing or not passing the entire document through the guard.  Indeed, if we assume even very limited processing capabilities within the guard, that is, turing completeness, then this guard can be made as powerful as any solution we can derive for implementing a CDS. Thus the computational power of the guard is not the issue. The real issues are the benefits that can be gained by distributing the capabilities intelligently within the networked environment.
 
-Also important to note, certain attributes may not be able to be evaluated using specific architectural models.  For example, conceptual or notional architecture models are intended to convey specific ideas prevalent in a given system architecture rather than ways that architecture will be realized.  As such, these kinds of models generally cannot be evaluated for things like portability or performance efficiency, as these qualities usually manifest based on specific standard and technology selections, respectively.  In these cases, the evaluation functions representing those attributes will be weighted at zero.
+Note that in Scenario I, once content is delivered to Domain B, it is no longer managed.
 
-\subsubsection*{Functional Suitability}
-Functional suitability in this context is reflects the ability of the system to accurately manage artifacts based on policy and context.  As the functional domain is the same for all examined systems, we will neglect this and set $ w_{e} = 0 $.
+\subsection{Scenario II --- Policy-Content Separation}
+In this scenario the CDS is an $\alpha$ guard. The fundamental design concept this scenario demonstrates is the policy-content separation principle. That is, content and policy should not be intertwined within one document.  This principle is similar to the one behind the form-content separation principle. This is the principle that led to CSS files containing form, and HTML documents containing pure content-related elements. Similarly, the behavior-content principle, embodied in unobtrusive JavaScript, has recently been recognized as an important design principle. Thus, in this scenario we are extending these ideas to what we are calling the policy-content separation principle.
 
-\subsubsection*{Reliability}
-Here, we will evaluate reliability via a simple Bayesian Belief Networks and Reliability Theory.  The function $ f_{r} $ for a given architecture will be a functional representation of the independent variables required to evaluate the network.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{alpha-level-1}
+\caption{Scenario II}
+\label{fig:model:alpha-level-1}
+\end{figure}
 
-\subsubsection*{Usability}
-These are purely notional models, and as a result cannot be evaluated using generally accepted usability metrics like the Systems Usability Scale (SUS) \cite{proposal:sus}.  Ergo, for this analysis we will set the weight $w_{u} = 0$.
+For the purpose of this scenario, we demonstrate more sophisticated cross-domain transfer capabilities.  We create XML documents, and then apply policies to the various sections of these documents, and then show how pieces of a document can be passed through the CDS, while other pieces are filtered out. In addition, we change a policy in one place (within a license), and demonstrate how this one policy change can impact how hundreds of documents are now managed.  This way, a single license can be applied to a potentially unlimited number of resources.
 
-\subsubsection*{Performance Efficiency}
-Performance efficiency is generally a characteristic of logical and physical system architectures.  Specific logical architectures can certainly decrease the performance of a given system through poor design, insufficient caching, badly considered state management, or inferior scalability.  Physical architectures clearly impact performance if processing power, storage, communication bandwidth, or other attributes are insufficient to process apparent loads.  We will therefore set $w_{p} = 0$ in this analysis.
+Here, we have essentially built an access control solution, albeit more sophisticated than the previous one. In this scenario, the policies are no longer centralized within the guard, rather they are separated.  Also, note that although we show a content repository only, we can easily extend the polices in our usage management framework to services.
 
-\subsubsection*{Maintainability}
-Maintainability can be measured via examination of a given system with an eye toward areas prone to change.  Loosely coupled components directly contribute to the ability to change a specific system component.  With this in mind, we can measure develop a simple ratio to indicate the maintainability of a given system --- the total number of components with high change impact to the number of components with high change impact that have been decoupled from the system via an interface 
+\subsection{scenario III --- End-to-End Arguments}
+In this scenario the CDS is also an $\alpha$ guard; however, usage management is now fully implemented within Domain B.
 
-\begin{equation}
-f_{m} = c_{i} / c_{\delta}
-\end{equation}
+This architectural change now fully enables usage management across the two domains, while at the same time pushing usage management functionality closer to the end points. In addition, the usage management functionalities are also more distributed, leading to the creation of additional roles within each domain. Specifically, in Scenario 1, the policy is wrapped up inside the guard, and only someone that has the authority to modify the guard can modify the policy. In this scenario, the policy has been removed from the CDS, and therefore someone with authority inside of the domain can set the policy. This, presumably would require less authority that modifying a CDS. The CDS's job now is simply to interpret and enforce policy --- policy is no longer stored in the CDS itself. Furthermore, in this scenario we have moved beyond access control, and are now able to implement usage management use cases, e.g., we can retract content from Domain B according to certain circumstances. This is a very important use case to demonstrate related to managing content within coalition partner domains.
 
-\subsubsection*{Portability}
-One way to evaluate system portability is via standard compliance \cite{5958158}.  Proposed architectures herein will not be evaluated to the level at which proposed standards have an impact.  Therefore, in this analysis, $ w_{f} =0 $.
+An important level of detail we can bring into this prototype scenario is the notion that the license and context are expressed according to ontologies that are domain specific. This leads to a very interesting and difficult research problem --- specificall how one domain recognizes a license that has been created according to an ontology in a different domain. One way to solve this problem is to assume that ontologies are organized according to inheritance hierarchy.
 
-\subsubsection*{Security}
-We will evaluate security using Reliability Theory and Bayesian Belief Networks as well.  In that network we will evaluate confidentiality, integrity, and availability failure modes.  We will define $ f_{s} $ as we did $ f_{r} $ previously.
+In this figure it may be the case that both domain A and B do not want the other to know the actual elements that are included in their ontologies; however, both of them are based upon ontologies that are publically available, or at least available across the domains.
 
-\subsubsection*{Compatibility}
-Compatibility with existing systems requires either accepted system standards or other systems with which to be compatible.  In this analysis, we have neither accepted standards or other systems, so we will set $ w_{c} = 0 $.
+In the scenario above, let us assume that an ontology is known to both domains, and Domain B has informed Domain A that it can receive licenses that are built according to that ontology. Thus, the usage management mechanism (UMM) within Domain A must first determine if it can create a license that satisfies the required polices of the requested content object. If it can, then it can use the more general ontology, create a license, and send it to Domain B. The UMM within Domain B can now appropriately manage, according to the original policies, the content it has received within its own domain.
 
-Any weights not explicitly set to zero previously will be set to one, giving us:
+The separation of ontology from the license manager in this case also allows for the development of stand-alone content generation and license checking capabilities.
 
-\begin{equation}
-W = \lbrace 0, 1, 0, 0, 1, 0, 1, 0 \rbrace
-\end{equation}
-
-or, in essence:
-
-\label{equation:final}
-\begin{equation}
-s = f_{r} + f_{m} + f_{s}
-\end{equation}
-
-
-
-
-As Pearson and Benameur \cite{proposal:privacy-security-trust-cloud} show, cloud technology is not currently as private as some organizations would like:
-\begin{itemize}
-\item \textit{User Data Control} --- In virtually any given Software-as-a-Service (SaaS) scenario, user data controls are sadly lacking.  Once data has been committed to a specific provider, that data is completely out of the original data owners control.  Furthermore, as we will see below, that data my not even be solely owned by the original owner anymore either.
-\item \textit{Secondary Use} --- Most consumer facing social systems extensively mine user provided data for additional business advantages.  This is a common and well known secondary use for supplied data.  SaaS providers again have strong incentives to examine user provided information.
-\item \textit{Offshore Development} --- Service users have no real control over who actually develops the systems a given service deploys.  Organizations have attempted to contractually limit development and support functions companies pursue to, say, the continental United States but have had very poor results with these kinds of unsupportable arrangements.
-\item \textit{Data Routing} --- Both system providers and system users in fact have little control over routing issues.  Prohibiting data routing through sensitive countries is a difficult task for a single organization.
-\item \textit{Secondary Storage} --- Most large-scale systems expect to use Content Delivery Networks (CDNs) to help manage content, and that expectation is heavily reflected in their physical system architectures. They simply cannot divorce use of CDNs from their systems for a single organization.
-\item \textit{Bankruptcy and Data Ownership} --- Ownership and obligation to maintain expected data arrangements for a given company is not established under bankruptcy \cite{proposal:borders-info-I,proposal:borders-info-II,proposal:borders-info-III}.
-\end{itemize}
-
-Security issues also emerge from utility computing infrastructures:
-\begin{itemize}
-\item \textit{Data Access} --- System users have very little control over who, in the system provider's organization, is able to access their data and systems.
-\item \textit{Data Deletion} --- Most savvy organizations have procedures in place to sanitize old storage elements like disk drives or backup tapes.  System users have very little control over if and how this is done when computing services are treated as a utility.
-\item \textit{Backup Data Storage} --- Backup media is very difficult to encrypt, and most system providers still use tape systems as preferred media solutions for backup and storage needs.  These tapes, or copies of them, are generally stored offsite to support disaster recovery scenarios.  Security of these types of systems has been spotty to date \cite{proposal:saic-breach-I,proposal:saic-breach-II,proposal:saic-breach-III}.
-\item \textit{Intercloud Standardization} --- Cloud computing systems do not have any standardized way to transfer computational units or data between systems.  Any protocols used for this kind of thing must be developed by customers themselves.  Due to the desire of providers to lock-in customers, this will likely not change as any standard development is strongly counter-incentiveized. 
-\item \textit{Multi-tenancy and Side-Channels} --- Multi-tenant architectures in which multiple customers simultaneously use the same systems open those customers to covert side-channel attacks.
-\item \textit{Logging and Auditing} --- Logging and auditing structures, especially for inter-cloud systems, are non-existent.
-\end{itemize}
-
-Finally, such systems suffer from internal and external trust issues:
-\begin{itemize}
-\item \textit{Trust Relationships} --- Trust is difficult to establish between individual cloud providers long-term.
-\item \textit{Consumer Trust} --- Service users are still not entirely trusting of cloud system providers.
-\end{itemize}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{alpha-level-2}
+\caption{Scenario III}
+\label{fig:model:alpha-level-2}
+\end{figure}
