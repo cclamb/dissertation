@@ -29,9 +29,11 @@ The system itself has two domains, Domain 0 and Domain 1.  Each domain consists 
 
 All router-to-router content traffic is modified based on security conditions.  A Context Manager maintains metadata regarding network paths.  If a given network path is only cleared for data of a certain sensitivity level, a transmitting router will remove all license information and content that is associated with higher sensitivities, and then transmit only information at an appropriate sensitivity level over the link.
 
-All router-to-router content traffic is modified based on security conditions.  A Context Manager maintains metadata regarding network paths.  If a given network path is only cleared for data of a certain sensitivity level, a transmitting router will remove all license information and content that is associated with higher sensitivities, and then transmit only information at an appropriate sensitivity level over the link.
+Figure \ref{fig:model:cross-domain-prototype} shows the prototypical workflow through the system across the domains, and Figure \ref{fig:model:prototype-physical-config} shows the current system configuration of the simulation, with the cross-domain link highlighted in red.  The system is current configured to use ports 4567 through 4571.
 
 All content requests are via HTTP GET.  Link status can be changed via HTTP POST and we use the CURL command to exercise the network.
+
+This proof-of-concept does implement a simple overlay network for usage managed content over HTTP, easily extensible to HTTPS.  Changes in the context of the network dynamically change the format of transmitted content.  All source code for this simulation is publically available on GitHub, at https://github.com/cclamb/overlay-network, with documentation on how to run the simulation.
 
 \begin{figure}[!t]
 \centering

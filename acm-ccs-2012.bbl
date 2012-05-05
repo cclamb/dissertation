@@ -1,0 +1,158 @@
+\begin{thebibliography}{10}
+
+\bibitem{marlin}
+Marlin architecture overview.
+\newblock Technical report, 2006.
+\newblock {\small \verb%http://www.marlin-community.com%}.
+
+\bibitem{proposal:info-sharing-strategy}
+{D}o{D} {I}nformation {S}haring {S}trategy.
+\newblock {http://cio-nii.defense.gov/docs/InfoSharingStrategy.pdf}, May 2007.
+
+\bibitem{proposal:assured-info-sharing}
+{A}ssured {I}nformation {S}haring in {C}louds.
+\newblock {http://www.zyn.com/sbir/sbres/sttr/dod/af/af11-bt30.htm}, August
+  2011.
+
+\bibitem{proposal:gig-arch}
+{D}epartment of {D}efense {G}lobal {I}nformation {G}rid {A}rchitectural
+  {V}ision.
+\newblock {http://cio-nii.defense.gov/docs/GIGArchVision.pdf}, 2011.
+
+\bibitem{proposal:nsa-cloud}
+{NSA} {P}ursues {I}ntelligence-{S}haring {A}rchitecture.
+\newblock
+  {http://www.informationweek.com/news/government/cloud-saas/229401646}, April
+  2011.
+
+\bibitem{proposal:openflow}
+{O}penflow - {E}nabling {I}nnovation in {Y}our {N}etwork.
+\newblock {http://www.openflow.org}, November 2011.
+
+\bibitem{proposal:ucdmo-goals}
+{A}bout the {UCDMO}.
+\newblock {http://www.ucdmo.gov/about.html}, January 2012.
+
+\bibitem{proposal:jboss-esb}
+{JB}oss {ESB}.
+\newblock {http://www.jboss.org/jbossesb}, January 2012.
+
+\bibitem{Blumenthal:2001:RDI:383034.383037}
+Marjory~S. Blumenthal and David~D. Clark.
+\newblock Rethinking the design of the internet: the end-to-end arguments vs.
+  the brave new world.
+\newblock {\em ACM Trans. Internet Technol.}, 1:70--109, August 2001.
+
+\bibitem{BlCl:01}
+Marjory~S. Blumenthal and David~D. Clark.
+\newblock Rethinking the design of the {I}nternet: {T}he end-to-end arguments
+  vs. the brave new world.
+\newblock {\em ACM Transactions on Internet Technology}, 1(1):70--109, Aug.
+  2001.
+
+\bibitem{proposal:bah-arch}
+Booz, Allen, and Hamilton.
+\newblock Distributed service oriented architecture (soa) compatible cross
+  domain service (dscds).
+\newblock Presented at the Unified Cross Domain Management Office Conference,
+  2009.
+
+\bibitem{Cl:88}
+David~D. Clark.
+\newblock The design philosophy of the {DARPA} internet protocols.
+\newblock In {\em {ACM SIGCOMM}}, pages 106--114, Stanford, CA, Aug. 1988.
+
+\bibitem{Clark:1995:DPD:205447.205458}
+David~D. Clark.
+\newblock The design philosophy of the darpa internet protocols.
+\newblock {\em SIGCOMM Comput. Commun. Rev.}, 25:102--111, January 1995.
+
+\bibitem{ClWrSoBr:02}
+David~D. Clark, John Wroclawski, Karen~R. Sollins, and Robert Braden.
+\newblock Tussle in cyberspace: Defining tomorrow's internet.
+\newblock In {\em {SIGCOMM}}, pages 347--356, Pittsburg, Pennsylvania, USA,
+  Aug. 2002.
+
+\bibitem{coral}
+Coral consortium whitepaper.
+\newblock Technical report, Feb. 2006.
+\newblock {\small \verb%www.coral-interop.org/main/news/Coral.whitepaper.pdf%}.
+
+\bibitem{HeJa:05}
+Gregory~L. Heileman and Pramod~A. Jamkhedkar.
+\newblock {DRM} interoperability analysis from the perspective of a layered
+  framework.
+\newblock In {\em Proceedings of the Fifth ACM Workshop on Digital Rights
+  Management}, pages 17--26, Alexandria, VA, Nov. 2005.
+
+\bibitem{JaHe:04}
+Pramod~A. Jamkhedkar and Gregory~L. Heileman.
+\newblock {DRM} as a layered system.
+\newblock In {\em Proceedings of the Fourth ACM Workshop on Digital Rights
+  Management}, pages 11--21, Washington, DC, Oct. 2004.
+
+\bibitem{JaHe:09}
+Pramod~A. Jamkhedkar and Gregory~L. Heileman.
+\newblock Digital rights management architectures.
+\newblock {\em Computers Electrical Engineering}, 35(2):376--394, 2009.
+
+\bibitem{JaHeLa:10}
+Pramod~A. Jamkhedkar, Gregory~L. Heileman, and Chris Lamb.
+\newblock An {I}nteroperable {U}sage {M}anagement {F}ramework.
+\newblock In {\em Proceedings of the Tenth ACM Workshop on Digital Rights
+  Management}, Chicago, Oct. 2010.
+
+\bibitem{JaHeMa:06}
+Pramod~A. Jamkhedkar, Gregory~L. Heileman, and Ivan Martinez-Ortiz.
+\newblock The problem with rights expression languages.
+\newblock In {\em Proceedings of the Sixth ACM Workshop on Digital Rights
+  Management}, pages 59--67, Alexandria, VA, Nov. 2006.
+
+\bibitem{KoLaMaMi:04}
+Rob~H. Koenen, Jack Lacy, Michael MacKay, and Steve Mitchell.
+\newblock The long march to interoperable digital rights management.
+\newblock {\em Proceedings of the IEEE}, 92(6):883--897, 2004.
+
+\bibitem{proposal:nsa-arch}
+NSA.
+\newblock Distributed service oriented architecture (soa)- compatible cross
+  domain service (dscds) dscds overview.
+\newblock Presented at the Unified Cross Domain Management Office Conference,
+  2009.
+
+\bibitem{proposal:cd101}
+Unified Cross Domain~Management Office.
+\newblock Cd101.
+\newblock Presented at the Unified Cross Domain Management Office Conference,
+  2009.
+
+\bibitem{proposal:raytheon-arch}
+Jason Ostermann.
+\newblock Raytheon dscds intro.
+\newblock Presented at the Unified Cross Domain Management Office Conference,
+  2009.
+
+\bibitem{PaSa:04}
+Jaehong Park and Ravi Sandhu.
+\newblock The {UCON}$_{ABC}$ usage control model.
+\newblock {\em ACM Trans. Inf. Syst. Secur.}, 7(1):128--174, 2004.
+
+\bibitem{proposal:privacy-security-trust-cloud}
+S.~Pearson and A.~Benameur.
+\newblock Privacy, security and trust issues arising from cloud computing.
+\newblock In {\em Cloud Computing Technology and Science (CloudCom), 2010 IEEE
+  Second International Conference on}, pages 693 --702, 30 2010-dec. 3 2010.
+
+\bibitem{4457175}
+G.M. Perez, F.J.G. Clemente, and A.F.G. Skarmeta.
+\newblock Building and managing policy-based secure overlay networks.
+\newblock In {\em Parallel, Distributed and Network-Based Processing, 2008. PDP
+  2008. 16th Euromicro Conference on}, pages 597 --603, feb. 2008.
+
+\bibitem{proposal:ron-ross}
+Ron Ross.
+\newblock Next generation risk management.
+\newblock Presented at the Unified Cross Domain Management Office Conference,
+  2009.
+
+\end{thebibliography}
