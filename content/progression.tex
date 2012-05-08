@@ -5,7 +5,7 @@
 \label{fig:model:cross-domain-prototype}
 \end{figure*}
 
-\subsection{Overlay Implementation Concerns}
+\section{Overlay Implementation Concerns}
 A key concept in our current work is the separation of content management from physical communication networks.  In the past, content was controlled via partitioning and physical network access management.  Physical networks were tightly controlled as a way to manage access to sensitive content.  Classified networks in common use today are canonical examples of this kind of approach to content management.  Access to these networks is tightly controlled by classification authorities and the ability to transfer content from these networks to more open systems is rigorously managed.  Corporate systems have also commonly used this kind of approach, though not usually with so much regulation or rigor.
 
 This kind of approach is not scalable however.  It imposes huge costs and infrastructural requirements that are becoming too large to effectively manage.  Furthermore, future systems containing sensitive information require similar security features, and simply cannot be developed without custom controlled infrastructure.  Health care systems, for example, have huge security needs and a more finely grained level of application than even deployed government systems.  These systems will contain exabytes of data, all of which needs to be explicitly controlled, managed, and reviewed by those associated with specific managed records.
@@ -20,7 +20,7 @@ To begin with, in content-specific overlay networks, cross-domain routing can be
 
 Mashup scenarios become similarly common.  As additional sources of accessible data appear, opportunities for inappropriate data combinations increase at best geometrically.  Data combinations need to be likewise managed to prevent inappropriate data combinations.
 
-\subsection{Implementation}
+\section{Implementation}
 Our current completed prototype shows that overlay routers can in fact use licenses bundled alongside content to modify transmitted content based on dynamic network conditions.  Running on a single host over HTTP, it simulates two content domains and communication between them.  The communication link has uncertain security state and changes over time.  Note that it currently runs on a single host with varying ports, but it could easily run on multiple hosts as well.  The current single host configuration is simply to simplify system startup and shutdown.
 
 License bundles are hosted on the filesystem, though they could be hosted in any other data store.  These artifacts are currently XML.  They are stored in a directory, and the license file has a LIC extention while the content file has an XML extension.  Both the content and the license files have the name of the directory in which they reside (for example, if the directory is named test, the license file is named test.lic and the content file test.xml).  In this context, the directory is the content bundle.  The license and content files are simply documents and port to document-centric storage systems like MongoDB easily.  They can certainly be stored in traditional relational databases as well.

@@ -1,4 +1,4 @@
-\subsection{Evaluation Methodology and Model}
+\section{Evaluation Methodology and Model}
 In order to successfully evaluate the elements of our overlay taxonomy, we must first establish a model against which to measure the presented architectures.  The current standard for evaluating software quality is ISO/IEC 25020 and this, along with other related standards from other service delivery organizations has begun to be integrated into both academia and industry as a tractable way to measure system quality \cite{5958158, proposal:iso-25020}.
 
 This particular model must address quality attributes specific to the presented architectures rather than the functional domain.  The goal of this model is to allow for architectural evaluation of policy evaluating architectures regardless of the specific functional domain.  Ergo, injecting a specific functional domain into the evaluation or the evaluating model is unacceptable.  Acceptable attributes are those which directly target quality attributes of the architectures in question.
@@ -13,32 +13,32 @@ We are specifically interested in evaluating architectures for policy evaluation
 
 Also important to note, certain attributes may not be able to be evaluated using specific architectural models.  For example, conceptual or notional architecture models are intended to convey specific ideas prevalent in a given system architecture rather than ways that architecture will be realized.  As such, these kinds of models generally cannot be evaluated for things like portability or performance efficiency, as these qualities usually manifest based on specific standard and technology selections, respectively.  In these cases, the evaluation functions representing those attributes will be weighted at zero.
 
-\subsubsection*{Functional Suitability}
+\subsection*{Functional Suitability}
 Functional suitability in this context is reflects the ability of the system to accurately manage artifacts based on policy and context.  As the functional domain is the same for all examined systems, we will neglect this and set $ w_{e} = 0 $.
 
-\subsubsection*{Reliability}
+\subsection*{Reliability}
 Here, we will evaluate reliability via a simple Bayesian Belief Networks and Reliability Theory.  The function $ f_{r} $ for a given architecture will be a functional representation of the independent variables required to evaluate the network.
 
-\subsubsection*{Usability}
+\subsection*{Usability}
 These are purely notional models, and as a result cannot be evaluated using generally accepted usability metrics like the Systems Usability Scale (SUS) \cite{proposal:sus}.  Ergo, for this analysis we will set the weight $w_{u} = 0$.
 
-\subsubsection*{Performance Efficiency}
+\subsection*{Performance Efficiency}
 Performance efficiency is generally a characteristic of logical and physical system architectures.  Specific logical architectures can certainly decrease the performance of a given system through poor design, insufficient caching, badly considered state management, or inferior scalability.  Physical architectures clearly impact performance if processing power, storage, communication bandwidth, or other attributes are insufficient to process apparent loads.  We will therefore set $w_{p} = 0$ in this analysis.
 
-\subsubsection*{Maintainability}
+\subsection*{Maintainability}
 Maintainability can be measured via examination of a given system with an eye toward areas prone to change.  Loosely coupled components directly contribute to the ability to change a specific system component.  With this in mind, we can measure develop a simple ratio to indicate the maintainability of a given system --- the total number of components with high change impact to the number of components with high change impact that have been decoupled from the system via an interface 
 
 \begin{equation}
 f_{m} = c_{i} / c_{\delta}
 \end{equation}
 
-\subsubsection*{Portability}
+\subsection*{Portability}
 One way to evaluate system portability is via standard compliance \cite{5958158}.  Proposed architectures herein will not be evaluated to the level at which proposed standards have an impact.  Therefore, in this analysis, $ w_{f} =0 $.
 
-\subsubsection*{Security}
+\subsection*{Security}
 We will evaluate security using Reliability Theory and Bayesian Belief Networks as well.  In that network we will evaluate confidentiality, integrity, and availability failure modes.  We will define $ f_{s} $ as we did $ f_{r} $ previously.
 
-\subsubsection*{Compatibility}
+\subsection*{Compatibility}
 Compatibility with existing systems requires either accepted system standards or other systems with which to be compatible.  In this analysis, we have neither accepted standards or other systems, so we will set $ w_{c} = 0 $.
 
 Any weights not explicitly set to zero previously will be set to one, giving us:
@@ -53,9 +53,6 @@ or, in essence:
 \begin{equation}
 s = f_{r} + f_{m} + f_{s}
 \end{equation}
-
-
-
 
 As Pearson and Benameur \cite{proposal:privacy-security-trust-cloud} show, cloud technology is not currently as private as some organizations would like:
 \begin{itemize}
