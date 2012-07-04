@@ -20,8 +20,8 @@ To begin with, in content-specific overlay networks, cross-domain routing can be
 
 Mashup scenarios become similarly common.  As additional sources of accessible data appear, opportunities for inappropriate data combinations increase at best geometrically.  Data combinations need to be likewise managed to prevent inappropriate data combinations.
 
-\section{Implementation}
-Our current completed prototype shows that overlay routers can in fact use licenses bundled alongside content to modify transmitted content based on dynamic network conditions.  Running on a single host over HTTP, it simulates two content domains and communication between them.  The communication link has uncertain security state and changes over time.  Note that it currently runs on a single host with varying ports, but it could easily run on multiple hosts as well.  The current single host configuration is simply to simplify system startup and shutdown.
+\section{Initial Prototype Implementation}
+Our first completed prototype shows that overlay routers can in fact use licenses bundled alongside content to modify transmitted content based on dynamic network conditions.  Running on a single host over HTTP, it simulates two content domains and communication between them.  The communication link has uncertain security state and changes over time.  Note that this prototype currently runs on a single host with varying ports, but it could easily run on multiple hosts as well.  The current single host configuration is simply to simplify system startup and shutdown.
 
 License bundles are hosted on the filesystem, though they could be hosted in any other data store.  These artifacts are currently XML.  They are stored in a directory, and the license file has a LIC extention while the content file has an XML extension.  Both the content and the license files have the name of the directory in which they reside (for example, if the directory is named test, the license file is named test.lic and the content file test.xml).  In this context, the directory is the content bundle.  The license and content files are simply documents and port to document-centric storage systems like MongoDB easily.  They can certainly be stored in traditional relational databases as well.
 
@@ -41,3 +41,36 @@ This proof-of-concept does implement a simple overlay network for usage managed 
 \caption{Physical Simulation Configuration}
 \label{fig:model:prototype-physical-config}
 \end{figure}
+
+\section{Initial Prototype Results}
+
+Policy and content delivery over HTTP possible
+
+Ruby/Sinatra will support HTTP overlay development, CURL for usage
+
+Information Filtering Expectations
+
+Extension into larger distributed system feasible
+
+\section{Inter-Provider Cloud Configuration}
+Over the month of June we established our initial technical baseline for upcoming content network development.  We have created and deployed baseline system images in both Amazon's Elastic Compute Cloud (EC2) and Rackspace Servers infrastructures.  We have also created and exercised our deployment, configuration, and logging systems to enable distributed monitoring and centralized reporting.  Overall, we currently have 20 nodes running with two distinct providers geographically dispersed across the continental United States.  This leads to a distinct requirement for a centralized system with distributed access for both initial configuration information as well as logging and auditing.  We have implemented this required infrastructure using Amazon's Simple Storage Service (S3), accessible from both Rackspace and Amazon hosted virtual machines.
+The specific technical components are Amazon EC2, Amazon S2, Rackspace Servers, and GitHub.  Both EC2 and Rackspace nodes are Ubuntu virtual machines, albeit at different versions, as we run Ubuntu version 11.04 in Rackspace and Ubuntu Version 12.04 in Amazon's infrastructures.  These systems are provisioned with Git, Ruby, the Ruby Version Manager (RVM), and supporting libraries.  They all run as micro-intances or equivalent, and are bootstrapped with the appopriate project information to begin to participate as an overlay network node.  While EC2 and Rackspace Server infrastructures are infrastructure-as-a-cloud (IaaS) offerings supporting virtual machine instances of various types, Amazon S3 is a simple key-value store.  Running with REST sematics over HTTP, S3 stores arbitrary documents associated with specific keys in buckets.  These documents can be downloaded by any authorized participant, where authoriztion state is proven by possention of a secret key.  In this way, we can store the global configuration of a specific overlay network in a single location from which every node can access informationm with respect to their pending role and needed configuraiton information.  Likewise, all overlay network state can also be saved to centralized buckets for later analysis.  Finally, Github is a centralized source code repository used to share code between all participating nodes.  Prior to each content network instantiation, each node checks the repository for updates, and downloads them if they exist.
+All data saved within S3 is serialized in a text-based data serialization language known as YAML.  YAML is a widely supported hierarchical data representation language with support within the Ruby core platform.  This enables us easily serialize Ruby-native data structures to text-based representations for storage within S3.  More importantly, it simplifies post-experimental data analysis as any information logged to the centralized logging system during a given experimental run can be easily read and analyzed after the fact.
+
+In order to manage and initialize all overlay nodes, we use Capistrano.  Capistrano is a distributed deployment system initially used to manage large clusters of Ruby-on-Rails systems.  It has since expanded into a general-purpose distributed deployment toolchain, tightly integratd with Git.  This allows us to bootstrap different configurations of networks from a single command-and-control node simply and efficiently.
+
+\begin{table*}[tp] %
+\centering %
+\begin{tabular}{clcc}
+\toprule %
+$Category$ 				& $Components$ 								\\\toprule %
+$Infrastructure$ 		& Amazon S3, Amazon EC2, Rackspace Servers 	\\\midrule
+$Operating Systems$		& Ubuntu 11.04, Ubuntu 12.04 				\\\midrule
+$Technologies$			& Ruby (Sinatra, Capistrano, YAML) 			\\\midrule
+$Supporting Systems$	& Git, Github 								\\\bottomrule
+\end{tabular}
+\caption{Supporting Components}
+\label{table:model:components}
+\end{table*}
+
+All these infrastructural elements, protocols, and technology components have been successfully tested, allowing for unified control and configuration of large, distributed overlay systems.  We have successfully tested our logging systems, and integrated them with the Ruby runtime for ease of access.  We have also passed configuration information to both Rackspace and Amazon EC2 systems and verified access from all participating nodes.  Finally, we have successfully exercised the ability to dynamically update all participating nodes from Github as well as the capability to manage the system via Capistrano.
