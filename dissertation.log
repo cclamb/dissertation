@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.6)  25 JUL 2012 05:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.6)  25 JUL 2012 05:51
 entering extended mode
  %&-line parsing enabled.
 **dissertation.tex
@@ -685,46 +685,37 @@ Underfull \vbox (badness 1028) has occurred while \output is active []
  [38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39 <./images/prototype-physical-config.png (PNG copy)>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40]
+ [39 <./images/prototype-physical-config.png (PNG copy)>] [40]
 Underfull \vbox (badness 6078) has occurred while \output is active []
 
  [41]
 [42] [43] <./images/overall-view.pdf, id=532, 343.2825pt x 265.99374pt>
 File: ./images/overall-view.pdf Graphic file (type pdf)
 
-<use ./images/overall-view.pdf> [44 <./images/overall-view.pdf>]
+<use ./images/overall-view.pdf>
+Underfull \vbox (badness 3713) has occurred while \output is active []
 
-! LaTeX Error: File `node-view' not found.
+ [44 <./images/overall-view.pdf>]
+<./images/node-view.pdf, id=556, 350.30875pt x 386.44376pt>
+File: ./images/node-view.pdf Graphic file (type pdf)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.115 \includegraphics[width=5in]{node-view}
-                                            
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \vbox (badness 4416) has occurred while \output is active []
+<use ./images/node-view.pdf>
+Underfull \vbox (badness 1406) has occurred while \output is active []
 
  [45]
-<./images/router-view.pdf, id=564, 350.30875pt x 352.31625pt>
-File: ./images/router-view.pdf Graphic file (type pdf)
-
-<use ./images/router-view.pdf>)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
-(./dissertation.bbl [47 <./images/router-view.pdf>]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
+ [46 <./images/node-view.pdf>]
+<./images/router-view.pdf, id=584, 350.30875pt x 352.31625pt>
+File: ./images/router-view.pdf Graphic file (type pdf)
 
-(/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
+<use ./images/router-view.pdf> [47 <./images/router-view.pdf>] [48])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+(./dissertation.bbl
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 4--7
@@ -796,7 +787,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--55
 barnes-and-noble-
  []
 
-[48
+[50
 
 ]
 Underfull \hbox (badness 1342) in paragraph at lines 57--59
@@ -822,12 +813,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--123
 b. 2006.
  []
 
-[49] [50]) [51] (./dissertation.aux) ) 
+[51] [52]) [53] (./dissertation.aux) ) 
 Here is how much of TeX's memory you used:
- 8749 strings out of 495061
- 124343 string characters out of 1182574
+ 8745 strings out of 495061
+ 124422 string characters out of 1182574
  211635 words of memory out of 3000000
- 11325 multiletter control sequences out of 15000+50000
+ 11329 multiletter control sequences out of 15000+50000
  74822 words of font info for 244 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  38i,9n,39p,1576b,405s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -840,9 +831,9 @@ rw/symbol/usyr.pfb></usr/share/texmf-texlive/fonts/type1/urw/symbol/usyr.pfb></
 usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texl
 ive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/
 times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (62 pages, 1221010 bytes).
+Output written on dissertation.pdf (64 pages, 1237637 bytes).
 PDF statistics:
- 677 PDF objects out of 1000 (max. 8388607)
- 166 named destinations out of 1000 (max. 500000)
- 37141 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 701 PDF objects out of 1000 (max. 8388607)
+ 168 named destinations out of 1000 (max. 500000)
+ 37146 words of extra memory for PDF output out of 42996 (max. 10000000)
 

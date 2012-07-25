@@ -53,7 +53,8 @@ Information Filtering Expectations
 Extension into larger distributed system feasible
 
 \section{Inter-Provider Cloud Configuration}
-Over the month of June we established our initial technical baseline for upcoming content network development.  We have created and deployed baseline system images in both Amazon's Elastic Compute Cloud (EC2) and Rackspace Servers infrastructures.  We have also created and exercised our deployment, configuration, and logging systems to enable distributed monitoring and centralized reporting.  Overall, we currently have 20 nodes running with two distinct providers geographically dispersed across the continental United States.  This leads to a distinct requirement for a centralized system with distributed access for both initial configuration information as well as logging and auditing.  We have implemented this required infrastructure using Amazon's Simple Storage Service (S3), accessible from both Rackspace and Amazon hosted virtual machines.
+At this point, I have created and deployed baseline system images in both Amazon's Elastic Compute Cloud (EC2) and Rackspace Servers infrastructures.  I have also created and exercised our deployment, configuration, and logging systems to enable distributed monitoring and centralized reporting.  Overall, we currently have 20 nodes running with two distinct providers geographically dispersed across the continental United States.  This leads to a distinct requirement for a centralized system with distributed access for both initial configuration information as well as logging and auditing.  We have implemented this required infrastructure using Amazon's Simple Storage Service (S3), accessible from both Rackspace and Amazon hosted virtual machines.
+
 The specific technical components are Amazon EC2, Amazon S2, Rackspace Servers, and GitHub.  Both EC2 and Rackspace nodes are Ubuntu virtual machines, albeit at different versions, as we run Ubuntu version 11.04 in Rackspace and Ubuntu Version 12.04 in Amazon's infrastructures.  These systems are provisioned with Git, Ruby, the Ruby Version Manager (RVM), and supporting libraries.  They all run as micro-intances or equivalent, and are bootstrapped with the appopriate project information to begin to participate as an overlay network node.  While EC2 and Rackspace Server infrastructures are infrastructure-as-a-cloud (IaaS) offerings supporting virtual machine instances of various types, Amazon S3 is a simple key-value store.  Running with REST sematics over HTTP, S3 stores arbitrary documents associated with specific keys in buckets.  These documents can be downloaded by any authorized participant, where authoriztion state is proven by possention of a secret key.  In this way, we can store the global configuration of a specific overlay network in a single location from which every node can access informationm with respect to their pending role and needed configuraiton information.  Likewise, all overlay network state can also be saved to centralized buckets for later analysis.  Finally, Github is a centralized source code repository used to share code between all participating nodes.  Prior to each content network instantiation, each node checks the repository for updates, and downloads them if they exist.
 
 All data saved within S3 is serialized in a text-based data serialization language known as YAML.  YAML is a widely supported hierarchical data representation language with support within the Ruby core platform.  This enables us easily serialize Ruby-native data structures to text-based representations for storage within S3.  More importantly, it simplifies post-experimental data analysis as any information logged to the centralized logging system during a given experimental run can be easily read and analyzed after the fact.
@@ -77,7 +78,7 @@ $Supporting Systems$	& Git, Github 								\\\bottomrule
 All these infrastructural elements, protocols, and technology components have been successfully tested, allowing for unified control and configuration of large, distributed overlay systems.  We have successfully tested our logging systems, and integrated them with the Ruby runtime for ease of access.  We have also passed configuration information to both Rackspace and Amazon EC2 systems and verified access from all participating nodes.  Finally, we have successfully exercised the ability to dynamically update all participating nodes from Github as well as the capability to manage the system via Capistrano.
 
 \section{Inter-Cloud Architecture}
-In this phase, Smashup is a distributed content network distributed across multiple nodes and domains providing cross-domain managed data access.  This network consists of clients accessing information through a user interface subsystem that accesses data from external sources and a distributed cross-domain information network.  Queries are submitted through a client, to an application server, then to external services and information nodes.
+At this point the system is a distributed content network distributed across multiple nodes and domains providing cross-domain managed data access.  This network consists of clients accessing information through a user interface subsystem that accesses data from external sources and a distributed cross-domain information network.  Queries are submitted through a client, to an application server, then to external services and information nodes.
 
 The unique strength of this system is enabling dynamic distributed content control.  This includes information retraction, redaction, protection, and secure routing.  Information retraction involves quickly removing a user's access to sensitive data.  Redaction addresses simple data removal, while protection would operationally involve applying encryption layers of increasing strength based on operational demands.  Finally, secure routing would provide the ability to send data over a more secure link if such a link is available and required.
 
@@ -106,6 +107,8 @@ Overall, the system consists of an HTML 5 based user interface subsystem, extern
 \label{fig:model:overall-view}
 \end{figure}
 
+In this work, the client systems layer will be replaced with a command-line interface and external services will not be accessed, but a typical deployment operationally would have these elements.
+
 The user interface subsystem processes requests and returns information from both Google Maps and the content network based on those requests.  Technically, it is based on the latest version of Ruby on Rails (RoR) using standard RoR configuration conventions running on top of Ruby 1.9.*.  We use Rake for deployment, and Gem for component installation.  We use Bundler to maintain consistent application dependency state and RVM to manage Ruby virtual machine versions.  HTML 5 interface elements are defined using SASS and HAML.
 
 Operationally, typical system use involves query submission, usage management rectification,  and result display.  We have two distinct types of queries - an initial query for a map of a specific location, generally triggered by entering some kind of geolocation parameters (though potentially using device-generated location information, allowing automatic map alignment with a user's current location) and a query for specific sensitive information.  Initial queries have two distinct subqueries, one of map information directed at the Google Maps API, and another of the content network to see what data is available.  All content is usage managed to ensure that mashed information is consistent from a data sensitivity perspective prior to display to the user.  Currently, no information is cached within the interface subsystem.
@@ -129,3 +132,30 @@ Figures \ref{fig:model:node-view} and \ref{fig:model:router-view} highlights com
 \caption{Router Architecture}
 \label{fig:model:router-view}
 \end{figure}
+
+The primary components in the router and node systems' application layer are small adapters intended to translate between HTTP protocols and domain components.  They are:
+
+\begin{itemize}
+\item \textbf{Context Manager Client Service (ctx\_mgr\_s)} --- This is an adapter between the domain context manager and the external context service.
+\item \textbf{Node Service (node\_s)} --- The node service provides a RESTful interface to external clients.  All content requests are initially sent to a known node service.  This is essentially the external interface to a given content network.  A content network generally contains many distinct nodes as well.
+\item \textbf{Router Service (router\_s)} --- The router service is essentially a customized HTTP router that dispatches content requests and responses through a hierarchical content network in accordance with established policies and the current environmental context.
+\item \textbf{Dispatch Service (dispatch\_s)} --- This service dispatches information requests to known nodes based on known policies and context.
+\end{itemize}
+
+The domain layer components include:
+
+\begin{itemize}
+\item \textbf{Context Manager (ctx\_mgr)} --- The context manager client service calls into the context manager service to retrieve the most current contextual information with respect to the content network, attached clients, users, and devices.
+\item \textbf{Node (node)} --- The node component contains all logic needed to process and respond to information requests.  Nodes manage requests, responses, context evaluation, and usage management mechanism application.
+\item \textbf{Usage Management Mechanism (umm)} --- The usage management mechanism will apply rules grouped into policies against a known context to determine the acceptability of an intended action.  It will indicate whether or not that action can proceed.  It can also make changes to a proposed action so that the alternative action can be executed.
+\item \textbf{Router (router)} --- Router domain components manage the distribution of information requests and responses, applying managing information dispersal throughout a content network in accordance with context and policy.
+\item \textbf{Dispatcher (dispatch)} --- Dispatchers send requests to known routers or nodes in the larger context network.
+\end{itemize}
+
+Finally, the sole infrastructure component:
+
+\begin{itemize}
+\item \textbf{Information and Policy Repository (repo)} --- Unique to nodes, information and policy repositories contain specific network content, organized by key, and associated policies.
+\end{itemize}
+
+We use the same components to assemble non-hierarchical networks, in which nodes have both content and policy storage as well as request response and dispatching responsibilities.  Also note that context management and usage management components are shared between all types of content networks as well as all types of component systems within those networks.  Non-hierarchical nodes and hierarchical routers and nodes all need these kinds of services.
