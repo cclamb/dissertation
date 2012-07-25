@@ -11,6 +11,14 @@ Warning--to sort, need author or key in marlin
 Warning--to sort, need author or key in proposal:ucdmo-goals
 Warning--to sort, need author or key in proposal:openflow
 Warning--to sort, need author or key in proposal:jboss-esb
+Warning--to sort, need author or key in proposal:iso-25020
+Warning--to sort, need author or key in proposal:sus
+Warning--to sort, need author or key in proposal:borders-info-I
+Warning--to sort, need author or key in proposal:borders-info-II
+Warning--to sort, need author or key in proposal:borders-info-III
+Warning--to sort, need author or key in proposal:saic-breach-I
+Warning--to sort, need author or key in proposal:saic-breach-II
+Warning--to sort, need author or key in proposal:saic-breach-III
 Warning--empty author in marlin
 Warning--empty institution in marlin
 Warning--empty booktitle in proposal:bah-arch
@@ -20,45 +28,45 @@ Warning--empty booktitle in proposal:nsa-arch
 Warning--empty booktitle in proposal:cd101
 Warning--empty booktitle in proposal:raytheon-arch
 Warning--empty booktitle in proposal:ron-ross
-You've used 28 entries,
+You've used 37 entries,
             2118 wiz_defined-function locations,
-            654 strings with 8132 characters,
-and the built_in function-call counts, 8225 in all, are:
-= -- 819
-> -- 260
-< -- 7
-+ -- 114
-- -- 80
-* -- 507
-:= -- 1223
-add.period$ -- 77
-call.type$ -- 28
-change.case$ -- 127
+            690 strings with 9755 characters,
+and the built_in function-call counts, 10050 in all, are:
+= -- 997
+> -- 286
+< -- 8
++ -- 130
+- -- 86
+* -- 602
+:= -- 1435
+add.period$ -- 96
+call.type$ -- 37
+change.case$ -- 157
 chr.to.int$ -- 0
-cite$ -- 45
-duplicate$ -- 369
-empty$ -- 780
-format.name$ -- 80
-if$ -- 1841
+cite$ -- 62
+duplicate$ -- 450
+empty$ -- 1007
+format.name$ -- 86
+if$ -- 2288
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 19
-newline$ -- 136
-num.names$ -- 38
-pop$ -- 192
+int.to.str$ -- 37
+missing$ -- 20
+newline$ -- 173
+num.names$ -- 40
+pop$ -- 265
 preamble$ -- 1
-purify$ -- 97
+purify$ -- 118
 quote$ -- 0
-skip$ -- 274
+skip$ -- 353
 stack$ -- 0
-substring$ -- 476
-swap$ -- 89
-text.length$ -- 7
+substring$ -- 555
+swap$ -- 110
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 112
-warning$ -- 17
-while$ -- 65
-width$ -- 30
-write$ -- 287
-(There were 17 warnings)
+type$ -- 148
+warning$ -- 25
+while$ -- 69
+width$ -- 39
+write$ -- 362
+(There were 25 warnings)

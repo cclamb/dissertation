@@ -76,3 +76,56 @@ $Supporting Systems$	& Git, Github 								\\\bottomrule
 
 All these infrastructural elements, protocols, and technology components have been successfully tested, allowing for unified control and configuration of large, distributed overlay systems.  We have successfully tested our logging systems, and integrated them with the Ruby runtime for ease of access.  We have also passed configuration information to both Rackspace and Amazon EC2 systems and verified access from all participating nodes.  Finally, we have successfully exercised the ability to dynamically update all participating nodes from Github as well as the capability to manage the system via Capistrano.
 
+\section{Inter-Cloud Architecture}
+In this phase, Smashup is a distributed content network distributed across multiple nodes and domains providing cross-domain managed data access.  This network consists of clients accessing information through a user interface subsystem that accesses data from external sources and a distributed cross-domain information network.  Queries are submitted through a client, to an application server, then to external services and information nodes.
+
+The unique strength of this system is enabling dynamic distributed content control.  This includes information retraction, redaction, protection, and secure routing.  Information retraction involves quickly removing a user's access to sensitive data.  Redaction addresses simple data removal, while protection would operationally involve applying encryption layers of increasing strength based on operational demands.  Finally, secure routing would provide the ability to send data over a more secure link if such a link is available and required.
+
+In this system information retraction involves changing the execution context such that access for a given user, perhaps even on a specific device, is removed.  This context then propagates through the information network and attached clients.  This is useful when a given user, say a coalition partner, is suddenly considered compromised and can no longer be allowed access to sensitive information.  Likewise, a specific user's system may likewise be compromised and be forbidden access to specific information.
+
+Information redaction is generally used when a user simply does not have authorization for a specific section of content, generally within a larger document. In these cases, that information and related policy metadata are simply removed from any query responses.  Likewise, information protection also addresses specific subsections of information in a larger document, but unlike redaction, a user is in these cases authorized to access information, but one of the links over which the information must travel is not authorized to transmit specific sensitive information.  In these cases that information can be encrypted with appropriately strong encryption to allow for more secure information transmission.
+
+Finally, secure routing use directly addresses the ability to select communication links based on information content.  In these situations, a network has more than one path over which to return content.  Furthermore, these multiple paths have different characteristics providing different levels of service.  The system, based on rules contained in a policy and the current context can then select communication links of different security levels when returning content.Likewise, the content network must:
+
+\begin{itemize}
+\item Support and distribute queries for available content based on submitted constraints including artifact key and hop count.
+\item Support and distribute queries for specific content based on key.
+\item Evaluate returned content for suitability for transmission to a requesting node at each transmission step.
+\item Support partitioning into multiple domains.
+\item Allow for dynamic information distribution at network start.
+\item Collect experimental metrics for evaluation.
+\item Be distributed across multiple nodes.
+\end{itemize}
+
+Overall, the system consists of an HTML 5 based user interface subsystem, external data sources, and a content network, as shown in Figure 1.  The user interface layer displays maps and associated metadata to users based on submitted geolocation information and supports two different mobile profiles (tablet and telephone) and a single workstation profile.  We use HTML 5 media queries for end device detection, allowing us to format information differently for our three profiles facilitating usability.  External data sources could be any data programming interface offered by a third party over which we have no direct control.  In this system, we use Google Maps to define, download, display, and format maps.  Finally, we have a content network configurable either as a hierarchical network or a non-hierarchical network containing geo-tagged information at various sensitivity levels.  This content network can be configured arbitrarily, enabling us to create a virtually unlimited number of different information domains.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=5in]{overall-view}
+\caption{Overall System Architecture}
+\label{fig:model:overall-view}
+\end{figure}
+
+The user interface subsystem processes requests and returns information from both Google Maps and the content network based on those requests.  Technically, it is based on the latest version of Ruby on Rails (RoR) using standard RoR configuration conventions running on top of Ruby 1.9.*.  We use Rake for deployment, and Gem for component installation.  We use Bundler to maintain consistent application dependency state and RVM to manage Ruby virtual machine versions.  HTML 5 interface elements are defined using SASS and HAML.
+
+Operationally, typical system use involves query submission, usage management rectification,  and result display.  We have two distinct types of queries - an initial query for a map of a specific location, generally triggered by entering some kind of geolocation parameters (though potentially using device-generated location information, allowing automatic map alignment with a user's current location) and a query for specific sensitive information.  Initial queries have two distinct subqueries, one of map information directed at the Google Maps API, and another of the content network to see what data is available.  All content is usage managed to ensure that mashed information is consistent from a data sensitivity perspective prior to display to the user.  Currently, no information is cached within the interface subsystem.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=5in]{node-view}
+\caption{Node Architecture}
+\label{fig:model:node-view}
+\end{figure}
+
+The content network can be configured to run as an HTTP overlay system using HTTP routers and nodes or in a peer-to-peer configuration.  In either case, queries can be submitted to the network from any one of the constituent nodes - note that routers do not store data; rather, they focus soley on routing queries through a hierarchical network.  After initial submission, queries propagate throughout the network based on user-submitted search parameters.  The content network physically runs on nodes provisioned from Rackspace Cloud and Amazon Elastic Compute Cloud (EC2).  It is built using Sinatra for HTTP processing and uses Capistrano for distributed system deployment and control.  We store distributed data in Amazon Simple Storage Service (S3) buckets.  We use RVM, Gem, and Bundler in this system as we do with the user interface subsystem.
+
+In both configurations, the common functional flow is built around responding to content queries with information of appropriate sensitivity for a given query context, as shown in Figures \ref{fig:model:node-view} and \ref{fig:model:router-view}.  In general, systems are designed with a layered perspective, with an application layer fielding initial requests, a protocol-agnostic domain layer that manages query responses, and an infrastructure layer that contains specific required libraries and other technical artifacts.  In these systems, the application layer handles HTTP protocol issues, translating requests from the lingua franca of HTTP into the domain language reflected in the domain layer.  The infrastructure layer consists of various data management technologies called upon by the domain layer when needed.
+
+Figures \ref{fig:model:node-view} and \ref{fig:model:router-view} highlights communication ordering within components in a hierarchical content network and also shows the functional components within the system.  From a communication perspective, requests come in through the application layer and are then handed off for processing to the domain layer.  The domain layer retrieves the current context and is responsible for query dispatch (in the case of a router) or data reponses (in the case of a node) that are managed according to the current environmental context.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=5in]{router-view}
+\caption{Router Architecture}
+\label{fig:model:router-view}
+\end{figure}

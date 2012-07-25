@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.6)  27 APR 2012 06:45
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.6)  25 JUL 2012 05:28
 entering extended mode
  %&-line parsing enabled.
 **dissertation.tex
@@ -525,39 +525,34 @@ Chapter 1.
 (./content/introduction.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
-
-Underfull \vbox (badness 1418) has occurred while \output is active []
-
  [1
 
 
-]
-[2])
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] [2])
+Underfull \vbox (badness 1406) has occurred while \output is active []
 
  [3]
 (./content/cross-domain-examples.tex
-<./images/nsa-legacy-arch.png, id=191, 902.37125pt x 363.3575pt>
+<./images/nsa-legacy-arch.png, id=243, 902.37125pt x 363.3575pt>
 File: ./images/nsa-legacy-arch.png Graphic file (type png)
 
 <use ./images/nsa-legacy-arch.png> [4]
-<./images/nsa-arch.png, id=201, 895.345pt x 286.06876pt>
+<./images/nsa-arch.png, id=253, 895.345pt x 286.06876pt>
 File: ./images/nsa-arch.png Graphic file (type png)
 
 <use ./images/nsa-arch.png> [5 <./images/nsa-legacy-arch.png (PNG copy)>]
-<./images/raytheon-arch.png, id=211, 1304.875pt x 464.73625pt>
+<./images/raytheon-arch.png, id=262, 1304.875pt x 464.73625pt>
 File: ./images/raytheon-arch.png Graphic file (type png)
 
 <use ./images/raytheon-arch.png> [6 <./images/nsa-arch.png (PNG copy)>]
-<./images/bah-arch.png, id=221, 972.63374pt x 456.70625pt>
-File: ./images/bah-arch.png Graphic file (type png)
-
-<use ./images/bah-arch.png> [7 <./images/raytheon-arch.png>])
-(./content/current-system-analysis.tex [8 <./images/bah-arch.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-[10]) [11]
+ [7 <./images/raytheon-arch.png>]
+<./images/bah-arch.png, id=278, 972.63374pt x 456.70625pt>
+File: ./images/bah-arch.png Graphic file (type png)
+
+<use ./images/bah-arch.png>) (./content/current-system-analysis.tex [8 <./image
+s/bah-arch.png>] [9] [10]) [11]
 Chapter 2.
 (./content/taxonomy.tex
 Underfull \vbox (badness 1418) has occurred while \output is active []
@@ -585,65 +580,151 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 38.
 
-<./images/model-phi-crop.jpg, id=297, 344.28625pt x 206.7725pt>
+<./images/model-phi-crop.jpg, id=349, 344.28625pt x 206.7725pt>
 File: ./images/model-phi-crop.jpg Graphic file (type jpg)
 
 <use ./images/model-phi-crop.jpg> [14 <./images/model-phi-crop.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 52.
+(hyperref)                removing `math shift' on input line 54.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 52.
+(hyperref)                removing `\alpha' on input line 54.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 52.
+(hyperref)                removing `math shift' on input line 54.
 
-<./images/model-alpha-crop.jpg, id=303, 350.30875pt x 235.88126pt>
+<./images/model-alpha-crop.jpg, id=355, 350.30875pt x 235.88126pt>
 File: ./images/model-alpha-crop.jpg Graphic file (type jpg)
 
-<use ./images/model-alpha-crop.jpg> [15 <./images/model-alpha-crop.jpg>]
+<use ./images/model-alpha-crop.jpg> [15]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 70.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 70.
+(hyperref)                removing `math shift' on input line 72.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 70.
-
-<./images/model-beta-crop.jpg, id=309, 506.89375pt x 306.14375pt>
-File: ./images/model-beta-crop.jpg Graphic file (type jpg)
-
-<use ./images/model-beta-crop.jpg> [16] [17 <./images/model-beta-crop.jpg>]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 88.
+(hyperref)                removing `\beta' on input line 72.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gamma' on input line 88.
+(hyperref)                removing `math shift' on input line 72.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 88.
-
-<./images/model-gamma-crop.jpg, id=321, 506.89375pt x 299.1175pt>
-File: ./images/model-gamma-crop.jpg Graphic file (type jpg)
-
-<use ./images/model-gamma-crop.jpg> [18 <./images/model-gamma-crop.jpg>]
-[19] [20] [21] [22] [23] [24])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-(./dissertation.bbl
+ [16 <./images/model-alpha-crop.jpg>]
+<./images/model-beta-crop.jpg, id=365, 506.89375pt x 306.14375pt>
+File: ./images/model-beta-crop.jpg Graphic file (type jpg)
+
+<use ./images/model-beta-crop.jpg>
+Underfull \vbox (badness 3271) has occurred while \output is active []
+
+ [17 <./images/model-beta-crop.jpg>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 90.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gamma' on input line 90.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 90.
+
+<./images/model-gamma-crop.jpg, id=373, 506.89375pt x 299.1175pt>
+File: ./images/model-gamma-crop.jpg Graphic file (type jpg)
+
+<use ./images/model-gamma-crop.jpg> [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 <./images/model-gamma-crop.jpg>] [20] [21] [22] [23] [24] [25]) [26]
+Chapter 3.
+(./content/metrics.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27
+
+]
+[28] [29] [30] [31] [32]
+Overfull \hbox (0.88075pt too wide) in paragraph at lines 79--80
+[]\T1/ptm/m/it/12 (-20) Trust Re-la-tion-ships \T1/ptm/m/n/12 (-20) --- Trust i
+s dif-fi-cult to es-tab-lish be-tween in-di-vid-ual cloud providers
+ []
+
+) [33]
+Chapter 4.
+(./content/progression.tex
+<./images/cross-domain-prototype.png, id=487, 1244.17764pt x 758.12646pt>
+File: ./images/cross-domain-prototype.png Graphic file (type png)
+
+<use ./images/cross-domain-prototype.png>
+Overfull \hbox (3.62pt too wide) in paragraph at lines 3--4
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34
+
+ <./images/cross-domain-prototype.png (PNG copy)>] [35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+[37]
+<./images/prototype-physical-config.png, id=506, 439.28824pt x 644.76176pt>
+File: ./images/prototype-physical-config.png Graphic file (type png)
+
+<use ./images/prototype-physical-config.png>
+Underfull \vbox (badness 1028) has occurred while \output is active []
+
+ [38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39 <./images/prototype-physical-config.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40]
+Underfull \vbox (badness 6078) has occurred while \output is active []
+
+ [41]
+[42] [43] <./images/overall-view.pdf, id=532, 343.2825pt x 265.99374pt>
+File: ./images/overall-view.pdf Graphic file (type pdf)
+
+<use ./images/overall-view.pdf> [44 <./images/overall-view.pdf>]
+
+! LaTeX Error: File `node-view' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 \includegraphics[width=5in]{node-view}
+                                            
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \vbox (badness 4416) has occurred while \output is active []
+
+ [45]
+<./images/router-view.pdf, id=564, 350.30875pt x 352.31625pt>
+File: ./images/router-view.pdf Graphic file (type pdf)
+
+<use ./images/router-view.pdf>)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+(./dissertation.bbl [47 <./images/router-view.pdf>]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
- (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 4--7
@@ -663,43 +744,105 @@ yn.com/sbir/sbres/sttr/dod/af/af11-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--27
+Underfull \hbox (badness 4254) in paragraph at lines 18--22
+[]\T1/ptm/m/n/12 (+20) Barnes and No-ble pays for Bor-ders cus-tomer data, spar
+k-ing ethics de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--33
+[]\T1/ptm/m/n/12 (+20) Important In-for-ma-tion Re-gard-ing the Right of Bor-de
+rs Cus-tomers to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--33
+\T1/ptm/m/n/12 (+20) Opt Out of Trans-fer of Per-sonal In-for-ma-tion to Barnes
+ and No-ble.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--39
+[]\T1/ptm/m/n/12 (+20) Military Health Plan Data Breach Threat-ens 4.9 Mil-lion
+.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--39
+\T1/ptm/m/n/12 (+20) http://www.informationweek.com/news/healthcare/security-pr
+ivacy/231700161,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--45
 []\T1/ptm/m/n/12 (+20) NSA Pur-sues Intelligence-Sharing Ar-chi-tec-ture.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--27
+Underfull \hbox (badness 10000) in paragraph at lines 41--45
 \T1/ptm/m/n/12 (+20) http://www.informationweek.com/news/government/cloud-saas/
 229401646,
  []
 
-[26
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--55
+[]\T1/ptm/m/n/12 (+20) Privacy Alert: Barnes and No-ble buys Bor-ders cus-tomer
+ list.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--55
+\T1/ptm/m/n/12 (+20) http://www.broadbandexpert.com/blog/privacy/privacy-alert-
+barnes-and-noble-
+ []
+
+[48
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 77--80
+Underfull \hbox (badness 1342) in paragraph at lines 57--59
+[]\T1/ptm/m/n/12 (+20) TRICARE dis-closes SAIC breach: backup tapes held data o
+n 4.9 mil-lion.
+ []
+
+
+Overfull \hbox (126.68776pt too wide) in paragraph at lines 70--74
+[]\T1/ptm/m/n/12 (-20) ISO/IEC 25020:2007.  http://www.iso.org/iso/iso_catalogu
+e/catalogue_tc/catalogue_detail.htm?csnumber=35744,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
+[]\T1/ptm/m/n/12 (+20) Measuring Us-abil-ity with the Sys-tem Us-abil-ity Scale
+ (SUS).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
 []\T1/ptm/m/n/12 (+20) Coral con-sor-tium whitepa-per.  Tech-ni-cal re-port, Fe
 b. 2006.
  []
 
-[27]) [28] (./dissertation.aux) ) 
+[49] [50]) [51] (./dissertation.aux) ) 
 Here is how much of TeX's memory you used:
- 8614 strings out of 495061
- 122251 string characters out of 1182574
- 209889 words of memory out of 3000000
- 11285 multiletter control sequences out of 15000+50000
- 72844 words of font info for 232 fonts, out of 3000000 for 9000
+ 8749 strings out of 495061
+ 124343 string characters out of 1182574
+ 211635 words of memory out of 3000000
+ 11325 multiletter control sequences out of 15000+50000
+ 74822 words of font info for 244 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,9n,39p,1178b,407s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base
-/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-tex
-live/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-texlive/fonts/type1/urw/
-times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></u
-sr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texli
-ve/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (39 pages, 1023634 bytes).
+ 38i,9n,39p,1576b,405s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips
+/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-tex
+live/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/u
+rw/symbol/usyr.pfb></usr/share/texmf-texlive/fonts/type1/urw/symbol/usyr.pfb></
+usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texl
+ive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/
+times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on dissertation.pdf (62 pages, 1221010 bytes).
 PDF statistics:
- 430 PDF objects out of 1000 (max. 8388607)
- 108 named destinations out of 1000 (max. 500000)
- 37057 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 677 PDF objects out of 1000 (max. 8388607)
+ 166 named destinations out of 1000 (max. 500000)
+ 37141 words of extra memory for PDF output out of 42996 (max. 10000000)
 

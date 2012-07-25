@@ -16,4 +16,12 @@
 \BOOKMARK [1][-]{section.2.2}{Taxonomic Analysis}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.2.1}{Characteristics of Policy-centricity}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.2}{Overlay Structure}{section.2.2}
-\BOOKMARK [0][-]{chapter*.16}{References}{}
+\BOOKMARK [0][-]{chapter.3}{Metric Selection}{}
+\BOOKMARK [1][-]{section.3.1}{Evaluation Methodology and Model}{chapter.3}
+\BOOKMARK [0][-]{chapter.4}{Experimental Configuration}{}
+\BOOKMARK [1][-]{section.4.1}{Overlay Implementation Concerns}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Initial Prototype Implementation}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{Initial Prototype Results}{chapter.4}
+\BOOKMARK [1][-]{section.4.4}{Inter-Provider Cloud Configuration}{chapter.4}
+\BOOKMARK [1][-]{section.4.5}{Inter-Cloud Architecture}{chapter.4}
+\BOOKMARK [0][-]{chapter*.24}{References}{}

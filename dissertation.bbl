@@ -14,10 +14,28 @@ Marlin architecture overview.
 \newblock {http://www.zyn.com/sbir/sbres/sttr/dod/af/af11-bt30.htm}, August
   2011.
 
+\bibitem{proposal:borders-info-I}
+{B}arnes and {N}oble pays for {B}orders customer data, sparking ethics debate.
+\newblock
+  {http://www.infusioncrm.com/barnes-and-noble-pays-for-borders-customer-data-%
+sparking-ethics-debate}, October 2011.
+
 \bibitem{proposal:gig-arch}
 {D}epartment of {D}efense {G}lobal {I}nformation {G}rid {A}rchitectural
   {V}ision.
 \newblock {http://cio-nii.defense.gov/docs/GIGArchVision.pdf}, 2011.
+
+\bibitem{proposal:borders-info-III}
+{I}mportant {I}nformation {R}egarding the {R}ight of {B}orders {C}ustomers to
+  {O}pt {O}ut of {T}ransfer of {P}ersonal {I}nformation to {B}arnes and
+  {N}oble.
+\newblock {http://www.ftc.gov/opa/2011/10/bordersbarnes.shtm}, October 2011.
+
+\bibitem{proposal:saic-breach-II}
+{M}ilitary {H}ealth {P}lan {D}ata {B}reach {T}hreatens 4.9 {M}illion.
+\newblock
+  {http://www.informationweek.com/news/healthcare/security-privacy/231700161},
+  October 2011.
 
 \bibitem{proposal:nsa-cloud}
 {NSA} {P}ursues {I}ntelligence-{S}haring {A}rchitecture.
@@ -29,13 +47,38 @@ Marlin architecture overview.
 {O}penflow - {E}nabling {I}nnovation in {Y}our {N}etwork.
 \newblock {http://www.openflow.org}, November 2011.
 
+\bibitem{proposal:borders-info-II}
+{P}rivacy {A}lert: {B}arnes and {N}oble buys {B}orders customer list.
+\newblock
+  {http://www.broadbandexpert.com/blog/privacy/privacy-alert-barnes-and-noble-%
+buys-borders-customer-list/}, October 2011.
+
+\bibitem{proposal:saic-breach-III}
+{TRICARE} discloses {SAIC} breach: backup tapes held data on 4.9 million.
+\newblock {http://www.phiprivacy.net/?p=7854}, October 2011.
+
+\bibitem{proposal:saic-breach-I}
+{TRICARE} discloses {SAIC} breach: stolen backup tapes held data on 4.9 million
+  (updated).
+\newblock {http://www.databreaches.net/?p=20816}, October 2011.
+
 \bibitem{proposal:ucdmo-goals}
 {A}bout the {UCDMO}.
 \newblock {http://www.ucdmo.gov/about.html}, January 2012.
 
+\bibitem{proposal:iso-25020}
+{ISO/IEC} 25020:2007.
+\newblock
+  {http://www.iso.org/iso/iso\_catalogue/catalogue\_tc/catalogue\_detail.htm?c%
+snumber=35744}, January 2012.
+
 \bibitem{proposal:jboss-esb}
 {JB}oss {ESB}.
 \newblock {http://www.jboss.org/jbossesb}, January 2012.
+
+\bibitem{proposal:sus}
+{M}easuring {U}sability with the {S}ystem {U}sability {S}cale ({SUS}).
+\newblock {http://www.measuringusability.com/sus.php}, January 2012.
 
 \bibitem{Blumenthal:2001:RDI:383034.383037}
 Marjory~S. Blumenthal and David~D. Clark.
@@ -112,6 +155,12 @@ Pramod~A. Jamkhedkar, Gregory~L. Heileman, and Ivan Martinez-Ortiz.
 Rob~H. Koenen, Jack Lacy, Michael MacKay, and Steve Mitchell.
 \newblock The long march to interoperable digital rights management.
 \newblock {\em Proceedings of the IEEE}, 92(6):883--897, 2004.
+
+\bibitem{5958158}
+M.~Lepmets, E.~Ras, and A.~Renault.
+\newblock A quality measurement framework for it services.
+\newblock In {\em SRII Global Conference (SRII), 2011 Annual}, pages 767 --774,
+  29 2011-april 2 2011.
 
 \bibitem{proposal:nsa-arch}
 NSA.
