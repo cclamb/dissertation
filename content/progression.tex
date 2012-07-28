@@ -163,6 +163,63 @@ We use the same components to assemble non-hierarchical networks, in which nodes
 \section{Primary Interfaces and Mappings}
 Each of the defined components have an associated interface defined over domain datatypes. These interfaces are implemented using Representational State Transfer (REST) semantics over Hypertext Transfer Protocol (HTTP), and the datatypes are represented in Extensible Markup Language (XML).
 
-\lstinputlisting[label=lst:datatypes-used, caption=Key Domain Dataypes]{content/code/datatypes.idl}
+\begin{lstlisting}[label=lst:artifact-data-types, caption=Key Artifact Dataypes]
+typedef Policy string;
+typedef Artifact string;
 
-\lstinputlisting[label=lst:node-interface, caption=The Node Interface]{content/code/node.idl}
+struct ArtifactDescriptor {
+	Policy policy;
+	Artifact artifact;
+};
+
+typedef sequence<ArtifactDescriptor> ArtifactDescriptorList;
+\end{lstlisting}
+
+As shown in Listing \ref{lst:artifact-datatypes-used}, we deal primarily with two key datatypes, \emph{Artifacts} and \emph{Policies}.  For the purpose of networked data transfer, both of these datatypes are formatted strings of XML data.  An \emph{ArtifactDescriptor} combines an Artifact with its associated policy.  An \emph{ArtifactDescriptorList} is an unlimited sequence of ArtifactDescriptors.
+
+\begin{lstlisting}[label=lst:status-data-types, caption=Key Status Dataypes]
+enum Status { unsecured, confidential, secret, topSecret };
+
+struct Status {
+	string edgeName;
+	Status status;
+};
+
+typedef sequence<Status> StatusList;
+
+struct Context {
+	date date;
+	StatusList networkStatus;
+};
+\end{lstlisting}
+
+Network status information is contained in \emph{Status} elements and grouped into a \emph{Context} structure, as shown in Listing \ref{lst:status-data-types}.
+
+\begin{lstlisting}[label=lst:err-data-types, caption=Key Error Dataypes]
+exception NetworkError {
+	string code;
+};
+\end{lstlisting}
+
+Finally, shown in Listing \ref{lst:err-data-types}, the \emph{NetworkError} exception is represented by standard HTTP error codes and responses operationally, and is used extensively throughout system interface operations.
+
+%\lstinputlisting[label=lst:datatypes-used, caption=Key Domain Dataypes]{content/code/datatypes.idl}
+
+The node interface described in Listing \ref{lst:node-interface}.  The Node interface is mapped to a REST style request over HTTP where the argument ordering is preserved when building the URL for accessing artifact content.  For example, when accessing a specific artifact, the artifact operation called with a username of 'truchas', on an iphone, for artfact X1234 would map to the URL http://host/artifact/truchas/iphone/X1234.  Likewise, a similar operation call on the artifacts operation would use the URL http://host/artifacts/truchas/iphone.
+
+\begin{lstlisting}[label=lst:node-interface, caption=The Node Interface]
+interface Node {
+	ArtifactDescriptor artifact(in string uname, in string device, in string id) raises (NetworkError);
+	ArtifactDescriptorList artifacts(in string uname, in string device) raises (NetworkError);
+};
+\end{lstlisting}
+
+This type of calling convention is used throught the system.  The specific ordering of the URL elements stems from corresponding artifact set relationships.  Specifically, the set of all artifacts a user has access to is the same as or larger than the set of all artifacts that a user on a specific device can access and the same size or smaller that the set of all available artifacts.
+
+\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Context Manager  Interface]
+interface ContextManager {
+	Context currentContext() raises (NetworkError);
+}
+\end{lstlisting}
+
+The \emph{ContextManager} interface defined in Listing \ref{lst:context-mgr-interface} describes how the nework context monitor exposes network state information to requestors.

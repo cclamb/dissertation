@@ -1,4 +1,0 @@
-interface node {
-	ArtifactDescriptor artifact(in string uname, in string device, in string id);
-	ArtifactDescriptorList artifacts(in string uname, in string device);
-}
