@@ -193,7 +193,7 @@ struct Context {
 };
 \end{lstlisting}
 
-Network status information is contained in \emph{Status} elements and grouped into a \emph{Context} structure, as shown in Listing \ref{lst:status-data-types}.
+Network status information is contained in \emph{Status} elements and grouped into a \emph{Context} structure, as shown in Listing \ref{lst:status-data-types}.  A \emph{StatusList} is essentially a dictionary of network connection statuses organized by edgename, where an edge is named by concatinating the edge nodes in any order.  These nodenames are concatenated and separated by a pipe symbol, so that the edge between \textit{NodeA} and \textit{NodeB} is named \textit{NodeA|NodeB} or \textit{NodeB|NodeA}.  This makes searching less efficient, in that a Context can contain a StatusList with names in either ordering, in exchange for easier and more terse data exchange.
 
 \begin{lstlisting}[label=lst:err-data-types, caption=Key Error Dataypes]
 exception NetworkError {
@@ -218,8 +218,8 @@ This type of calling convention is used throught the system.  The specific order
 
 \begin{lstlisting}[label=lst:context-mgr-interface, caption=The Context Manager  Interface]
 interface ContextManager {
-	Context currentContext() raises (NetworkError);
+	Context context() raises (NetworkError);
 }
 \end{lstlisting}
 
-The \emph{ContextManager} interface defined in Listing \ref{lst:context-mgr-interface} describes how the nework context monitor exposes network state information to requestors.
+The \emph{ContextManager} interface defined in Listing \ref{lst:context-mgr-interface} describes how the nework context monitor exposes network state information to requestors.  Note, in this case, the defined interface maps to the URL http://host/context.
