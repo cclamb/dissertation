@@ -1,4 +1,3 @@
-% \documentclass[12pt,letterpaper]{article}
 \documentclass[botnum,fleqn,final]{unmeethesis}
 
 % Set Title and Author
@@ -10,10 +9,13 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-%\usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{epsfig}
 \usepackage{booktabs}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{multirow}
+\usepackage{color}
 
 % Font settings:
 \usepackage[T1]{fontenc}
@@ -38,7 +40,8 @@
             pdftitle={\mytitle},
             pdfauthor={\myauthor}}
 
-% Use hyperref package to allow hyperlinks inside of the PDF document and PDF metadata
+% Use hyperref package to allow hyperlinks inside of 
+% the PDF document and PDF metadata
 % http://en.wikibooks.org/wiki/LaTeX/Hyperlinks
 \usepackage[pdftex]{hyperref}
 \hypersetup{
@@ -50,11 +53,9 @@
     pdfstartview={FitH},     % fits the width of the page to the window
     pdftitle={\mytitle},     % title
     pdfauthor={\myauthor},   % author
-    %pdfsubject={Subject},   % subject of the document
-    %pdfcreator={Creator},   % creator of the document
-    %pdfproducer={Producer}, % producer of the document
-    %pdfkeywords={keyword1} {key2} {key3}, % list of keywords
-    %pdfnewwindow=true,      % links in new window
+    pdfsubject={\mytitle},   % subject of the document
+    pdfcreator={\myauthor},  % creator of the document
+    pdfproducer={\myauthor}, % producer of the document
     colorlinks=true,         % false: boxed links; true: colored links
     linkcolor=black,         % color of internal links
     citecolor=black,         % color of links to bibliography
@@ -64,6 +65,29 @@
 
 
 \graphicspath{{./images/}}
+
+\definecolor{idlred}{rgb}{0.6,0,0} % for strings
+\definecolor{idlgreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{idlpurple}{rgb}{0.5,0,0.35} % keywords
+
+\lstset{
+	language=idl,
+	basicstyle=\scriptsize\ttfamily,
+	numbers=left,
+	stepnumber=1,
+	numberstyle=\tiny\color{black},
+	numbersep=10pt,
+	tabsize=4,
+	backgroundcolor=\color{white},
+	keywordstyle=\color{idlpurple}\bfseries,
+	stringstyle=\color{idlred},
+	commentstyle=\color{idlgreen},
+	frame=shadowbox,
+	rulesepcolor=\color{black},
+	breaklines=true,
+	showspaces=false,
+	showstringspaces=false
+}
 
 \begin{document}
 

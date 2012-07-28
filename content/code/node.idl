@@ -1,0 +1,4 @@
+interface node {
+	sequence artifact(in string uname, in string device, in string id);
+	sequence artifacts(in string uname, in string device);
+}
