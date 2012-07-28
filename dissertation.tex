@@ -16,6 +16,7 @@
 \usepackage{courier}
 \usepackage{multirow}
 \usepackage{color}
+\usepackage{framed}
 
 % Font settings:
 \usepackage[T1]{fontenc}
@@ -65,29 +66,33 @@
 
 
 \graphicspath{{./images/}}
-
-\definecolor{idlred}{rgb}{0.6,0,0} % for strings
-\definecolor{idlgreen}{rgb}{0.25,0.5,0.35} % comments
-\definecolor{idlpurple}{rgb}{0.5,0,0.35} % keywords
-
+ 
 \lstset{
-	language=idl,
-	basicstyle=\scriptsize\ttfamily,
-	numbers=left,
+	language=IDL,
+	basicstyle=\scriptsize\ttfamily, 
+	numbers=left,    
+	numberstyle=\tiny,
 	stepnumber=1,
-	numberstyle=\tiny\color{black},
-	numbersep=10pt,
-	tabsize=4,
-	backgroundcolor=\color{white},
-	keywordstyle=\color{idlpurple}\bfseries,
-	stringstyle=\color{idlred},
-	commentstyle=\color{idlgreen},
-	frame=shadowbox,
-	rulesepcolor=\color{black},
-	breaklines=true,
+	numbersep=5pt,
+	tabsize=2,
+	extendedchars=true,        
+	breaklines=true,            
+	keywordstyle=\color{red},
+	frame=b,         
+	stringstyle=\color{white}\ttfamily,
 	showspaces=false,
-	showstringspaces=false
+	showtabs=false,
+	xleftmargin=17pt,
+	framexleftmargin=17pt,
+	framexrightmargin=5pt,
+	framexbottommargin=4pt,
+	showstringspaces=false      
 }
+ 
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
 
 \begin{document}
 

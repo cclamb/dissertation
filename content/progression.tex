@@ -160,4 +160,9 @@ Finally, the sole infrastructure component:
 
 We use the same components to assemble non-hierarchical networks, in which nodes have both content and policy storage as well as request response and dispatching responsibilities.  Also note that context management and usage management components are shared between all types of content networks as well as all types of component systems within those networks.  Non-hierarchical nodes and hierarchical routers and nodes all need these kinds of services.
 
-\lstinputlisting[]{content/code/node.idl}
+\section{Primary Interfaces and Mappings}
+Each of the defined components have an associated interface defined over domain datatypes. These interfaces are implemented using Representational State Transfer (REST) semantics over Hypertext Transfer Protocol (HTTP), and the datatypes are represented in Extensible Markup Language (XML).
+
+\lstinputlisting[label=lst:datatypes-used, caption=Key Domain Dataypes]{content/code/datatypes.idl}
+
+\lstinputlisting[label=lst:node-interface, caption=The Node Interface]{content/code/node.idl}

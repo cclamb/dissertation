@@ -1,4 +1,4 @@
 interface node {
-	sequence artifact(in string uname, in string device, in string id);
-	sequence artifacts(in string uname, in string device);
+	ArtifactDescriptor artifact(in string uname, in string device, in string id);
+	ArtifactDescriptorList artifacts(in string uname, in string device);
 }

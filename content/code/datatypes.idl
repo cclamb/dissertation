@@ -1,0 +1,10 @@
+struct Policy {};
+
+struct Artifact {};
+
+struct ArtifactDescriptor {
+	Policy policy;
+	Artifact artifact;
+};
+
+typedef sequence<ArtifactDescriptor> ArtifactDescriptorList;
