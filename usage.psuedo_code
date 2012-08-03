@@ -1,0 +1,28 @@
+
+; Partitioning approach, node in router network (no dispatch)
+; ---
+
+artifact_descriptor get_artifact(in subject s, in device d; in key k) raises (error) :
+given:
+  ; interfaces
+  repository r
+  usage_management_mechanism umm
+  artifact_rectifier ar
+  context_factory cf
+
+  ; data structures
+  content_bundle_list cbr
+  artifact_descriptor adr
+
+  ; functions
+  bool empty()
+  void push(inout context_bundle_list c, in object)
+
+ad = r.get_artifact(k)
+return nil if ad == nil
+ctx = cf.assemble_context(s, r, d)
+cbl = ar.partition(ad)
+for_each cb in cbl :
+  push(cbr, cb) if umm.can_execute(cb.policy, ctx, activity.read)
+adr = ar.assemble(ctr)
+return adr

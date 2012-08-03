@@ -1,0 +1,54 @@
+typedef string user_name;
+
+typedef string artifact;
+typedef string policy;
+typedef string section;
+
+typedef artifact resource;
+typedef user_name subject;
+
+typedef sequence<policy> policy_list;
+
+enum device { tablet, phone, workstation };
+enum status { unsecured, confidential, secret, top_secret };
+
+struct artifact_descriptor {
+  artifact a;
+  policy_list p_list;
+};
+
+interface environment {
+  object get(in edge e);  
+};
+
+struct context {
+  resource r;
+  subject s;
+  environment e;  
+};
+
+struct content_bundle {
+  section s;
+  policy p;
+};
+
+typedef sequence<content_bundle> content_bundle_list;
+typedef sequence<artifact_descriptor> artifact_descriptor_list;
+
+interface repository {
+  artifact_descriptor get_artifact(in key k);
+  artifact_descriptor_list get_all_artifacts();
+};
+
+interface usage_management_mechanism {
+  bool can_execute(in policy p, in context c, in activity a);
+};
+
+interface artifact_rectifier {
+  content_bundle_list partition(in artifact_descriptor a);
+  artifact_descriptor assemble(in content_bundle_list c);
+};
+
+interface context_factory {
+  context assemble_context(in subject s, in resource r, in device d);
+};

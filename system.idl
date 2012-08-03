@@ -1,0 +1,86 @@
+typedef string user_name;
+typedef string key;
+
+typedef string artifact;
+typedef string policy;
+typedef string request;
+typedef string section;
+
+typedef artifact resource;
+typedef user_name subject;
+typedef edge string;
+
+typedef sequence<policy> policy_list;
+
+enum device { tablet, phone, workstation };
+enum status { unsecured, confidential, secret, top_secret };
+enum activity { read };
+enum action { read, transmit };
+
+struct environment_record {
+  edge e;
+  status s
+};
+
+struct artifact_descriptor {
+  artifact a;
+  policy_list p_list;
+};
+
+struct content_bundle {
+  section s;
+  policy p;
+};
+
+interface environment {
+  status get(in edge e);  
+};
+
+struct context {
+  resource r;
+  subject s;
+  environment e;  
+};
+
+typedef sequence<environment_record> environment_record_list;
+typedef sequence<artifact_descriptor> artifact_descriptor_list;
+typedef sequence<content_bundle> content_bundle_list;
+
+exception error {
+  int code;
+};
+
+exception client_error : error {};
+exception server_error : error {};
+exception unknown_response_error : error {};
+
+interface activity_translator {
+  action_list translate(in activity a);
+};
+
+interface artifact_manager {
+  artifact_descriptor get_artifact(in subject s, in device d, in key k) raises (error);
+  artifact_descriptor_list get_all_artifacts(in subject s, in device d) raises (error);
+};
+
+interface repository {
+  artifact_descriptor get_artifact(in key k);
+  artifact_descriptor_list get_all_artifacts();
+};
+
+interface dispatcher {
+  artifact_descriptor_list dispatch(in request r) raises (error);
+};
+
+interface usage_management_mechanism {
+  bool can_execute(in policy p, in context c, in activity a);
+};
+
+interface artifact_rectifier {
+  content_bundle_list partition(in artifact_descriptor a);
+  artifact_descriptor assemble(in content_bundle_list c);
+};
+
+interface context_factory {
+  context assemble_context(in subject s, in resource r, in device d);
+};

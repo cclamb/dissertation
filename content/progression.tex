@@ -216,10 +216,35 @@ interface Node {
 
 This type of calling convention is used throught the system.  The specific ordering of the URL elements stems from corresponding artifact set relationships.  Specifically, the set of all artifacts a user has access to is the same as or larger than the set of all artifacts that a user on a specific device can access and the same size or smaller that the set of all available artifacts.
 
-\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Context Manager  Interface]
+\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Context Manager Interface]
 interface ContextManager {
 	Context context() raises (NetworkError);
-}
+};
 \end{lstlisting}
 
 The \emph{ContextManager} interface defined in Listing \ref{lst:context-mgr-interface} describes how the nework context monitor exposes network state information to requestors.  Note, in this case, the defined interface maps to the URL http://host/context.
+
+\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Usage Management Mechanism Interface]
+[Constructor(in ContextManager contextManager);]
+interface UsageManagementMechanism {
+	
+};
+\end{lstlisting}
+
+\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Repository Interface]
+interface Repository {
+	
+};
+\end{lstlisting}
+
+\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Router Interface]
+interface Router {
+	
+};
+\end{lstlisting}
+
+\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Dispatcher Interface]
+interface Dispatcher {
+	
+};
+\end{lstlisting}
