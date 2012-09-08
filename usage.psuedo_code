@@ -26,3 +26,9 @@ for_each cb in cbl :
   push(cbr, cb) if umm.can_execute(cb.policy, ctx, activity.read)
 adr = ar.assemble(ctr)
 return adr
+
+
+
+; Initial phase
+ad = r.get_artifact(k)
+return ad ; returns if ad is nil or has content

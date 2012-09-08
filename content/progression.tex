@@ -160,91 +160,322 @@ Finally, the sole infrastructure component:
 
 We use the same components to assemble non-hierarchical networks, in which nodes have both content and policy storage as well as request response and dispatching responsibilities.  Also note that context management and usage management components are shared between all types of content networks as well as all types of component systems within those networks.  Non-hierarchical nodes and hierarchical routers and nodes all need these kinds of services.
 
+\section{Experimental Structure}
+Content-centric networks are generalized constructs supplying the ability to manage distributed content more effectively.  This work explores specifically how users can control information security and privacy in a more granular way when data is arbitrarily combined.  In order to do this effectively however, we must define a simple protocol that allows connected systems to determine what kind of information is available.
+
+We can use a variety of approaches with respect to information storage in these kinds of networks.  In many ways, they exhibit behavior very similar to filesystems.  In a content-centric network, rather than asking for content via some kind of address, like a uniform resource locator (URL), we use a specific non-ambiguous name.  This is very similar to how content management systems and web caches work today.  These kinds of systems treat a URL as a name rather than an address, returning a cached image of the requested content rather than the content actually pointed to by the URL.  This requires that consumers and caching agents recognize and manage the possibility of stale data, but that risk is generally worth the performance gain.  Content-centric networks can similarly optimize various aspects of content retrieval, returning the most local, highest quality, or most reliable data item, for example.
+
+In this content network, we store metadata associated with specific locations as well as the locations themselves.  Rather than optimizing with regard to location or quality, this network optimizes security posture.  In order to do so, we need to specify a simple data discovery protocol so clients can discover what data is available.
+We have proposed two different models for content access in this kind of network.  The first, the Cat Model, mimics typical filesystem interaction on unix-centric computers.  The second, the Index Model, acts more like a typical website, with a central index providing available options.  Both models are can manage hierarchical content, a requirement for managing large volumes of information.
+
+The first system is modeled after a typical filesystem.  In this case, a user would have read access to the network via a set of related commands.  Filesystems follow a model where you can list the available contents, access specific details of the contents, and then access individual contents themselves.  In UNIX and unix inspired systems, these actions correspond to ls, for diretory listings, and programs like cat, to allow access to specific individual content.  File details are exposed by options on the ls command.
+
+Command-line access to a content network is certainly feasible.  Command-line shells are common in a variety of environments, ranging from development environments like Play to software development systems like Ruby and Python.
+
+In our content network, the ls command would traverse the network returning information describing contents based on the current security context.  This context consists of the environment, the resource requested, and the subject requesting the resource.  For example, a user with access to a content network via some kind of shell may list network content from a device at a given physical and network location and receive content listing A, while executing a listing from a different device from the same locations may generate content listing B, which can be significantly different from A based on contextual changes.
+
+Another problem arises with listing network contents is the fundamentally different nature of listing a relatively small directory on a local computer as opposed to the contents of a geographically dispersed network.  We feel comfortable that the latency involved when reading this kind of local directory is small, and that the number of elements to list is tractable.  Networks do not support these kinds of assumptions.  The time required to list the available contents on a dispersed content network can be significant.
+
+A cat-like command on a content network suffers from similar problems.  As content within an artifact can be marked with different sensitivity, displayed artifact content can change based on context as well.  Likewise, large artifacts can take significant time to display on devices because of content dispersion issues.
+
+The proposed Index Model has significant precedent as well.  This model is commonly used in world-wide-web systems both large and small.  Modified versions have been used to seed BitTorrent networks as well as direct content traffic on early instances of Napster.  Here, we have a small index file that lists available content on the network.  This index could be associated with a policy and marked for sensitivity, and could contain links to content as well as metadata describing that content.  This index would essentially serve the function of the ls command in the Cat Model.  Selecting a link from an index via a network client would then serve as the Cat Model's cat command.
+
+Similar issues with respect to network dispersion exist with showing the contents of artifacts in both models, and the index contents can seem to change with respect to changing context, as they are also associated with policy sets describing the use of content.  Both models can also be optimized for project-centric content viewing or to show indicators with respect to expected content retrieval latency.  Organizationally, any kind of informational hierarchy within the network would need to be based on the semantics of referenced content rather than external factors.  Content-centric networks use keys to location content rather than addresses, so this hierarchical name would in fact be such a key rather than an address for the content.
+
+Latency effects and content surprise are characteristics of the underlying content network rather than a specific interface approach.  They effect either approach equally.  The Cat Model is more general than the Index Model however.  You can in fact implement the Index Model with the Cat Model, but not the inverse.  
+Our work is focused on secure mashing of content in a web-centric environment.  As a result, the Index Model fits our needs better than the more general Cat Model.
+
+\subsection{Initial Seed Information}
+In order to seed network clients, we provide an initial index object that contains location information and associated metadata.  This information is classed according to sensitivity and consists of names and latitude/longitude coordinates contained in an XML file, similar to that shown in listing \ref{lst:seed-data}.
+
+\begin{lstlisting}[language=xml, label=lst:seed-data, caption=Seed Information for the Network]
+<index>
+  <location>
+    <name>The location name; a city name, for example</name>
+    <lat>The location latitude</lat>
+    <lon>The location longitude</lon>
+    <about>Metadata about the location</about>
+    <key>The detail data object name</key>
+    <key>...</key>
+    ....
+  </location>
+  <location>...</location>
+  <location>...</location>
+  ...
+</index>
+\end{lstlisting}
+
+Any of these XML elements can be marked with an attribute, policy-set, which is the name of a policy set contained in the associated policy file.  It is contained as an artifact with an associated policy set.
+
+Detail data objects are arbitrary XML documents that support the policy attribute.  We support text, images, and shape information.  Each different type is ensconced within an XML element corresponding to the type of data contained, and are delivered in a single XML document with associated policy sets.
+
+
+\par\noindent
+\begin{minipage}[t]{.30\textwidth}
+\begin{lstlisting}[language=xml, label=lst:image-data, caption=Image]
+<artifact>
+  <policy-set>
+  ...
+  </policy-set>
+  <data-object>
+    <image type=".">
+    ...
+    </image>
+  </data-object>
+  ...
+</artifact>
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.30\textwidth}
+\begin{lstlisting}[language=xml, label=lst:shape-data, caption=Shape]
+<artifact>
+  <policy-set>
+  ...
+  </policy-set>
+  <data-object>
+    <shape type=".">
+    ...
+    </shape>
+  </data-object>
+  ...
+</artifact>
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.30\textwidth}
+\begin{lstlisting}[language=xml, label=lst:content-data, caption=Content]
+<artifact>
+  <policy-set>
+  ...
+  </policy-set>
+  <data-object>
+    <content type=".">
+     ...
+    </content>
+  </data-object>
+  ...
+</artifact>
+\end{lstlisting}
+\end{minipage}
+
+In these examples, data-objects can be associated with policies contained in the policy-set element.  Each policy-set element can contain zero or more policies.  Sections within the content element can also be associated with policy sets, and currently type can be either xml or txt.  A shape can only be associated with a policy set from the shape element itself.  Properties of a shape cannot be associated with a policy set individually.  Shape types include marker, circle, and polygon, as shown in listing 3. Data contained within an image element is Base64 encoded and must contain type information to indicate the specific image format.  Currently, the supported values are jpg and png.
+
+\par\noindent
+\begin{minipage}[t]{.30\textwidth}
+\begin{lstlisting}[language=xml, label=lst:marker-shape, caption=Marker]
+...
+<shape type="marker">
+  <marker>
+    <lat>...</lat>
+    <lon>...</lon>
+  </marker>
+</shape>
+...
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.30\textwidth}
+\begin{lstlisting}[language=xml, label=lst:circle-shape, caption=Circle]
+...
+<shape type="circle">
+  <center>
+    <lat>...</lat>
+    <lon>...</lon>
+  </center>
+  </radius>...</radius>
+</shape>
+...
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.30\textwidth}
+\begin{lstlisting}[language=xml, label=lst:polygon-shape, caption=Polygon]
+...
+<shape type="polygon">
+  <vertex>...</vertex>
+  ...
+</shape>
+...
+\end{lstlisting}
+\end{minipage}
+
+\subsection{Policies and Attributes}
+This system will use attribute based mechanisms for usage management.  The policies defined over content must therefore consist of rules that address usage over an ontology of possible user attributes of concern.  We are specifically interested in a user's primary attributes: mission affiliation, clearance levels (both sensitivity and category), organization, and computational environment (consisting of both device and operating system).  We also make decisions with respect to usage based on a secondary attribute, need-to-use.
+
+\begin{table*}[tp] %
+\centering %
+\begin{tabular}{clcc}
+\toprule %
+$ Name$ 	& $Description$ \\\toprule %
+$\phi$ 		& The initial level of this taxonomy, $\phi$ classified systems \\
+ 			& have a single guard without policy-based control \\\midrule
+$\alpha$	& $\alpha$ classified systems have a single guard by have begun \\
+			& to integrate policy-based control \\\midrule
+$\beta$		& Systems that have begun to integrate policy-based control with \\
+			& router elements are in the $\beta$ category \\\midrule
+$\gamma$	& Systems that have integrated policy-based control with routing \\
+			& and computational elements \\\midrule
+$\delta$	& Continuous policy-based control with \textit{smart licensed} artifacts \\\bottomrule
+\end{tabular}
+\caption{Proposed Usage Management Taxonomy}
+\label{table:model:taxonomy}
+\end{table*}
+
+Sets differ from orderings in the above table as sets denote membership with no associated value.  Orderings on the other hand have distinct values increasing from left to right in the listed enumerations.  For example, a user can be affiliated with a specific mission in Domain A, either tropic\_thunder or gallant\_entry, or both.  That user is also associated with a sensitivity value, either unclassified, secret, or topsecret, where topsecret is the most sensitive and unclassified the least.
+
+Need-to-use decisions are based on the current context in tandem with mission and organizational affiliation.  We use attribute based control in these scenarios, in which we make access decisions based on the attributes of a requesting user rather than defined roles.
+
+User attributes support defined policy elements.  Not every policy attribute has a corresponding user attribute as not all policy attributes are associated with users.  Some are associated with the user's environment, like operating system or device.
+
+\begin{table*}[tp] %
+\centering %
+\begin{tabular}{clcc}
+\toprule %
+$ Name$ 	& $Description$ \\\toprule %
+$\phi$ 		& The initial level of this taxonomy, $\phi$ classified systems \\
+ 			& have a single guard without policy-based control \\\midrule
+$\alpha$	& $\alpha$ classified systems have a single guard by have begun \\
+			& to integrate policy-based control \\\midrule
+$\beta$		& Systems that have begun to integrate policy-based control with \\
+			& router elements are in the $\beta$ category \\\midrule
+$\gamma$	& Systems that have integrated policy-based control with routing \\
+			& and computational elements \\\midrule
+$\delta$	& Continuous policy-based control with \textit{smart licensed} artifacts \\\bottomrule
+\end{tabular}
+\caption{Proposed Usage Management Taxonomy}
+\label{table:model:taxonomy}
+\end{table*}
+
+Policies are evaluated either via direct set membership or via membership in a category in an ordering.  Content can be affiliated with multiple sets with regard to set-oriented attributes.  Likewise, users can belong to multiple sets as well.  Both content and users will be associated with a single value from an ordering element, as that value is inclusive of lower values as well.  For example, a user can be affiliated with both the tropic\_thunder and gallant\_entry missions, but only one of the clearance values of uncleared, secret, or top secret.  In the case of clearance values, secret subsumes uncleared, so a user with a secret attribute set would be able to access any unclassified material.
+
+In the scope of this project, we use a Ruby-based domain specific language (DSL) to describe policies.  In larger heterogeneous deployments, a standards-based alternative like XACML would be more suitable.  This project however is not focused on developing a complete policy specification language, but rather on using one in a very dynamic environment.  XACML, for example, is a very large and complete standard that would require a significant investment of effort to implement.  It can also tend to be verbose.  A simple DSL focused on our specific needs is a more efficient alternative that allows us to focus our time and effort on the goals of this work rather than implementation of a large standard.
+
+\begin{lstlisting}[language=ruby, label=lst:policy-dsl, caption=Policy DSL Example]
+policy_set {
+  policy(:p1) {
+    match :all
+    rule(:mission_affiliation) { |x| x == :tropic_thunder }
+    rule(:sensitivity) { |x| x == :top_secret }
+  }
+
+  policy(:p2) {
+    include :p1
+    match :all
+    rule(:device) { |d| d == :workstation || d == :phone }
+  }
+
+  policy(:p3) {
+    include :p1
+    match :one
+    rule(:category) { |c| c == :vermillion }
+    rule(:organization} { |o| == :oceania }
+  }
+}
+\end{lstlisting}
+
+This is our first, simplified DSL supporting a subset of XACML elements.  In this example, we have a base policy, p1, that all other policies inherit.  That policy requires that all rules evaluate to true.  p2 adds another rule based on devices, all of which must evaluate to true as well.  Finally, p3 adds two additional rules, only one of which must evaluate to true for the policy to be fulfilled.
+
 \section{Primary Interfaces and Mappings}
 Each of the defined components have an associated interface defined over domain datatypes. These interfaces are implemented using Representational State Transfer (REST) semantics over Hypertext Transfer Protocol (HTTP), and the datatypes are represented in Extensible Markup Language (XML).
 
-\begin{lstlisting}[label=lst:artifact-data-types, caption=Key Artifact Dataypes]
-typedef Policy string;
-typedef Artifact string;
+\begin{lstlisting}[language=idl, label=lst:artifact-data-types, caption=Key Artifact Dataypes]
+typedef policy_set string;
+typedef artifact string;
 
-struct ArtifactDescriptor {
-	Policy policy;
-	Artifact artifact;
+struct artifact_descriptor {
+	policy_set policy_set;
+	artifact artifact;
 };
 
-typedef sequence<ArtifactDescriptor> ArtifactDescriptorList;
+typedef sequence<artifact_descriptor> artifact_descriptor_list;
 \end{lstlisting}
 
-As shown in Listing \ref{lst:artifact-datatypes-used}, we deal primarily with two key datatypes, \emph{Artifacts} and \emph{Policies}.  For the purpose of networked data transfer, both of these datatypes are formatted strings of XML data.  An \emph{ArtifactDescriptor} combines an Artifact with its associated policy.  An \emph{ArtifactDescriptorList} is an unlimited sequence of ArtifactDescriptors.
+As shown in Listing \ref{lst:artifact-datatypes}, we deal primarily with two key datatypes, \emph{artifacts} and \emph{policy\_sets}.  For the purpose of networked data transfer, both of these datatypes are formatted strings of XML and policy DSL data.  An \emph{artifact\_descriptor} combines an artifact with its associated set of policies.  An \emph{artifact\_descriptor\_list} is an unlimited sequence of artifact\_descriptors.
 
-\begin{lstlisting}[label=lst:status-data-types, caption=Key Status Dataypes]
-enum Status { unsecured, confidential, secret, topSecret };
+\begin{lstlisting}[language=idl, label=lst:status-data-types, caption=Key Status Dataypes]
+enum status { unsecured, confidential, secret, top_secret };
 
-struct Status {
-	string edgeName;
-	Status status;
+struct link_status {
+	string name;
+	status status;
 };
 
-typedef sequence<Status> StatusList;
+typedef sequence<link_status> link_status_list;
 
-struct Context {
+struct context {
 	date date;
-	StatusList networkStatus;
+	link_status_list network_Status;
 };
 \end{lstlisting}
 
-Network status information is contained in \emph{Status} elements and grouped into a \emph{Context} structure, as shown in Listing \ref{lst:status-data-types}.  A \emph{StatusList} is essentially a dictionary of network connection statuses organized by edgename, where an edge is named by concatinating the edge nodes in any order.  These nodenames are concatenated and separated by a pipe symbol, so that the edge between \textit{NodeA} and \textit{NodeB} is named \textit{NodeA|NodeB} or \textit{NodeB|NodeA}.  This makes searching less efficient, in that a Context can contain a StatusList with names in either ordering, in exchange for easier and more terse data exchange.
+Network status information is contained in \emph{status} elements and grouped into a \emph{context} structure, as shown in Listing \ref{lst:status-data-types}.  A \emph{status\_list} is essentially a dictionary of network connection statuses organized by link name, where an edge is named by concatinating the edge nodes in any order.  These node names are concatenated and separated by a pipe symbol, so that the edge between \textit{NodeA} and \textit{NodeB} is named \textit{NodeA|NodeB} or \textit{NodeB|NodeA}.  This makes searching less efficient, in that a Context can contain a status\_list with names in either ordering, in exchange for easier and more terse data exchange.
 
-\begin{lstlisting}[label=lst:err-data-types, caption=Key Error Dataypes]
-exception NetworkError {
-	string code;
+\begin{lstlisting}[language=idl, label=lst:err-data-types, caption=Key Error Dataypes]
+exception error {
+  string message;
 };
+
+exception client_error : error {};
+exception server_error : error {};
+exception unknown_response_error : error {};
 \end{lstlisting}
 
-Finally, shown in Listing \ref{lst:err-data-types}, the \emph{NetworkError} exception is represented by standard HTTP error codes and responses operationally, and is used extensively throughout system interface operations.
+Finally, shown in Listing \ref{lst:err-data-types}, the \emph{error} exception is represented by standard HTTP error codes and responses operationally, and is used extensively throughout system interface operations.  Other information can be included in exception messages if the errors are not HTTP specific.
 
 %\lstinputlisting[label=lst:datatypes-used, caption=Key Domain Dataypes]{content/code/datatypes.idl}
 
-The node interface described in Listing \ref{lst:node-interface}.  The Node interface is mapped to a REST style request over HTTP where the argument ordering is preserved when building the URL for accessing artifact content.  For example, when accessing a specific artifact, the artifact operation called with a username of 'truchas', on an iphone, for artfact X1234 would map to the URL http://host/artifact/truchas/iphone/X1234.  Likewise, a similar operation call on the artifacts operation would use the URL http://host/artifacts/truchas/iphone.
+The artifact\_manager interface described in Listing \ref{lst:artifact-manager-interface}.  This interface is mapped to a REST style request over HTTP where the argument ordering is preserved when building the URL for accessing artifact content.  For example, when accessing a specific artifact, the artifact operation called with a username of 'truchas', on an iphone, for artfact X1234 would map to the URL http://host/artifact/truchas/iphone/X1234.  Likewise, a similar operation call on the artifacts operation would use the URL http://host/artifacts/truchas/iphone.  Both Nodes and Routers implement the artifact\_manager interface.
 
-\begin{lstlisting}[label=lst:node-interface, caption=The Node Interface]
-interface Node {
-	ArtifactDescriptor artifact(in string uname, in string device, in string id) raises (NetworkError);
-	ArtifactDescriptorList artifacts(in string uname, in string device) raises (NetworkError);
+\begin{lstlisting}[language=idl, label=lst:artifact-manager-interface, caption=The Node Interface]
+typedef string user_name;
+typedef user_name subject;
+typedef string key;
+
+enum device { tablet, phone, workstation };
+
+interface artifact_manager {
+  artifact_descriptor get_artifact(in subject s, in device d, in key k) raises (error);
+  artifact_descriptor_list get_all_artifacts(in subject s, in device d) raises (error);
 };
 \end{lstlisting}
 
-This type of calling convention is used throught the system.  The specific ordering of the URL elements stems from corresponding artifact set relationships.  Specifically, the set of all artifacts a user has access to is the same as or larger than the set of all artifacts that a user on a specific device can access and the same size or smaller that the set of all available artifacts.
+This type of calling convention is used throught the system.  The specific ordering of the URL elements stems from corresponding artifact set relationships.  Specifically, the set of all artifacts a user has access to is the same as or larger than the set of all artifacts that a user on a specific device can access and that subset is then the same size or smaller that the set of all available artifacts.
 
-\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Context Manager Interface]
+\begin{lstlisting}[language=idl, label=lst:context-mgr-interface, caption=The Context Manager Interface]
 interface ContextManager {
-	Context context() raises (NetworkError);
+	context context() raises (NetworkError);
 };
 \end{lstlisting}
 
 The \emph{ContextManager} interface defined in Listing \ref{lst:context-mgr-interface} describes how the nework context monitor exposes network state information to requestors.  Note, in this case, the defined interface maps to the URL http://host/context.
 
-\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Usage Management Mechanism Interface]
+The \emph{usage\_management\_mechanism} makes decisions with respect to proposed activities based on a set of policies and the current dynamic environmental context.
+
+\begin{lstlisting}[language=idl, label=lst:umm-interface, caption=The Usage Management Mechanism Interface]
+enum activity { read, transmit };
+typedef string policy;
+
 [Constructor(in ContextManager contextManager);]
-interface UsageManagementMechanism {
-	
+interface usage_management_mechanism {
+  bool can_execute(in policy p, in context c, in activity a);
 };
 \end{lstlisting}
 
-\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Repository Interface]
-interface Repository {
-	
+The \emph{repository} interface shown in listing \ref{lst:repository-interface} defines how information is stored and retrieved within a given node our router.  This is an internal component used for concrete data item storage.
+
+\begin{lstlisting}[language=idl, label=lst:repository-interface, caption=The Repository Interface]
+interface repository {
+  artifact_descriptor get_artifact(in key k);
+  artifact_descriptor_list get_all_artifacts();
 };
 \end{lstlisting}
 
-\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Router Interface]
-interface Router {
-	
-};
-\end{lstlisting}
+Finally, the \emph{dispacher} interface, also used internally within a given node or router, describes how we pass requests to other network participants.
 
-\begin{lstlisting}[label=lst:context-mgr-interface, caption=The Dispatcher Interface]
-interface Dispatcher {
-	
+\begin{lstlisting}[language=idl, label=lst:dispatcher-interface, caption=The Dispatcher Interface]
+[Constructor(in string host);]
+interface dispatcher {
+  artifact_descriptor_list dispatch(in user u, in device d, in key k) raises (error);
 };
 \end{lstlisting}

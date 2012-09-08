@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: dissertation.aux
+The style file: plain.bst
+Database file #1: bib/proposal.bib
+Database file #2: bib/drm.bib
+Warning--to sort, need author or key in proposal:info-sharing-strategy
+Warning--to sort, need author or key in proposal:nsa-cloud
+Warning--to sort, need author or key in proposal:assured-info-sharing
+Warning--to sort, need author or key in proposal:gig-arch
+Warning--to sort, need author or key in marlin
+Warning--to sort, need author or key in proposal:ucdmo-goals
+Warning--to sort, need author or key in proposal:openflow
+Warning--to sort, need author or key in proposal:jboss-esb
+Warning--to sort, need author or key in proposal:iso-25020
+Warning--to sort, need author or key in proposal:sus
+Warning--to sort, need author or key in proposal:borders-info-I
+Warning--to sort, need author or key in proposal:borders-info-II
+Warning--to sort, need author or key in proposal:borders-info-III
+Warning--to sort, need author or key in proposal:saic-breach-I
+Warning--to sort, need author or key in proposal:saic-breach-II
+Warning--to sort, need author or key in proposal:saic-breach-III
+Warning--empty author in marlin
+Warning--empty institution in marlin
+Warning--empty booktitle in proposal:bah-arch
+Warning--empty author in coral
+Warning--empty institution in coral
+Warning--empty booktitle in proposal:nsa-arch
+Warning--empty booktitle in proposal:cd101
+Warning--empty booktitle in proposal:raytheon-arch
+Warning--empty booktitle in proposal:ron-ross
+You've used 37 entries,
+            2118 wiz_defined-function locations,
+            690 strings with 9755 characters,
+and the built_in function-call counts, 10050 in all, are:
+= -- 997
+> -- 286
+< -- 8
++ -- 130
+- -- 86
+* -- 602
+:= -- 1435
+add.period$ -- 96
+call.type$ -- 37
+change.case$ -- 157
+chr.to.int$ -- 0
+cite$ -- 62
+duplicate$ -- 450
+empty$ -- 1007
+format.name$ -- 86
+if$ -- 2288
+int.to.chr$ -- 0
+int.to.str$ -- 37
+missing$ -- 20
+newline$ -- 173
+num.names$ -- 40
+pop$ -- 265
+preamble$ -- 1
+purify$ -- 118
+quote$ -- 0
+skip$ -- 353
+stack$ -- 0
+substring$ -- 555
+swap$ -- 110
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 148
+warning$ -- 25
+while$ -- 69
+width$ -- 39
+write$ -- 362
+(There were 25 warnings)
