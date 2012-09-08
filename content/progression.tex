@@ -307,16 +307,24 @@ This system will use attribute based mechanisms for usage management.  The polic
 \centering %
 \begin{tabular}{lccccc}
 \toprule %
-\emph{Dimension}		& \emph{Type}	& \emph{Required?}	& \emph{Domain A}	& \emph{Domain B}	& \emph{Domain C} 	\\\toprule %
+\emph{Dimension}		& \emph{Type}	& \emph{Required?}	& \emph{Domain A}	& \emph{Domain B}	& \emph{Domain C} 	\\\toprule
 \emph{Affiliation} 	& Set 			& Yes 				& tropic\_thunder, 	& tropic\_thunder,	& tropic\_thunder, 	\\
 					&				&					& gallant\_entry		& gallant\_entry		& curious\_response	\\\midrule
-\emph{Sensitivity} 	& Set 			& Yes 				& TS GE 				& TS GR 				& TS TR \\\midrule
-\emph{Category}		& Set 			& Yes 				& TS GE 				& TS GR 				& TS TR \\\midrule
-\emph{Organization}	& Set 			& Yes 				& TS GE 				& TS GR 				& TS TR \\\midrule
-\emph{Device}	 	& Set 			& Yes 				& TS GE 				& TS GR 				& TS TR \\\bottomrule
+\emph{Sensitivity} 	& Ordering 		& Yes 				& unclassified,		& unclassified		& unclassified,		\\
+					&				&					& secret,			& secret,			& secret,			\\
+					&				&					& top\_secret		& top\_secret		& top\_secret		\\\midrule
+\emph{Category}		& Set 			& No 				& aqua,				& alpha,				& one,				\\
+					&				&					& magenta,			& beta,				& two,				\\
+					&				&					& vermillion			& gamma				& three				\\\midrule
+\emph{Organization}	& Set 			& Yes 				& Oceania, 			& Oceania,			& Oceania,			\\
+					&				&					& Eastasia,			& Eastasia,			& Eastasia,			\\
+					&				&					& Urasia				& Urasia				& Urasia				\\\midrule
+\emph{Device}	 	& Set 			& No 				& workstation, 		& workstation,		& workstation, 		\\
+					&				&					& tablet,			& phone				& tablet				\\
+					&				&					& phone				& 					& 					\\\midrule
 \end{tabular}
-\caption{Proposed Usage Management Taxonomy}
-\label{table:model:taxonomy}
+\caption{All Possible Attributes for Usage Management Decisions}
+\label{table:model:network-attributes}
 \end{table*}
 
 Sets differ from orderings in the above table as sets denote membership with no associated value.  Orderings on the other hand have distinct values increasing from left to right in the listed enumerations.  For example, a user can be affiliated with a specific mission in Domain A, either tropic\_thunder or gallant\_entry, or both.  That user is also associated with a sensitivity value, either unclassified, secret, or topsecret, where topsecret is the most sensitive and unclassified the least.
@@ -327,21 +335,23 @@ User attributes support defined policy elements.  Not every policy attribute has
 
 \begin{table*}[tp] %
 \centering %
-\begin{tabular}{clcc}
+\begin{tabular}{lccccc}
 \toprule %
-$ Name$ 	& $Description$ \\\toprule %
-$\phi$ 		& The initial level of this taxonomy, $\phi$ classified systems \\
- 			& have a single guard without policy-based control \\\midrule
-$\alpha$	& $\alpha$ classified systems have a single guard by have begun \\
-			& to integrate policy-based control \\\midrule
-$\beta$		& Systems that have begun to integrate policy-based control with \\
-			& router elements are in the $\beta$ category \\\midrule
-$\gamma$	& Systems that have integrated policy-based control with routing \\
-			& and computational elements \\\midrule
-$\delta$	& Continuous policy-based control with \textit{smart licensed} artifacts \\\bottomrule
+\emph{Dimension}		& \emph{Type}	& \emph{Required?}	& \emph{Domain A}	& \emph{Domain B}	& \emph{Domain C} 	\\\toprule
+\emph{Affiliation} 	& Set 			& Yes 				& tropic\_thunder, 	& tropic\_thunder,	& tropic\_thunder, 	\\
+					&				&					& gallant\_entry		& gallant\_entry		& curious\_response	\\\midrule
+\emph{Clearance} 	& Ordering 		& Yes 				& unclassified,		& unclassified		& unclassified,		\\
+					&				&					& secret,			& secret,			& secret,			\\
+					&				&					& top\_secret		& top\_secret		& top\_secret		\\\midrule
+\emph{Category}		& Set 			& No 				& aqua,				& alpha,				& one,				\\
+					&				&					& magenta,			& beta,				& two,				\\
+					&				&					& vermillion			& gamma				& three				\\\midrule
+\emph{Organization}	& Set 			& Yes 				& Oceania, 			& Oceania,			& Oceania,			\\
+					&				&					& Eastasia,			& Eastasia,			& Eastasia,			\\
+					&				&					& Urasia				& Urasia				& Urasia				\\\midrule
 \end{tabular}
-\caption{Proposed Usage Management Taxonomy}
-\label{table:model:taxonomy}
+\caption{Possible Attributes for Usage Management Decisions specific to Users}
+\label{table:model:user-attributes}
 \end{table*}
 
 Policies are evaluated either via direct set membership or via membership in a category in an ordering.  Content can be affiliated with multiple sets with regard to set-oriented attributes.  Likewise, users can belong to multiple sets as well.  Both content and users will be associated with a single value from an ordering element, as that value is inclusive of lower values as well.  For example, a user can be affiliated with both the tropic\_thunder and gallant\_entry missions, but only one of the clearance values of uncleared, secret, or top secret.  In the case of clearance values, secret subsumes uncleared, so a user with a secret attribute set would be able to access any unclassified material.
@@ -371,7 +381,7 @@ policy_set {
 }
 \end{lstlisting}
 
-This is our first, simplified DSL supporting a subset of XACML elements.  In this example, we have a base policy, p1, that all other policies inherit.  That policy requires that all rules evaluate to true.  p2 adds another rule based on devices, all of which must evaluate to true as well.  Finally, p3 adds two additional rules, only one of which must evaluate to true for the policy to be fulfilled.
+This is our simplified DSL supporting a subset of XACML elements.  In this example, we have a base policy, p1, that all other policies inherit.  That policy requires that all rules evaluate to true.  p2 adds another rule based on devices, all of which must evaluate to true as well.  Finally, p3 adds two additional rules, only one of which must evaluate to true for the policy to be fulfilled.
 
 \section{Primary Interfaces and Mappings}
 Each of the defined components have an associated interface defined over domain datatypes. These interfaces are implemented using Representational State Transfer (REST) semantics over Hypertext Transfer Protocol (HTTP), and the datatypes are represented in Extensible Markup Language (XML).
