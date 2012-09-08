@@ -63,13 +63,13 @@ In order to manage and initialize all overlay nodes, we use Capistrano.  Capistr
 
 \begin{table*}[tp] %
 \centering %
-\begin{tabular}{clcc}
+\begin{tabular}{lc}
 \toprule %
 $Category$ 				& $Components$ 								\\\toprule %
 $Infrastructure$ 		& Amazon S3, Amazon EC2, Rackspace Servers 	\\\midrule
 $Operating Systems$		& Ubuntu 11.04, Ubuntu 12.04 				\\\midrule
 $Technologies$			& Ruby (Sinatra, Capistrano, YAML) 			\\\midrule
-$Supporting Systems$	& Git, Github 								\\\bottomrule
+$Supporting Systems$		& Git, Github 								\\\bottomrule
 \end{tabular}
 \caption{Supporting Components}
 \label{table:model:components}
@@ -305,18 +305,15 @@ This system will use attribute based mechanisms for usage management.  The polic
 
 \begin{table*}[tp] %
 \centering %
-\begin{tabular}{clcc}
+\begin{tabular}{lccccc}
 \toprule %
-$ Name$ 	& $Description$ \\\toprule %
-$\phi$ 		& The initial level of this taxonomy, $\phi$ classified systems \\
- 			& have a single guard without policy-based control \\\midrule
-$\alpha$	& $\alpha$ classified systems have a single guard by have begun \\
-			& to integrate policy-based control \\\midrule
-$\beta$		& Systems that have begun to integrate policy-based control with \\
-			& router elements are in the $\beta$ category \\\midrule
-$\gamma$	& Systems that have integrated policy-based control with routing \\
-			& and computational elements \\\midrule
-$\delta$	& Continuous policy-based control with \textit{smart licensed} artifacts \\\bottomrule
+\emph{Dimension}		& \emph{Type}	& \emph{Required?}	& \emph{Domain A}	& \emph{Domain B}	& \emph{Domain C} 	\\\toprule %
+\emph{Affiliation} 	& Set 			& Yes 				& tropic\_thunder, 	& tropic\_thunder,	& tropic\_thunder, 	\\
+					&				&					& gallant\_entry		& gallant\_entry		& curious\_response	\\\midrule
+\emph{Sensitivity} 	& Set 			& Yes 				& TS GE 				& TS GR 				& TS TR \\\midrule
+\emph{Category}		& Set 			& Yes 				& TS GE 				& TS GR 				& TS TR \\\midrule
+\emph{Organization}	& Set 			& Yes 				& TS GE 				& TS GR 				& TS TR \\\midrule
+\emph{Device}	 	& Set 			& Yes 				& TS GE 				& TS GR 				& TS TR \\\bottomrule
 \end{tabular}
 \caption{Proposed Usage Management Taxonomy}
 \label{table:model:taxonomy}
