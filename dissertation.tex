@@ -1,7 +1,7 @@
 \documentclass[botnum,fleqn,final]{unmeethesis}
 
 % Set Title and Author
-\newcommand{\mytitle}{Overlay Networks for Usage Management}
+\newcommand{\mytitle}{Securing Data in the Future Internet}
 \newcommand{\myauthor}{Christopher C. Lamb}
 
 
@@ -129,7 +129,7 @@
 \maketitleabstract
 
 \begin{abstract}
-Overlay networks have become a widely used technology with examples ranging from consumer focused distribution systems like BitTorrent to commercial content distribution systems like Akamai.  These kinds of systems, with the appropriate policy-centric content management components, can address looming problems in information distribution that both companies and federal agencies are beginning to face with respect to sensitive content.  This work addresses the current state of the art in these kinds of cross-domain systems, reviewing current example system architectures from the Unified Cross Domain Management Office (UCDMO), a federal organization specifically tasked with addressing these issues.  It then covers other related work, introduces a taxonomy of types of policy-centric usage managed overlay network systems and an associated methodology for evaluating the individual taxonomic elements.  It then delves into experimental evaluation of the various defined architectural options and finally presents results of comparing experimental evaluation with anticipated results. 
+Information-centric networks have distinct advantages with regard to securing sensitive content as a result of their new approaches to managing data in the future internet.  These kinds of systems, because of their data-centric perspective, provide the opportunity to embed  policy-centric content management components that can address looming problems in information distribution that both companies and federal agencies are beginning to face with respect to sensitive content.  This work addresses the current state of the art in both these kinds of cross-domain systems and information-centric networking in general.  It then covers other related work, outlining why information-centric networks are more powerful with regard to usage management.  Then, it introduces a taxonomy of types of policy-centric usage managed information-centric network systems and an associated methodology for evaluating the individual taxonomic elements.  It finally delves into experimental evaluation of the various defined architectural options and presents results of comparing experimental evaluation with anticipated outcomes. 
 \end{abstract}
 
 \tableofcontents
@@ -146,25 +146,26 @@ Overlay networks have become a widely used technology with examples ranging from
 
 \chapter{Introduction}
 \input{content/introduction}
-
-%\chapter{Cross Domain Examples}
 \input{content/cross-domain-examples}
-
-%\chapter{Current Systems}
+\input{content/info-centric-networks}
 \input{content/current-system-analysis}
 
-\chapter{Proposed Taxonomy}
+\chapter{Usage Management in Information-centric Networks}
+\input{content/capabilities}
+\input{content/characteristics}
 \input{content/taxonomy}
-
-\chapter{Metric Selection}
-\input{content/metrics}
+\input{content/expectations}
 
 \chapter{Experimental Configuration}
+\input{content/experiments}
 \input{content/progression}
+
+\chapter{Experimental Results}
+\input{content/results}
 
 \pagebreak
 
 \bibliographystyle{plain}
-\bibliography{bib/proposal,bib/drm}
+\bibliography{bib/proposal,bib/drm,bib/info-centric}
 
 \end{document}

@@ -1,10 +1,11 @@
-\subsection{Current Solutions}
+\section{Current Solutions}
+\label{section:current-solutions}
 Current and near-future proposed solutions endorsed by the UCDMO include system architectures assembled by the NSA, Raytheon, and Booz $\mid$  Allen $\mid$  Hamilton (BAH).   The NSA has been active in this area for decades as a logical extension of their role in signals intelligence collection and processing.  Raytheon and BAH have been engaged over the past few years to provide an alternative voice and design approach to these kinds of systems, an effort met with limited success.
 
 These cross-domain solutions are intended to enable sensitive information to easily flow both from a higher sensitivity domain to a lower sensitivity domain, and from lower to higher as well.  They generally act over both primary data (say, a document) and metadata over that primary data as well.  Note that in these system, in most cases, human intervention is still required to adequately review data prior to passing into lower security domains.
 
-\subsubsection{NSA, Filtered}
-The NSA conducted initial work in this area.  Their standard-setting efforts culminated in a reasonable conceptual system architecture, using groups of filters dedicated to specific delineated tasks to process sensitive information \cite{proposal:nsa-arch}.
+\subsection{NSA, Filtered}
+The NSA conducted initial work in this area.  Their standard-setting efforts culminated in a reasonable conceptual system architecture, using groups of filters dedicated to specific delineated tasks to process sensitive information ~\cite{proposal:nsa-arch}.
 
 \begin{figure}[!t]
 \centering
@@ -13,12 +14,12 @@ The NSA conducted initial work in this area.  Their standard-setting efforts cul
 \label{fig:model:conceptual-model}
 \end{figure}
 
-In the scenario portrayed in Figure \ref{fig:model:conceptual-model}, \textit{Domain A} could very well be a private cloud managed by the U.S. Air Force, while \textit{Domain B} is a public operational network of some kind shared by coalition partners in a joint operation.
+In the scenario portrayed in Figure ~\ref{fig:model:conceptual-model}, \textit{Domain A} could very well be a private cloud managed by the U.S. Air Force, while \textit{Domain B} is a public operational network of some kind shared by coalition partners in a joint operation.
 
 A system user attempts to send a \textit{data package} consisting of a primary document and associated metadata from \textit{Domain A} to \textit{Domain B}.  At some point, that submission reaches a \textit{guard}, which contains at least one \textit{filter chain}.  Each filter chain then contains at least one \textit{filter}.  Individual filters can execute arbitrary actions over a submitted data package and have access to any number of external resources as required.  At any point, a filter can examine the data package and reject it, at which point it will frequently wait for human review.  If a filter does not reject a data package, it passes that package onto the next filter or submits it for delivery to Domain B.
 
-\subsubsection{NSA, Services}
-In recent years, the NSA has extended the legacy system architecture for cross-domain information sharing to exploit service-oriented computing styles \cite{proposal:nsa-arch}.  Visualized in Figure \ref{fig:model:conceptual-model-services}, this model incorporates more modern conceptual elements and componentry.
+\subsection{NSA, Services}
+In recent years, the NSA has extended the legacy system architecture for cross-domain information sharing to exploit service-oriented computing styles ~\cite{proposal:nsa-arch}.  Visualized in Figure ~\ref{fig:model:conceptual-model-services}, this model incorporates more modern conceptual elements and componentry.
 
 \begin{figure}[!t]
 \centering
@@ -27,14 +28,14 @@ In recent years, the NSA has extended the legacy system architecture for cross-d
 \label{fig:model:conceptual-model-services}
 \end{figure}
 
-In the view in Figure \ref{fig:model:conceptual-model-services}, we see on the left the \textit{Global Information Grid}, or \textit{GIG}.  On the right, we have the \textit{Distributed Service-oriented Cross Domain Solution}, or \textit{DSCDS}.  The GIG is not a truly open system --- rather, it is a loosely coupled collection of computational services handing data at a variety of levels of sensitivity, federated to provide stakeholders timely access to relevant information \cite{proposal:gig-arch}.  The DSCDS is essentially the embodiment of the NSA's cross-domain vision applied to service oriented computing.  This model fuses various technology choices with previous cross-domain thinking.
+In the view in Figure ~\ref{fig:model:conceptual-model-services}, we see on the left the \textit{Global Information Grid}, or \textit{GIG}.  On the right, we have the \textit{Distributed Service-oriented Cross Domain Solution}, or \textit{DSCDS}.  The GIG is not a truly open system --- rather, it is a loosely coupled collection of computational services handing data at a variety of levels of sensitivity, federated to provide stakeholders timely access to relevant information ~\cite{proposal:gig-arch}.  The DSCDS is essentially the embodiment of the NSA's cross-domain vision applied to service oriented computing.  This model fuses various technology choices with previous cross-domain thinking.
 
 Indicative of this more modern system design thinking, we have a variety of services and service consumers attached to a common service bus within the GIG.  Within the DSCDS, we have groups of filters implemented as services inspecting transferred data when moved over the bus.  Finally, all of this interaction is managed by a management interface and controlled by an orchestration engine accessing a centralized group of policies.
 
 Note that here we have begun to access a common policy repository for various types of security metadata regarding primary data elements.
 
-\subsubsection{Raytheon}
-In the past few years, Raytheon has offered a new model for cross domain use influenced by the NSA service-oriented model \cite{proposal:raytheon-arch}.
+\subsection{Raytheon}
+In the past few years, Raytheon has offered a new model for cross domain use influenced by the NSA service-oriented model ~\cite{proposal:raytheon-arch}.
 
 \begin{figure}[!t]
 \centering
@@ -43,14 +44,14 @@ In the past few years, Raytheon has offered a new model for cross domain use inf
 \label{fig:model:conceptual-model-ray}
 \end{figure}
 
-The model in Figure \ref{fig:model:conceptual-model-ray}   is more grounded in the actual technical environment this kind of solution would be embedded within.  Here, we have the Non-secure Internet Protocol Router Network (NIPRNet) as one domain, and the Secret Internet Protocol Router Network (SIPRNet) as the other.  Here, NIPRNet is the lower security domain (lowside), and SIPRNet the higher security domain (highside).  This particular view shows the motion of data from the high side (SIPRNet) to the low side (NIPRNet).
+The model in Figure ~\ref{fig:model:conceptual-model-ray}   is more grounded in the actual technical environment this kind of solution would be embedded within.  Here, we have the Non-secure Internet Protocol Router Network (NIPRNet) as one domain, and the Secret Internet Protocol Router Network (SIPRNet) as the other.  Here, NIPRNet is the lower security domain (lowside), and SIPRNet the higher security domain (highside).  This particular view shows the motion of data from the high side (SIPRNet) to the low side (NIPRNet).
 
 Here, a data request is submitted from SIPRNet first two the \textit{XML Security Gateway} which calls into the \textit{Orchestration Engine} for policy validation.  The Orchstration Engine then coordinates calls into a \textit{Policy Repository} as well as to a collection of external \textit{Support Services}.  Once rectified against these elements, the request is passed into the \textit{Cross Domain Guard} which routes the request into the \textit{Unclassified Enclave} in NIPRNet.  Here, the request is passed directly through the lowside \textit{XML Security Gateway}, without rectification, onto the \textit{Service Provider}.  The response from the Service Provider is then passed back to the requester via the inverse path.
 
 This model also begins to use a centralized policy repository, just as the NSA Service Model.  It also uses a single cross domain guard to transfer information from both the highside to the lowside, and vice-versa.
 
-\subsubsection{Booz $\mid$ Allen $\mid$ Hamilton}
-BAH submitted a competing model, also in 2009 \cite{proposal:bah-arch}.  In fact, both Raytheon and BAH presented their models under competitive contract to the UCDMO at the same conference, so the domain application is not coincidental.
+\subsection{Booz $\mid$ Allen $\mid$ Hamilton}
+BAH submitted a competing model, also in 2009 ~\cite{proposal:bah-arch}.  In fact, both Raytheon and BAH presented their models under competitive contract to the UCDMO at the same conference, so the domain application is not coincidental.
 
 \begin{figure}[!t]
 \centering
@@ -59,7 +60,7 @@ BAH submitted a competing model, also in 2009 \cite{proposal:bah-arch}.  In fact
 \label{fig:model:conceptual-model-bah}
 \end{figure}
 
-Figure \ref{fig:model:conceptual-model-bah} embodies BAH's thinking with respect to cross domain information management.  We have a \textit{Domain A} as a high security domain, and \textit{Domain B} as a low security domain.  Here, we again have dataflow from the highside to the lowside through the cross domain management system.
+Figure ~\ref{fig:model:conceptual-model-bah} embodies BAH's thinking with respect to cross domain information management.  We have a \textit{Domain A} as a high security domain, and \textit{Domain B} as a low security domain.  Here, we again have dataflow from the highside to the lowside through the cross domain management system.
 
 While not as detailed as the Raytheon proposal, this does have similar elements.  Here, we data first travels from Domain A into the \textit{Interface Segment for Domain A}, similar to the secret enclave used in the Raytheon model.  From there, it moves into the \textit{CI Segment}, which in turn submits the transferring data into the \textit{Filter Segment}.  From there, the package is moved into the \textit{Interface Segment for Domain B}, and then onto \textit{Domain B}.  The \textit{Administrative Segment} provides managment and oversight of the system as a whole.
 
