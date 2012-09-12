@@ -42,16 +42,6 @@ University of New Mexico}
 \includegraphics[width = 10cm]{ECE-UNM-logo}
 \end{figure}}
 
-% Delete this, if you do not want the table of contents to pop up at
-% the beginning of each subsection:
-%\AtBeginSubsection[]
-%{
-%  \begin{frame}<beamer>
-%    \frametitle{Outline}
-%     \tableofcontents[currentsection,currentsubsection]
-%  \end{frame}
-%}
-
 \begin{document}
 
 \begin{frame}
@@ -63,33 +53,76 @@ University of New Mexico}
 
 \begin{frame}
 \frametitle{Introduction}
-Infro
 \tableofcontents 
 \end{frame}
 
-\section{Usage Management}
-
-\begin{frame}
-\frametitle{Usage Management}
-
-\end{frame}
-
+\section{Information-centric Networking}
 \begin{frame}
 \frametitle{Information-centric Networking}
+
+Information-centric networking (ICN) is a new approach to internet-scale networks.  These networks take advantage of data locality, cache data aggressively, decouple information providers from consumers, and use a content-centric perspective in network design
+\pause
+\newline
+\newline
+Similar conceptual approaches:
+{\small
+\begin{itemize}
+\item {\bf Named Data Objects} --- Data objects are the primary data abstraction.
+\item {\bf API Structure} --- Programming interfaces are structured around requesting specific data objects.  Can be synchronous or asynchronous.
+\item {\bf Naming and Security} --- Names are tightly and securely bound to content.
+\item {\bf Caching} --- Content is aggressively cached on nodes.
+\end{itemize}
+}
+\pause
+We are most concerned with the first and second characteristics currently.
 \end{frame}
 
 \begin{frame}
 \frametitle{Current Technology Fail}
+Current internet technologies don't dynamically protect data.  Initial design assumtions and implementation characteristics make these approaches difficult.
+\pause
+\newline
+\newline
+Why does the internet fail?
+{\small
+\begin{itemize}
+\item {\bf Strict Layering} --- Routing and switching are generally lower level operations (layers 2 and 3 in the OSI model).  Content-sensitive routing is a layer 7 (application layer) operation, requiring very expensive hardware to do well. 
+\item {\bf End-to-End Arguments} --- Network cores are simple, fast, and dumb.  They need to brighten up to evanluate information suitability.  
+\item {\bf Packetization} --- Policies and content requires multiple packets.  This implies complex window retention logic to handle context splitting, and in at least half of typical cases, context splitting can't be handled at all.
+\end{itemize}
+}
+The principles have been effective, but in some cases services {\it should} be in the network core.
 \end{frame}
 
+\section{System Overview}
 \begin{frame}
 \frametitle{System Overview --- Device Perspective}
-\centerline{\includegraphics[width=2.5in]{overall-view}}
+\centerline{\includegraphics[width=2in]{overall-view}}
+How does the system work?
+\pause
+{\small
+\begin{enumerate}
+\item {\bf Request} --- An initial request is submitted from an edge device
+\pause
+\item {\bf Reciept} --- The request is received by an application server that has access to ICN services via an ICN node and external services of some kind as well.
+\pause
+\item {\bf Dispatch} --- The request for information if suitable is dispatched into the ICN.
+\end{enumerate}
+}
 \end{frame}
 
 \begin{frame}
 \frametitle{System Overview --- Into the network}
 \centerline{\includegraphics[width=3.5in]{node-hierarchy}}
+How is information dispatched through the network? {\it Well, it depends on the network.}
+\pause
+{\small
+\begin{enumerate}
+\item {\bf Submission} --- Submit to a node.
+\item {\bf Transmission} --- Pass through the network, either via a router (if hierarchical) or known peers (non-hierarchical).
+\item {\bf Respond} --- Nodes respond with content if possible.
+\end{enumerate}
+}
 \end{frame}
 
 \begin{frame}
@@ -97,6 +130,7 @@ Infro
 \centerline{\includegraphics[width=3.5in]{router-node-view}}
 \end{frame}
 
+\section{Theoretical Foundations}
 \begin{frame}
 \frametitle{Distributed Security Decisions}
 \end{frame}
@@ -113,10 +147,35 @@ Infro
 \frametitle{Information Protection}
 \end{frame}
 
+\section{Implementation Overview}
 \begin{frame}
-\frametitle{}
+\frametitle{Implementation Overview --- Simulation Environment}
 \end{frame}
 
+\begin{frame}
+\frametitle{Implementation Overview --- Capistrano}
+\end{frame}
+
+\begin{frame}
+\frametitle{Implementation Overview --- Rest API}
+\end{frame}
+
+\begin{frame}
+\frametitle{Implementation Overview --- Information Flow}
+\end{frame}
+
+\begin{frame}
+\frametitle{Implementation Overview --- Usage Domain}
+\end{frame}
+
+\begin{frame}
+\frametitle{Implementation Overview --- Policy Language}
+\end{frame}
+
+\section{Final Steps}
+\begin{frame}
+\frametitle{Next Steps}
+\end{frame}
 
 \end{document}
 
