@@ -128,11 +128,32 @@ How is information dispatched through the network? {\it Well, it depends on the 
 \begin{frame}
 \frametitle{System Overivew --- Nodes and Routers}
 \centerline{\includegraphics[width=3.5in]{router-node-view}}
+Strictly layered architecture within nodes:
+{\small
+\begin{itemize}
+\item {\bf Application} --- REST Interfaces, network access
+\item {\bf Domain} --- Domain functionality, specific node/router logic and UM
+\item {\bf Infrastructure} --- Data storage repositories, data objects and policies
+\end{itemize}
+}
 \end{frame}
 
 \section{Theoretical Foundations}
 \begin{frame}
 \frametitle{Distributed Security Decisions}
+In order to make security decions, we must know the {\it environment} of the {\it resource} (the data object) and the {\it subject} (the user).
+\pause
+\newline
+\newline
+\newline
+\begin{beamerboxesrounded}[shadow]{Fundamental Foundations}
+In order to understand that our decisions are valid and maintain security in distributed {\it environments}, we must {\it prove} that local security decisions provide a compliant global solution. 
+\end{beamerboxesrounded}
+\pause
+\newline
+\newline
+\newline
+We make {\it greedy} with respect to security, and for efficiency we use {\it dynamic programming}.  For these to provide a globally optimal solution, we need to show that the routing problem exibits {\it optimal structure} and {\it overlapping subproblems}.
 \end{frame}
 
 \begin{frame}
@@ -149,7 +170,7 @@ How is information dispatched through the network? {\it Well, it depends on the 
 
 \section{Implementation Overview}
 \begin{frame}
-\frametitle{Implementation Overview --- Simulation Environment}
+\frametitle{Implementation Overview --- Environment}
 \end{frame}
 
 \begin{frame}
