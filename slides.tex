@@ -6,13 +6,45 @@
 \usepackage{psfrag}
 \usepackage[english]{babel}
 \usepackage{color}
-%Mathematics packages
 \usepackage{amsmath}
 \usepackage{mathrsfs}
 \usepackage{amsfonts}
-
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{framed}
 \usepackage{enumerate}
+\usepackage{microtype}
+\usepackage{multirow}
 
+\lstset{
+	language=Ruby,
+	basicstyle=\scriptsize\ttfamily, 
+	numbers=left,    
+	numberstyle=\tiny,
+	stepnumber=1,
+	numbersep=5pt,
+	tabsize=2,
+	extendedchars=true,        
+	breaklines=true,            
+	keywordstyle=\color{red},
+	frame=b,         
+	stringstyle=\color{white}\ttfamily,
+	showspaces=false,
+	showtabs=false,
+	xleftmargin=17pt,
+	framexleftmargin=17pt,
+	framexrightmargin=5pt,
+	framexbottommargin=4pt,
+	showstringspaces=false      
+}
+
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
 
 \graphicspath{{./images/}} % Figures path - used in graphicx
 
@@ -158,19 +190,70 @@ We make {\it greedy} with respect to security, and for efficiency we use {\it dy
 
 \begin{frame}
 \frametitle{Optimal Substructure}
+{\it Idea}: If we then have a path $P$ consisting of nodes and edges $\lbrace V, E \rbrace$, that path was assembled by choosing the most secure edge $e \in E$ from a corresponding node $v \in V$ at some time $t$.  The path $P$ consisting of these edges $e$ is then the most secure path that can be chosen.
+\pause
+\newline
+\newline
+{\it Proof by Contradiction}
+{\small
+\begin{enumerate}
+\item Assume a path $P = \lbrace V, E \rbrace$ chosen using a greedy algorithm.
+\item Assume that $P$ is not the most secure, and that a more distinctly secure path $P' = \lbrace V, E' \rbrace$ exists.
+\item If $P'$ exists, then at some $v \in V$ $\exists$ $e' \in E$ such that $e'$ is more secure than the corresponding edge $e \in E$.
+\item If so, then at all$v \in V$, $e' = e$ leading to $E' = E$ and $P' = P$, so $P'$ is not distinct from $P$. 
+\end{enumerate}
+}
+\pause
+\color{blue}
+{\small
+This is essentially the shortest path problem.  In this case possible solutions are constrained however, because we don't have access to information about the entire network.  We can only evaluate context at each node.
+}
+\color{black}
 \end{frame}
 
 \begin{frame}
 \frametitle{Overlapping Subproblems}
-\end{frame}
-
-\begin{frame}
-\frametitle{Information Protection}
+{\it Idea}: We can caluculate a context to determine the security posture of a given edge.  If the parameters involved in calulating that value don't change, then the security value of that edge won't change either.
+\pause
+\newline
+\newline
+{\it Proof by Contradiction}
+{\small
+\begin{enumerate}
+\item Assume a security value $v$ associated with an edge $e \in E$ calucuated via contributing parameters $p \in P$ by an idempotent security function $f$.
+\item Assume $\exists$ an alternative security value $v'$ for $e$ calculated from the same parameters $p$ by $f$.
+\item Then the function $f$ returns different outputs $O$ based on the same input $p$.
+\item $\not \exists$ $v'$ due to the definition of idempotence. 
+\end{enumerate}
+}
+\color{blue}
+{\small
+The security functions are deterministic and don't incorporate any random behavior, so we can assume idempotence as a characteristic.
+}
+\color{black}
 \end{frame}
 
 \section{Implementation Overview}
 \begin{frame}
 \frametitle{Implementation Overview --- Environment}
+The simulation environment runs over a nation-spanning overlay network hosted via Rackspace Cloud and Amazon Elastic Compute Cloud (EC2).  The network uses ICN concepts in interface design and operational semantics.
+\pause
+\newline
+\newline
+\centering
+Overlay Technical Components
+\begin{table}[tp] %
+\centering %
+\begin{tabular}{lc}
+\toprule %
+$Category$ 				& $Components$ 								\\\toprule %
+$Infrastructure$ 		& Amazon S3, Amazon EC2, Rackspace Servers 	\\\midrule
+$Operating Systems$		& Ubuntu 11.04, Ubuntu 12.04 				\\\midrule
+$Technologies$			& Ruby (Sinatra, Capistrano, YAML) 			\\\midrule
+$Supporting Systems$	& Git, Github 								\\\bottomrule
+\end{tabular}
+\caption{Supporting Components}
+\end{table}
 \end{frame}
 
 \begin{frame}
@@ -182,15 +265,43 @@ We make {\it greedy} with respect to security, and for efficiency we use {\it dy
 \end{frame}
 
 \begin{frame}
-\frametitle{Implementation Overview --- Information Flow}
+\frametitle{Implementation Overview --- Flow}
 \end{frame}
 
 \begin{frame}
-\frametitle{Implementation Overview --- Usage Domain}
+\frametitle{Implementation Overview --- Usage}
+{\tiny
+\begin{table}[tp] %
+\centering %
+\begin{tabular}{lccccc}
+\toprule %
+\emph{Dimension}		& \emph{Type}	& \emph{Required?}	& \emph{Domain A}	& \emph{Domain B}	& \emph{Domain C} 	\\\toprule
+\emph{Affiliation} 	& Set 			& Yes 				& tropic\_thunder, 	& tropic\_thunder,	& tropic\_thunder, 	\\
+					&				&					& gallant\_entry	& gallant\_entry	& curious\_response	\\\midrule
+\emph{Sensitivity} 	& Ordering 		& Yes 				& unclassified,		& unclassified		& unclassified,		\\
+					&				&					& secret,			& secret,			& secret,			\\
+					&				&					& top\_secret		& top\_secret		& top\_secret		\\\midrule
+\emph{Category}		& Set 			& No 				& aqua,				& alpha,			& one,				\\
+					&				&					& magenta,			& beta,				& two,				\\
+					&				&					& vermillion		& gamma				& three				\\\midrule
+\emph{Organization}	& Set 			& Yes 				& Oceania, 			& Oceania,			& Oceania,			\\
+					&				&					& Eastasia,			& Eastasia,			& Eastasia,			\\
+					&				&					& Urasia			& Urasia			& Urasia				\\\midrule
+\emph{Device}	 	& Set 			& No 				& workstation, 		& workstation,		& workstation, 		\\
+					&				&					& tablet,			& phone				& tablet			\\
+					&				&					& phone				& 					& 					\\\midrule
+\end{tabular}
+\caption{All Possible Attributes for Usage Management Decisions}
+\label{table:model:network-attributes}
+\end{table}
+}
 \end{frame}
 
 \begin{frame}
-\frametitle{Implementation Overview --- Policy Language}
+\frametitle{Implementation Overview --- Policy}
+\begin{lstlisting}[language=ruby, label=lst:policy-dsl, caption=Policy DSL Example]
+foobar
+\end{lstlisting}
 \end{frame}
 
 \section{Final Steps}
