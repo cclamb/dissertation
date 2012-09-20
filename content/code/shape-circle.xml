@@ -1,0 +1,9 @@
+...
+<shape type="circle">
+  <center>
+    <lat>...</lat>
+    <lon>...</lon>
+  </center>
+  </radius>...</radius>
+</shape>
+...

@@ -1,0 +1,245 @@
+\begin{thebibliography}{10}
+
+\bibitem{marlin}
+Marlin architecture overview.
+\newblock Technical report, 2006.
+\newblock {\small \verb%http://www.marlin-community.com%}.
+
+\bibitem{proposal:info-sharing-strategy}
+{D}o{D} {I}nformation {S}haring {S}trategy.
+\newblock {http://cio-nii.defense.gov/docs/InfoSharingStrategy.pdf}, May 2007.
+
+\bibitem{proposal:assured-info-sharing}
+{A}ssured {I}nformation {S}haring in {C}louds.
+\newblock {http://www.zyn.com/sbir/sbres/sttr/dod/af/af11-bt30.htm}, August
+  2011.
+
+\bibitem{proposal:gig-arch}
+{D}epartment of {D}efense {G}lobal {I}nformation {G}rid {A}rchitectural
+  {V}ision.
+\newblock {http://cio-nii.defense.gov/docs/GIGArchVision.pdf}, 2011.
+
+\bibitem{proposal:nsa-cloud}
+{NSA} {P}ursues {I}ntelligence-{S}haring {A}rchitecture.
+\newblock
+  {http://www.informationweek.com/news/government/cloud-saas/229401646}, April
+  2011.
+
+\bibitem{proposal:openflow}
+{O}penflow - {E}nabling {I}nnovation in {Y}our {N}etwork.
+\newblock {http://www.openflow.org}, November 2011.
+
+\bibitem{proposal:ucdmo-goals}
+{A}bout the {UCDMO}.
+\newblock {http://www.ucdmo.gov/about.html}, January 2012.
+
+\bibitem{xerox}
+{B}enefits of {C}ontent-{C}entric {N}etworking.
+\newblock {http://www.xerox.com/innovation/news-stories/networking/enus.html},
+  September 2012.
+
+\bibitem{CCNx}
+{CCN}x.
+\newblock {http://www.ccnx.org/}, September 2012.
+
+\bibitem{parc}
+{C}ontent-{C}entric {N}etworking - {P}arc, a {X}erox {C}ompany.
+\newblock {http://www.parc.com/work/focus-area/content-centric-networking/},
+  September 2012.
+
+\bibitem{proposal:jboss-esb}
+{JB}oss {ESB}.
+\newblock {http://www.jboss.org/jbossesb}, January 2012.
+
+\bibitem{NDN}
+{N}amed {D}ata {N}etworking.
+\newblock {http://named-data.org/}, September 2012.
+
+\bibitem{NetInf}
+{N}et{I}nf | {SAIL}.
+\newblock {http://www.sail-project.eu/about-sail/netinf/}, September 2012.
+
+\bibitem{PSIRP}
+{PSIRP}.
+\newblock {http://www.psirp.org/}, September 2012.
+
+\bibitem{6231276}
+B.~Ahlgren, C.~Dannewitz, C.~Imbrenda, D.~Kutscher, and B.~Ohlman.
+\newblock A survey of information-centric networking.
+\newblock {\em Communications Magazine, IEEE}, 50(7):26 --36, july 2012.
+
+\bibitem{rfc3986}
+T.~Berners-Lee, R.~Fielding, and L.~Masinter.
+\newblock Uniform resource identifier {(URI):} generic syntax.
+\newblock RFC 3986, Internet Engineering Task Force, January 2005.
+
+\bibitem{BlCl:01}
+Marjory~S. Blumenthal and David~D. Clark.
+\newblock Rethinking the design of the {I}nternet: {T}he end-to-end arguments
+  vs. the brave new world.
+\newblock {\em ACM Transactions on Internet Technology}, 1(1):70--109, Aug.
+  2001.
+
+\bibitem{Blumenthal:2001:RDI:383034.383037}
+Marjory~S. Blumenthal and David~D. Clark.
+\newblock Rethinking the design of the internet: the end-to-end arguments vs.
+  the brave new world.
+\newblock {\em ACM Trans. Internet Technol.}, 1:70--109, August 2001.
+
+\bibitem{proposal:bah-arch}
+Booz, Allen, and Hamilton.
+\newblock Distributed service oriented architecture (soa) compatible cross
+  domain service (dscds).
+\newblock Presented at the Unified Cross Domain Management Office Conference,
+  2009.
+
+\bibitem{Cl:88}
+David~D. Clark.
+\newblock The design philosophy of the {DARPA} internet protocols.
+\newblock In {\em {ACM SIGCOMM}}, pages 106--114, Stanford, CA, Aug. 1988.
+
+\bibitem{Clark:1995:DPD:205447.205458}
+David~D. Clark.
+\newblock The design philosophy of the darpa internet protocols.
+\newblock {\em SIGCOMM Comput. Commun. Rev.}, 25:102--111, January 1995.
+
+\bibitem{ClWrSoBr:02}
+David~D. Clark, John Wroclawski, Karen~R. Sollins, and Robert Braden.
+\newblock Tussle in cyberspace: Defining tomorrow's internet.
+\newblock In {\em {SIGCOMM}}, pages 347--356, Pittsburg, Pennsylvania, USA,
+  Aug. 2002.
+
+\bibitem{coral}
+Coral consortium whitepaper.
+\newblock Technical report, Feb. 2006.
+\newblock {\small \verb%www.coral-interop.org/main/news/Coral.whitepaper.pdf%}.
+
+\bibitem{4698847}
+M.~D'Ambrosio, P.~Fasano, M.~Marchisio, V.~Vercellone, and M.~Ullio.
+\newblock Providing data dissemination services in the future internet.
+\newblock In {\em Global Telecommunications Conference, 2008. IEEE GLOBECOM
+  2008. IEEE}, pages 1 --6, 30 2008-dec. 4 2008.
+
+\bibitem{rfc2616}
+R.~Fielding, J.~Gettys, J.~C. Mogul, H.~Frystyk, L.~Masinter, P.~J. Leach, and
+  T.~Berners-Lee.
+\newblock Hypertext transfer protocol {--} {HTTP/1.1}.
+\newblock RFC 2616, Internet Engineering Task Force, June 1999.
+
+\bibitem{Ghodsi:2011:NCA:2018584.2018586}
+Ali Ghodsi, Teemu Koponen, Jarno Rajahalme, Pasi Sarolahti, and Scott Shenker.
+\newblock Naming in content-oriented architectures.
+\newblock In {\em Proceedings of the ACM SIGCOMM workshop on
+  Information-centric networking}, ICN '11, pages 1--6, New York, NY, USA,
+  2011. ACM.
+
+\bibitem{HeJa:05}
+Gregory~L. Heileman and Pramod~A. Jamkhedkar.
+\newblock {DRM} interoperability analysis from the perspective of a layered
+  framework.
+\newblock In {\em Proceedings of the Fifth ACM Workshop on Digital Rights
+  Management}, pages 17--26, Alexandria, VA, Nov. 2005.
+
+\bibitem{JaHe:04}
+Pramod~A. Jamkhedkar and Gregory~L. Heileman.
+\newblock {DRM} as a layered system.
+\newblock In {\em Proceedings of the Fourth ACM Workshop on Digital Rights
+  Management}, pages 11--21, Washington, DC, Oct. 2004.
+
+\bibitem{JaHe:09}
+Pramod~A. Jamkhedkar and Gregory~L. Heileman.
+\newblock Digital rights management architectures.
+\newblock {\em Computers Electrical Engineering}, 35(2):376--394, 2009.
+
+\bibitem{JaHeLa:10}
+Pramod~A. Jamkhedkar, Gregory~L. Heileman, and Chris Lamb.
+\newblock An {I}nteroperable {U}sage {M}anagement {F}ramework.
+\newblock In {\em Proceedings of the Tenth ACM Workshop on Digital Rights
+  Management}, Chicago, Oct. 2010.
+
+\bibitem{JaHeMa:06}
+Pramod~A. Jamkhedkar, Gregory~L. Heileman, and Ivan Martinez-Ortiz.
+\newblock The problem with rights expression languages.
+\newblock In {\em Proceedings of the Sixth ACM Workshop on Digital Rights
+  Management}, pages 59--67, Alexandria, VA, Nov. 2006.
+
+\bibitem{KoLaMaMi:04}
+Rob~H. Koenen, Jack Lacy, Michael MacKay, and Steve Mitchell.
+\newblock The long march to interoperable digital rights management.
+\newblock {\em Proceedings of the IEEE}, 92(6):883--897, 2004.
+
+\bibitem{Koponen:2007:DNA:1282427.1282402}
+Teemu Koponen, Mohit Chawla, Byung-Gon Chun, Andrey Ermolinskiy, Kye~Hyun Kim,
+  Scott Shenker, and Ion Stoica.
+\newblock A data-oriented (and beyond) network architecture.
+\newblock {\em SIGCOMM Comput. Commun. Rev.}, 37(4):181--192, August 2007.
+
+\bibitem{proposal:nsa-arch}
+NSA.
+\newblock Distributed service oriented architecture (soa)- compatible cross
+  domain service (dscds) dscds overview.
+\newblock Presented at the Unified Cross Domain Management Office Conference,
+  2009.
+
+\bibitem{Nygren:2010:ANP:1842733.1842736}
+Erik Nygren, Ramesh~K. Sitaraman, and Jennifer Sun.
+\newblock The akamai network: a platform for high-performance internet
+  applications.
+\newblock {\em SIGOPS Oper. Syst. Rev.}, 44(3):2--19, August 2010.
+
+\bibitem{proposal:cd101}
+Unified Cross Domain~Management Office.
+\newblock Cd101.
+\newblock Presented at the Unified Cross Domain Management Office Conference,
+  2009.
+
+\bibitem{proposal:raytheon-arch}
+Jason Ostermann.
+\newblock Raytheon dscds intro.
+\newblock Presented at the Unified Cross Domain Management Office Conference,
+  2009.
+
+\bibitem{PaSa:04}
+Jaehong Park and Ravi Sandhu.
+\newblock The {UCON}$_{ABC}$ usage control model.
+\newblock {\em ACM Trans. Inf. Syst. Secur.}, 7(1):128--174, 2004.
+
+\bibitem{proposal:privacy-security-trust-cloud}
+S.~Pearson and A.~Benameur.
+\newblock Privacy, security and trust issues arising from cloud computing.
+\newblock In {\em Cloud Computing Technology and Science (CloudCom), 2010 IEEE
+  Second International Conference on}, pages 693 --702, 30 2010-dec. 3 2010.
+
+\bibitem{4457175}
+G.M. Perez, F.J.G. Clemente, and A.F.G. Skarmeta.
+\newblock Building and managing policy-based secure overlay networks.
+\newblock In {\em Parallel, Distributed and Network-Based Processing, 2008. PDP
+  2008. 16th Euromicro Conference on}, pages 597 --603, feb. 2008.
+
+\bibitem{rfc791}
+J.~B. Postel.
+\newblock Internet protocol.
+\newblock RFC 791, Internet Engineering Task Force, September 1981.
+
+\bibitem{rfc793}
+J.~B. Postel.
+\newblock Transmission control protocol.
+\newblock RFC 793, Internet Engineering Task Force, September 1981.
+
+\bibitem{proposal:ron-ross}
+Ron Ross.
+\newblock Next generation risk management.
+\newblock Presented at the Unified Cross Domain Management Office Conference,
+  2009.
+
+\bibitem{SaReCl:84}
+J.~H. Saltzer, D.~P. Reed, and D.~D. Clark.
+\newblock End-to-end arguments in system design.
+\newblock {\em ACM Transactions in Computer Systems}, 2(4):277--288, Nov. 1984.
+
+\bibitem{Tarkoma:2010:ONT:1805887}
+Sasu Tarkoma.
+\newblock {\em Overlay Networks: Toward Information Networking.}
+\newblock Auerbach Publications, Boston, MA, USA, 1st edition, 2010.
+
+\end{thebibliography}

@@ -43,7 +43,7 @@ This proof-of-concept does implement a simple overlay network for usage managed 
 \end{figure}
 
 \section{Initial Prototype Results}
-
+\color{red}
 Policy and content delivery over HTTP possible
 
 Ruby/Sinatra will support HTTP overlay development, CURL for usage
@@ -51,6 +51,7 @@ Ruby/Sinatra will support HTTP overlay development, CURL for usage
 Information Filtering Expectations
 
 Extension into larger distributed system feasible
+\color{black}
 
 \section{Inter-Provider Cloud Configuration}
 At this point, I have created and deployed baseline system images in both Amazon's Elastic Compute Cloud (EC2) and Rackspace Servers infrastructures.  I have also created and exercised our deployment, configuration, and logging systems to enable distributed monitoring and centralized reporting.  Overall, we currently have 20 nodes running with two distinct providers geographically dispersed across the continental United States.  This leads to a distinct requirement for a centralized system with distributed access for both initial configuration information as well as logging and auditing.  We have implemented this required infrastructure using Amazon's Simple Storage Service (S3), accessible from both Rackspace and Amazon hosted virtual machines.
@@ -166,6 +167,7 @@ Content-centric networks are generalized constructs supplying the ability to man
 We can use a variety of approaches with respect to information storage in these kinds of networks.  In many ways, they exhibit behavior very similar to filesystems.  In a content-centric network, rather than asking for content via some kind of address, like a uniform resource locator (URL), we use a specific non-ambiguous name.  This is very similar to how content management systems and web caches work today.  These kinds of systems treat a URL as a name rather than an address, returning a cached image of the requested content rather than the content actually pointed to by the URL.  This requires that consumers and caching agents recognize and manage the possibility of stale data, but that risk is generally worth the performance gain.  Content-centric networks can similarly optimize various aspects of content retrieval, returning the most local, highest quality, or most reliable data item, for example.
 
 In this content network, we store metadata associated with specific locations as well as the locations themselves.  Rather than optimizing with regard to location or quality, this network optimizes security posture.  In order to do so, we need to specify a simple data discovery protocol so clients can discover what data is available.
+
 We have proposed two different models for content access in this kind of network.  The first, the Cat Model, mimics typical filesystem interaction on unix-centric computers.  The second, the Index Model, acts more like a typical website, with a central index providing available options.  Both models are can manage hierarchical content, a requirement for managing large volumes of information.
 
 The first system is modeled after a typical filesystem.  In this case, a user would have read access to the network via a set of related commands.  Filesystems follow a model where you can list the available contents, access specific details of the contents, and then access individual contents themselves.  In UNIX and unix inspired systems, these actions correspond to ls, for diretory listings, and programs like cat, to allow access to specific individual content.  File details are exposed by options on the ls command.
@@ -182,8 +184,7 @@ The proposed Index Model has significant precedent as well.  This model is commo
 
 Similar issues with respect to network dispersion exist with showing the contents of artifacts in both models, and the index contents can seem to change with respect to changing context, as they are also associated with policy sets describing the use of content.  Both models can also be optimized for project-centric content viewing or to show indicators with respect to expected content retrieval latency.  Organizationally, any kind of informational hierarchy within the network would need to be based on the semantics of referenced content rather than external factors.  Content-centric networks use keys to location content rather than addresses, so this hierarchical name would in fact be such a key rather than an address for the content.
 
-Latency effects and content surprise are characteristics of the underlying content network rather than a specific interface approach.  They effect either approach equally.  The Cat Model is more general than the Index Model however.  You can in fact implement the Index Model with the Cat Model, but not the inverse.  
-Our work is focused on secure mashing of content in a web-centric environment.  As a result, the Index Model fits our needs better than the more general Cat Model.
+Latency effects and content surprise are characteristics of the underlying content network rather than a specific interface approach.  They effect either approach equally.  The Cat Model is more general than the Index Model however.  You can in fact implement the Index Model with the Cat Model, but not the inverse.  Our work is focused on secure mashing of content in a web-centric environment.  As a result, the Index Model fits our needs better than the more general Cat Model.
 
 \subsection{Initial Seed Information}
 In order to seed network clients, we provide an initial index object that contains location information and associated metadata.  This information is classed according to sensitivity and consists of names and latitude/longitude coordinates contained in an XML file, similar to that shown in listing \ref{lst:seed-data}.

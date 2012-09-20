@@ -63,12 +63,12 @@
 
 %---------------------------Title frame definition------------------------------------- 
 
-\title{Usage Management In Multi-level Security Environments}
+\title{Usage Management in Information-centric Networks}
 \author [Greg, Chris]{Gregory Heileman and Christopher C. Lamb}
 \institute[University of New Mexico]{
 \inst {}Department of Electrical and Computer Engineering\\
 University of New Mexico}
-\date{April 4, 2012}
+\date{September 2012}
 \titlegraphic{
 \begin{figure} 
 \includegraphics[width = 10cm]{ECE-UNM-logo}
@@ -242,6 +242,7 @@ The simulation environment runs over a nation-spanning overlay network hosted vi
 \newline
 \centering
 Overlay Technical Components
+{\small
 \begin{table}[tp] %
 \centering %
 \begin{tabular}{lc}
@@ -249,27 +250,36 @@ Overlay Technical Components
 $Category$ 				& $Components$ 								\\\toprule %
 $Infrastructure$ 		& Amazon S3, Amazon EC2, Rackspace Servers 	\\\midrule
 $Operating Systems$		& Ubuntu 11.04, Ubuntu 12.04 				\\\midrule
-$Technologies$			& Ruby (Sinatra, Capistrano, YAML) 			\\\midrule
-$Supporting Systems$	& Git, Github 								\\\bottomrule
+$Technologies$			& Ruby (Sinatra, Capistrano, YAML), REST 	\\\midrule
+$Supporting Systems$		& Git, Github 								\\\bottomrule
 \end{tabular}
-\caption{Supporting Components}
 \end{table}
-\end{frame}
-
-\begin{frame}
-\frametitle{Implementation Overview --- Capistrano}
-\end{frame}
-
-\begin{frame}
-\frametitle{Implementation Overview --- Rest API}
+}
 \end{frame}
 
 \begin{frame}
 \frametitle{Implementation Overview --- Flow}
+We examined two different interation architectures:
+{\small
+\begin{itemize}
+\item {\it Cat Model} --- Similar to a filesystem using a command-line interface to access content.
+\item {\it Index Model} --- Akin to typical web-based systems using an index file referring to other content.
+\end{itemize}
+}
+\pause
+We chose the {\it Index Model}.  But why?
+{\small
+\begin{itemize}
+\item {\it Content Listing} --- Content listing on an arbitrary network requires hop count or duration limits in order to maintain responsiveness.
+\item {\it Content Listing} --- Precedent for this system in this context (BitTorrent, etc.).
+\item {\it Content Listing} --- Focus of work is web-centric, so a web-centric approach is a more natural fit.
+\end{itemize}
+}
 \end{frame}
 
 \begin{frame}
 \frametitle{Implementation Overview --- Usage}
+Planned execution domains can have policies over five different dimensions.  We have three separate domains with different policy taxonomies.
 {\tiny
 \begin{table}[tp] %
 \centering %
@@ -277,36 +287,73 @@ $Supporting Systems$	& Git, Github 								\\\bottomrule
 \toprule %
 \emph{Dimension}		& \emph{Type}	& \emph{Required?}	& \emph{Domain A}	& \emph{Domain B}	& \emph{Domain C} 	\\\toprule
 \emph{Affiliation} 	& Set 			& Yes 				& tropic\_thunder, 	& tropic\_thunder,	& tropic\_thunder, 	\\
-					&				&					& gallant\_entry	& gallant\_entry	& curious\_response	\\\midrule
+					&				&					& gallant\_entry		& gallant\_entry		& curious\_response	\\\midrule
 \emph{Sensitivity} 	& Ordering 		& Yes 				& unclassified,		& unclassified		& unclassified,		\\
 					&				&					& secret,			& secret,			& secret,			\\
 					&				&					& top\_secret		& top\_secret		& top\_secret		\\\midrule
-\emph{Category}		& Set 			& No 				& aqua,				& alpha,			& one,				\\
+\emph{Category}		& Set 			& No 				& aqua,				& alpha,				& one,				\\
 					&				&					& magenta,			& beta,				& two,				\\
-					&				&					& vermillion		& gamma				& three				\\\midrule
+					&				&					& vermillion			& gamma				& three				\\\midrule
 \emph{Organization}	& Set 			& Yes 				& Oceania, 			& Oceania,			& Oceania,			\\
 					&				&					& Eastasia,			& Eastasia,			& Eastasia,			\\
-					&				&					& Urasia			& Urasia			& Urasia				\\\midrule
+					&				&					& Urasia				& Urasia				& Urasia				\\\midrule
 \emph{Device}	 	& Set 			& No 				& workstation, 		& workstation,		& workstation, 		\\
-					&				&					& tablet,			& phone				& tablet			\\
+					&				&					& tablet,			& phone				& tablet				\\
 					&				&					& phone				& 					& 					\\\midrule
 \end{tabular}
-\caption{All Possible Attributes for Usage Management Decisions}
-\label{table:model:network-attributes}
 \end{table}
 }
 \end{frame}
 
 \begin{frame}
+\frametitle{Implementation Overview --- Index}
+Initial content is located via an index.
+
+\lstinputlisting[language=xml, label=lst:seed-data, caption=Seed Information for the Network]{content/code/index.xml}
+\end{frame}
+
+\begin{frame}
+\frametitle{Implementation Overview --- Data}
+Currently, we process images, shapes, and generic content.
+\par\noindent
+\begin{minipage}[t]{.30\textwidth}
+\lstinputlisting[language=xml, label=lst:image-data, caption=Image]{content/code/image.xml}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.30\textwidth}
+\lstinputlisting[language=xml, label=lst:shape-data, caption=Shape]{content/code/shape.xml}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.30\textwidth}
+\lstinputlisting[language=xml, label=lst:content-data, caption=Content]{content/code/content.xml}
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Implementation Overview --- Shapes}
+We hande a variety of shapes.
+\par\noindent
+\begin{minipage}[t]{.30\textwidth}
+\lstinputlisting[language=xml, label=lst:marker-data, caption=Marker]{content/code/shape-marker.xml}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.30\textwidth}
+\lstinputlisting[language=xml, label=lst:circle-data, caption=Circle]{content/code/shape-circle.xml}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.30\textwidth}
+\lstinputlisting[language=xml, label=lst:polygon-data, caption=Polygon]{content/code/shape-polygon.xml}
+\end{minipage}
+\end{frame}
+
+\begin{frame}
 \frametitle{Implementation Overview --- Policy}
-\begin{lstlisting}[language=ruby, label=lst:policy-dsl, caption=Policy DSL Example]
-foobar
-\end{lstlisting}
+\lstinputlisting[language=ruby, label=lst:policy-dsl, caption=Policy DSL Example]{content/code/policy.pol}
 \end{frame}
 
 \section{Final Steps}
 \begin{frame}
-\frametitle{Next Steps}
+\frametitle{Final Steps}
 \end{frame}
 
 \end{document}

@@ -1,0 +1,20 @@
+policy_set {
+  policy(:p1) {
+    match :all
+    rule(:mission_affiliation) { |x| x == :tropic_thunder }
+    rule(:sensitivity) { |x| x == :top_secret }
+  }
+
+  policy(:p2) {
+    include :p1
+    match :all
+    rule(:device) { |d| d == :workstation || d == :phone }
+  }
+
+  policy(:p3) {
+    include :p1
+    match :one
+    rule(:category) { |c| c == :vermillion }
+    rule(:organization} { |o| == :oceania }
+  }
+}

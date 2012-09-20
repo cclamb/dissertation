@@ -1,0 +1,14 @@
+<index>
+  <location>
+    <name>The location name; a city name, for example</name>
+    <lat>The location latitude</lat>
+    <lon>The location longitude</lon>
+    <about>Metadata about the location</about>
+    <key>The detail data object name</key>
+    <key>...</key>
+    ....
+  </location>
+  <location>...</location>
+  <location>...</location>
+  ...
+</index>

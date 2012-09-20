@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.10pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Information-centric Networking}{3}{0}{1}
+\beamer@sectionintoc {2}{System Overview}{5}{0}{2}
+\beamer@sectionintoc {3}{Theoretical Foundations}{8}{0}{3}
+\beamer@sectionintoc {4}{Implementation Overview}{11}{0}{4}
+\beamer@sectionintoc {5}{Final Steps}{18}{0}{5}

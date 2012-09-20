@@ -1,0 +1,11 @@
+<artifact>
+  <policy-set>
+  ...
+  </policy-set>
+  <data-object>
+    <content type=".">
+     ...
+    </content>
+  </data-object>
+  ...
+</artifact>

@@ -1,0 +1,74 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: dissertation.aux
+The style file: plain.bst
+Database file #1: bib/proposal.bib
+Database file #2: bib/drm.bib
+Database file #3: bib/info-centric.bib
+Database file #4: bib/rfc.bib
+Warning--I didn't find a database entry for "TODO"
+Warning--to sort, need author or key in proposal:info-sharing-strategy
+Warning--to sort, need author or key in proposal:nsa-cloud
+Warning--to sort, need author or key in proposal:assured-info-sharing
+Warning--to sort, need author or key in proposal:gig-arch
+Warning--to sort, need author or key in NDN
+Warning--to sort, need author or key in CCNx
+Warning--to sort, need author or key in PSIRP
+Warning--to sort, need author or key in NetInf
+Warning--to sort, need author or key in xerox
+Warning--to sort, need author or key in parc
+Warning--to sort, need author or key in marlin
+Warning--to sort, need author or key in proposal:ucdmo-goals
+Warning--to sort, need author or key in proposal:openflow
+Warning--to sort, need author or key in proposal:jboss-esb
+Warning--empty author in marlin
+Warning--empty institution in marlin
+Warning--empty booktitle in proposal:bah-arch
+Warning--empty author in coral
+Warning--empty institution in coral
+Warning--empty booktitle in proposal:nsa-arch
+Warning--empty booktitle in proposal:cd101
+Warning--empty booktitle in proposal:raytheon-arch
+Warning--empty booktitle in proposal:ron-ross
+You've used 45 entries,
+            2118 wiz_defined-function locations,
+            749 strings with 10460 characters,
+and the built_in function-call counts, 13090 in all, are:
+= -- 1283
+> -- 501
+< -- 13
++ -- 216
+- -- 162
+* -- 865
+:= -- 2005
+add.period$ -- 123
+call.type$ -- 45
+change.case$ -- 219
+chr.to.int$ -- 0
+cite$ -- 68
+duplicate$ -- 543
+empty$ -- 1174
+format.name$ -- 162
+if$ -- 2869
+int.to.chr$ -- 0
+int.to.str$ -- 45
+missing$ -- 27
+newline$ -- 215
+num.names$ -- 60
+pop$ -- 307
+preamble$ -- 1
+purify$ -- 172
+quote$ -- 0
+skip$ -- 400
+stack$ -- 0
+substring$ -- 677
+swap$ -- 119
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 178
+warning$ -- 23
+while$ -- 98
+width$ -- 47
+write$ -- 460
+(There were 24 warnings)
