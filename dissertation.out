@@ -24,12 +24,11 @@
 \BOOKMARK [0][-]{chapter.3}{Experimental Configuration}{}% 24
 \BOOKMARK [1][-]{section.3.1}{Overlay Implementation Concerns}{chapter.3}% 25
 \BOOKMARK [1][-]{section.3.2}{Initial Prototype Implementation}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.3}{Initial Prototype Results}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.4}{Inter-Provider Cloud Configuration}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.5}{Inter-Cloud Architecture}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.6}{Experimental Structure}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.6.1}{Initial Seed Information}{section.3.6}% 31
-\BOOKMARK [2][-]{subsection.3.6.2}{Policies and Attributes}{section.3.6}% 32
-\BOOKMARK [1][-]{section.3.7}{Primary Interfaces and Mappings}{chapter.3}% 33
-\BOOKMARK [0][-]{chapter.4}{Experimental Results}{}% 34
-\BOOKMARK [0][-]{chapter*.29}{References}{}% 35
+\BOOKMARK [1][-]{section.3.3}{Inter-Provider Cloud Configuration}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.4}{Inter-Cloud Architecture}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.5}{Experimental Structure}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.5.1}{Initial Seed Information}{section.3.5}% 30
+\BOOKMARK [2][-]{subsection.3.5.2}{Policies and Attributes}{section.3.5}% 31
+\BOOKMARK [1][-]{section.3.6}{Primary Interfaces and Mappings}{chapter.3}% 32
+\BOOKMARK [0][-]{chapter.4}{Experimental Results}{}% 33
+\BOOKMARK [0][-]{chapter*.29}{References}{}% 34

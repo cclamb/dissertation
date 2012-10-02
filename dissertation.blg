@@ -6,7 +6,6 @@ Database file #1: bib/proposal.bib
 Database file #2: bib/drm.bib
 Database file #3: bib/info-centric.bib
 Database file #4: bib/rfc.bib
-Warning--I didn't find a database entry for "TODO"
 Warning--to sort, need author or key in proposal:info-sharing-strategy
 Warning--to sort, need author or key in proposal:nsa-cloud
 Warning--to sort, need author or key in proposal:assured-info-sharing
@@ -18,8 +17,9 @@ Warning--to sort, need author or key in NetInf
 Warning--to sort, need author or key in xerox
 Warning--to sort, need author or key in parc
 Warning--to sort, need author or key in marlin
-Warning--to sort, need author or key in proposal:ucdmo-goals
 Warning--to sort, need author or key in proposal:openflow
+Warning--to sort, need author or key in cisco-6500
+Warning--to sort, need author or key in proposal:ucdmo-goals
 Warning--to sort, need author or key in proposal:jboss-esb
 Warning--empty author in marlin
 Warning--empty institution in marlin
@@ -30,45 +30,45 @@ Warning--empty booktitle in proposal:nsa-arch
 Warning--empty booktitle in proposal:cd101
 Warning--empty booktitle in proposal:raytheon-arch
 Warning--empty booktitle in proposal:ron-ross
-You've used 45 entries,
+You've used 47 entries,
             2118 wiz_defined-function locations,
-            749 strings with 10460 characters,
-and the built_in function-call counts, 13090 in all, are:
-= -- 1283
-> -- 501
+            757 strings with 10718 characters,
+and the built_in function-call counts, 13474 in all, are:
+= -- 1319
+> -- 509
 < -- 13
-+ -- 216
-- -- 162
-* -- 865
-:= -- 2005
-add.period$ -- 123
-call.type$ -- 45
-change.case$ -- 219
++ -- 220
+- -- 164
+* -- 882
+:= -- 2062
+add.period$ -- 128
+call.type$ -- 47
+change.case$ -- 225
 chr.to.int$ -- 0
-cite$ -- 68
-duplicate$ -- 543
-empty$ -- 1174
-format.name$ -- 162
-if$ -- 2869
+cite$ -- 71
+duplicate$ -- 562
+empty$ -- 1219
+format.name$ -- 164
+if$ -- 2957
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 27
-newline$ -- 215
-num.names$ -- 60
-pop$ -- 307
+int.to.str$ -- 47
+missing$ -- 29
+newline$ -- 224
+num.names$ -- 62
+pop$ -- 322
 preamble$ -- 1
-purify$ -- 172
+purify$ -- 177
 quote$ -- 0
-skip$ -- 400
+skip$ -- 413
 stack$ -- 0
-substring$ -- 677
-swap$ -- 119
+substring$ -- 687
+swap$ -- 121
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 178
-warning$ -- 23
-while$ -- 98
-width$ -- 47
-write$ -- 460
+type$ -- 184
+warning$ -- 24
+while$ -- 100
+width$ -- 49
+write$ -- 479
 (There were 24 warnings)

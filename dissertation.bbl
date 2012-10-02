@@ -7,7 +7,9 @@ Marlin architecture overview.
 
 \bibitem{proposal:info-sharing-strategy}
 {D}o{D} {I}nformation {S}haring {S}trategy.
-\newblock {http://cio-nii.defense.gov/docs/InfoSharingStrategy.pdf}, May 2007.
+\newblock
+  {http://dodcio.defense.gov/Portals/0/Documents/InfoSharingStrategy.pdf}, May
+  2007.
 
 \bibitem{proposal:assured-info-sharing}
 {A}ssured {I}nformation {S}haring in {C}louds.
@@ -41,6 +43,11 @@ Marlin architecture overview.
 \bibitem{CCNx}
 {CCN}x.
 \newblock {http://www.ccnx.org/}, September 2012.
+
+\bibitem{cisco-6500}
+{C}isco {C}atalyst 6500 {S}eries {S}witches.
+\newblock {http://www.cisco.com/en/US/products/hw/switches/ps708/index.html},
+  September 2012.
 
 \bibitem{parc}
 {C}ontent-{C}entric {N}etworking - {P}arc, a {X}erox {C}ompany.
@@ -236,6 +243,11 @@ Ron Ross.
 J.~H. Saltzer, D.~P. Reed, and D.~D. Clark.
 \newblock End-to-end arguments in system design.
 \newblock {\em ACM Transactions in Computer Systems}, 2(4):277--288, Nov. 1984.
+
+\bibitem{Tanenbaum:1985:CN:536716}
+Andrew~S. Tanenbaum.
+\newblock {\em Computer Networks}.
+\newblock Prentice Hall PTR, Upper Saddle River, NJ, USA, 1985.
 
 \bibitem{Tarkoma:2010:ONT:1805887}
 Sasu Tarkoma.

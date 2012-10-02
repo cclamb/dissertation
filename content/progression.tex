@@ -42,16 +42,7 @@ This proof-of-concept does implement a simple overlay network for usage managed 
 \label{fig:model:prototype-physical-config}
 \end{figure}
 
-\section{Initial Prototype Results}
-\color{red}
-Policy and content delivery over HTTP possible
-
-Ruby/Sinatra will support HTTP overlay development, CURL for usage
-
-Information Filtering Expectations
-
-Extension into larger distributed system feasible
-\color{black}
+Initial results confirmed that the approach was feasible.  The network was able to successfully filter content based on policies and dynamic network conditions.  The system was also able to deliver both arbitrary content and policies within a single document as well, and it was not prohibitively difficult to extract either data or policies.  Furthermore, Ruby with Sinatra effectively supported the required HTTP-centric infrastructure needed to effectively simulate an information-centric network.  It seemed clear at this point that extending the prototypical implementation from a single host to a fully nationally distributed network was feasible.
 
 \section{Inter-Provider Cloud Configuration}
 At this point, I have created and deployed baseline system images in both Amazon's Elastic Compute Cloud (EC2) and Rackspace Servers infrastructures.  I have also created and exercised our deployment, configuration, and logging systems to enable distributed monitoring and centralized reporting.  Overall, we currently have 20 nodes running with two distinct providers geographically dispersed across the continental United States.  This leads to a distinct requirement for a centralized system with distributed access for both initial configuration information as well as logging and auditing.  We have implemented this required infrastructure using Amazon's Simple Storage Service (S3), accessible from both Rackspace and Amazon hosted virtual machines.
