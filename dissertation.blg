@@ -6,6 +6,8 @@ Database file #1: bib/proposal.bib
 Database file #2: bib/drm.bib
 Database file #3: bib/info-centric.bib
 Database file #4: bib/rfc.bib
+Warning--I didn't find a database entry for "OrangeBook"
+Warning--I didn't find a database entry for "CommonCriteria"
 Warning--to sort, need author or key in proposal:info-sharing-strategy
 Warning--to sort, need author or key in proposal:nsa-cloud
 Warning--to sort, need author or key in proposal:assured-info-sharing
@@ -30,45 +32,45 @@ Warning--empty booktitle in proposal:nsa-arch
 Warning--empty booktitle in proposal:cd101
 Warning--empty booktitle in proposal:raytheon-arch
 Warning--empty booktitle in proposal:ron-ross
-You've used 47 entries,
+You've used 51 entries,
             2118 wiz_defined-function locations,
-            757 strings with 10718 characters,
-and the built_in function-call counts, 13474 in all, are:
-= -- 1319
-> -- 509
-< -- 13
-+ -- 220
-- -- 164
-* -- 882
-:= -- 2062
-add.period$ -- 128
-call.type$ -- 47
-change.case$ -- 225
+            791 strings with 11446 characters,
+and the built_in function-call counts, 14830 in all, are:
+= -- 1462
+> -- 555
+< -- 15
++ -- 239
+- -- 178
+* -- 952
+:= -- 2272
+add.period$ -- 141
+call.type$ -- 51
+change.case$ -- 245
 chr.to.int$ -- 0
-cite$ -- 71
-duplicate$ -- 562
-empty$ -- 1219
-format.name$ -- 164
-if$ -- 2957
+cite$ -- 75
+duplicate$ -- 626
+empty$ -- 1333
+format.name$ -- 178
+if$ -- 3261
 int.to.chr$ -- 0
-int.to.str$ -- 47
-missing$ -- 29
-newline$ -- 224
-num.names$ -- 62
-pop$ -- 322
+int.to.str$ -- 51
+missing$ -- 32
+newline$ -- 244
+num.names$ -- 70
+pop$ -- 345
 preamble$ -- 1
-purify$ -- 177
+purify$ -- 192
 quote$ -- 0
-skip$ -- 413
+skip$ -- 467
 stack$ -- 0
-substring$ -- 687
-swap$ -- 121
-text.length$ -- 13
+substring$ -- 772
+swap$ -- 144
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 184
+type$ -- 200
 warning$ -- 24
-while$ -- 100
-width$ -- 49
-write$ -- 479
-(There were 24 warnings)
+while$ -- 114
+width$ -- 53
+write$ -- 523
+(There were 26 warnings)

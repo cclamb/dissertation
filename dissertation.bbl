@@ -75,10 +75,20 @@ B.~Ahlgren, C.~Dannewitz, C.~Imbrenda, D.~Kutscher, and B.~Ohlman.
 \newblock A survey of information-centric networking.
 \newblock {\em Communications Magazine, IEEE}, 50(7):26 --36, july 2012.
 
+\bibitem{Bell1973}
+D.~E. Bell and L.~J. LaPadula.
+\newblock {Secure Computer Systems: Mathematical Foundations}.
+\newblock Technical report, MITRE Corporation, March 1973.
+
 \bibitem{rfc3986}
 T.~Berners-Lee, R.~Fielding, and L.~Masinter.
 \newblock Uniform resource identifier {(URI):} generic syntax.
 \newblock RFC 3986, Internet Engineering Task Force, January 2005.
+
+\bibitem{Biba1977}
+Biba.
+\newblock {Integrity Considerations for Secure Computer Systems}.
+\newblock {\em MITRE Co., technical report ESD-TR 76-372}, 1977.
 
 \bibitem{BlCl:01}
 Marjory~S. Blumenthal and David~D. Clark.
@@ -99,6 +109,18 @@ Booz, Allen, and Hamilton.
   domain service (dscds).
 \newblock Presented at the Unified Cross Domain Management Office Conference,
   2009.
+
+\bibitem{Brewer89}
+D.~F.~C. Brewer and M.~J. Nash.
+\newblock The {C}hinese wall security policy.
+\newblock In {\em Proceedings of the 1989 IEEE Symposium on Security and
+  Privacy}, pages 206--214, 1989.
+
+\bibitem{ClaWil87}
+D.~D. Clark and D.~R. Wilson.
+\newblock {A Comparison of Commercial and Military Computer Security Policies}.
+\newblock In {\em 1987 {IEEE} Symposium on Security and Privacy}, pages
+  184--194. {IEEE} Computer Society Press, 1987.
 
 \bibitem{Cl:88}
 David~D. Clark.

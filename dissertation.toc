@@ -2,33 +2,34 @@
 \contentsline {chapter}{List of Tables}{xii}{chapter*.3}
 \contentsline {chapter}{Glossary}{xiii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Current Solutions}{4}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}NSA, Filtered}{4}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}NSA, Services}{5}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Raytheon}{6}{subsection.1.1.3}
-\contentsline {subsection}{\numberline {1.1.4}Booz $\mid $ Allen $\mid $ Hamilton}{8}{subsection.1.1.4}
-\contentsline {section}{\numberline {1.2}Information-centric Networking}{9}{section.1.2}
-\contentsline {section}{\numberline {1.3}Cross Domain Solutions}{11}{section.1.3}
-\contentsline {section}{\numberline {1.4}Other Related Work}{13}{section.1.4}
-\contentsline {chapter}{\numberline {2}Usage Management in Information-centric Networks}{15}{chapter.2}
-\contentsline {section}{\numberline {2.1}Characteristics}{18}{section.2.1}
-\contentsline {section}{\numberline {2.2}Taxonomies of Usage Management Overlay}{19}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}$\phi $-level Overlay Systems}{21}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}$\alpha $-level Overlay Systems}{22}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}$\beta $-level Overlay Systems}{24}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}$\gamma $-level Overlay Systems}{25}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Taxonomic Analysis}{26}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Characteristics of Policy-centricity}{27}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Overlay Structure}{29}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Analysis}{33}{section.2.4}
-\contentsline {chapter}{\numberline {3}Experimental Configuration}{34}{chapter.3}
-\contentsline {section}{\numberline {3.1}Overlay Implementation Concerns}{34}{section.3.1}
-\contentsline {section}{\numberline {3.2}Initial Prototype Implementation}{37}{section.3.2}
-\contentsline {section}{\numberline {3.3}Inter-Provider Cloud Configuration}{39}{section.3.3}
-\contentsline {section}{\numberline {3.4}Inter-Cloud Architecture}{41}{section.3.4}
-\contentsline {section}{\numberline {3.5}Experimental Structure}{49}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Initial Seed Information}{52}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Policies and Attributes}{54}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6}Primary Interfaces and Mappings}{57}{section.3.6}
-\contentsline {chapter}{\numberline {4}Experimental Results}{62}{chapter.4}
-\contentsline {chapter}{References}{63}{chapter*.29}
+\contentsline {section}{\numberline {1.1}Confidentiality and Integrity Models}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}National and International Standards}{6}{section.1.2}
+\contentsline {section}{\numberline {1.3}Current Solutions}{7}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}NSA, Filtered}{8}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}NSA, Services}{9}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Raytheon}{10}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Booz $\mid $ Allen $\mid $ Hamilton}{11}{subsection.1.3.4}
+\contentsline {section}{\numberline {1.4}Information-centric Networking}{14}{section.1.4}
+\contentsline {section}{\numberline {1.5}Other Related Work}{16}{section.1.5}
+\contentsline {chapter}{\numberline {2}Usage Management in Information-centric Networks}{18}{chapter.2}
+\contentsline {section}{\numberline {2.1}Characteristics}{21}{section.2.1}
+\contentsline {section}{\numberline {2.2}Taxonomies of Usage Management Overlay}{22}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}$\phi $-level Overlay Systems}{24}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}$\alpha $-level Overlay Systems}{25}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}$\beta $-level Overlay Systems}{27}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}$\gamma $-level Overlay Systems}{28}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Taxonomic Analysis}{29}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Characteristics of Policy-centricity}{30}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Information-centric Structure}{33}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Analysis}{36}{section.2.4}
+\contentsline {chapter}{\numberline {3}Experimental Configuration}{37}{chapter.3}
+\contentsline {section}{\numberline {3.1}Overlay Implementation Concerns}{37}{section.3.1}
+\contentsline {section}{\numberline {3.2}Initial Prototype Implementation}{40}{section.3.2}
+\contentsline {section}{\numberline {3.3}Inter-Provider Cloud Configuration}{42}{section.3.3}
+\contentsline {section}{\numberline {3.4}Inter-Cloud Architecture}{44}{section.3.4}
+\contentsline {section}{\numberline {3.5}Experimental Structure}{52}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Initial Seed Information}{55}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Policies and Attributes}{57}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Primary Interfaces and Mappings}{60}{section.3.6}
+\contentsline {chapter}{\numberline {4}Experimental Results}{65}{chapter.4}
+\contentsline {chapter}{References}{66}{chapter*.29}
