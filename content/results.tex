@@ -41,21 +41,6 @@ Confidentiality is likewise impacted primarily by approach and not by infrastruc
 Overall, results show that, from a performance perspective, the encryption approach fares the worst, but only slightly, and certainly not in all cases.  Both results from Amazon and Rackspace, in Figures ~\ref{fig:model:amazon-results} and ~\ref{fig:model:rackspace-results}, show encryption as generally taking the largest performance hit, just following rerouting.
 Furthermore, network effects have a much larger impact on performance than information protection approaches.  The query to the home node is an excellent predictor of overall network stability, as content delivered directly from a home node is not subjected to the selected information protection strategy.  Note that when queried from Amazon or Rackspace, the home node timing results are very close to uniform.  Queries from Comcast, however, are much more varied, indicating more highly variable quality of service within the Comcast network.  This is also supported by the gross distribution of response times.  Within both the Amazon and Rackspace networks, the farther a queried node is from the content requested, the worse the performance, as expected.  Comcast's network has a much more uniform information network response time overall as the processing time of the information network simulation is overshadowed by the highly varied performance of Comcast's physical network.  Availability is surprisingly uniform across all confidentiality strategies, showing little impact on end-to-end processing times.  Encryption strategies show the most degradation, though that performance degradation is less than general network performance variation.
 
-\begin{table*}[tp] %
-\centering %
-\begin{tabular}{lccc}
-\toprule %
-{\it Property}			& {\it Redaction}	& {\it Rerouting} 	& {\it Encryption} 	\\\toprule
-{\it Infrastructure} 	& 3				  	& 1					& 1				 	\\\midrule
-{\it Operating Systems}	& 1					& 2					& 3 					\\\midrule
-{\it Technologies}		& 1					& 1					& 1					\\\bottomrule
-\end{tabular}
-\caption{Approach Evaluation Summary}
-\label{table:model:evaluation}
-\end{table*}
-
-Table ~\ref{table:model:evaluation} shows the overall results of experiments and analysis with respect to various possible approaches to securing information transiting content networks, on a scale of one to three, with three the highest and one the lowest scores.  Not surprisingly, there is no clear best approach.  Rather, decisions with respect to which approach to choose for given content is highly dependent on the sensitivity of the content as well as integrity and availability requirements.
-
 \section{Non-Hierarchical Networks}
 In order to test non-hierarchical networks, a simple branching network of participants was used, identical in form to the hierarchical network, though queries could be routed through the network from any point.  Queries could come into any node on the network, and would propagate through the network to the requested content, evaluating the returned content as it passes back through the network in response to the initial query.
 
@@ -93,4 +78,13 @@ Non-hierarchical networks behave very similarly to hierarchical networks.  This 
 \section{Removing Network Effects}
 Having established the parameters under which confidentiality strategies may be chosen, the next immediate area of concern involves the number of filtering events that can occur prior to a given information network suffering from degraded performance.  Previous results demonstrated that we do in fact have some kind of degradation of performance in or selected network based on distance from content, but that can also be attributed to the distributed nature of the network itself.  Processing performance of a given node must be evaluated free of network effects in order to more clearly understand the availability implications of content filtering itself.
 
-A single node, configured on one of the test nodes in either infrastructure, would yield the type of network effect free performance limits needed.  Nodes in both Rackspace and Amazon environments were configured such that requests were made of the home node itself, under each of the three confidentiality strategies.  Requests were also directed to the home node without any usage management systems engaged in order to collect control data.
+A single node, configured on one of the test nodes in either infrastructure, would yield the type of network effect free performance limits needed.  A node in Amazon's environments were configured such that requests were made of the home node itself, under each of the three confidentiality strategies.  Requests were also directed to the home node without any usage management systems engaged in order to collect control data.  After that initial request, the node was configured with various usage management strategies in order to measure their availability impact.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=4.5in]{single-node-results}
+\caption{Results from Requests to a Singe Node}
+\label{fig:model:single-node-results}
+\end{figure}
+
+As shown in Figure ~\ref{fig:model:single-node-results}, with information network effects removed, readaction and encryption have very similar performance overall.  Redaction, as a strategy, is very simple programmatically, and as we use symmetric encryption, ciphering and deciphering operations are very fast.  Rerouting, in this case, is clearly the worst strategy.  This is a result of the dependency of this strategy on external systems and system configuration times.  Specifically, configuring and using SMTP for each rerouting operation is prohibitively expensive.
