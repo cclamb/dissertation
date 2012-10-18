@@ -199,11 +199,19 @@ With the stage set with respect to current technologies and approaches, this cha
 \input{content/capabilities}
 \input{content/characteristics}
 \input{content/taxonomy}
-\input{content/expectations}
+\section{Experimental Support}
+As we have shown, information-centric networks provide new ways to secure information, but the potential costs are still undefined.  This kind of repeated content analysis, enabled by information-centric computation, can potentially delay information delivery unacceptably.  Information integrity can also be damaged using some possible approaches.  The specific impacts on availability and integrity of these increased confidentiality mechanisms are vital to understand when selecting specific approaches.
+
+For example, removing information from content prior to transmittal over unsecured network paths certainly protects that removed content, but destroys the integrity of the transmitted information.  Likewise, constant encryption and decryption of data to enable repeated examination of transmitted content will certainly have a negative performance impact.  The next two chapters describe exactly how the prototype information network is implemented, and how these approaches impact information confidentiality, integrity, and availability.
 
 \chapter{Experimental Configuration}
-% \input{content/experiments}
+A key concept in our current work is the separation of content management from physical communication networks.  In the past, content was controlled via partitioning and physical network access management.  Physical networks were tightly controlled as a way to manage access to sensitive content.  Classified networks in common use today are canonical examples of this kind of approach to content management.  Access to these networks is tightly controlled by classification authorities and the ability to transfer content from these networks to more open systems is rigorously managed.  Corporate systems have also commonly used this kind of approach, though not usually with so much regulation or rigor.
+
+This kind of approach is not scalable however.  It imposes huge costs and infrastructural requirements that are becoming too large to effectively manage.  Furthermore, future systems containing sensitive information require similar security features, and simply cannot be developed without custom controlled infrastructure.  Health care systems, for example, have huge security needs and a more finely grained level of application than even deployed government systems.  These systems will contain exabytes of data, all of which needs to be explicitly controlled, managed, and reviewed by those associated with specific managed records.
+
 \input{content/progression}
+\section{Using the Network}
+This system is now defined, with primary interface and data type definitions, and implemented.  At this point, it can filter information through defined nodes implementing different strategies in accordance with specific defined rules.  It is also instrumented so that it can generate accurate timing information needed to measure availability impacts of confidentiality strategies on tranmitted information.  The next chapter will cover specifically how these results were collected, the results themselves, and interpretation of what those results imply.
 
 \chapter{Experimental Results and Conclusions}
 \input{content/results}
