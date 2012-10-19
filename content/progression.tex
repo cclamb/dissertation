@@ -386,7 +386,7 @@ struct artifact_descriptor {
 typedef sequence<artifact_descriptor> artifact_descriptor_list;
 \end{lstlisting}
 
-As shown in Listing \ref{lst:artifact-datatypes}, we deal primarily with two key datatypes, \emph{artifacts} and \emph{policy\_sets}.  For the purpose of networked data transfer, both of these datatypes are formatted strings of XML and policy DSL data.  An \emph{artifact\_descriptor} combines an artifact with its associated set of policies.  An \emph{artifact\_descriptor\_list} is an unlimited sequence of artifact\_descriptors.
+As shown in Listing \ref{lst:artifact-data-types}, we deal primarily with two key datatypes, \emph{artifacts} and \emph{policy\_sets}.  For the purpose of networked data transfer, both of these datatypes are formatted strings of XML and policy DSL data.  An \emph{artifact\_descriptor} combines an artifact with its associated set of policies.  An \emph{artifact\_descriptor\_list} is an unlimited sequence of artifact\_descriptors.
 
 \begin{lstlisting}[language=idl, label=lst:status-data-types, caption=Key Status Dataypes]
 enum status { unsecured, confidential, secret, top_secret };
