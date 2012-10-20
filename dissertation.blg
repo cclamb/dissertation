@@ -6,11 +6,12 @@ Database file #1: bib/proposal.bib
 Database file #2: bib/drm.bib
 Database file #3: bib/info-centric.bib
 Database file #4: bib/rfc.bib
-Warning--I didn't find a database entry for "OrangeBook"
-Warning--I didn't find a database entry for "CommonCriteria"
 Warning--to sort, need author or key in proposal:info-sharing-strategy
 Warning--to sort, need author or key in proposal:nsa-cloud
 Warning--to sort, need author or key in proposal:assured-info-sharing
+Warning--to sort, need author or key in NIST800:144
+Warning--to sort, need author or key in NIST800:12
+Warning--to sort, need author or key in NIST800:95
 Warning--to sort, need author or key in proposal:gig-arch
 Warning--to sort, need author or key in NDN
 Warning--to sort, need author or key in CCNx
@@ -23,54 +24,58 @@ Warning--to sort, need author or key in proposal:openflow
 Warning--to sort, need author or key in cisco-6500
 Warning--to sort, need author or key in proposal:ucdmo-goals
 Warning--to sort, need author or key in proposal:jboss-esb
+Warning--empty author in NIST800:12
 Warning--empty author in marlin
 Warning--empty institution in marlin
+Warning--empty author in NIST800:95
+Warning--empty author in NIST800:144
 Warning--empty booktitle in proposal:bah-arch
 Warning--empty author in coral
 Warning--empty institution in coral
+Warning--empty year in CommonCriteria
 Warning--empty booktitle in proposal:nsa-arch
 Warning--empty booktitle in proposal:cd101
 Warning--empty booktitle in proposal:raytheon-arch
 Warning--empty booktitle in proposal:ron-ross
-You've used 51 entries,
+You've used 57 entries,
             2118 wiz_defined-function locations,
-            791 strings with 11446 characters,
-and the built_in function-call counts, 14830 in all, are:
-= -- 1462
-> -- 555
-< -- 15
-+ -- 239
-- -- 178
-* -- 952
-:= -- 2272
-add.period$ -- 141
-call.type$ -- 51
-change.case$ -- 245
+            813 strings with 11995 characters,
+and the built_in function-call counts, 15969 in all, are:
+= -- 1582
+> -- 579
+< -- 16
++ -- 252
+- -- 184
+* -- 1014
+:= -- 2465
+add.period$ -- 158
+call.type$ -- 57
+change.case$ -- 267
 chr.to.int$ -- 0
-cite$ -- 75
-duplicate$ -- 626
-empty$ -- 1333
-format.name$ -- 178
-if$ -- 3261
+cite$ -- 88
+duplicate$ -- 683
+empty$ -- 1440
+format.name$ -- 184
+if$ -- 3505
 int.to.chr$ -- 0
-int.to.str$ -- 51
-missing$ -- 32
-newline$ -- 244
-num.names$ -- 70
-pop$ -- 345
+int.to.str$ -- 57
+missing$ -- 36
+newline$ -- 271
+num.names$ -- 76
+pop$ -- 368
 preamble$ -- 1
-purify$ -- 192
+purify$ -- 207
 quote$ -- 0
-skip$ -- 467
+skip$ -- 498
 stack$ -- 0
-substring$ -- 772
-swap$ -- 144
-text.length$ -- 15
+substring$ -- 803
+swap$ -- 147
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 200
-warning$ -- 24
-while$ -- 114
-width$ -- 53
-write$ -- 523
-(There were 26 warnings)
+type$ -- 220
+warning$ -- 31
+while$ -- 120
+width$ -- 59
+write$ -- 585
+(There were 31 warnings)

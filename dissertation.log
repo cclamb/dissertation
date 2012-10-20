@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  4 OCT 2012 21:59
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  19 OCT 2012 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -538,6 +538,8 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 120.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 121.
  [4
 
 ]
@@ -547,9 +549,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 
 ] [7
 
-] (./dissertation.toc
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+] [8] (./dissertation.toc
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 5.
 
 
@@ -591,28 +591,29 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
- [8
+ [9
 
-] [9])
+] [10])
 \tf@toc=\write4
 \openout4 = `dissertation.toc'.
 
 
-[10] (./dissertation.lof)
+[11] (./dissertation.lof [12
+
+])
 \tf@lof=\write5
 \openout5 = `dissertation.lof'.
 
- [11
-
-] (./dissertation.lot)
+ [13] (./dissertation.lot)
 \tf@lot=\write6
 \openout6 = `dissertation.lot'.
 
- [12
+ [14
 
-] [13
+] [15
 
-]
+] [16]
+[17]
 Chapter 1.
 (./content/introduction.tex
 Underfull \vbox (badness 6157) has occurred while \output is active []
@@ -625,120 +626,118 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2])
 (./content/models.tex
+Underfull \vbox (badness 1406) has occurred while \output is active []
+
+ [3]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-Underfull \vbox (badness 5862) has occurred while \output is active []
-
- [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[4]
+Underfull \vbox (badness 1406) has occurred while \output is active []
 
  [5])
-(./content/standards.tex
+(./content/standards.tex [6]) (./content/cross-domain-examples.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Citation `OrangeBook' on page 6 undefined on input line 4.
-
-
-LaTeX Warning: Citation `RedBook' on page 6 undefined on input line 6.
-
-
-LaTeX Warning: Citation `CommonCriteria' on page 6 undefined on input line 8.
-
-[6]
-
-LaTeX Warning: Citation `800-144' on page 7 undefined on input line 10.
-
-
-LaTeX Warning: Citation `800-12' on page 7 undefined on input line 10.
-
-
-LaTeX Warning: Citation `800-95' on page 7 undefined on input line 10.
-
-) (./content/cross-domain-examples.tex [7]
-<./images/nsa-legacy-arch.png, id=328, 902.37125pt x 363.3575pt>
+ [7]
+<./images/nsa-legacy-arch.png, id=404, 902.37125pt x 363.3575pt>
 File: ./images/nsa-legacy-arch.png Graphic file (type png)
 
 <use ./images/nsa-legacy-arch.png>
-Package pdftex.def Info: ./images/nsa-legacy-arch.png used on input line 16.
+Package pdftex.def Info: ./images/nsa-legacy-arch.png used on input line 12.
 (pdftex.def)             Requested size: 361.34999pt x 145.50674pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [8]
-<./images/nsa-arch.png, id=336, 895.345pt x 286.06876pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./images/nsa-legacy-arch.png>]
+<./images/nsa-arch.png, id=424, 895.345pt x 286.06876pt>
 File: ./images/nsa-arch.png Graphic file (type png)
 
 <use ./images/nsa-arch.png>
-Package pdftex.def Info: ./images/nsa-arch.png used on input line 30.
+Package pdftex.def Info: ./images/nsa-arch.png used on input line 33.
 (pdftex.def)             Requested size: 361.34999pt x 115.45563pt.
- [9 <./images/nsa-legacy-arch.png> <./images/nsa-arch.png>] <./images/raytheon-
-arch.png, id=344, 1304.875pt x 464.73625pt>
+
+<./images/raytheon-arch.png, id=426, 1304.875pt x 464.73625pt>
 File: ./images/raytheon-arch.png Graphic file (type png)
 
 <use ./images/raytheon-arch.png>
-Package pdftex.def Info: ./images/raytheon-arch.png used on input line 46.
+Package pdftex.def Info: ./images/raytheon-arch.png used on input line 47.
 (pdftex.def)             Requested size: 361.34999pt x 128.69281pt.
- [10]
+ [10 <./images/nsa-arch.png>]
+Underfull \vbox (badness 7851) has occurred while \output is active []
+
+ [11 <./images/raytheon-arch.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 57.
+(hyperref)                removing `math shift' on input line 58.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mid' on input line 57.
+(hyperref)                removing `\mid' on input line 58.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 57.
+(hyperref)                removing `math shift' on input line 58.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 57.
+(hyperref)                removing `math shift' on input line 58.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mid' on input line 57.
+(hyperref)                removing `\mid' on input line 58.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 57.
+(hyperref)                removing `math shift' on input line 58.
 
-<./images/bah-arch.png, id=352, 972.63374pt x 456.70625pt>
+<./images/bah-arch.png, id=439, 972.63374pt x 456.70625pt>
 File: ./images/bah-arch.png Graphic file (type png)
 
 <use ./images/bah-arch.png>
-Package pdftex.def Info: ./images/bah-arch.png used on input line 62.
+Package pdftex.def Info: ./images/bah-arch.png used on input line 63.
 (pdftex.def)             Requested size: 361.34999pt x 169.66856pt.
- [11 <./images/raytheon-arch.png>])
-(./content/current-system-analysis.tex [12 <./images/bah-arch.png>])
-(./content/info-centric-networks.tex
+ [12 <./images/bah-arch.png>])
+(./content/current-system-analysis.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-[14]
+ [13])
+(./content/info-centric-networks.tex [14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15])
-(./content/related-work.tex [16]) [17]
+ [15]
+Underfull \vbox (badness 1406) has occurred while \output is active []
+
+ [16])
+(./content/related-work.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+[18]
 Chapter 2.
-(./content/capabilities.tex [18
+(./content/capabilities.tex [19
 
 ]
 Underfull \vbox (badness 1406) has occurred while \output is active []
 
- [19])
-(./content/characteristics.tex
+ [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
-[21]) (./content/taxonomy.tex [22] [23]
+ [21])
+(./content/characteristics.tex [22]) (./content/taxonomy.tex [23]
+Underfull \vbox (badness 7116) has occurred while \output is active []
+
+ [24]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 38.
@@ -751,13 +750,16 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 38.
 
-<./images/model-phi-crop.jpg, id=508, 344.28625pt x 206.7725pt>
+<./images/model-phi-crop.jpg, id=592, 344.28625pt x 206.7725pt>
 File: ./images/model-phi-crop.jpg Graphic file (type jpg)
 
 <use ./images/model-phi-crop.jpg>
 Package pdftex.def Info: ./images/model-phi-crop.jpg used on input line 43.
-(pdftex.def)             Requested size: 216.81pt x 130.21371pt.
- [24 <./images/model-phi-crop.jpg>]
+(pdftex.def)             Requested size: 289.07999pt x 173.61829pt.
+ [25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26 <./images/model-phi-crop.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 54.
@@ -770,13 +772,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 54.
 
-<./images/model-alpha-crop.jpg, id=513, 350.30875pt x 235.88126pt>
+<./images/model-alpha-crop.jpg, id=603, 350.30875pt x 235.88126pt>
 File: ./images/model-alpha-crop.jpg Graphic file (type jpg)
 
 <use ./images/model-alpha-crop.jpg>
 Package pdftex.def Info: ./images/model-alpha-crop.jpg used on input line 59.
-(pdftex.def)             Requested size: 216.81pt x 145.9929pt.
- [25]
+(pdftex.def)             Requested size: 289.07999pt x 194.66562pt.
+ [27 <./images/model-alpha-crop.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 72.
@@ -789,16 +791,16 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 72.
 
-<./images/model-beta-crop.jpg, id=519, 506.89375pt x 306.14375pt>
+<./images/model-beta-crop.jpg, id=609, 506.89375pt x 306.14375pt>
 File: ./images/model-beta-crop.jpg Graphic file (type jpg)
 
 <use ./images/model-beta-crop.jpg>
 Package pdftex.def Info: ./images/model-beta-crop.jpg used on input line 77.
-(pdftex.def)             Requested size: 216.81pt x 130.9432pt.
-
+(pdftex.def)             Requested size: 289.07999pt x 174.59717pt.
+ [28]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26 <./images/model-alpha-crop.jpg>] [27 <./images/model-beta-crop.jpg>]
+ [29 <./images/model-beta-crop.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 90.
@@ -811,102 +813,101 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 90.
 
-<./images/model-gamma-crop.jpg, id=530, 506.89375pt x 299.1175pt>
+<./images/model-gamma-crop.jpg, id=621, 506.89375pt x 299.1175pt>
 File: ./images/model-gamma-crop.jpg Graphic file (type jpg)
 
 <use ./images/model-gamma-crop.jpg>
 Package pdftex.def Info: ./images/model-gamma-crop.jpg used on input line 95.
-(pdftex.def)             Requested size: 216.81pt x 127.93794pt.
- [28 <./images/model-gamma-crop.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29]
-Underfull \vbox (badness 1400) has occurred while \output is active []
-
- [30]
-Underfull \vbox (badness 1546) has occurred while \output is active []
-
- [31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(pdftex.def)             Requested size: 289.07999pt x 170.59003pt.
+ [30 <./images/model-gamma-crop.jpg>]
+[31]
+Underfull \vbox (badness 1406) has occurred while \output is active []
 
  [32]
-[33] [34] [35]) (./content/expectations.tex) [36]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+[34]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36])
+[37] [38]
 Chapter 3.
-(./content/experiments.tex) (./content/progression.tex
-<./images/cross-domain-prototype.png, id=579, 1244.17764pt x 758.12646pt>
+(./content/progression.tex
+Underfull \vbox (badness 6157) has occurred while \output is active []
+
+ [39
+
+]
+[40] <./images/cross-domain-prototype.png, id=674, 1244.17764pt x 758.12646pt>
 File: ./images/cross-domain-prototype.png Graphic file (type png)
 
 <use ./images/cross-domain-prototype.png>
 Package pdftex.def Info: ./images/cross-domain-prototype.png used on input line
- 3.
+ 17.
 (pdftex.def)             Requested size: 433.62pt x 264.21457pt.
 
-Overfull \hbox (3.62pt too wide) in paragraph at lines 3--4
+Overfull \hbox (3.62pt too wide) in paragraph at lines 17--18
  [][] 
  []
 
-[37
+[41]
+Underfull \vbox (badness 3019) has occurred while \output is active []
 
-] [38 <./images/cross-domain-prototype.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39]
-[40]
-<./images/prototype-physical-config.png, id=600, 439.28824pt x 644.76176pt>
+ [42 <./images/cross-domain-prototype.png>]
+<./images/prototype-physical-config.png, id=685, 439.28824pt x 644.76176pt>
 File: ./images/prototype-physical-config.png Graphic file (type png)
 
 <use ./images/prototype-physical-config.png>
 Package pdftex.def Info: ./images/prototype-physical-config.png used on input l
-ine 40.
+ine 36.
 (pdftex.def)             Requested size: 216.81pt x 318.2185pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42 <./images/prototype-physical-config.png>]
-Underfull \vbox (badness 1406) has occurred while \output is active []
-
  [43]
-[44]
+Underfull \vbox (badness 2884) has occurred while \output is active []
+
+ [44 <./images/prototype-physical-config.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [45]
-<./images/overall-view.png, id=622, 343.2825pt x 265.99374pt>
+[46] [47] <./images/overall-view.png, id=707, 343.2825pt x 265.99374pt>
 File: ./images/overall-view.png Graphic file (type png)
 
 <use ./images/overall-view.png>
-Package pdftex.def Info: ./images/overall-view.png used on input line 97.
-(pdftex.def)             Requested size: 361.34999pt x 279.99165pt.
- [46] [47 <./images/overall-view.png>]
-<./images/node-view.pdf, id=632, 350.30875pt x 386.44376pt>
+Package pdftex.def Info: ./images/overall-view.png used on input line 91.
+(pdftex.def)             Requested size: 289.07999pt x 223.99332pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48 <./images/overall-view.png>]
+<./images/node-view.pdf, id=713, 350.30875pt x 386.44376pt>
 File: ./images/node-view.pdf Graphic file (type pdf)
 
 <use ./images/node-view.pdf>
-Package pdftex.def Info: ./images/node-view.pdf used on input line 110.
-(pdftex.def)             Requested size: 361.34999pt x 398.64886pt.
+Package pdftex.def Info: ./images/node-view.pdf used on input line 104.
+(pdftex.def)             Requested size: 289.07999pt x 318.92027pt.
 
-Underfull \vbox (badness 7888) has occurred while \output is active []
+Underfull \vbox (badness 1406) has occurred while \output is active []
 
- [48 <./images/node-view.pdf>]
-<./images/router-view.png, id=656, 350.30875pt x 352.31625pt>
+ [49]
+Underfull \vbox (badness 2277) has occurred while \output is active []
+
+ [50 <./images/node-view.pdf>]
+<./images/router-view.png, id=742, 350.30875pt x 352.31625pt>
 File: ./images/router-view.png Graphic file (type png)
 
 <use ./images/router-view.png>
-Package pdftex.def Info: ./images/router-view.png used on input line 123.
-(pdftex.def)             Requested size: 361.34999pt x 363.4435pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [49]
-[50 <./images/router-view.png>] [51] [52]
+Package pdftex.def Info: ./images/router-view.png used on input line 117.
+(pdftex.def)             Requested size: 289.07999pt x 290.75587pt.
+ [51 <./images/router-view.png>] [52] [53]
 Underfull \vbox (badness 1028) has occurred while \output is active []
 
- [53]
+ [54]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54]
+ [55]
 (/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
@@ -914,213 +915,303 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 183.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 177.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 183.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 183--183
+Overfull \hbox (6.0pt too wide) in paragraph at lines 177--177
 [][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 183.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 177.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [55]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 207--207
+) [56]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 201--201
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 223--223
+Overfull \hbox (6.0pt too wide) in paragraph at lines 217--217
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 239--239
+Overfull \hbox (6.0pt too wide) in paragraph at lines 233--233
 [][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 258--258
-[][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 271--271
-[][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 285--285
-[][][][][][][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [56]
-Overfull \hbox (28.09683pt too wide) in paragraph at lines 300--318
- [][] 
  []
 
 [57]
-Overfull \hbox (28.09683pt too wide) in paragraph at lines 330--345
+Overfull \hbox (6.0pt too wide) in paragraph at lines 252--252
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 265--265
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 279--279
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (28.09683pt too wide) in paragraph at lines 294--312
+ [][] 
+ []
+
+[58]
+Overfull \hbox (28.09683pt too wide) in paragraph at lines 324--339
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]
+ [59]
 (/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2004/09/05 1.3 listings language file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 353--353
+Overfull \hbox (6.0pt too wide) in paragraph at lines 347--347
 [][][][][][][] 
  []
 
-[59]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 381--381
+[60]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 375--375
 [][][][][][][] 
  []
 
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 382.
-[60]
-
-LaTeX Warning: Reference `lst:artifact-datatypes' on page 61 undefined on input
- line 393.
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 395--395
-[][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 413--413
-[][][][][][][] 
- []
-
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 376.
 [61]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 429--429
+Overfull \hbox (6.0pt too wide) in paragraph at lines 389--389
 [][][][][][][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [62]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 444--444
+Overfull \hbox (6.0pt too wide) in paragraph at lines 407--407
 [][][][][][][] 
  []
 
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 454--454
-[][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 466--466
+[62]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 423--423
 [][][][][][][] 
  []
 
 [63]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 475--475
+Overfull \hbox (6.0pt too wide) in paragraph at lines 438--438
 [][][][][][][] 
  []
 
-) [64]
-Chapter 4.
-(./content/results.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65
+Overfull \hbox (6.0pt too wide) in paragraph at lines 448--448
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 460--460
+[][][][][][][] 
+ []
+
+[64]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 469--469
+[][][][][][][] 
+ []
+
+) [65]
+Chapter 4.
+(./content/results.tex
+Underfull \vbox (badness 6157) has occurred while \output is active []
+
+ [66
 
 ]
+[67] <./images/strategy_effects_az.pdf, id=989, 362.35374pt x 217.81375pt>
+File: ./images/strategy_effects_az.pdf Graphic file (type pdf)
+
+<use ./images/strategy_effects_az.pdf>
+Package pdftex.def Info: ./images/strategy_effects_az.pdf used on input line 12
+.
+(pdftex.def)             Requested size: 433.62pt x 260.65727pt.
+
+Overfull \hbox (3.62pt too wide) in paragraph at lines 12--13
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [68]
+<./images/strategy_effects_rs.pdf, id=995, 361.35pt x 216.81pt>
+File: ./images/strategy_effects_rs.pdf Graphic file (type pdf)
+
+<use ./images/strategy_effects_rs.pdf>
+Package pdftex.def Info: ./images/strategy_effects_rs.pdf used on input line 21
+.
+(pdftex.def)             Requested size: 433.62pt x 260.174pt.
+
+Overfull \hbox (3.62pt too wide) in paragraph at lines 21--22
+ [][] 
+ []
+
+[69 <./images/strategy_effects_az.pdf>] [70 <./images/strategy_effects_rs.pdf>]
+<./images/strategy_effects_local.pdf, id=1365, 361.35pt x 217.81375pt>
+File: ./images/strategy_effects_local.pdf Graphic file (type pdf)
+
+<use ./images/strategy_effects_local.pdf>
+Package pdftex.def Info: ./images/strategy_effects_local.pdf used on input line
+ 34.
+(pdftex.def)             Requested size: 433.62pt x 261.3785pt.
+
+Overfull \hbox (3.62pt too wide) in paragraph at lines 34--35
+ [][] 
+ []
+
+
+Underfull \vbox (badness 1406) has occurred while \output is active []
+
+ [71]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [72 <./images/strategy_effects_local.pdf>]
+<./images/nh_strategy_effects_az.pdf, id=1554, 362.35374pt x 241.90375pt>
+File: ./images/nh_strategy_effects_az.pdf Graphic file (type pdf)
+
+<use ./images/nh_strategy_effects_az.pdf>
+Package pdftex.def Info: ./images/nh_strategy_effects_az.pdf used on input line
+ 51.
+(pdftex.def)             Requested size: 433.62pt x 289.48575pt.
+
+Overfull \hbox (3.62pt too wide) in paragraph at lines 51--52
+ [][] 
+ []
+
+<./images/nh_strategy_effects_rs.pdf, id=1556, 361.35pt x 240.9pt>
+File: ./images/nh_strategy_effects_rs.pdf Graphic file (type pdf)
+
+<use ./images/nh_strategy_effects_rs.pdf>
+Package pdftex.def Info: ./images/nh_strategy_effects_rs.pdf used on input line
+ 60.
+(pdftex.def)             Requested size: 433.62pt x 289.08221pt.
+
+Overfull \hbox (3.62pt too wide) in paragraph at lines 60--61
+ [][] 
+ []
+
+[73] <./images/nh_strategy_effects_local.pdf, id=1562, 361.35pt x 241.90375pt>
+File: ./images/nh_strategy_effects_local.pdf Graphic file (type pdf)
+
+<use ./images/nh_strategy_effects_local.pdf>
+Package pdftex.def Info: ./images/nh_strategy_effects_local.pdf used on input l
+ine 69.
+(pdftex.def)             Requested size: 433.62pt x 290.28673pt.
+
+Overfull \hbox (3.62pt too wide) in paragraph at lines 69--70
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74 <./images/nh_strategy_effects_az.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75 <./images/nh_strategy_effects_rs.pdf>]
+Underfull \vbox (badness 3128) has occurred while \output is active []
+
+ [76 <./images/nh_strategy_effects_local.pdf>]
+<./images/single-node-results.pdf, id=2196, 361.35pt x 216.81pt>
+File: ./images/single-node-results.pdf Graphic file (type pdf)
+
+<use ./images/single-node-results.pdf>
+Package pdftex.def Info: ./images/single-node-results.pdf used on input line 85
+.
+(pdftex.def)             Requested size: 325.215pt x 195.1305pt.
+) (./content/conclusions.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77 <./images/single-node-results.pdf>]
+Underfull \vbox (badness 5862) has occurred while \output is active []
+
+ [78])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79]
 (./dissertation.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
 []\T1/ptm/m/n/12 (+20) Marlin ar-chi-tec-ture overview.  Tech-ni-cal re-port, 2
 006.
  []
 
 
-Overfull \hbox (101.29732pt too wide) in paragraph at lines 9--13
+Overfull \hbox (101.29732pt too wide) in paragraph at lines 13--17
 []\T1/ptm/m/n/12 (-20) DoD In-for-ma-tion Shar-ing Strat-egy.  http://dodcio.de
 fense.gov/Portals/0/Documents/InfoSharingStrategy.pdf,
  []
 
 
-Overfull \hbox (6.42162pt too wide) in paragraph at lines 15--18
+Overfull \hbox (6.42162pt too wide) in paragraph at lines 23--26
 []\T1/ptm/m/n/12 (-20) Assured In-for-ma-tion Shar-ing in Clouds.  http://www.z
 yn.com/sbir/sbres/sttr/dod/af/af11-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--29
+Underfull \hbox (badness 10000) in paragraph at lines 37--41
 []\T1/ptm/m/n/12 (+20) NSA Pur-sues Intelligence-Sharing Ar-chi-tec-ture.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--29
+Underfull \hbox (badness 10000) in paragraph at lines 37--41
 \T1/ptm/m/n/12 (+20) http://www.informationweek.com/news/government/cloud-saas/
 229401646,
  []
 
 
-Overfull \hbox (98.22511pt too wide) in paragraph at lines 48--51
+Overfull \hbox (98.22511pt too wide) in paragraph at lines 60--63
 []\T1/ptm/m/n/12 (-20) Cisco Cat-a-lyst 6500 Se-ries Switches.  http://www.cisc
 o.com/en/US/products/hw/switches/ps708/index.html,
  []
 
+[80
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--56
+]
+Underfull \hbox (badness 10000) in paragraph at lines 65--68
 []\T1/ptm/m/n/12 (+20) Content-Centric Net-work-ing - Parc, a Xe-rox Com-pany.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--56
+Underfull \hbox (badness 10000) in paragraph at lines 65--68
 \T1/ptm/m/n/12 (+20) http://www.parc.com/work/focus-area/content-centric-networ
 king/, Septem-ber
  []
 
-[66
-
-] [67]
-Underfull \hbox (badness 10000) in paragraph at lines 142--145
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 154--157
 []\T1/ptm/m/n/12 (+20) Coral con-sor-tium whitepa-per.  Tech-ni-cal re-port, Fe
 b. 2006.
  []
 
-[68])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
- [69]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
+[82] [83])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
+ [84]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
  (./dissertation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
-
-
-Package rerunfilecheck Warning: File `dissertation.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `dissertation.out':
-(rerunfilecheck)             Before: BFF83DF7553EF3273E82B5F87931A119;2429
-(rerunfilecheck)             After:  7042FE92693055EA457E662B683031B8;2441.
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
+Package rerunfilecheck Info: File `dissertation.out' has not changed.
+(rerunfilecheck)             Checksum: 9766556C25EA2B93519C999E034E34C4;2957.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 225.
  ) 
 Here is how much of TeX's memory you used:
- 11822 strings out of 493633
- 176158 string characters out of 3143378
- 493199 words of memory out of 3000000
- 14263 multiletter control sequences out of 15000+200000
- 88213 words of font info for 275 fonts, out of 3000000 for 9000
+ 11903 strings out of 493633
+ 178038 string characters out of 3143378
+ 472106 words of memory out of 3000000
+ 14304 multiletter control sequences out of 15000+200000
+ 88438 words of font info for 277 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  40i,9n,51p,2305b,1920s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1133,10 +1224,10 @@ ist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw/times/utmr8
 a.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (81 pages, 1193140 bytes).
+Output written on dissertation.pdf (100 pages, 1687525 bytes).
 PDF statistics:
- 1034 PDF objects out of 1200 (max. 8388607)
- 912 compressed objects within 10 object streams
- 360 named destinations out of 1000 (max. 500000)
- 41306 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 2407 PDF objects out of 2487 (max. 8388607)
+ 1777 compressed objects within 18 object streams
+ 393 named destinations out of 1000 (max. 500000)
+ 41397 words of extra memory for PDF output out of 42996 (max. 10000000)
 

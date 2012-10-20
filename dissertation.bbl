@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{NIST800:12}
+An introduction to computer security: The nist handbook.
+\newblock Technical report, NIST, Gaithersburg, MD, 1995.
+
 \bibitem{marlin}
 Marlin architecture overview.
 \newblock Technical report, 2006.
@@ -11,6 +15,10 @@ Marlin architecture overview.
   {http://dodcio.defense.gov/Portals/0/Documents/InfoSharingStrategy.pdf}, May
   2007.
 
+\bibitem{NIST800:95}
+Guide to secure web services.
+\newblock Technical report, NIST, Gaithersburg, MD, 2007.
+
 \bibitem{proposal:assured-info-sharing}
 {A}ssured {I}nformation {S}haring in {C}louds.
 \newblock {http://www.zyn.com/sbir/sbres/sttr/dod/af/af11-bt30.htm}, August
@@ -20,6 +28,10 @@ Marlin architecture overview.
 {D}epartment of {D}efense {G}lobal {I}nformation {G}rid {A}rchitectural
   {V}ision.
 \newblock {http://cio-nii.defense.gov/docs/GIGArchVision.pdf}, 2011.
+
+\bibitem{NIST800:144}
+Guidelines on security and privacy in public cloud computing.
+\newblock Technical report, NIST, Gaithersburg, MD, 2011.
 
 \bibitem{proposal:nsa-cloud}
 {NSA} {P}ursues {I}ntelligence-{S}haring {A}rchitecture.
@@ -90,18 +102,18 @@ Biba.
 \newblock {Integrity Considerations for Secure Computer Systems}.
 \newblock {\em MITRE Co., technical report ESD-TR 76-372}, 1977.
 
+\bibitem{Blumenthal:2001:RDI:383034.383037}
+Marjory~S. Blumenthal and David~D. Clark.
+\newblock Rethinking the design of the internet: the end-to-end arguments vs.
+  the brave new world.
+\newblock {\em ACM Trans. Internet Technol.}, 1:70--109, August 2001.
+
 \bibitem{BlCl:01}
 Marjory~S. Blumenthal and David~D. Clark.
 \newblock Rethinking the design of the {I}nternet: {T}he end-to-end arguments
   vs. the brave new world.
 \newblock {\em ACM Transactions on Internet Technology}, 1(1):70--109, Aug.
   2001.
-
-\bibitem{Blumenthal:2001:RDI:383034.383037}
-Marjory~S. Blumenthal and David~D. Clark.
-\newblock Rethinking the design of the internet: the end-to-end arguments vs.
-  the brave new world.
-\newblock {\em ACM Trans. Internet Technol.}, 1:70--109, August 2001.
 
 \bibitem{proposal:bah-arch}
 Booz, Allen, and Hamilton.
@@ -148,6 +160,11 @@ M.~D'Ambrosio, P.~Fasano, M.~Marchisio, V.~Vercellone, and M.~Ullio.
 \newblock Providing data dissemination services in the future internet.
 \newblock In {\em Global Telecommunications Conference, 2008. IEEE GLOBECOM
   2008. IEEE}, pages 1 --6, 30 2008-dec. 4 2008.
+
+\bibitem{CommonCriteria}
+G.~Deloche.
+\newblock Common criteria for information technology security evaluation.
+\newblock Technical Report 15408, ISO/IEC.
 
 \bibitem{rfc2616}
 R.~Fielding, J.~Gettys, J.~C. Mogul, H.~Frystyk, L.~Masinter, P.~J. Leach, and
@@ -275,5 +292,17 @@ Andrew~S. Tanenbaum.
 Sasu Tarkoma.
 \newblock {\em Overlay Networks: Toward Information Networking.}
 \newblock Auerbach Publications, Boston, MA, USA, 1st edition, 2010.
+
+\bibitem{OrangeBook}
+National Computer Security~Center (U.S.).
+\newblock {\em Trusted network interpretation of the Trusted computer system
+  evaluation criteria}.
+\newblock NCSC-TG. National Computer Security Center, 1985.
+
+\bibitem{RedBook}
+National Computer Security~Center (U.S.).
+\newblock {\em Trusted network interpretation of the Trusted computer system
+  evaluation criteria}.
+\newblock NCSC-TG. National Computer Security Center, 1987.
 
 \end{thebibliography}

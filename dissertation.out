@@ -11,25 +11,32 @@
 \BOOKMARK [2][-]{subsection.1.3.4}{Booz \040Allen \040Hamilton}{section.1.3}% 11
 \BOOKMARK [1][-]{section.1.4}{Information-centric Networking}{chapter.1}% 12
 \BOOKMARK [1][-]{section.1.5}{Other Related Work}{chapter.1}% 13
-\BOOKMARK [0][-]{chapter.2}{Usage Management in Information-centric Networks}{}% 14
-\BOOKMARK [1][-]{section.2.1}{Characteristics}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.2}{Taxonomies of Usage Management Overlay}{chapter.2}% 16
-\BOOKMARK [2][-]{subsection.2.2.1}{-level Overlay Systems}{section.2.2}% 17
-\BOOKMARK [2][-]{subsection.2.2.2}{-level Overlay Systems}{section.2.2}% 18
-\BOOKMARK [2][-]{subsection.2.2.3}{-level Overlay Systems}{section.2.2}% 19
-\BOOKMARK [2][-]{subsection.2.2.4}{-level Overlay Systems}{section.2.2}% 20
-\BOOKMARK [1][-]{section.2.3}{Taxonomic Analysis}{chapter.2}% 21
-\BOOKMARK [2][-]{subsection.2.3.1}{Characteristics of Policy-centricity}{section.2.3}% 22
-\BOOKMARK [2][-]{subsection.2.3.2}{Information-centric Structure}{section.2.3}% 23
-\BOOKMARK [1][-]{section.2.4}{Analysis}{chapter.2}% 24
-\BOOKMARK [0][-]{chapter.3}{Experimental Configuration}{}% 25
-\BOOKMARK [1][-]{section.3.1}{Overlay Implementation Concerns}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.2}{Initial Prototype Implementation}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.3}{Inter-Provider Cloud Configuration}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.4}{Inter-Cloud Architecture}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.5}{Experimental Structure}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.5.1}{Initial Seed Information}{section.3.5}% 31
-\BOOKMARK [2][-]{subsection.3.5.2}{Policies and Attributes}{section.3.5}% 32
-\BOOKMARK [1][-]{section.3.6}{Primary Interfaces and Mappings}{chapter.3}% 33
-\BOOKMARK [0][-]{chapter.4}{Experimental Results}{}% 34
-\BOOKMARK [0][-]{chapter*.29}{References}{}% 35
+\BOOKMARK [1][-]{section.1.6}{Applying Usage Management}{chapter.1}% 14
+\BOOKMARK [0][-]{chapter.2}{Usage Management in Information-centric Networks}{}% 15
+\BOOKMARK [1][-]{section.2.1}{Capabilities of Information Networks}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.2}{Characteristics}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.3}{Taxonomies of Usage Management Overlay}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.3.1}{-level Overlay Systems}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.2}{-level Overlay Systems}{section.2.3}% 20
+\BOOKMARK [2][-]{subsection.2.3.3}{-level Overlay Systems}{section.2.3}% 21
+\BOOKMARK [2][-]{subsection.2.3.4}{-level Overlay Systems}{section.2.3}% 22
+\BOOKMARK [1][-]{section.2.4}{Taxonomic Analysis}{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.4.1}{Characteristics of Policy-centricity}{section.2.4}% 24
+\BOOKMARK [2][-]{subsection.2.4.2}{Information-centric Structure}{section.2.4}% 25
+\BOOKMARK [1][-]{section.2.5}{Experimental Support}{chapter.2}% 26
+\BOOKMARK [0][-]{chapter.3}{Experimental Configuration}{}% 27
+\BOOKMARK [1][-]{section.3.1}{Network Implementation Concerns}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.2}{Initial Prototype Implementation}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.3}{Inter-Provider Cloud Configuration}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.4}{Inter-Cloud Architecture}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.5}{Experimental Structure}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.5.1}{Initial Seed Information}{section.3.5}% 33
+\BOOKMARK [2][-]{subsection.3.5.2}{Policies and Attributes}{section.3.5}% 34
+\BOOKMARK [1][-]{section.3.6}{Primary Interfaces and Mappings}{chapter.3}% 35
+\BOOKMARK [1][-]{section.3.7}{Using the Network}{chapter.3}% 36
+\BOOKMARK [0][-]{chapter.4}{Experimental Results and Conclusions}{}% 37
+\BOOKMARK [1][-]{section.4.1}{Hierarchical Networks}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.2}{Non-Hierarchical Networks}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.3}{Removing Network Effects}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.4}{Conclusions}{chapter.4}% 41
+\BOOKMARK [0][-]{chapter*.30}{References}{}% 42

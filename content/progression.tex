@@ -10,7 +10,7 @@ To begin with, in content-specific overlay networks, cross-domain routing can be
 Mashup scenarios become similarly common.  As additional sources of accessible data appear, opportunities for inappropriate data combinations increase at best geometrically.  Data combinations need to be likewise managed to prevent inappropriate data combinations.
 
 \section{Initial Prototype Implementation}
-Our first completed prototype shows that overlay routers can in fact use licenses bundled alongside content to modify transmitted content based on dynamic network conditions.  Running on a single host over HTTP, it simulates two content domains and communication between them.  The communication link has uncertain security state and changes over time.  Note that this prototype currently runs on a single host with varying ports, but it could easily run on multiple hosts as well.  The current single host configuration is simply to simplify system startup and shutdown.
+The first completed prototype shows that overlay routers can in fact use licenses bundled alongside content to modify transmitted content based on dynamic network conditions.  Running on a single host over HTTP, it simulates two content domains and communication between them.  The communication link has uncertain security state and changes over time.  Note that this prototype currently runs on a single host with varying ports, but it could easily run on multiple hosts as well.  The current single host configuration is simply to simplify system startup and shutdown.
 
 \begin{figure*}[!t]
 \centering
@@ -41,7 +41,7 @@ This proof-of-concept does implement a simple overlay network for usage managed 
 Initial results confirmed that the approach was feasible.  The network was able to successfully filter content based on policies and dynamic network conditions.  The system was also able to deliver both arbitrary content and policies within a single document as well, and it was not prohibitively difficult to extract either data or policies.  Furthermore, Ruby with Sinatra effectively supported the required HTTP-centric infrastructure needed to effectively simulate an information-centric network.  It seemed clear at this point that extending the prototypical implementation from a single host to a fully nationally distributed network was feasible.
 
 \section{Inter-Provider Cloud Configuration}
-At this point, I have created and deployed baseline system images in both Amazon's Elastic Compute Cloud (EC2) and Rackspace Servers infrastructures.  I have also created and exercised our deployment, configuration, and logging systems to enable distributed monitoring and centralized reporting.  Overall, the system currently has 20 nodes running with two distinct providers geographically dispersed across the continental United States.  This leads to a distinct requirement for a centralized system with distributed access for both initial configuration information as well as logging and auditing.  This required infrastructure has been implemented using Amazon's Simple Storage Service (S3), accessible from both Rackspace and Amazon hosted virtual machines.
+At this point, baseline system images have been created and deployed in both Amazon's Elastic Compute Cloud (EC2) and Rackspace Servers infrastructures.  The deployment, configuration, and logging systems to enable distributed monitoring and centralized reporting have all been validated and repeatedly used.  Overall, the system currently has 20 nodes running with two distinct providers geographically dispersed across the continental United States.  This leads to a distinct requirement for a centralized system with distributed access for both initial configuration information as well as logging and auditing.  This required infrastructure has been implemented using Amazon's Simple Storage Service (S3), accessible from both Rackspace and Amazon hosted virtual machines.
 
 The specific technical components are Amazon EC2, Amazon S2, Rackspace Servers, and GitHub.  Both EC2 and Rackspace nodes are Ubuntu virtual machines, albeit at different versions, specifically Ubuntu version 11.04 in Rackspace and Ubuntu Version 12.04 in Amazon's infrastructures.  These systems are provisioned with Git, Ruby, the Ruby Version Manager (RVM), and supporting libraries.  They all run as micro-intances or equivalent, and are bootstrapped with the appopriate project information to begin to participate as an overlay network node.  While EC2 and Rackspace Server infrastructures are infrastructure-as-a-cloud (IaaS) offerings supporting virtual machine instances of various types, Amazon S3 is a simple key-value store.  Running with REST sematics over HTTP, S3 stores arbitrary documents associated with specific keys in buckets.  These documents can be downloaded by any authorized participant, where authoriztion state is proven by possention of a secret key.  In this way, the global configuration of a specific overlay network can be stored in a single location from which every node can access informationm with respect to their pending role and needed configuraiton information.  Likewise, all overlay network state can also be saved to centralized buckets for later analysis.  Finally, Github is a centralized source code repository used to share code between all participating nodes.  Prior to each content network instantiation, each node checks the repository for updates, and downloads them if they exist.
 
@@ -84,7 +84,7 @@ Finally, secure routing use directly addresses the ability to select communicati
 \item Be distributed across multiple nodes.
 \end{itemize}
 
-Overall, the system consists of an HTML 5 based user interface subsystem, external data sources, and a content network, as shown in Figure 1.  The user interface layer displays maps and associated metadata to users based on submitted geolocation information and supports two different mobile profiles (tablet and telephone) and a single workstation profile.  HTML 5 media queries were used for end device detection, allowing us to format information differently for our three profiles facilitating usability.  External data sources could be any data programming interface offered by a third party.  In this system, Google Maps was used to define, download, display, and format maps.  Finally, this content network exists and is configurable either as a hierarchical network or a non-hierarchical network containing geo-tagged information at various sensitivity levels.  This content network can be configured arbitrarily, enabling the creation of a virtually unlimited number of different information domains.
+Overall, the system consists of an HTML 5 based user interface subsystem, external data sources, and a content network, as shown in Figure 1.  The user interface layer displays maps and associated metadata to users based on submitted geolocation information and supports two different mobile profiles (tablet and telephone) and a single workstation profile.  HTML 5 media queries were used for end device detection, allowing us to format information differently for the three profiles facilitating usability.  External data sources could be any data programming interface offered by a third party.  In this system, Google Maps was used to define, download, display, and format maps.  Finally, this content network exists and is configurable either as a hierarchical network or a non-hierarchical network containing geo-tagged information at various sensitivity levels.  This content network can be configured arbitrarily, enabling the creation of a virtually unlimited number of different information domains.
 
 \begin{figure}[!t]
 \centering
@@ -159,20 +159,20 @@ The first system is modeled after a typical filesystem.  In this case, a user wo
 
 Command-line access to a content network is certainly feasible.  Command-line shells are common in a variety of environments, ranging from development environments like Play to software development systems like Ruby and Python.
 
-In our content network, the ls command would traverse the network returning information describing contents based on the current security context.  This context consists of the environment, the resource requested, and the subject requesting the resource.  For example, a user with access to a content network via some kind of shell may list network content from a device at a given physical and network location and receive content listing A, while executing a listing from a different device from the same locations may generate content listing B, which can be significantly different from A based on contextual changes.
+In the content network, the ls command would traverse the network returning information describing contents based on the current security context.  This context consists of the environment, the resource requested, and the subject requesting the resource.  For example, a user with access to a content network via some kind of shell may list network content from a device at a given physical and network location and receive content listing A, while executing a listing from a different device from the same locations may generate content listing B, which can be significantly different from A based on contextual changes.
 
 Another problem arises with listing network contents is the fundamentally different nature of listing a relatively small directory on a local computer as opposed to the contents of a geographically dispersed network.  The latency involved when reading this kind of local directory is small, and the number of elements to list is tractable.  Networks do not support these kinds of assumptions.  The time required to list the available contents on a dispersed content network can be significant.
 
 A cat-like command on a content network suffers from similar problems.  As content within an artifact can be marked with different sensitivity, displayed artifact content can change based on context as well.  Likewise, large artifacts can take significant time to display on devices because of content dispersion issues.
 
-The proposed Index Model has significant precedent as well.  This model is commonly used in world-wide-web systems both large and small.  Modified versions have been used to seed BitTorrent networks as well as direct content traffic on early instances of Napster.  Here, we have a small index file that lists available content on the network.  This index could be associated with a policy and marked for sensitivity, and could contain links to content as well as metadata describing that content.  This index would essentially serve the function of the ls command in the Cat Model.  Selecting a link from an index via a network client would then serve as the Cat Model's cat command.
+The proposed Index Model has significant precedent as well.  This model is commonly used in world-wide-web systems both large and small.  Modified versions have been used to seed BitTorrent networks as well as direct content traffic on early instances of Napster.  Here, a small index file that lists available content on the network.  This index could be associated with a policy and marked for sensitivity, and could contain links to content as well as metadata describing that content.  This index would essentially serve the function of the ls command in the Cat Model.  Selecting a link from an index via a network client would then serve as the Cat Model's cat command.
 
 Similar issues with respect to network dispersion exist with showing the contents of artifacts in both models, and the index contents can seem to change with respect to changing context, as they are also associated with policy sets describing the use of content.  Both models can also be optimized for project-centric content viewing or to show indicators with respect to expected content retrieval latency.  Organizationally, any kind of informational hierarchy within the network would need to be based on the semantics of referenced content rather than external factors.  Content-centric networks use keys to location content rather than addresses, so this hierarchical name would in fact be such a key rather than an address for the content.
 
-Latency effects and content surprise are characteristics of the underlying content network rather than a specific interface approach.  They effect either approach equally.  The Cat Model is more general than the Index Model however.  You can in fact implement the Index Model with the Cat Model, but not the inverse.  Our work is focused on secure mashing of content in a web-centric environment.  As a result, the Index Model fits our needs better than the more general Cat Model.
+Latency effects and content surprise are characteristics of the underlying content network rather than a specific interface approach.  They effect either approach equally.  The Cat Model is more general than the Index Model however.  You can in fact implement the Index Model with the Cat Model, but not the inverse.  This work is focused on secure mashing of content in a web-centric environment.  As a result, the Index Model fits use case needs better than the more general Cat Model.
 
 \subsection{Initial Seed Information}
-In order to seed network clients, we provide an initial index object that contains location information and associated metadata.  This information is classed according to sensitivity and consists of names and latitude/longitude coordinates contained in an XML file, similar to that shown in listing \ref{lst:seed-data}.
+An initial index object that contains location information and associated metadata seeds the network.  This information is classed according to sensitivity and consists of names and latitude/longitude coordinates contained in an XML file, similar to that shown in listing \ref{lst:seed-data}.
 
 \begin{lstlisting}[language=xml, label=lst:seed-data, caption=Seed Information for the Network]
 <index>
@@ -193,7 +193,7 @@ In order to seed network clients, we provide an initial index object that contai
 
 Any of these XML elements can be marked with an attribute, policy-set, which is the name of a policy set contained in the associated policy file.  It is contained as an artifact with an associated policy set.
 
-Detail data objects are arbitrary XML documents that support the policy attribute.  We support text, images, and shape information.  Each different type is ensconced within an XML element corresponding to the type of data contained, and are delivered in a single XML document with associated policy sets.
+Detail data objects are arbitrary XML documents that support the policy attribute.  Text, images, and shape information are all supported.  Each different type is ensconced within an XML element corresponding to the type of data contained, and are delivered in a single XML document with associated policy sets.
 
 
 \par\noindent
@@ -287,7 +287,7 @@ In these examples, data-objects can be associated with policies contained in the
 \end{minipage}
 
 \subsection{Policies and Attributes}
-This system will use attribute based mechanisms for usage management.  The policies defined over content must therefore consist of rules that address usage over an ontology of possible user attributes of concern.  We are specifically interested in a user's primary attributes: mission affiliation, clearance levels (both sensitivity and category), organization, and computational environment (consisting of both device and operating system).  We also make decisions with respect to usage based on a secondary attribute, need-to-use.
+This system will use attribute based mechanisms for usage management.  The policies defined over content must therefore consist of rules that address usage over an ontology of possible user attributes of concern.  Of specific interest is a user's primary attributes: mission affiliation, clearance levels (both sensitivity and category), organization, and computational environment (consisting of both device and operating system).  Decisions are also made with respect to usage based on a secondary attribute, need-to-use.
 
 \begin{table*}[tp] %
 \centering %
@@ -315,7 +315,7 @@ This system will use attribute based mechanisms for usage management.  The polic
 
 Sets differ from orderings in the above table as sets denote membership with no associated value.  Orderings on the other hand have distinct values increasing from left to right in the listed enumerations.  For example, a user can be affiliated with a specific mission in Domain A, either tropic\_thunder or gallant\_entry, or both.  That user is also associated with a sensitivity value, either unclassified, secret, or topsecret, where topsecret is the most sensitive and unclassified the least.
 
-Need-to-use decisions are based on the current context in tandem with mission and organizational affiliation.  We use attribute based control in these scenarios, in which we make access decisions based on the attributes of a requesting user rather than defined roles.
+Need-to-use decisions are based on the current context in tandem with mission and organizational affiliation.  Attribute based control is used in these scenarios, in which access decisions are made based on the attributes of a requesting user rather than defined roles.
 
 User attributes support defined policy elements.  Not every policy attribute has a corresponding user attribute as not all policy attributes are associated with users.  Some are associated with the user's environment, like operating system or device.
 
@@ -342,7 +342,7 @@ User attributes support defined policy elements.  Not every policy attribute has
 
 Policies are evaluated either via direct set membership or via membership in a category in an ordering.  Content can be affiliated with multiple sets with regard to set-oriented attributes.  Likewise, users can belong to multiple sets as well.  Both content and users will be associated with a single value from an ordering element, as that value is inclusive of lower values as well.  For example, a user can be affiliated with both the tropic\_thunder and gallant\_entry missions, but only one of the clearance values of uncleared, secret, or top secret.  In the case of clearance values, secret subsumes uncleared, so a user with a secret attribute set would be able to access any unclassified material.
 
-In the scope of this project, we use a Ruby-based domain specific language (DSL) to describe policies.  In larger heterogeneous deployments, a standards-based alternative like XACML would be more suitable.  This project however is not focused on developing a complete policy specification language, but rather on using one in a very dynamic environment.  XACML, for example, is a very large and complete standard that would require a significant investment of effort to implement.  It can also tend to be verbose.  A simple DSL focused on our specific needs is a more efficient alternative that allows us to focus our time and effort on the goals of this work rather than implementation of a large standard.
+In the scope of this project, a Ruby-based domain specific language (DSL) is used to describe policies.  In larger heterogeneous deployments, a standards-based alternative like XACML would be more suitable.  This project however is not focused on developing a complete policy specification language, but rather on using one in a very dynamic environment.  XACML, for example, is a very large and complete standard that would require a significant investment of effort to implement.  It can also tend to be verbose.  A simple DSL focused on the specific needs is a more efficient alternative that allows us to focus time and effort on the goals of this work rather than implementation of a large standard.
 
 \begin{lstlisting}[language=ruby, label=lst:policy-dsl, caption=Policy DSL Example]
 policy_set {
@@ -367,7 +367,7 @@ policy_set {
 }
 \end{lstlisting}
 
-This is our simplified DSL supporting a subset of XACML elements.  In this example, we have a base policy, p1, that all other policies inherit.  That policy requires that all rules evaluate to true.  p2 adds another rule based on devices, all of which must evaluate to true as well.  Finally, p3 adds two additional rules, only one of which must evaluate to true for the policy to be fulfilled.
+This is the simplified DSL supporting a subset of XACML elements.  In this example, a base policy exists, p1, that all other policies inherit.  That policy requires that all rules evaluate to true.  p2 adds another rule based on devices, all of which must evaluate to true as well.  Finally, p3 adds two additional rules, only one of which must evaluate to true for the policy to be fulfilled.
 
 \section{Primary Interfaces and Mappings}
 Each of the defined components have an associated interface defined over domain datatypes. These interfaces are implemented using Representational State Transfer (REST) semantics over Hypertext Transfer Protocol (HTTP), and the datatypes are represented in Extensible Markup Language (XML).
@@ -384,7 +384,7 @@ struct artifact_descriptor {
 typedef sequence<artifact_descriptor> artifact_descriptor_list;
 \end{lstlisting}
 
-As shown in Listing \ref{lst:artifact-datatypes}, we deal primarily with two key datatypes, \emph{artifacts} and \emph{policy\_sets}.  For the purpose of networked data transfer, both of these datatypes are formatted strings of XML and policy DSL data.  An \emph{artifact\_descriptor} combines an artifact with its associated set of policies.  An \emph{artifact\_descriptor\_list} is an unlimited sequence of artifact\_descriptors.
+As shown in Listing \ref{lst:artifact-data-types}, the system primarily deals with two key datatypes, \emph{artifacts} and \emph{policy\_sets}.  For the purpose of networked data transfer, both of these datatypes are formatted strings of XML and policy DSL data.  An \emph{artifact\_descriptor} combines an artifact with its associated set of policies.  An \emph{artifact\_descriptor\_list} is an unlimited sequence of artifact\_descriptors.
 
 \begin{lstlisting}[language=idl, label=lst:status-data-types, caption=Key Status Dataypes]
 enum status { unsecured, confidential, secret, top_secret };
@@ -455,7 +455,7 @@ interface usage_management_mechanism {
 };
 \end{lstlisting}
 
-The \emph{repository} interface shown in listing \ref{lst:repository-interface} defines how information is stored and retrieved within a given node our router.  This is an internal component used for concrete data item storage.
+The \emph{repository} interface shown in listing \ref{lst:repository-interface} defines how information is stored and retrieved within a given node or router.  This is an internal component used for concrete data item storage.
 
 \begin{lstlisting}[language=idl, label=lst:repository-interface, caption=The Repository Interface]
 interface repository {
@@ -464,7 +464,7 @@ interface repository {
 };
 \end{lstlisting}
 
-Finally, the \emph{dispacher} interface, also used internally within a given node or router, describes how we pass requests to other network participants.
+Finally, the \emph{dispacher} interface, also used internally within a given node or router, describes how requests are passed to other network participants.
 
 \begin{lstlisting}[language=idl, label=lst:dispatcher-interface, caption=The Dispatcher Interface]
 [Constructor(in string host);]
