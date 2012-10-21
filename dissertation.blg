@@ -36,45 +36,45 @@ Warning--empty booktitle in proposal:nsa-arch
 Warning--empty booktitle in proposal:cd101
 Warning--empty booktitle in proposal:raytheon-arch
 Warning--empty booktitle in proposal:ron-ross
-You've used 58 entries,
+You've used 56 entries,
             2118 wiz_defined-function locations,
-            821 strings with 12152 characters,
-and the built_in function-call counts, 16268 in all, are:
-= -- 1614
-> -- 586
-< -- 16
-+ -- 255
-- -- 186
-* -- 1038
-:= -- 2514
-add.period$ -- 161
-call.type$ -- 58
-change.case$ -- 271
+            807 strings with 11847 characters,
+and the built_in function-call counts, 15540 in all, are:
+= -- 1539
+> -- 566
+< -- 15
++ -- 246
+- -- 180
+* -- 990
+:= -- 2405
+add.period$ -- 155
+call.type$ -- 56
+change.case$ -- 262
 chr.to.int$ -- 0
-cite$ -- 89
-duplicate$ -- 694
-empty$ -- 1467
-format.name$ -- 186
-if$ -- 3566
+cite$ -- 87
+duplicate$ -- 660
+empty$ -- 1402
+format.name$ -- 180
+if$ -- 3400
 int.to.chr$ -- 0
-int.to.str$ -- 58
-missing$ -- 37
-newline$ -- 276
-num.names$ -- 78
-pop$ -- 370
+int.to.str$ -- 56
+missing$ -- 35
+newline$ -- 266
+num.names$ -- 74
+pop$ -- 360
 preamble$ -- 1
-purify$ -- 210
+purify$ -- 203
 quote$ -- 0
-skip$ -- 505
+skip$ -- 479
 stack$ -- 0
-substring$ -- 833
-swap$ -- 148
-text.length$ -- 16
+substring$ -- 776
+swap$ -- 137
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 224
+type$ -- 216
 warning$ -- 31
-while$ -- 124
-width$ -- 60
-write$ -- 596
+while$ -- 117
+width$ -- 58
+write$ -- 573
 (There were 31 warnings)

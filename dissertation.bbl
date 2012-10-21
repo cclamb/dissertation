@@ -108,13 +108,6 @@ Marjory~S. Blumenthal and David~D. Clark.
   the brave new world.
 \newblock {\em ACM Trans. Internet Technol.}, 1:70--109, August 2001.
 
-\bibitem{BlCl:01}
-Marjory~S. Blumenthal and David~D. Clark.
-\newblock Rethinking the design of the {I}nternet: {T}he end-to-end arguments
-  vs. the brave new world.
-\newblock {\em ACM Transactions on Internet Technology}, 1(1):70--109, Aug.
-  2001.
-
 \bibitem{proposal:bah-arch}
 Booz, Allen, and Hamilton.
 \newblock Distributed service oriented architecture (soa) compatible cross
@@ -133,11 +126,6 @@ D.~D. Clark and D.~R. Wilson.
 \newblock {A Comparison of Commercial and Military Computer Security Policies}.
 \newblock In {\em 1987 {IEEE} Symposium on Security and Privacy}, pages
   184--194. {IEEE} Computer Society Press, 1987.
-
-\bibitem{Cl:88}
-David~D. Clark.
-\newblock The design philosophy of the {DARPA} internet protocols.
-\newblock In {\em {ACM SIGCOMM}}, pages 106--114, Stanford, CA, Aug. 1988.
 
 \bibitem{Clark:1995:DPD:205447.205458}
 David~D. Clark.

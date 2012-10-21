@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.6)  20 OCT 2012 18:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.6)  20 OCT 2012 19:58
 entering extended mode
  %&-line parsing enabled.
 **dissertation.tex
@@ -709,7 +709,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 38.
 
-<./images/model-phi-crop.jpg, id=600, 344.28625pt x 206.7725pt>
+<./images/model-phi-crop.jpg, id=598, 344.28625pt x 206.7725pt>
 File: ./images/model-phi-crop.jpg Graphic file (type jpg)
 
 <use ./images/model-phi-crop.jpg> [25]
@@ -728,7 +728,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 54.
 
-<./images/model-alpha-crop.jpg, id=612, 350.30875pt x 235.88126pt>
+<./images/model-alpha-crop.jpg, id=610, 350.30875pt x 235.88126pt>
 File: ./images/model-alpha-crop.jpg Graphic file (type jpg)
 
 <use ./images/model-alpha-crop.jpg> [27 <./images/model-alpha-crop.jpg>]
@@ -744,7 +744,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 72.
 
-<./images/model-beta-crop.jpg, id=617, 506.89375pt x 306.14375pt>
+<./images/model-beta-crop.jpg, id=615, 506.89375pt x 306.14375pt>
 File: ./images/model-beta-crop.jpg Graphic file (type jpg)
 
 <use ./images/model-beta-crop.jpg> [28]
@@ -764,7 +764,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29 <./images/model-beta-crop.jpg>]
-<./images/model-gamma-crop.jpg, id=628, 506.89375pt x 299.1175pt>
+<./images/model-gamma-crop.jpg, id=626, 506.89375pt x 299.1175pt>
 File: ./images/model-gamma-crop.jpg Graphic file (type jpg)
 
 <use ./images/model-gamma-crop.jpg>
@@ -792,7 +792,7 @@ Underfull \vbox (badness 6157) has occurred while \output is active []
  [38
 
 ]
-[39] <./images/cross-domain-prototype.png, id=678, 1244.17764pt x 758.12646pt>
+[39] <./images/cross-domain-prototype.png, id=676, 1244.17764pt x 758.12646pt>
 File: ./images/cross-domain-prototype.png Graphic file (type png)
 
 <use ./images/cross-domain-prototype.png>
@@ -804,7 +804,7 @@ Overfull \hbox (3.62pt too wide) in paragraph at lines 17--18
 Underfull \vbox (badness 3019) has occurred while \output is active []
 
  [41 <./images/cross-domain-prototype.png (PNG copy)>]
-<./images/prototype-physical-config.png, id=689, 439.28824pt x 644.76176pt>
+<./images/prototype-physical-config.png, id=687, 439.28824pt x 644.76176pt>
 File: ./images/prototype-physical-config.png Graphic file (type png)
 
 <use ./images/prototype-physical-config.png> [42]
@@ -814,14 +814,14 @@ Underfull \vbox (badness 2884) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [44]
-[45] [46] <./images/overall-view.pdf, id=712, 343.2825pt x 265.99374pt>
+[45] [46] <./images/overall-view.pdf, id=710, 343.2825pt x 265.99374pt>
 File: ./images/overall-view.pdf Graphic file (type pdf)
 
 <use ./images/overall-view.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47 <./images/overall-view.pdf>]
-<./images/node-view.pdf, id=735, 350.30875pt x 386.44376pt>
+<./images/node-view.pdf, id=733, 350.30875pt x 386.44376pt>
 File: ./images/node-view.pdf Graphic file (type pdf)
 
 <use ./images/node-view.pdf>
@@ -831,7 +831,7 @@ Underfull \vbox (badness 1406) has occurred while \output is active []
 Underfull \vbox (badness 2277) has occurred while \output is active []
 
  [49 <./images/node-view.pdf>]
-<./images/router-view.pdf, id=763, 350.30875pt x 352.31625pt>
+<./images/router-view.pdf, id=761, 350.30875pt x 352.31625pt>
 File: ./images/router-view.pdf Graphic file (type pdf)
 
 <use ./images/router-view.pdf> [50 <./images/router-view.pdf>] [51] [52]
@@ -960,7 +960,7 @@ Underfull \vbox (badness 6157) has occurred while \output is active []
  [65
 
 ]
-[66] <./images/strategy_effects_az.pdf, id=1023, 362.35374pt x 217.81375pt>
+[66] <./images/strategy_effects_az.pdf, id=1021, 362.35374pt x 217.81375pt>
 File: ./images/strategy_effects_az.pdf Graphic file (type pdf)
 
 <use ./images/strategy_effects_az.pdf>
@@ -972,7 +972,7 @@ Overfull \hbox (3.62pt too wide) in paragraph at lines 12--13
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [67]
-<./images/strategy_effects_rs.pdf, id=1029, 361.35pt x 216.81pt>
+<./images/strategy_effects_rs.pdf, id=1027, 361.35pt x 216.81pt>
 File: ./images/strategy_effects_rs.pdf Graphic file (type pdf)
 
 <use ./images/strategy_effects_rs.pdf>
@@ -981,7 +981,7 @@ Overfull \hbox (3.62pt too wide) in paragraph at lines 21--22
  []
 
 [68 <./images/strategy_effects_az.pdf>] [69 <./images/strategy_effects_rs.pdf>]
-<./images/strategy_effects_local.pdf, id=1397, 361.35pt x 217.81375pt>
+<./images/strategy_effects_local.pdf, id=1395, 361.35pt x 217.81375pt>
 File: ./images/strategy_effects_local.pdf Graphic file (type pdf)
 
 <use ./images/strategy_effects_local.pdf>
@@ -996,7 +996,7 @@ Underfull \vbox (badness 1406) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [71 <./images/strategy_effects_local.pdf>]
-<./images/nh_strategy_effects_az.pdf, id=1585, 362.35374pt x 241.90375pt>
+<./images/nh_strategy_effects_az.pdf, id=1583, 362.35374pt x 241.90375pt>
 File: ./images/nh_strategy_effects_az.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_az.pdf>
@@ -1004,7 +1004,7 @@ Overfull \hbox (3.62pt too wide) in paragraph at lines 50--51
  [][] 
  []
 
-<./images/nh_strategy_effects_rs.pdf, id=1587, 361.35pt x 240.9pt>
+<./images/nh_strategy_effects_rs.pdf, id=1585, 361.35pt x 240.9pt>
 File: ./images/nh_strategy_effects_rs.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_rs.pdf>
@@ -1012,7 +1012,7 @@ Overfull \hbox (3.62pt too wide) in paragraph at lines 59--60
  [][] 
  []
 
-[72] <./images/nh_strategy_effects_local.pdf, id=1593, 361.35pt x 241.90375pt>
+[72] <./images/nh_strategy_effects_local.pdf, id=1591, 361.35pt x 241.90375pt>
 File: ./images/nh_strategy_effects_local.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_local.pdf>
@@ -1027,7 +1027,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 3128) has occurred while \output is active []
 
  [75 <./images/nh_strategy_effects_local.pdf>]
-<./images/single-node-results.pdf, id=2223, 361.35pt x 216.81pt>
+<./images/single-node-results.pdf, id=2221, 361.35pt x 216.81pt>
 File: ./images/single-node-results.pdf Graphic file (type pdf)
 
 <use ./images/single-node-results.pdf>) (./content/conclusions.tex
@@ -1089,17 +1089,17 @@ king/, Septem-ber
  []
 
 [80]
-Underfull \hbox (badness 10000) in paragraph at lines 154--157
+Underfull \hbox (badness 10000) in paragraph at lines 142--145
 []\T1/ptm/m/n/12 (+20) Coral con-sor-tium whitepa-per.  Tech-ni-cal re-port, Fe
 b. 2006.
  []
 
 [81] [82]) [83] (./dissertation.aux) ) 
 Here is how much of TeX's memory you used:
- 12210 strings out of 495061
- 175789 string characters out of 1182574
- 447342 words of memory out of 3000000
- 14468 multiletter control sequences out of 15000+50000
+ 12206 strings out of 495061
+ 175751 string characters out of 1182574
+ 447284 words of memory out of 3000000
+ 14466 multiletter control sequences out of 15000+50000
  88438 words of font info for 277 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  38i,9n,49p,2305b,1900s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1113,9 +1113,9 @@ b></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-
 texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on dissertation.pdf (100 pages, 1890559 bytes).
+Output written on dissertation.pdf (100 pages, 1890011 bytes).
 PDF statistics:
- 2430 PDF objects out of 2487 (max. 8388607)
- 395 named destinations out of 1000 (max. 500000)
+ 2428 PDF objects out of 2487 (max. 8388607)
+ 393 named destinations out of 1000 (max. 500000)
  41405 words of extra memory for PDF output out of 42996 (max. 10000000)
 
