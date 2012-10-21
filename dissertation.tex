@@ -78,9 +78,31 @@
 	tabsize=2,
 	extendedchars=true,        
 	breaklines=true,            
-	keywordstyle=\color{red},
+%	keywordstyle=\color{red},
 	frame=b,         
-	stringstyle=\color{white}\ttfamily,
+	stringstyle=\ttfamily,
+	showspaces=false,
+	showtabs=false,
+	xleftmargin=17pt,
+	framexleftmargin=17pt,
+	framexrightmargin=5pt,
+	framexbottommargin=4pt,
+	showstringspaces=false      
+}
+
+\lstset{
+	language=XML,
+	basicstyle=\scriptsize\ttfamily, 
+	numbers=left,    
+	numberstyle=\tiny,
+	stepnumber=1,
+	numbersep=5pt,
+	tabsize=2,
+	extendedchars=true,        
+	breaklines=true,            
+%	keywordstyle=\color{red},
+	frame=b,         
+	stringstyle=\ttfamily,
 	showspaces=false,
 	showtabs=false,
 	xleftmargin=17pt,
@@ -135,7 +157,7 @@ I would also like to thank everyone in the Informatics Lab.  Their feedback, sup
 \maketitleabstract
 
 \begin{abstract}
-Information-centric networks have distinct advantages with regard to securing sensitive content as a result of their new approaches to managing data in potential future internet architectures.  These kinds of systems, because of their data-centric perspective, provide the opportunity to embed  policy-centric content management components that can address looming problems in information distribution that both companies and federal agencies are beginning to face with respect to sensitive content.  This work addresses the current state of the art in both these kinds of cross-domain systems and information-centric networking in general.  It then covers other related work, outlining why information-centric networks are more powerful with regard to usage management.  Then, it introduces a taxonomy of types of policy-centric usage managed information-centric network systems and an associated methodology for evaluating the individual taxonomic elements.  It finally delves into experimental evaluation of the various defined architectural options and presents results of comparing experimental evaluation with anticipated outcomes. This work is the end result of four conference papers (IEEE Cloud 2011, ACM DRM 2011, IEEE SoSE '11, and IEEE Cloud 2012), one invited talk (DoDIS 2012), and research performed using this system is currently submitted to two journals for publication (IJ-Closer and Dynamic Work).
+Information-centric networks have distinct advantages with regard to securing sensitive content as a result of their new approaches to managing data in potential future internet architectures.  These kinds of systems, because of their data-centric perspective, provide the opportunity to embed  policy-centric content management components that can address looming problems in information distribution that both companies and federal agencies are beginning to face with respect to sensitive content.  This work addresses the current state of the art in both these kinds of cross-domain systems and information-centric networking in general.  It then covers other related work, outlining why information-centric networks are more powerful with regard to usage management.  Then, it introduces a taxonomy of types of policy-centric usage managed information-centric network systems and an associated methodology for evaluating the individual taxonomic elements.  It finally delves into experimental evaluation of the various defined architectural options and presents results of comparing experimental evaluation with anticipated outcomes. This work is the end result of four conference papers (IEEE Cloud 2011, ACM DRM 2011, IEEE SoSE '11, and IEEE Cloud 2012), one invited talk (DoDIS 2012), and research performed using this system is currently submitted to two journals for publication (IJ-Closer and a special issue of IEEE Internet Computing focusing on dynamic collective work).
 \end{abstract}
 
 \tableofcontents
@@ -144,6 +166,7 @@ Information-centric networks have distinct advantages with regard to securing se
 
 \begin{glossary}{UHR}
 \item[CCN] Content-Centric Network
+\item[CTCPEC] Canadian Trusted Computer Product Evaluation Criteria 
 \item[content network] A network used to store information in which a single query to a contained content node will propagate that query to other systems until a suitable response is found.
 \item[content node] A single system in a content network.
 \item[content router] An node in a content network that routes queries to child nodes.  Content routers do not contain data, but just route queries.
@@ -155,11 +178,13 @@ Information-centric networks have distinct advantages with regard to securing se
 \item[DONA] Data-Oriented Network Architecture
 \item[domain (security domain)] A group of systems designed to handle certain specific types of information.
 \item[domain ontology] An ontology of data from a specific domain.
+\item[EC2] Amazon Elastic Compute Cloud.
 \item[enclave] A subset of systems within a domain.
-\item[filter] A component generally in a guard that examines a set of data and reacts specific elements of that set according to predetermined rules.
+\item[filter] A component generally in a guard that examines a set of data and redacts specific elements of that set according to predetermined rules.
 \item[guard] A system between two domains that validates information crossing from one domain to the other as appropriate for storage in the destination domain.
 \item[hierarchical content network] A content network organized in a strict hierarchy.
-\item[ICN] Information-Centric Network
+\item[ICN] Information-centric Network
+\item[ITSEC] Information Technology Security Evaluation Criteria
 \item[NetInf] Network of Information
 \item[non-hierarchical content network] A content network that is not organized hierarchically.  An example would be a peer-to-peer system.
 \item[ontology manager] A component that manages and unifies domain ontologies from different domains.
@@ -172,6 +197,7 @@ Information-centric networks have distinct advantages with regard to securing se
 \item[PSIRP] Publish-Subscribe Internet Routing Project
 \item[resource] Content that is managed from a usage perspective.
 \item[rules] A specific description of how a resource can be used.
+\item[S3] Amazon Simple Storage Service.
 \item[smashup] A secure mashup application.
 \item[subject] An actor that uses a resource.
 \item[UCDMO] Unified Cross Domain Management Office
@@ -191,27 +217,27 @@ Information-centric networks have distinct advantages with regard to securing se
 \input{content/info-centric-networks}
 \input{content/related-work}
 \section{Applying Usage Management}
-The current state of usage management and control in distributed systems has been addressed from a variety of perspectives, ranging from the United States government to the international community.  Today, organizations have robust models, international standards, and technological approaches that can all be brought to bear on their information management problems.  Information-centric networks present an unaddressed opportunity to bring these standards and theoretical solutions together into a new type of systems providing unique and more powerful information management capabilities.  The next chapter addresses specifically how to migrate these capabilities into information-centric networks and the characteristics of those networks once they have these capabilities.
+The current state of usage management and control in distributed systems has been addressed from a variety of perspectives, ranging from the United States government to the international community.  Today, organizations have robust models, international standards, and technological approaches that can all be brought to bear on their information management problems.  Information-centric networks present an unaddressed opportunity to bring these standards and theoretical solutions together into a new type of system providing unique and more powerful information management capabilities.  The next chapter addresses specifically how to migrate these capabilities into information-centric networks and the characteristics of those networks once they have these capabilities.
 
 \chapter{Usage Management in Information-centric Networks}
-With the stage set with respect to current technologies and approaches, this chapter will delve into how to apply these techniques in a network setting.  This chapter first addresses specifically why a content-centered perspective when networking information systems provides capabilities that are rendered very difficult to address via traditional, packetized networks.  It then covers the characteristics of information networks that protect information, based on perspectives from industry, government, and the military, describes a taxonomy for approaching ubiquitous network information management, and then analyzes the proposed taxonomy.
+With the stage set with respect to current technologies and approaches, this chapter will delve into how to apply these techniques in a network setting.  This chapter first addresses specifically why a content-centered perspective when networking information systems provides capabilities that are very difficult to address via traditional, packetized networks.  It then covers the characteristics of information networks that protect information, based on perspectives from industry, government, and the military, describes a taxonomy for approaching ubiquitous network information management, and then analyzes the proposed taxonomy.
 
 \input{content/capabilities}
 \input{content/characteristics}
 \input{content/taxonomy}
 \section{Experimental Support}
-As we have shown, information-centric networks provide new ways to secure information, but the potential costs are still undefined.  This kind of repeated content analysis, enabled by information-centric computation, can potentially delay information delivery unacceptably.  Information integrity can also be damaged using some possible approaches.  The specific impacts on availability and integrity of these increased confidentiality mechanisms are vital to understand when selecting specific approaches.
+As we have shown, information-centric networks provide new ways to secure information, but the potential costs are still undefined.  This kind of repeated content analysis, enabled by information-centric computation, can potentially delay information delivery unacceptably.  Information integrity can also be damaged using some possible approaches.  The specific impacts on availability and integrity of these increased confidentiality mechanisms are vital to understand when selecting between multiple options.
 
 For example, removing information from content prior to transmittal over unsecured network paths certainly protects that removed content, but destroys the integrity of the transmitted information.  Likewise, constant encryption and decryption of data to enable repeated examination of transmitted content will certainly have a negative performance impact.  The next two chapters describe exactly how the prototype information network is implemented, and how these approaches impact information confidentiality, integrity, and availability.
 
 \chapter{Experimental Configuration}
 A key concept in our current work is the separation of content management from physical communication networks.  In the past, content was controlled via partitioning and physical network access management.  Physical networks were tightly controlled as a way to manage access to sensitive content.  Classified networks in common use today are canonical examples of this kind of approach to content management.  Access to these networks is tightly controlled by classification authorities and the ability to transfer content from these networks to more open systems is rigorously managed.  Corporate systems have also commonly used this kind of approach, though not usually with so much regulation or rigor.
 
-This kind of approach is not scalable however.  It imposes huge costs and infrastructural requirements that are becoming too large to effectively manage.  Furthermore, future systems containing sensitive information require similar security features, and simply cannot be developed without custom controlled infrastructure.  Health care systems, for example, have huge security needs and a more finely grained level of application than even deployed government systems.  These systems will contain exabytes of data, all of which needs to be explicitly controlled, managed, and reviewed by those associated with specific managed records.
+This kind of approach is not scalable however.  It imposes huge costs and infrastructural requirements that are becoming too large to effectively manage ~\cite{Tallon:2010:UDI:1735223.1735253}.  Furthermore, future systems containing sensitive information require similar security features, and simply cannot be developed without custom controlled infrastructure.  Health care systems, for example, have huge security needs and a more finely grained level of application than even deployed government systems.  These systems will contain exabytes of data, all of which needs to be explicitly controlled, managed, and reviewed by those associated with specific managed records.
 
 \input{content/progression}
 \section{Using the Network}
-This system is now defined, with primary interface and data type definitions, and implemented.  At this point, it can filter information through defined nodes implementing different strategies in accordance with specific defined rules.  It is also instrumented so that it can generate accurate timing information needed to measure availability impacts of confidentiality strategies on tranmitted information.  The next chapter will cover specifically how these results were collected, the results themselves, and interpretation of what those results imply.
+This system is now defined, with primary interface and data type definitions, and implemented.  At this point, it can filter information through defined nodes implementing different strategies in accordance with specific defined rules.  It is also instrumented so that it can generate accurate timing information needed to measure availability impacts of confidentiality strategies on transmitted information.  The next chapter will cover specifically how these results were collected, the results themselves, and interpretation of what those results imply.
 
 \chapter{Experimental Results and Conclusions}
 \input{content/results}
