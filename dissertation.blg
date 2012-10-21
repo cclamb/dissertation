@@ -1,5 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2011)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: dissertation.aux
 The style file: plain.bst
 Database file #1: bib/proposal.bib
@@ -37,45 +36,45 @@ Warning--empty booktitle in proposal:nsa-arch
 Warning--empty booktitle in proposal:cd101
 Warning--empty booktitle in proposal:raytheon-arch
 Warning--empty booktitle in proposal:ron-ross
-You've used 57 entries,
+You've used 58 entries,
             2118 wiz_defined-function locations,
-            813 strings with 11995 characters,
-and the built_in function-call counts, 15969 in all, are:
-= -- 1582
-> -- 579
+            821 strings with 12152 characters,
+and the built_in function-call counts, 16268 in all, are:
+= -- 1614
+> -- 586
 < -- 16
-+ -- 252
-- -- 184
-* -- 1014
-:= -- 2465
-add.period$ -- 158
-call.type$ -- 57
-change.case$ -- 267
++ -- 255
+- -- 186
+* -- 1038
+:= -- 2514
+add.period$ -- 161
+call.type$ -- 58
+change.case$ -- 271
 chr.to.int$ -- 0
-cite$ -- 88
-duplicate$ -- 683
-empty$ -- 1440
-format.name$ -- 184
-if$ -- 3505
+cite$ -- 89
+duplicate$ -- 694
+empty$ -- 1467
+format.name$ -- 186
+if$ -- 3566
 int.to.chr$ -- 0
-int.to.str$ -- 57
-missing$ -- 36
-newline$ -- 271
-num.names$ -- 76
-pop$ -- 368
+int.to.str$ -- 58
+missing$ -- 37
+newline$ -- 276
+num.names$ -- 78
+pop$ -- 370
 preamble$ -- 1
-purify$ -- 207
+purify$ -- 210
 quote$ -- 0
-skip$ -- 498
+skip$ -- 505
 stack$ -- 0
-substring$ -- 803
-swap$ -- 147
+substring$ -- 833
+swap$ -- 148
 text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 220
+type$ -- 224
 warning$ -- 31
-while$ -- 120
-width$ -- 59
-write$ -- 585
+while$ -- 124
+width$ -- 60
+write$ -- 596
 (There were 31 warnings)

@@ -283,6 +283,11 @@ J.~H. Saltzer, D.~P. Reed, and D.~D. Clark.
 \newblock End-to-end arguments in system design.
 \newblock {\em ACM Transactions in Computer Systems}, 2(4):277--288, Nov. 1984.
 
+\bibitem{Tallon:2010:UDI:1735223.1735253}
+Paul~P. Tallon.
+\newblock Understanding the dynamics of information management costs.
+\newblock {\em Commun. ACM}, 53(5):121--125, May 2010.
+
 \bibitem{Tanenbaum:1985:CN:536716}
 Andrew~S. Tanenbaum.
 \newblock {\em Computer Networks}.
