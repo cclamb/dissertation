@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.6)  20 OCT 2012 18:42
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.6)  20 OCT 2012 18:53
 entering extended mode
  %&-line parsing enabled.
 **dissertation.tex
@@ -1000,7 +1000,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: ./images/nh_strategy_effects_az.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_az.pdf>
-Overfull \hbox (3.62pt too wide) in paragraph at lines 51--52
+Overfull \hbox (3.62pt too wide) in paragraph at lines 50--51
  [][] 
  []
 
@@ -1008,7 +1008,7 @@ Overfull \hbox (3.62pt too wide) in paragraph at lines 51--52
 File: ./images/nh_strategy_effects_rs.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_rs.pdf>
-Overfull \hbox (3.62pt too wide) in paragraph at lines 60--61
+Overfull \hbox (3.62pt too wide) in paragraph at lines 59--60
  [][] 
  []
 
@@ -1016,14 +1016,11 @@ Overfull \hbox (3.62pt too wide) in paragraph at lines 60--61
 File: ./images/nh_strategy_effects_local.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_local.pdf>
-Overfull \hbox (3.62pt too wide) in paragraph at lines 69--70
+Overfull \hbox (3.62pt too wide) in paragraph at lines 68--69
  [][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [73 <./images/nh_strategy_effects_az.pdf>]
+[73 <./images/nh_strategy_effects_az.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [74 <./images/nh_strategy_effects_rs.pdf>]
@@ -1116,7 +1113,7 @@ b></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-
 texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on dissertation.pdf (100 pages, 1890695 bytes).
+Output written on dissertation.pdf (100 pages, 1890559 bytes).
 PDF statistics:
  2430 PDF objects out of 2487 (max. 8388607)
  395 named destinations out of 1000 (max. 500000)
