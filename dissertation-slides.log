@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  26 OCT 2012 14:42
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  27 OCT 2012 11:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -848,17 +848,7 @@ Package: beamerinnerthemecircles 2010/06/17  (rcs-revision d02a7cf4d8ae)
 (/usr/local/texlive/2011/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
 emeorchid.sty
 Package: beamercolorthemeorchid 2010/06/17  (rcs-revision d02a7cf4d8ae)
-) (./dissertation-slides.aux
-
-LaTeX Warning: Label `table:model:evaluation' multiply defined.
-
-
-LaTeX Warning: Label `table:model:evaluation' multiply defined.
-
-
-LaTeX Warning: Label `table:model:evaluation' multiply defined.
-
-)
+) (./dissertation-slides.aux)
 \openout1 = `dissertation-slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
@@ -876,7 +866,8 @@ LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 83.
- (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/t1phv.fd
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -1109,7 +1100,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 4.74998pt on input line 87.
 
-<./images/UNM.jpg, id=23, 266.49562pt x 60.225pt>
+<./images/UNM.jpg, id=27, 266.49562pt x 60.225pt>
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
 Package pdftex.def Info: ./images/UNM.jpg used on input line 87.
@@ -1199,182 +1190,204 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 182.
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.02997pt on input line 206.
+(Font)              scaled to size 7.02997pt on input line 205.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 206.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 205.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 206.
+(Font)              scaled to size 9.49997pt on input line 205.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 206.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 205.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 7.02997pt on input line 206.
-pdfTeX warning (ext4): destination with the same identifier (name{table:model:e
-valuation}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.206 \end{frame}
-                 
+(Font)              scaled to size 7.02997pt on input line 205.
 File: ./images/UNM.jpg Graphic file (type jpg)
- <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 206.
+
+<use ./images/UNM.jpg>
+Package pdftex.def Info: ./images/UNM.jpg used on input line 205.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [8
 
-]pdfTeX warning (ext4): destination with the same identifier (name{table:model:
-evaluation}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.230 \end{frame}
-                 
+]
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 230.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 228.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [9
 
-]pdfTeX warning (ext4): destination with the same identifier (name{table:model:
-evaluation}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.254 \end{frame}
-                 
+]
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 254.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 251.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
- [10
+
+[10
 
 ]
-<./images/strategy_effects_az.pdf, id=94, 362.35374pt x 217.81375pt>
-File: ./images/strategy_effects_az.pdf Graphic file (type pdf)
-
-<use ./images/strategy_effects_az.pdf>
-Package pdftex.def Info: ./images/strategy_effects_az.pdf used on input line 26
-4.
-(pdftex.def)             Requested size: 289.07999pt x 173.77263pt.
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 264.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 257.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [11
 
- <./images/strategy_effects_az.pdf>]
-<./images/strategy_effects_rs.pdf, id=279, 361.35pt x 216.81pt>
-File: ./images/strategy_effects_rs.pdf Graphic file (type pdf)
-
-<use ./images/strategy_effects_rs.pdf>
-Package pdftex.def Info: ./images/strategy_effects_rs.pdf used on input line 27
-4.
-(pdftex.def)             Requested size: 289.07999pt x 173.44823pt.
+]
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 274.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 261.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [12
 
+]
+File: ./images/UNM.jpg Graphic file (type jpg)
+
+<use ./images/UNM.jpg>
+Package pdftex.def Info: ./images/UNM.jpg used on input line 265.
+(pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
+ [13
+
+]
+<./images/strategy_effects_az.pdf, id=115, 362.35374pt x 217.81375pt>
+File: ./images/strategy_effects_az.pdf Graphic file (type pdf)
+
+<use ./images/strategy_effects_az.pdf>
+Package pdftex.def Info: ./images/strategy_effects_az.pdf used on input line 27
+6.
+(pdftex.def)             Requested size: 289.07999pt x 173.77263pt.
+File: ./images/UNM.jpg Graphic file (type jpg)
+ <use ./images/UNM.jpg>
+Package pdftex.def Info: ./images/UNM.jpg used on input line 276.
+(pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
+ [14
+
+ <./images/strategy_effects_az.pdf>]
+<./images/strategy_effects_rs.pdf, id=298, 361.35pt x 216.81pt>
+File: ./images/strategy_effects_rs.pdf Graphic file (type pdf)
+
+<use ./images/strategy_effects_rs.pdf>
+Package pdftex.def Info: ./images/strategy_effects_rs.pdf used on input line 28
+5.
+(pdftex.def)             Requested size: 289.07999pt x 173.44823pt.
+File: ./images/UNM.jpg Graphic file (type jpg)
+ <use ./images/UNM.jpg>
+Package pdftex.def Info: ./images/UNM.jpg used on input line 285.
+(pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
+ [15
+
  <./images/strategy_effects_rs.pdf>]
-<./images/strategy_effects_local.pdf, id=464, 361.35pt x 217.81375pt>
+<./images/strategy_effects_local.pdf, id=482, 361.35pt x 217.81375pt>
 File: ./images/strategy_effects_local.pdf Graphic file (type pdf)
 
 <use ./images/strategy_effects_local.pdf>
 Package pdftex.def Info: ./images/strategy_effects_local.pdf used on input line
- 284.
+ 294.
 (pdftex.def)             Requested size: 289.07999pt x 174.25122pt.
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 284.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 294.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
- [13
+ [16
 
  <./images/strategy_effects_local.pdf>]
-<./images/nh_strategy_effects_az.pdf, id=650, 362.35374pt x 241.90375pt>
+File: ./images/UNM.jpg Graphic file (type jpg)
+ <use ./images/UNM.jpg>
+Package pdftex.def Info: ./images/UNM.jpg used on input line 299.
+(pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
+ [17
+
+]
+<./images/nh_strategy_effects_az.pdf, id=672, 362.35374pt x 241.90375pt>
 File: ./images/nh_strategy_effects_az.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_az.pdf>
 Package pdftex.def Info: ./images/nh_strategy_effects_az.pdf used on input line
- 294.
+ 308.
 (pdftex.def)             Requested size: 289.07999pt x 192.99173pt.
 
-Overfull \vbox (3.43533pt too high) detected at line 294
+Overfull \vbox (3.43533pt too high) detected at line 308
  []
 
 File: ./images/UNM.jpg Graphic file (type jpg)
 <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 294.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 308.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
- [14
+ [18
 
  <./images/nh_strategy_effects_az.pdf>]
-<./images/nh_strategy_effects_rs.pdf, id=864, 361.35pt x 240.9pt>
+<./images/nh_strategy_effects_rs.pdf, id=884, 361.35pt x 240.9pt>
 File: ./images/nh_strategy_effects_rs.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_rs.pdf>
 Package pdftex.def Info: ./images/nh_strategy_effects_rs.pdf used on input line
- 304.
+ 317.
 (pdftex.def)             Requested size: 289.07999pt x 192.72025pt.
 
-Overfull \vbox (3.16385pt too high) detected at line 304
+Overfull \vbox (3.16385pt too high) detected at line 317
  []
 
 File: ./images/UNM.jpg Graphic file (type jpg)
 <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 304.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 317.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
- [15
+ [19
 
  <./images/nh_strategy_effects_rs.pdf>]
-<./images/nh_strategy_effects_local.pdf, id=1077, 361.35pt x 241.90375pt>
+<./images/nh_strategy_effects_local.pdf, id=1097, 361.35pt x 241.90375pt>
 File: ./images/nh_strategy_effects_local.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_local.pdf>
 Package pdftex.def Info: ./images/nh_strategy_effects_local.pdf used on input l
-ine 314.
+ine 326.
 (pdftex.def)             Requested size: 289.07999pt x 193.52325pt.
 
-Overfull \vbox (3.96686pt too high) detected at line 314
+Overfull \vbox (3.96686pt too high) detected at line 326
  []
 
 File: ./images/UNM.jpg Graphic file (type jpg)
 <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 314.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 326.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
- [16
+ [20
 
  <./images/nh_strategy_effects_local.pdf>]
-<./images/single-node-results.pdf, id=1290, 361.35pt x 216.81pt>
+File: ./images/UNM.jpg Graphic file (type jpg)
+
+<use ./images/UNM.jpg>
+Package pdftex.def Info: ./images/UNM.jpg used on input line 331.
+(pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
+ [21
+
+]
+<./images/single-node-results.pdf, id=1314, 361.35pt x 216.81pt>
 File: ./images/single-node-results.pdf Graphic file (type pdf)
 
 <use ./images/single-node-results.pdf>
-Package pdftex.def Info: ./images/single-node-results.pdf used on input line 32
-4.
+Package pdftex.def Info: ./images/single-node-results.pdf used on input line 34
+0.
 (pdftex.def)             Requested size: 289.07999pt x 173.44823pt.
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 324.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 340.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
- [17
+ [22
 
  <./images/single-node-results.pdf>]
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 339.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 345.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
- [18
+ [23
 
 ]
-(./content-slides/references.tex (./dissertation-slides.bbl)
 File: ./images/UNM.jpg Graphic file (type jpg)
-
-<use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 7.
+ <use ./images/UNM.jpg>
+Package pdftex.def Info: ./images/UNM.jpg used on input line 360.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
- [19
 
-])
+[24
+
+]
 \tf@nav=\write7
 \openout7 = `dissertation-slides.nav'.
 
@@ -1384,25 +1397,21 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 7.
 \tf@snm=\write9
 \openout9 = `dissertation-slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 364.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 364.
  (./dissertation-slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 364.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 364.
 Package rerunfilecheck Info: File `dissertation-slides.out' has not changed.
-(rerunfilecheck)             Checksum: 4385C38CF244DC4BB9BC7686440B08BF;129.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
+(rerunfilecheck)             Checksum: 5860218F82C6C2662C9153325A0BD63E;199.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 364.
  ) 
 Here is how much of TeX's memory you used:
- 19393 strings out of 493633
- 352620 string characters out of 3143378
- 456648 words of memory out of 3000000
- 22088 multiletter control sequences out of 15000+200000
- 67403 words of font info for 137 fonts, out of 3000000 for 9000
+ 19357 strings out of 493633
+ 351372 string characters out of 3143378
+ 456254 words of memory out of 3000000
+ 22058 multiletter control sequences out of 15000+200000
+ 65032 words of font info for 135 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,14n,56p,408b,627s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1411,10 +1420,10 @@ xlive/2011/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2
 011/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2011/te
 xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2011/texmf-dis
 t/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on dissertation-slides.pdf (19 pages, 540776 bytes).
+Output written on dissertation-slides.pdf (24 pages, 539791 bytes).
 PDF statistics:
- 1395 PDF objects out of 1440 (max. 8388607)
- 870 compressed objects within 9 object streams
- 51 named destinations out of 1000 (max. 500000)
- 33401 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1417 PDF objects out of 1440 (max. 8388607)
+ 887 compressed objects within 9 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 33409 words of extra memory for PDF output out of 35830 (max. 10000000)
 
