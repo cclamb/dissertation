@@ -8,6 +8,32 @@
 \usepackage{color}
 \usepackage{natbib}
 
+
+
+%\usepackage[latin1]{inputenc}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{graphicx}
+%\usepackage{epsfig}
+\usepackage{booktabs}
+\usepackage{listings}
+%\usepackage{courier}
+%\usepackage{multirow}
+%\usepackage{color}
+%\usepackage{framed}
+%\usepackage{lipsum}
+
+% Font settings:
+\usepackage[T1]{fontenc}
+%\usepackage{mathpazo}
+\usepackage{mathptmx}
+\usepackage[scaled]{helvet}
+\usepackage{courier}
+\usepackage{microtype}
+
+
+
 %Mathematics packages
 \usepackage{amsmath}
 \usepackage{mathrsfs}
@@ -33,8 +59,8 @@
 
 %---------------------------Title frame definition------------------------------------- 
 
-\title{Overlay Architectures enabling Cloud Computing for Multi-Level Security Environments}
-\author [Chris]{Christopher C. Lamb, Gregory L. Heileman}
+\title{Information Protection in Content-centric Networks}
+\author [Chris]{Christopher C. Lamb}
 \institute[University of New Mexico]{
 \inst {}Department of Electrical and Computer Engineering\\
 University of New Mexico}
@@ -68,12 +94,241 @@ University of New Mexico}
 \tableofcontents 
 \end{frame}
 
-\input{content-slides/summary}
-\input{content-slides/results}
-\input{content-slides/system}
-\input{content-slides/system-architecture}
-\input{content-slides/introduction}
-\input{content-slides/motivation}
+%\input{content-slides/summary}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{Original Goals}
+\begin{beamerboxesrounded}[shadow]{Contribution of Work}
+The contribution of this work is a quantitative analysis of policy-centric overlay network options, associated taxonomies of use, and prototypical technology proofs-of-concept.
+\end{beamerboxesrounded}
+\begin{itemize}
+\item \textit{Network Control Options} --- {\small This includes various types networks and associated strengths and weaknesses addressing centralized and decentralized models.}
+\item \textit{Taxonomies of Use} --- {\small Depending on the specific usage management requirements and context, different overlays have different applicability; this work will provide guidance on suitability; it will eventually lead to how to manage data flow within SDN-capable infrastructure.}
+\item \textit{Prototypical Technologies} --- {\small Examples and proofs-of-concept will be required to appropriately analyze various architectural alternatives.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Meeting the Goals}
+\begin{beamerboxesrounded}[shadow]{Network Control Options}
+{\small I have developed and analysed multiple types of overlay systems, both centralized (hierarchical) and non-centralized (non-hierarchical), with differing topologies and integrated content-centric control.}
+\end{beamerboxesrounded}
+~\\
+\begin{beamerboxesrounded}[shadow]{Taxonomies of Use}
+{\small I have established an verified a taxonomy of usage management and applied that within the network providing mechanisms extendable to SDN use.}
+\end{beamerboxesrounded}
+~\\
+\begin{beamerboxesrounded}[shadow]{Prototypical Technologies}
+{\small Prototype information-centric networks are running between the Rackspace and Amazon clouds.}
+\end{beamerboxesrounded}
+\end{frame}
+
+\begin{frame}
+\frametitle{Impact and Originality}
+\begin{itemize}
+\item Information-centric architectures common in future internet designs
+\item Significant work with respect to name/object binding, overall topologies, approaches
+\item No significant work yet on exploiting information-centricity for enhanced security
+\item They have significant new capabilities inherent in approach that allow for better information security
+\end{itemize}
+\begin{beamerboxesrounded}[shadow]{Additional Contributions}
+{\small This work, as well as providing alternatives analysis with respect to information-centric security with respect to architectures and approaches, also demonstrates the first implementation of granular context-sensitive security functionality embedded in an information-centric network.}
+\end{beamerboxesrounded}
+\end{frame}
+
+\section{Results}
+
+\begin{frame}
+\frametitle{Results Overview}
+Overall evaluation of impact against strategy:
+\begin{itemize}
+\item {\small Encryption most likely to be used...}
+\item {\small ...Rerouting likely the best compromise (but expensive)}
+\item {\small Hierarchical and non-hierarchical networks had similar performance}
+\item {\small No clear leading strategy under all conditions}
+\end{itemize}
+~\\
+\centering %
+\begin{tabular}{lccc}
+\toprule %
+{\bf Property}			& {\bf Redaction}	& {\bf Rerouting} 	& {\bf Encryption} 	\\\toprule
+{\bf Confidentiality} 	& 3				  	& 2					& 1				 	\\\midrule
+{\bf Integrity}			& 0					& 1					& 3 					\\\midrule
+{\bf Availability}		& 0					& 1					& 2					\\\bottomrule
+\end{tabular}
+\label{table:model:evaluation}
+\begin{center}
+{\small Strategy Impact by Attribute}
+\end{center}
+\begin{center}
+{\bf What does this mean? How did we get it?}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Methodology}
+{\bf \textit{Confidentiality, Integrity characteristics based on approach.}} \\
+\begin{itemize}
+\item {\small {\bf Redaction}, by removing information, by definition destroys integrity while guaranteeing confidentiality; unavailable information that is cannot be leaked}
+\item {\small {\bf Rerouting} removes information from a context damaging integrity that can possibly be repaired later, potentially increasing confidentiality by rendering that information unavailable}
+\item {\small {\bf Encryption} minimizes integrity impacts be keeping ciphered data with original context at the expense of possible interception and cryptanalysis exposure}
+\end{itemize}
+{\bf \textit{Availability is based on performance.}} \\
+\begin{itemize}
+\item {\small {\bf Performance} is measured via end-to-end time of transmittal}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Redaction}
+{\bf Redaction:} {\small Removing content that is not approved for transmission over a given link or consumption by a given agent from a larger context of suitable content.} \\
+\begin{itemize}
+\item {\small Strongest confidentiality}
+\item {\small Destroys integrity}
+\item {\small Mixed impact on availability}
+\end{itemize}
+\begin{center}
+{\bf \textit{Fast and easy to implement}}
+\\~\\
+\begin{small}
+\begin{tabular}{lccc}
+\toprule %
+{\bf Property}			& {\bf Redaction}	& {\bf Rerouting} 	& {\bf Encryption} 	\\\toprule
+{\bf Confidentiality} 	& 3				  	& 2					& 1				 	\\\midrule
+{\bf Integrity}			& 0					& 1					& 3 					\\\midrule
+{\bf Availability}		& 1					& 1					& 2					\\\bottomrule
+\end{tabular}
+\label{table:model:evaluation}
+\end{small}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Rerouting}
+{\bf Rerouting:} {\small Removing content that is not approved for transmission over a given link and rerouting that content to its destination through secondary means (e.g. SMTP).} \\
+\begin{itemize}
+\item {\small Confidentiality dependent on secondary links}
+\item {\small Integrity compromised temporarily and perhaps permanently}
+\item {\small Availability dependent on secondary links}
+\end{itemize}
+\begin{center}
+{\bf \textit{Undependable, expensive, good information control}}
+\\~\\
+\begin{small}
+\begin{tabular}{lccc}
+\toprule %
+{\bf Property}			& {\bf Redaction}	& {\bf Rerouting} 	& {\bf Encryption} 	\\\toprule
+{\bf Confidentiality} 	& 3				  	& 2					& 1				 	\\\midrule
+{\bf Integrity}			& 0					& 1					& 3 					\\\midrule
+{\bf Availability}		& 0					& 1					& 2					\\\bottomrule
+\end{tabular}
+\label{table:model:evaluation}
+\end{small}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Encryption}
+{\bf Encryption:} {\small Enciphering content within larger documents, deciphering enciphered sections when suitable by defined policy and when content needs to be re-evaluated.} \\
+\begin{itemize}
+\item {\small Confidentiality questionable over time}
+\item {\small Integrity compromised temporarily and perhaps permanently}
+\item {\small Availability dependent on secondary links}
+\end{itemize}
+\begin{center}
+{\bf \textit{Reasonably secure, simple and performant}}
+\\~\\
+\begin{small}
+\begin{tabular}{lccc}
+\toprule %
+{\bf Property}			& {\bf Redaction}	& {\bf Rerouting} 	& {\bf Encryption} 	\\\toprule
+{\bf Confidentiality} 	& 3				  	& 2					& 1				 	\\\midrule
+{\bf Integrity}			& 0					& 1					& 3 					\\\midrule
+{\bf Availability}		& 0					& 1					& 2					\\\bottomrule
+\end{tabular}
+\label{table:model:evaluation}
+\end{small}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hierarchical Effects}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=4in]{strategy_effects_az}
+\caption{Hierarchical Results from Amazon}
+\label{fig:model:amazon-results}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hierarchical Effects}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=4in]{strategy_effects_rs}
+\caption{Hierarchical Results from Rackspace}
+\label{fig:model:rackspace-results}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hierarchical Effects}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=4in]{strategy_effects_local}
+\caption{Hierarchical Results from Comcast}
+\label{fig:model:comcast-results}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Non-Hierarchical Effects}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=4in]{nh_strategy_effects_az}
+\caption{Non-Hierarchical Results from Amazon}
+\label{fig:model:nh-amazon-results}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Non-Hierarchical Effects}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=4in]{nh_strategy_effects_rs}
+\caption{Non-Hierarchical  Results from Rackspace}
+\label{fig:model:nh-rackspace-results}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Non-Hierarchical Effects}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=4in]{nh_strategy_effects_local}
+\caption{Non-Hierarchical Results from Comcast}
+\label{fig:model:nh-comcast-results}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Network-Free Evaluation}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=4in]{single-node-results}
+\caption{Results from Requests to a Singe Node}
+\label{fig:model:single-node-results}
+\end{figure}
+\end{frame}
+
+
+%\input{content-slides/results}
+%\input{content-slides/system}
+%\input{content-slides/system-architecture}
+%\input{content-slides/introduction}
+%\input{content-slides/motivation}
 
 %\input{content-slides/progress}
 
