@@ -63,8 +63,8 @@
 			<integer>29</integer>
 			<key>Points</key>
 			<array>
-				<string>{48.50000362885455, 164.74998364581955}</string>
-				<string>{71.999999996128508, 164.74998364581955}</string>
+				<string>{48.500003628854543, 164.74998364581955}</string>
+				<string>{71.999999996128352, 164.74998364581955}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -556,7 +556,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{14.5, 8.5}, {287.5, 366.5}}</string>
+		<string>{{14, 8.5}, {287.5, 366.5}}</string>
 		<key>Zoom</key>
 		<real>2</real>
 		<key>ZoomValues</key>

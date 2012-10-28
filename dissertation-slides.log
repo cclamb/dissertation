@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  27 OCT 2012 11:17
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  27 OCT 2012 22:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1233,120 +1233,133 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 257.
  [11
 
 ]
+<./images/hierarchical-clouds.pdf, id=104, 1313.90875pt x 1102.1175pt>
+File: ./images/hierarchical-clouds.pdf Graphic file (type pdf)
+
+<use ./images/hierarchical-clouds.pdf>
+Package pdftex.def Info: ./images/hierarchical-clouds.pdf used on input line 26
+5.
+(pdftex.def)             Requested size: 216.81pt x 181.85835pt.
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 261.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 265.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [12
 
-]
-File: ./images/UNM.jpg Graphic file (type jpg)
+ <./images/hierarchical-clouds.pdf>]
+<./images/non-hierarchical-clouds.pdf, id=189, 1313.90875pt x 1102.1175pt>
+File: ./images/non-hierarchical-clouds.pdf Graphic file (type pdf)
 
-<use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 265.
+<use ./images/non-hierarchical-clouds.pdf>
+Package pdftex.def Info: ./images/non-hierarchical-clouds.pdf used on input lin
+e 273.
+(pdftex.def)             Requested size: 216.81pt x 181.85835pt.
+File: ./images/UNM.jpg Graphic file (type jpg)
+ <use ./images/UNM.jpg>
+Package pdftex.def Info: ./images/UNM.jpg used on input line 273.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [13
 
-]
-<./images/strategy_effects_az.pdf, id=115, 362.35374pt x 217.81375pt>
+ <./images/non-hierarchical-clouds.pdf>]
+<./images/strategy_effects_az.pdf, id=214, 362.35374pt x 217.81375pt>
 File: ./images/strategy_effects_az.pdf Graphic file (type pdf)
 
 <use ./images/strategy_effects_az.pdf>
-Package pdftex.def Info: ./images/strategy_effects_az.pdf used on input line 27
-6.
+Package pdftex.def Info: ./images/strategy_effects_az.pdf used on input line 28
+4.
 (pdftex.def)             Requested size: 289.07999pt x 173.77263pt.
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 276.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 284.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [14
 
  <./images/strategy_effects_az.pdf>]
-<./images/strategy_effects_rs.pdf, id=298, 361.35pt x 216.81pt>
+<./images/strategy_effects_rs.pdf, id=397, 361.35pt x 216.81pt>
 File: ./images/strategy_effects_rs.pdf Graphic file (type pdf)
 
 <use ./images/strategy_effects_rs.pdf>
-Package pdftex.def Info: ./images/strategy_effects_rs.pdf used on input line 28
-5.
+Package pdftex.def Info: ./images/strategy_effects_rs.pdf used on input line 29
+3.
 (pdftex.def)             Requested size: 289.07999pt x 173.44823pt.
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 285.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 293.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [15
 
  <./images/strategy_effects_rs.pdf>]
-<./images/strategy_effects_local.pdf, id=482, 361.35pt x 217.81375pt>
+<./images/strategy_effects_local.pdf, id=581, 361.35pt x 217.81375pt>
 File: ./images/strategy_effects_local.pdf Graphic file (type pdf)
 
 <use ./images/strategy_effects_local.pdf>
 Package pdftex.def Info: ./images/strategy_effects_local.pdf used on input line
- 294.
+ 302.
 (pdftex.def)             Requested size: 289.07999pt x 174.25122pt.
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 294.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 302.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [16
 
  <./images/strategy_effects_local.pdf>]
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 299.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 307.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [17
 
 ]
-<./images/nh_strategy_effects_az.pdf, id=672, 362.35374pt x 241.90375pt>
+<./images/nh_strategy_effects_az.pdf, id=770, 362.35374pt x 241.90375pt>
 File: ./images/nh_strategy_effects_az.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_az.pdf>
 Package pdftex.def Info: ./images/nh_strategy_effects_az.pdf used on input line
- 308.
+ 316.
 (pdftex.def)             Requested size: 289.07999pt x 192.99173pt.
 
-Overfull \vbox (3.43533pt too high) detected at line 308
+Overfull \vbox (3.43533pt too high) detected at line 316
  []
 
 File: ./images/UNM.jpg Graphic file (type jpg)
 <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 308.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 316.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [18
 
  <./images/nh_strategy_effects_az.pdf>]
-<./images/nh_strategy_effects_rs.pdf, id=884, 361.35pt x 240.9pt>
+<./images/nh_strategy_effects_rs.pdf, id=983, 361.35pt x 240.9pt>
 File: ./images/nh_strategy_effects_rs.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_rs.pdf>
 Package pdftex.def Info: ./images/nh_strategy_effects_rs.pdf used on input line
- 317.
+ 325.
 (pdftex.def)             Requested size: 289.07999pt x 192.72025pt.
 
-Overfull \vbox (3.16385pt too high) detected at line 317
+Overfull \vbox (3.16385pt too high) detected at line 325
  []
 
 File: ./images/UNM.jpg Graphic file (type jpg)
 <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 317.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 325.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [19
 
  <./images/nh_strategy_effects_rs.pdf>]
-<./images/nh_strategy_effects_local.pdf, id=1097, 361.35pt x 241.90375pt>
+<./images/nh_strategy_effects_local.pdf, id=1196, 361.35pt x 241.90375pt>
 File: ./images/nh_strategy_effects_local.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_local.pdf>
 Package pdftex.def Info: ./images/nh_strategy_effects_local.pdf used on input l
-ine 326.
+ine 334.
 (pdftex.def)             Requested size: 289.07999pt x 193.52325pt.
 
-Overfull \vbox (3.96686pt too high) detected at line 326
+Overfull \vbox (3.96686pt too high) detected at line 334
  []
 
 File: ./images/UNM.jpg Graphic file (type jpg)
 <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 326.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 334.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [20
 
@@ -1354,35 +1367,35 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 326.
 File: ./images/UNM.jpg Graphic file (type jpg)
 
 <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 331.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 339.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [21
 
 ]
-<./images/single-node-results.pdf, id=1314, 361.35pt x 216.81pt>
+<./images/single-node-results.pdf, id=1413, 361.35pt x 216.81pt>
 File: ./images/single-node-results.pdf Graphic file (type pdf)
 
 <use ./images/single-node-results.pdf>
 Package pdftex.def Info: ./images/single-node-results.pdf used on input line 34
-0.
+8.
 (pdftex.def)             Requested size: 289.07999pt x 173.44823pt.
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 340.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 348.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [22
 
  <./images/single-node-results.pdf>]
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 345.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 353.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
  [23
 
 ]
 File: ./images/UNM.jpg Graphic file (type jpg)
  <use ./images/UNM.jpg>
-Package pdftex.def Info: ./images/UNM.jpg used on input line 360.
+Package pdftex.def Info: ./images/UNM.jpg used on input line 368.
 (pdftex.def)             Requested size: 71.13188pt x 16.0744pt.
 
 [24
@@ -1397,20 +1410,20 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 360.
 \tf@snm=\write9
 \openout9 = `dissertation-slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 364.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 364.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 372.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 372.
  (./dissertation-slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 364.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 364.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 372.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 372.
 Package rerunfilecheck Info: File `dissertation-slides.out' has not changed.
 (rerunfilecheck)             Checksum: 5860218F82C6C2662C9153325A0BD63E;199.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 364.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 372.
  ) 
 Here is how much of TeX's memory you used:
- 19357 strings out of 493633
- 351372 string characters out of 3143378
+ 19373 strings out of 493633
+ 351780 string characters out of 3143378
  456254 words of memory out of 3000000
- 22058 multiletter control sequences out of 15000+200000
+ 22072 multiletter control sequences out of 15000+200000
  65032 words of font info for 135 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,14n,56p,408b,627s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1420,10 +1433,10 @@ xlive/2011/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2
 011/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2011/te
 xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2011/texmf-dis
 t/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on dissertation-slides.pdf (24 pages, 539791 bytes).
+Output written on dissertation-slides.pdf (24 pages, 593770 bytes).
 PDF statistics:
- 1417 PDF objects out of 1440 (max. 8388607)
- 887 compressed objects within 9 object streams
+ 1516 PDF objects out of 1728 (max. 8388607)
+ 957 compressed objects within 10 object streams
  54 named destinations out of 1000 (max. 500000)
- 33409 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 33419 words of extra memory for PDF output out of 35830 (max. 10000000)
 
