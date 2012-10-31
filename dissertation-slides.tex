@@ -157,16 +157,20 @@ Pramod A. Jamkhedkar, Gregory L. Heileman, and Chris C. Lamb. {\sl An interopera
 
 \begin{frame}
 \frametitle{Publications}
-{\bf Pending Journal Submissions:} \\
+{\bf Accepted Journal Submissions:} \\
 \begin{scriptsize}
-Christopher C. Lamb and Gregory L. Heileman, "Content-centric Information Protection in Cloud Computing", {\it International Journal of Cloud Computing and Services Science}. \\
-~\\
-Christopher C. Lamb and Gregory L. Heileman, "Dynamic Context-sensitive Information Protection", {\it IEEE Internet Computing - Dynamic Collective Work}. \\
+Christopher C. Lamb and Gregory L. Heileman, "Content-centric Information Protection in Cloud Computing", {\it International Journal of Cloud Computing and Services Science} vol. 1, no. 5, December 2012. \\
 ~\\
 \end{scriptsize}
 {\bf Accepted Book Chapters:} \\
 \begin{scriptsize}
 Pramod A. Jamkhedkar, Christopher C. Lamb, and Gregory L. Heileman, {\it Digital Rights Management: Technology, Standards and Applications}, Auerbach Publications, 2013. \\
+~\\
+\end{scriptsize}
+{\bf Pending Journal Submissions:} \\
+\begin{scriptsize}
+Christopher C. Lamb and Gregory L. Heileman, "Dynamic Context-sensitive Information Protection", {\it IEEE Internet Computing - Dynamic Collective Work}. \\
+~\\
 \end{scriptsize}
 \end{frame}
 
@@ -339,7 +343,17 @@ Overall evaluation of impact against strategy:
 
 \begin{frame}
 \frametitle{Hierarchical Analysis}
-
+{\bf Caching is important.} \\
+{\scriptsize Network effects have a tremendous impact on performance.  Using in-node content caching helps take advantage of query locality.} \\
+~\\
+{\bf Less naive routing wouldn't hurt either.} \\
+{\scriptsize A query from the amazon test node to rackspace nodes travels to rackspace, to amazon, to rackspace, and then back to amazon.  Better node location services or caching could eliminate this back-and-forth.} \\
+~\\
+{\bf Infrastructure costs are high.} \\
+{\scriptsize Rerouting content has some significant conceptual advantages, but establishing reliable secondary infrastructure can be expensive and difficult. } \\
+~\\
+{\bf Encryption is a realistic compromise.} \\
+{\scriptsize Encryption seemed performant and didn't sacrifice integrity and availability for confidentiality gains.}
 \end{frame}
 
 \begin{frame}
@@ -371,7 +385,15 @@ Overall evaluation of impact against strategy:
 
 \begin{frame}
 \frametitle{Non-Hierarchical Analysis}
-
+{\bf Similar performance to hierarchical topologies.} \\
+{\scriptsize We see similar performance profiles for hierarchical and non-hierarchical networks.  Conclusions from hierarchical networks with respect to routing and caching hold here as well. Non-hierarchical networks do have additional content processing demands.} \\
+~\\
+{\bf Secondary infrastructure effects more prominent.} \\
+{\scriptsize In these tests, we had significant infrastructural issues with respect to rerouting with our provider.  Again, secondary infrastructure can be problematic.  } \\
+~\\
+{\bf Non-hierarchical and hierarchical have different strengths.} \\
+{\scriptsize Hierarchical networks may more effectively resist random failures due to functional centralization. Non-hierarchical networks may better maintain functionality in the face of directed attacks.  This will likely depend on topology as well as hierarchical characteristics.  \textit{More research is needed to support these conclusions.}} \\
+~\\
 \end{frame}
 
 \begin{frame}
