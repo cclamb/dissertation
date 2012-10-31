@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  28 OCT 2012 15:44
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  29 OCT 2012 09:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1253,7 +1253,7 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 293.
  [13
 
  <./images/physical-clouds.pdf>]
-<./images/hierarchical-clouds.pdf, id=134, 1313.90875pt x 1102.1175pt>
+<./images/hierarchical-clouds.pdf, id=230, 1313.90875pt x 1102.1175pt>
 File: ./images/hierarchical-clouds.pdf Graphic file (type pdf)
 
 <use ./images/hierarchical-clouds.pdf>
@@ -1267,7 +1267,7 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 301.
  [14
 
  <./images/hierarchical-clouds.pdf>]
-<./images/non-hierarchical-clouds.pdf, id=222, 1313.90875pt x 1102.1175pt>
+<./images/non-hierarchical-clouds.pdf, id=318, 1313.90875pt x 1102.1175pt>
 File: ./images/non-hierarchical-clouds.pdf Graphic file (type pdf)
 
 <use ./images/non-hierarchical-clouds.pdf>
@@ -1281,7 +1281,7 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 309.
  [15
 
  <./images/non-hierarchical-clouds.pdf>]
-<./images/strategy_effects_az.pdf, id=246, 362.35374pt x 217.81375pt>
+<./images/strategy_effects_az.pdf, id=342, 362.35374pt x 217.81375pt>
 File: ./images/strategy_effects_az.pdf Graphic file (type pdf)
 
 <use ./images/strategy_effects_az.pdf>
@@ -1295,7 +1295,7 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 320.
  [16
 
  <./images/strategy_effects_az.pdf>]
-<./images/strategy_effects_rs.pdf, id=429, 361.35pt x 216.81pt>
+<./images/strategy_effects_rs.pdf, id=525, 361.35pt x 216.81pt>
 File: ./images/strategy_effects_rs.pdf Graphic file (type pdf)
 
 <use ./images/strategy_effects_rs.pdf>
@@ -1309,7 +1309,7 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 329.
  [17
 
  <./images/strategy_effects_rs.pdf>]
-<./images/strategy_effects_local.pdf, id=613, 361.35pt x 217.81375pt>
+<./images/strategy_effects_local.pdf, id=709, 361.35pt x 217.81375pt>
 File: ./images/strategy_effects_local.pdf Graphic file (type pdf)
 
 <use ./images/strategy_effects_local.pdf>
@@ -1330,7 +1330,7 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 343.
  [19
 
 ]
-<./images/nh_strategy_effects_az.pdf, id=804, 362.35374pt x 241.90375pt>
+<./images/nh_strategy_effects_az.pdf, id=899, 362.35374pt x 241.90375pt>
 File: ./images/nh_strategy_effects_az.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_az.pdf>
@@ -1348,7 +1348,7 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 352.
  [20
 
  <./images/nh_strategy_effects_az.pdf>]
-<./images/nh_strategy_effects_rs.pdf, id=1016, 361.35pt x 240.9pt>
+<./images/nh_strategy_effects_rs.pdf, id=1111, 361.35pt x 240.9pt>
 File: ./images/nh_strategy_effects_rs.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_rs.pdf>
@@ -1366,7 +1366,7 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 361.
  [21
 
  <./images/nh_strategy_effects_rs.pdf>]
-<./images/nh_strategy_effects_local.pdf, id=1228, 361.35pt x 241.90375pt>
+<./images/nh_strategy_effects_local.pdf, id=1324, 361.35pt x 241.90375pt>
 File: ./images/nh_strategy_effects_local.pdf Graphic file (type pdf)
 
 <use ./images/nh_strategy_effects_local.pdf>
@@ -1392,7 +1392,7 @@ Package pdftex.def Info: ./images/UNM.jpg used on input line 375.
  [23
 
 ]
-<./images/single-node-results.pdf, id=1445, 361.35pt x 216.81pt>
+<./images/single-node-results.pdf, id=1541, 361.35pt x 216.81pt>
 File: ./images/single-node-results.pdf Graphic file (type pdf)
 
 <use ./images/single-node-results.pdf>
@@ -1453,10 +1453,10 @@ xlive/2011/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2
 011/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2011/te
 xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2011/texmf-dis
 t/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on dissertation-slides.pdf (26 pages, 634144 bytes).
+Output written on dissertation-slides.pdf (26 pages, 645745 bytes).
 PDF statistics:
- 1550 PDF objects out of 1728 (max. 8388607)
- 984 compressed objects within 10 object streams
+ 1646 PDF objects out of 1728 (max. 8388607)
+ 1047 compressed objects within 11 object streams
  58 named destinations out of 1000 (max. 500000)
  33424 words of extra memory for PDF output out of 35830 (max. 10000000)
 
