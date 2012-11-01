@@ -196,7 +196,7 @@ Overall evaluation of impact against strategy:
 \end{tabular}
 \label{table:model:evaluation}
 \begin{center}
-{\small Strategy Impact by Attribute}
+{\scriptsize Strategy Impact by Attribute (3 is best, 0 is worst)}
 \end{center}
 \begin{center}
 {\bf What does this mean? How did we get it?}
@@ -407,9 +407,52 @@ Overall evaluation of impact against strategy:
 
 \begin{frame}
 \frametitle{Network-Free Analysis}
-
+{\bf Doing nothing is cheapest.} \\
+{\scriptsize As expected, the control group has the best performance.  We are not processing content in the control example, rather we just pass content directly through the node.} \\
+~\\
+{\bf Redaction is next.} \\
+{\scriptsize Computationally, redaction is the simplest strategy, and is just slightly more expensive than the control set, but it destroys integrity.} \\
+~\\
+{\bf Encryption is just slightly more expensive than redaction.} \\
+{\scriptsize We do use symmetric ciphers here, so this is very fast.  Public key encryption would be more expensive.}\\
+~\\
+{\bf Rerouting is by far the most expensive.} \\
+{\scriptsize Note that this is a logarithmic scale graph! Setting up secondary channel communication is expensive and time consuming.} \\
 \end{frame}
 
+\section{Conclusions and Ongoing Work}
+
+\begin{frame}
+\frametitle{Conclusions}
+{\bf What did we learn?}
+\begin{small}
+\begin{itemize}
+\item Redaction destroys integrity
+\item Rerouting is expensive
+\item Encryption can be broken
+\end{itemize}
+\end{small}
+{\bf Surprisingly, rerouting is not a realistic option!}
+\begin{small}
+\begin{itemize}
+\item Rerouting may provide the best compromise between confidentiality and integrity, but an a potentially high availability, and likely financial, cost.  Maintaining dual infrastructures, especially if the second is highly secure, will more than double infrastructure spend.
+\item Encryption may be eventually broken, but is difficult to decipher short-tem, is easier to implement, and is likely much less expensive than rerouting.
+\end{itemize}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{What's next?}
+{\bf This work is funded for an additional six months, and likely for an additional three years of continuing funding.  Goals currently include:}
+\begin{small}
+\begin{itemize}
+\item {\bf Productionization} of the current system for eventual deployment in operational systems.  This will involve extending the current infrastructure to handle additional types of data and potentially different and lower-level protocols.
+\item {\bf Public Key Infrastructure} to provide non-repudiation as well as confidentiality to protected information.  This will likely involve some combination of symmetric and asymmetric cryptography (e.g. TLS, IPsec).
+\item {\bf Software Defined Networking} to enable real-time network configuration in response to changing contexts.
+\item {\bf Publish/Subscribe} approaches to registering for content of interest, and associated decoupling of request and response network paths.
+\end{itemize}
+\end{small}
+\end{frame}
 
 %\input{content-slides/results}
 %\input{content-slides/system}
