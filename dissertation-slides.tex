@@ -157,35 +157,67 @@ Christopher C. Lamb and Gregory L. Heileman, "Dynamic Context-sensitive Informat
 
 \begin{frame}
 \frametitle{Motivation for Work}
-{\bf USDMO} \\
-{\bf DARPA} \\
-{\bf Medical}\\
+{\bf Unified Cross-Domain Management Office (UCDMO)} \\
+{\small The UCDMO is responsible for cross-domain classified information flow.  They are focused on protecting information while providing it to whomever needs it.} \\
 ~\\
+{\bf Defence Advanced Research Projects Agency (DARPA)} \\
+{\small DARPA has been trolling for solutions in this space under the Clean-slate design of Resilient, Adaptive, and Secure Hosts (CRASH) program.} \\
+~\\
+{\bf Medical} \\
+{\small Medical systems handle highly sensitive information, and the distribution of that information must be controlled and traced.} \\
 \begin{center}
-This work examines the impacts of specific {\bf strategies} on the {\bf security properties} of information-centric networks of different {\bf topologies}.
+{\small This work examines the impacts of specific {\bf strategies} on the {\bf security properties} of information-centric networks of different {\bf topologies}.}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \frametitle{Strategies}
-Redaction, Rerouting, Encryption?
+{\bf What are these strategies?} \\
+{\small Strategies are methods designers can use to protect information.  More than one can be used at a time.} \\
+\begin{small}
+\begin{itemize}
+\item {\bf Redaction} is removing sensitive content from the body of a message, but leaving non-sensitive content.
+\item {\bf Rerouting} is removing sensitive content and retransmitting that content over a more secure channel or route.
+\item {\bf Encryption} involves enciphering sensitive content in a message while leaving non-sensitive content in the clear.
+\end{itemize}
+\end{small}
 \end{frame}
 
 \begin{frame}
 \frametitle{Security Properties}
-What do we mean by Confidentiality, Integrity, and Availability?
+{\bf What are these security properties?} \\
+{\small In this work, the primary properties of concern are confidentiality, integrity, and availability.  These are the system properties most traditionally associated with cyber-security evaluation.} \\
+\begin{small}
+\begin{itemize}
+\item {\bf Confidentiality} is a measure of the overall confidentiality of sensitive information.  Information that can be accessed by unauthorized users has low confidentiality.
+\item {\bf Integrity} describes whether the information has been altered in any way.  If information has changed, its integrity decreases.
+\item {\bf Availability} is related to the ability of a user to acquire information to which he or she is authorized.
+\end{itemize}
+\end{small}
 \end{frame}
 
 \begin{frame}
 \frametitle{Topologies}
-what do we mean by hierarchical, non-hierarchical?
+{\bf What do we mean by hierarchical, non-hierarchical?} \\
+{\small These are two different network types that represent two extremes of network organization.} \\
+\begin{small}
+\begin{itemize}
+\item {\bf Hierarchical} networks are ordered in a strict top-down structure.  Here, they are organized in a tree in which only the leaves of the tree content content, and all internal nodes only route requests and reponses. 
+\item {\bf Non-Hierarchical} networks are more loosely organized.  In non-hierarchical networks, all nodes route information and contain content.  They are akin to peer-to-peer networks.
+\end{itemize}
+\end{small}
 \end{frame}
 
 \begin{frame}
 \frametitle{Motivation for Selection}
 {\bf Why Confidentiality, Integrity, and Availability?} \\
+{\small These are system properties wide associated with cyber-security.  They provide insight into the ability of a system to protect and deliver information.} \\
+~\\
 {\bf Why Redaction, Rerouting, and Encryption?} \\
+{\small These are three distinct possible strategies that system designers can use to protect sensitive information.  Encryption is commonly used to protect sensitive information.  Redaction is commonly used with documents, and rerouting has been commonly used for sending classified data to remote locations.} \\
+~\\
 {\bf Why Hierarchical and Non-Hierarchical networks?} \\
+{\small These are two distinct types of network approaches to storing information commonly used in today's computer systems.}
 \end{frame}
 
 \begin{frame}
@@ -328,8 +360,24 @@ Overall evaluation of impact against strategy:
 
 \begin{frame}
 \frametitle{Hierarchical Experimentation}
-What are home, peer, etc.? how are they distributed? \\
-What is the control? \\
+{\bf The nodes fielding content requests are scattered throughout the network, though the content is fixed.}
+\begin{small}
+\begin{itemize}
+\item The {\bf home} node contains the requested content and is hosed at Amazon.
+\item The {\bf peer} node is under the same immediate router as the home node, and is also hosted at Amazon.
+\item The {\bf neighbor} node is under the neighboring router, again at Amazon.
+\item The {\bf distant 1} and {\bf 2} nodes are under routers in Rackspace infrastructure on the other end of the network.
+\end{itemize}
+\end{small}
+Control testing does not apply usage management to content.  All other cases apply usage management and the specific outlined strategy.
+\end{frame}
+
+\begin{frame}
+\frametitle{Hierarchical Topology Revisited}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{hierarchical-clouds}
+\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -376,8 +424,25 @@ What is the control? \\
 
 \begin{frame}
 \frametitle{Non-Hierarchical Experimentation}
-neighbor (1), etc.? how are they distributed? \\
-What is the control? \\
+{\bf Nodes are in both Rackspace and Amazon.  The home node and neighbor nodes (1) and (2) are in amazon, while the remaining nodes are in Rackspace.  Content is again fixed.}
+\begin{small}
+\begin{itemize}
+\item The {\bf home} node contains the requested content and is hosed at Amazon.
+\item The {\bf neighbor (1)} node is next to the home node.
+\item The {\bf neighbor (2)} is next to the neighbor (1) node.
+\item The {\bf neighbor (3)} is next to the neighbor (2) node.
+\item The {\bf neighbor (4)} and {\bf (5)} nodes adhere to the same pattern.
+\end{itemize}
+\end{small}
+Control and strategy application is the same as in hierarchical testing.
+\end{frame}
+
+\begin{frame}
+\frametitle{Non-Hierarchical Topology Revisited}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{non-hierarchical-clouds}
+\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -422,11 +487,18 @@ What is the control? \\
 
 \begin{frame}
 \frametitle{Network-Free Experimentation}
-How was this done? what node? what test node?\\
+{\bf Why network free?} \\
+{\small This highlights the basic characteristics of a given strategy without any network effects clouding results. End-to-end results are important, but so are basic strategy effects.} \\
 ~\\
-tested on the amazon home node from the amazon home node \\
-~\\
-What is the control? \\
+{\bf How implemented?}
+\begin{small}
+\begin{itemize}
+\item Single node in Amazon
+\item Requests and responses over loopback
+\item Strategies and control tests are the same
+\item Used the home node containing content of interest
+\end{itemize}
+\end{small}
 \end{frame}
 
 \begin{frame}
@@ -461,14 +533,14 @@ What is the control? \\
 \begin{small}
 \begin{itemize}
 \item Redaction destroys integrity
-\item Rerouting is expensive
+\item Rerouting can be expensive
 \item Encryption can be broken
 \end{itemize}
 \end{small}
-{\bf Surprisingly, rerouting is not a realistic option!}
+{\bf Surprisingly, rerouting is not the most realistic option!}
 \begin{small}
 \begin{itemize}
-\item Rerouting may provide the best compromise between confidentiality and integrity, but at a potentially high availability, and likely financial, cost.  Maintaining dual infrastructures, especially if the second is highly secure, will more than double infrastructure spend.
+\item Rerouting may provide the best compromise between confidentiality and integrity, but at a potentially high availability, and likely financial, cost.  Maintaining dual infrastructures, especially if the second is highly secure, will more than double infrastructure spend.  Results will vary based on implementation more than just strategy.
 \item Encryption may be eventually broken, but is difficult to decipher short-tem, is easier to implement, and is likely much less expensive than rerouting.
 \end{itemize}
 \end{small}
