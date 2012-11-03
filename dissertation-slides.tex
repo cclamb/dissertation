@@ -125,7 +125,7 @@ The contribution of this work is a quantitative analysis of policy-centric overl
 
 \begin{frame}
 \frametitle{Publications}
-{\bf Accepted Conference Papers:} \\
+{\bf Conference Papers:} \\
 \begin{scriptsize}
 C.C. Lamb and G.L. Heileman. {\sl Overlay architectures enabling cloud computing for multi-level security environments}. In Services (SERVICES), 2012 IEEE Eighth World Congress on, pages 116-124, june 2012.\\
 ~\\
@@ -142,19 +142,13 @@ Pramod A. Jamkhedkar, Gregory L. Heileman, and Chris C. Lamb. {\sl An interopera
 
 \begin{frame}
 \frametitle{Publications}
-{\bf Accepted Journal Submissions:} \\
+{\bf Journal Articles and Book Chapters:} \\
 \begin{scriptsize}
 Christopher C. Lamb and Gregory L. Heileman, "Content-centric Information Protection in Cloud Computing", {\it International Journal of Cloud Computing and Services Science} vol. 1, no. 5, December 2012. \\
 ~\\
-\end{scriptsize}
-{\bf Accepted Book Chapters:} \\
-\begin{scriptsize}
 Pramod A. Jamkhedkar, Christopher C. Lamb, and Gregory L. Heileman, {\it Digital Rights Management: Technology, Standards and Applications}, Auerbach Publications, 2013. \\
 ~\\
-\end{scriptsize}
-{\bf Pending Journal Submissions:} \\
-\begin{scriptsize}
-Christopher C. Lamb and Gregory L. Heileman, "Dynamic Context-sensitive Information Protection", {\it IEEE Internet Computing - Dynamic Collective Work}. \\
+Christopher C. Lamb and Gregory L. Heileman, "Dynamic Context-sensitive Information Protection", {\it IEEE Internet Computing - Dynamic Collective Work}. {\it (pending) }\\
 ~\\
 \end{scriptsize}
 \end{frame}
@@ -162,7 +156,54 @@ Christopher C. Lamb and Gregory L. Heileman, "Dynamic Context-sensitive Informat
 \section{Results Summary}
 
 \begin{frame}
-\frametitle{Results Overview}
+\frametitle{Motivation for Work}
+{\bf USDMO} \\
+{\bf DARPA} \\
+{\bf Medical}\\
+~\\
+\begin{center}
+This work examines the impacts of specific {\bf strategies} on the {\bf security properties} of information-centric networks of different {\bf topologies}.
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Strategies}
+Redaction, Rerouting, Encryption?
+\end{frame}
+
+\begin{frame}
+\frametitle{Security Properties}
+What do we mean by Confidentiality, Integrity, and Availability?
+\end{frame}
+
+\begin{frame}
+\frametitle{Topologies}
+what do we mean by hierarchical, non-hierarchical?
+\end{frame}
+
+\begin{frame}
+\frametitle{Motivation for Selection}
+{\bf Why Confidentiality, Integrity, and Availability?} \\
+{\bf Why Redaction, Rerouting, and Encryption?} \\
+{\bf Why Hierarchical and Non-Hierarchical networks?} \\
+\end{frame}
+
+\begin{frame}
+\frametitle{Results Overview (1 of 2)}
+{\bf \textit{Confidentiality, Integrity characteristics based on approach.}} \\
+\begin{itemize}
+\item {\small {\bf Redaction}, by removing information, by definition destroys integrity while guaranteeing confidentiality; unavailable information that is cannot be leaked}
+\item {\small {\bf Rerouting} removes information from a context damaging integrity that can possibly be repaired later, potentially increasing confidentiality by rendering that information unavailable}
+\item {\small {\bf Encryption} minimizes integrity impacts be keeping ciphered data with original context at the expense of possible interception and cryptanalysis exposure}
+\end{itemize}
+{\bf \textit{Availability is based on performance.}} \\
+\begin{itemize}
+\item {\small {\bf Performance} is measured via end-to-end time of transmittal}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Results Overview (2 of 2)}
 Overall evaluation of impact against strategy:
 \begin{itemize}
 \item {\small Encryption most likely to be used...}
@@ -177,7 +218,7 @@ Overall evaluation of impact against strategy:
 {\bf Property}			& {\bf Redaction}	& {\bf Rerouting} 	& {\bf Encryption} 	\\\toprule
 {\bf Confidentiality} 	& 3				  	& 2					& 1				 	\\\midrule
 {\bf Integrity}			& 0					& 1					& 3 					\\\midrule
-{\bf Availability}		& 0					& 1					& 2					\\\bottomrule
+{\bf Availability}		& 3					& 1					& 2					\\\bottomrule
 \end{tabular}
 \label{table:model:evaluation}
 \begin{center}
@@ -188,88 +229,74 @@ Overall evaluation of impact against strategy:
 \end{center}
 \end{frame}
 
-\begin{frame}
-\frametitle{Methodology}
-{\bf \textit{Confidentiality, Integrity characteristics based on approach.}} \\
-\begin{itemize}
-\item {\small {\bf Redaction}, by removing information, by definition destroys integrity while guaranteeing confidentiality; unavailable information that is cannot be leaked}
-\item {\small {\bf Rerouting} removes information from a context damaging integrity that can possibly be repaired later, potentially increasing confidentiality by rendering that information unavailable}
-\item {\small {\bf Encryption} minimizes integrity impacts be keeping ciphered data with original context at the expense of possible interception and cryptanalysis exposure}
-\end{itemize}
-{\bf \textit{Availability is based on performance.}} \\
-\begin{itemize}
-\item {\small {\bf Performance} is measured via end-to-end time of transmittal}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Redaction}
-{\bf Redaction:} {\small Removing content that is not approved for transmission over a given link or consumption by a given agent from a larger context of suitable content.} \\
-\begin{itemize}
-\item {\small Strongest confidentiality}
-\item {\small Destroys integrity}
-\item {\small Mixed impact on availability}
-\end{itemize}
-\begin{center}
-{\bf \textit{Fast and easy to implement}}
-\\~\\
-\begin{small}
-\begin{tabular}{lccc}
-\toprule %
-{\bf Property}			& {\bf Redaction}	& {\bf Rerouting} 	& {\bf Encryption} 	\\\toprule
-{\bf Confidentiality} 	& 3				  	& 2					& 1				 	\\\midrule
-{\bf Integrity}			& 0					& 1					& 3 					\\\midrule
-{\bf Availability}		& 0					& 1					& 2					\\\bottomrule
-\end{tabular}
-\end{small}
-\end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{Rerouting}
-{\bf Rerouting:} {\small Removing content that is not approved for transmission over a given link and rerouting that content to its destination through secondary means (e.g. SMTP).} \\
-\begin{itemize}
-\item {\small Confidentiality dependent on secondary links}
-\item {\small Integrity compromised temporarily and perhaps permanently}
-\item {\small Availability dependent on secondary links}
-\end{itemize}
-\begin{center}
-{\bf \textit{Undependable, expensive, good information control}}
-\\~\\
-\begin{small}
-\begin{tabular}{lccc}
-\toprule %
-{\bf Property}			& {\bf Redaction}	& {\bf Rerouting} 	& {\bf Encryption} 	\\\toprule
-{\bf Confidentiality} 	& 3				  	& 2					& 1				 	\\\midrule
-{\bf Integrity}			& 0					& 1					& 3 					\\\midrule
-{\bf Availability}		& 0					& 1					& 2					\\\bottomrule
-\end{tabular}
-\end{small}
-\end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{Encryption}
-{\bf Encryption:} {\small Enciphering content within larger documents, deciphering enciphered sections when suitable by defined policy and when content needs to be re-evaluated.} \\
-\begin{itemize}
-\item {\small Confidentiality questionable over time}
-\item {\small Integrity compromised temporarily and perhaps permanently}
-\item {\small Availability dependent on secondary links}
-\end{itemize}
-\begin{center}
-{\bf \textit{Reasonably secure, simple and performant}}
-\\~\\
-\begin{small}
-\begin{tabular}{lccc}
-\toprule %
-{\bf Property}			& {\bf Redaction}	& {\bf Rerouting} 	& {\bf Encryption} 	\\\toprule
-{\bf Confidentiality} 	& 3				  	& 2					& 1				 	\\\midrule
-{\bf Integrity}			& 0					& 1					& 3 					\\\midrule
-{\bf Availability}		& 0					& 1					& 2					\\\bottomrule
-\end{tabular}
-\end{small}
-\end{center}
-\end{frame}
+%\begin{frame}
+%\frametitle{Redaction}
+%{\bf Redaction:} {\small Removing content that is not approved for transmission over a given link or consumption by a given agent from a larger context of suitable content.} \\
+%\begin{itemize}
+%\item {\small Strongest confidentiality}
+%\item {\small Destroys integrity}
+%\item {\small Mixed impact on availability}
+%\end{itemize}
+%\begin{center}
+%{\bf \textit{Fast and easy to implement}}
+%\\~\\
+%\begin{small}
+%\begin{tabular}{lccc}
+%\toprule %
+%{\bf Property}			& {\bf Redaction}	& {\bf Rerouting} 	& {\bf Encryption} 	\\\toprule
+%{\bf Confidentiality} 	& 3				  	& 2					& 1				 	\\\midrule
+%{\bf Integrity}			& 0					& 1					& 3 					\\\midrule
+%{\bf Availability}		& 0					& 1					& 2					\\\bottomrule
+%\end{tabular}
+%\end{small}
+%\end{center}
+%\end{frame}
+%
+%\begin{frame}
+%\frametitle{Rerouting}
+%{\bf Rerouting:} {\small Removing content that is not approved for transmission over a given link and rerouting that content to its destination through secondary means (e.g. SMTP).} \\
+%\begin{itemize}
+%\item {\small Confidentiality dependent on secondary links}
+%\item {\small Integrity compromised temporarily and perhaps permanently}
+%\item {\small Availability dependent on secondary links}
+%\end{itemize}
+%\begin{center}
+%{\bf \textit{Undependable, expensive, good information control}}
+%\\~\\
+%\begin{small}
+%\begin{tabular}{lccc}
+%\toprule %
+%{\bf Property}			& {\bf Redaction}	& {\bf Rerouting} 	& {\bf Encryption} 	\\\toprule
+%{\bf Confidentiality} 	& 3				  	& 2					& 1				 	\\\midrule
+%{\bf Integrity}			& 0					& 1					& 3 					\\\midrule
+%{\bf Availability}		& 0					& 1					& 2					\\\bottomrule
+%\end{tabular}
+%\end{small}
+%\end{center}
+%\end{frame}
+%
+%\begin{frame}
+%\frametitle{Encryption}
+%{\bf Encryption:} {\small Enciphering content within larger documents, deciphering enciphered sections when suitable by defined policy and when content needs to be re-evaluated.} \\
+%\begin{itemize}
+%\item {\small Confidentiality questionable over time}
+%\item {\small Integrity compromised temporarily and perhaps permanently}
+%\item {\small Availability dependent on secondary links}
+%\end{itemize}
+%\begin{center}
+%{\bf \textit{Reasonably secure, simple and performant}}
+%\\~\\
+%\begin{small}
+%\begin{tabular}{lccc}
+%\toprule %
+%{\bf Property}			& {\bf Redaction}	& {\bf Rerouting} 	& {\bf Encryption} 	\\\toprule
+%{\bf Confidentiality} 	& 3				  	& 2					& 1				 	\\\midrule
+%{\bf Integrity}			& 0					& 1					& 3 					\\\midrule
+%{\bf Availability}		& 0					& 1					& 2					\\\bottomrule
+%\end{tabular}
+%\end{small}
+%\end{center}
+%\end{frame}
 
 \section{Test Network Topologies}
 
@@ -298,6 +325,12 @@ Overall evaluation of impact against strategy:
 \end{frame}
 
 \section{Results Detail}
+
+\begin{frame}
+\frametitle{Hierarchical Experimentation}
+What are home, peer, etc.? how are they distributed? \\
+What is the control? \\
+\end{frame}
 
 \begin{frame}
 \frametitle{Hierarchical Effects}
@@ -342,6 +375,12 @@ Overall evaluation of impact against strategy:
 \end{frame}
 
 \begin{frame}
+\frametitle{Non-Hierarchical Experimentation}
+neighbor (1), etc.? how are they distributed? \\
+What is the control? \\
+\end{frame}
+
+\begin{frame}
 \frametitle{Non-Hierarchical Effects}
 \begin{figure}[!t]
 \centering
@@ -379,6 +418,15 @@ Overall evaluation of impact against strategy:
 {\bf Non-hierarchical and hierarchical have different strengths.} \\
 {\scriptsize Hierarchical networks may more effectively resist random failures due to functional centralization. Non-hierarchical networks may better maintain functionality in the face of directed attacks.  This will likely depend on topology as well as hierarchical characteristics.  \textit{More research is needed to support these conclusions.}} \\
 ~\\
+\end{frame}
+
+\begin{frame}
+\frametitle{Network-Free Experimentation}
+How was this done? what node? what test node?\\
+~\\
+tested on the amazon home node from the amazon home node \\
+~\\
+What is the control? \\
 \end{frame}
 
 \begin{frame}
