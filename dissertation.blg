@@ -1,0 +1,81 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: dissertation.aux
+The style file: plain.bst
+Database file #1: bib/proposal.bib
+Database file #2: bib/drm.bib
+Database file #3: bib/info-centric.bib
+Database file #4: bib/rfc.bib
+Warning--to sort, need author or key in proposal:info-sharing-strategy
+Warning--to sort, need author or key in proposal:nsa-cloud
+Warning--to sort, need author or key in proposal:assured-info-sharing
+Warning--to sort, need author or key in NIST800:144
+Warning--to sort, need author or key in NIST800:12
+Warning--to sort, need author or key in NIST800:95
+Warning--to sort, need author or key in proposal:gig-arch
+Warning--to sort, need author or key in NDN
+Warning--to sort, need author or key in CCNx
+Warning--to sort, need author or key in PSIRP
+Warning--to sort, need author or key in NetInf
+Warning--to sort, need author or key in xerox
+Warning--to sort, need author or key in parc
+Warning--to sort, need author or key in marlin
+Warning--to sort, need author or key in proposal:openflow
+Warning--to sort, need author or key in cisco-6500
+Warning--to sort, need author or key in proposal:ucdmo-goals
+Warning--to sort, need author or key in proposal:jboss-esb
+Warning--empty author in NIST800:12
+Warning--empty author in marlin
+Warning--empty institution in marlin
+Warning--empty author in NIST800:95
+Warning--empty author in NIST800:144
+Warning--empty booktitle in proposal:bah-arch
+Warning--empty author in coral
+Warning--empty institution in coral
+Warning--empty year in CommonCriteria
+Warning--empty booktitle in proposal:nsa-arch
+Warning--empty booktitle in proposal:cd101
+Warning--empty booktitle in proposal:raytheon-arch
+Warning--empty booktitle in proposal:ron-ross
+You've used 56 entries,
+            2118 wiz_defined-function locations,
+            807 strings with 11847 characters,
+and the built_in function-call counts, 15540 in all, are:
+= -- 1539
+> -- 566
+< -- 15
++ -- 246
+- -- 180
+* -- 990
+:= -- 2405
+add.period$ -- 155
+call.type$ -- 56
+change.case$ -- 262
+chr.to.int$ -- 0
+cite$ -- 87
+duplicate$ -- 660
+empty$ -- 1402
+format.name$ -- 180
+if$ -- 3400
+int.to.chr$ -- 0
+int.to.str$ -- 56
+missing$ -- 35
+newline$ -- 266
+num.names$ -- 74
+pop$ -- 360
+preamble$ -- 1
+purify$ -- 203
+quote$ -- 0
+skip$ -- 479
+stack$ -- 0
+substring$ -- 776
+swap$ -- 137
+text.length$ -- 15
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 216
+warning$ -- 31
+while$ -- 117
+width$ -- 58
+write$ -- 573
+(There were 31 warnings)

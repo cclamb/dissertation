@@ -611,7 +611,8 @@
     \vspace{+0.84in}
     \Huge \bfseries \acknowledgname
     \@endparpenalty\@M
-  \end{flushleft}}%
+  \end{flushleft}
+  }%
 {\endsinglespace\vfil\vfil\null  
    \if@twoside%
      \clearpage%
@@ -630,7 +631,7 @@
 %   }
    \@maketitleabstract
 %%  \if@twoside\begin{titlepage}\mbox{}\end{titlepage}\fi
-%   \clearpage
+   \clearpage
    \@resetpagesize
 %% \addcontentsline{toc}{chapter}{Abstract}%
 %   \if@twoside%
@@ -652,7 +653,7 @@
 
   \let\footnotesize\small
   \let\footnoterule\relax
-  \null\vfil%
+  %\null\vfil%
 %  \begin{center}%
 %    {\LARGE\bf \@title}
 %    \par\vskip 60pt plus2pt minus30pt
@@ -674,7 +675,7 @@
 %  \end{center}
 %   \vfil\null%
 %\if@twoside\begin{titlepage} \setcounter{page}{0}\mbox{} \end{titlepage}\fi
-%\let\maketitleabstract\relax
+% \let\maketitleabstract\relax
 }%
 %::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 %  The following commands define the abstract page
