@@ -294,7 +294,8 @@
       \fi
 
     \else
-      \fcolorbox{red}{white}{\box\@fancybox}%
+%      \fcolorbox{red}{white}{\box\@fancybox}% - no more red border
+	   \fcolorbox{white}{white}{\box\@fancybox}%
     \fi
   \endgroup}
 
@@ -622,58 +623,59 @@
 %  The following commands define the abstract title page
 %::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 \newcommand\maketitleabstract{%
-   \clearpage
-   \thisfancypage{}{%
-     \setlength{\fboxsep}{-6pt}%
-     \singlebox
-}
+%   \clearpage
+%   \thisfancypage{}{%
+%     \setlength{\fboxsep}{-6pt}%
+%     \singlebox
+%   }
    \@maketitleabstract
-%   \if@twoside\begin{titlepage}\mbox{}\end{titlepage}\fi
-   \clearpage
+%%  \if@twoside\begin{titlepage}\mbox{}\end{titlepage}\fi
+%   \clearpage
    \@resetpagesize
-                    % \addcontentsline{toc}{chapter}{Abstract}%
-   \if@twoside%
-     \thispagestyle{empty}%
-     \mbox{}%
-     \clearpage%
-   \fi
-}
+%% \addcontentsline{toc}{chapter}{Abstract}%
+%   \if@twoside%
+%     \thispagestyle{empty}%
+%     \mbox{}%
+%     \clearpage%
+%   \fi
+   }
 
 \newcommand\@maketitleabstract{%
-  \thispagestyle{empty}
-%
+%  \thispagestyle{empty}
+
   \setlength{\textheight}{614pt}
   \setlength{\textwidth}{427.5pt}
   \setlength{\topmargin}{-4pt}
   \setlength{\headheight}{4pt}
   \setlength{\headsep}{4pt}
   \setlength{\footskip}{4pt}
-%
+
   \let\footnotesize\small
-%  \let\footnoterule\relax
+  \let\footnoterule\relax
   \null\vfil%
-  \begin{center}%
-    {\LARGE\bf \@title}
-    \par\vskip 60pt plus2pt minus30pt
-    by
-    \par\vskip 9pt
-    {\large\bf \@author}
-    \par\vskip 20pt plus6pt minus51pt
-    {\large \MakeUppercase{\abstractname\ of \@documenttype}}
-    \par\vskip 12pt
-    \@degreetext
-    \par\vskip 12pt
-    {\large \@degree}
-    \par\vskip 6pt
-    The \@schoolname \par
-    \@schooladdress
-    \par\vskip 6pt
-    \@date
-    \par
-  \end{center}
-   \vfil\null%
+%  \begin{center}%
+%    {\LARGE\bf \@title}
+%    \par\vskip 60pt plus2pt minus30pt
+%    by
+%    \par\vskip 9pt
+%    {\large\bf \@author}
+%    \par\vskip 20pt plus6pt minus51pt
+%    {\large \MakeUppercase{\abstractname\ of \@documenttype}}
+%    \par\vskip 12pt
+%    \@degreetext
+%    \par\vskip 12pt
+%    {\large \@degree}
+%    \par\vskip 6pt
+%    The \@schoolname \par
+%    \@schooladdress
+%    \par\vskip 6pt
+%    \@date
+%    \par
+%  \end{center}
+%   \vfil\null%
 %\if@twoside\begin{titlepage} \setcounter{page}{0}\mbox{} \end{titlepage}\fi
-\let\maketitleabstract\relax}%
+%\let\maketitleabstract\relax
+}%
 %::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 %  The following commands define the abstract page
 %::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -688,7 +690,7 @@
    \fi
   \thispagestyle{plain}
 %  \null\vfil%
-   \null%
+  \null%
   \begin{center}%
     {\LARGE\bf \@title}
     \par\vskip 20pt plus2pt minus9pt
