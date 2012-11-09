@@ -1,0 +1,42 @@
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=6in]{strategy_effects_az}
+%\caption{Hierarchical Results from Amazon}
+%\label{fig:model:amazon-results}
+%\end{figure}
+
+%\begin{figure}
+%\centering
+%\mbox{\subfigure[Mean]{\includegraphics[width=3in]{strategy_effects_az}
+%\quad
+%\subfigure[Stdev]{\includegraphics[width=3in]{strategy_effects_stdev_az} }}}
+%\caption{Text pertaining to both graphs}
+%\label{fig:model:amazon-results}
+%\end{figure}
+
+%\begin{figure}
+%\centering
+%\subfigure[Mean]{\includegraphics[width=3in]{strategy_effects_az}}
+%\quad
+%\subfigure[Stdev]{\includegraphics[width=3in]{strategy_effects_stdev_az} }
+%\caption{Text pertaining to both graphs}
+%\label{fig:model:amazon-results}
+%\end{figure}
+
+%\begin{figure}[htbp]
+%  \begin{minipage}[b]{0.5\linewidth}
+%    \centering
+%    \includegraphics[width=\linewidth]{strategy_effects_az}
+%    \caption{The caption for figure 1}
+%    \label{fig:model:amazon-results}
+%  \end{minipage}
+%  \hspace{0.5cm}
+%  \begin{minipage}[b]{0.5\linewidth}
+%    \centering
+%    \includegraphics[width=\linewidth]{strategy_effects_stdev_az}
+%    \caption{The caption for figure 2.}
+%    \label{fig:chapter001_reward_001}
+%  \end{minipage}
+%\end{figure}
+
+
