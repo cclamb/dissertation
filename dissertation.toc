@@ -37,7 +37,7 @@
 \contentsline {section}{\numberline {3.7}Using the Network}{64}{section.3.7}
 \contentsline {chapter}{\numberline {4}Experimental Results and Conclusions}{65}{chapter.4}
 \contentsline {section}{\numberline {4.1}Hierarchical Networks}{66}{section.4.1}
-\contentsline {section}{\numberline {4.2}Non-Hierarchical Networks}{71}{section.4.2}
-\contentsline {section}{\numberline {4.3}Removing Network Effects}{74}{section.4.3}
-\contentsline {section}{\numberline {4.4}Conclusions}{75}{section.4.4}
-\contentsline {chapter}{References}{78}{chapter*.30}
+\contentsline {section}{\numberline {4.2}Non-Hierarchical Networks}{72}{section.4.2}
+\contentsline {section}{\numberline {4.3}Removing Network Effects}{75}{section.4.3}
+\contentsline {section}{\numberline {4.4}Conclusions}{76}{section.4.4}
+\contentsline {chapter}{References}{79}{chapter*.30}
