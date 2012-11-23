@@ -18,6 +18,7 @@
 \usepackage{color}
 \usepackage{framed}
 \usepackage{lipsum}
+\usepackage{subfigure}
 
 % Font settings:
 \usepackage[T1]{fontenc}
@@ -118,22 +119,42 @@
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
 
 \begin{document}
+\thispagestyle{empty}
+~\\
+\underline{Christopher C. Lamb~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} \\[-10pt]
+{\scriptsize \textsl{Candidate}} \\
+~\\
+\underline{Engineering~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} \\[-10pt]
+{\scriptsize \textsl{Department}} \\[20pt]
+This dissertation is approved, and it is acceptable in quality and form for publication: \\[5pt]
+{\sl Approved by the Dissertation Committee:}\\[10pt]
+\underline{Gregory Heileman~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {\scriptsize \textsl{, chairperson}}}\\[10pt]
+\underline{Wennie Shu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\[10pt]
+\underline{Nasir Ghani~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\[10pt]
+\underline{Patrick Bridges~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\[15pt]
+\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\[15pt]
+\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\[15pt]
+\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\[15pt]
+\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\[15pt]
+\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\[15pt]
+\newpage
+\thispagestyle{plain}
 
 \frontmatter
 
 \title{\mytitle}
 \author{\myauthor}
 
-\degreesubject{Ph.D., Computer Engineering}
+\degreesubject{Ph.D., Engineering}
 
-\degree{Doctor of Philosophy \\ Computer Engineering}
+\degree{Doctor of Philosophy \\ Engineering}
 
 \documenttype{Dissertation}
 
 \previousdegrees{B.S., Mechanical Engineering, New Mexico State University, 1994 \\
                  M.S., Computer Science, University of New Mexico, 2002}
 
-\date{\today}
+\date{December 2012}
 
 \maketitle
 
@@ -155,11 +176,9 @@ I would also like to thank everyone in the Informatics Lab.  Their feedback, sup
 \end{acknowledgments}
 
 \maketitleabstract
-
+  
 \begin{abstract}
 Information-centric networks have distinct advantages with regard to securing sensitive content as a result of their new approaches to managing data in potential future internet architectures.  These kinds of systems, because of their data-centric perspective, provide the opportunity to embed  policy-centric content management components that can address looming problems in information distribution that both companies and federal agencies are beginning to face with respect to sensitive content.  This information-centricity facilitates the application of security techniques that are very difficult and in some cases impossible to apply in traditional packetized networks.  This work addresses the current state of the art in both these kinds of cross-domain systems and information-centric networking in general.  It then covers other related work, outlining why information-centric networks are more powerful than traditional packetized networks with regard to usage management.  Then, it introduces a taxonomy of types of policy-centric usage managed information network systems and an associated methodology for evaluating the individual taxonomic elements.  It finally delves into experimental evaluation of the various defined architectural options and presents results of comparing experimental evaluation with anticipated outcomes. 
-
-%This work is the end result of four conference papers (IEEE Cloud 2011, ACM DRM 2011, IEEE SoSE '11, and IEEE Cloud 2012), one invited talk (DoDIS 2012), and research performed using this system is currently submitted to two journals for publication (IJ-Closer and a special issue of IEEE Internet Computing focusing on dynamic collective work).
 \end{abstract}
 
 \tableofcontents
